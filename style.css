@@ -1,0 +1,21 @@
+body{
+	background-position:fixed;
+	background-size:75%;
+	background-repeat:no-repeat;
+	background-position:cover;
+}
+
+#login{
+	position: absolute;
+    top: 87%;
+    left: 39%;
+    width: 400px;
+    height: 175px;
+    margin-top: -150px;
+    margin-left: -210px;
+	background-color:white;
+}
+
+#loginLetter{
+	font-size:36px;
+}
