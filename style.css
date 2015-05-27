@@ -1,20 +1,48 @@
 body{
-	background-position:fixed;
-	background-size:100%;
+	
 	background-repeat:no-repeat;
-	background-position:cover;
+}
+html{
+
 }
 
-#login{
+#login, #signUpBox {
+    max-width:300px;
+    min-width:250px;
+    padding:10px 50px;
+    border:2px solid gray;
+    border-radius:10px;
+    font-family:raleway;
+	background-color:#861715;
+}
+
+#signUpBox{
+	bottom: 5px;
 	position: absolute;
+	float: right;
     top: 87%;
-    left: 39%;
+    left: 62%;
     width: 400px;
-    height: 175px;
+    height: 205px;
     margin-top: -150px;
     margin-left: -210px;
 	background-color:white;
+	text-align: center;
 }
+#login{
+	bottom: 5px;
+	position: absolute;
+	float: left;
+    top: 87%;
+    left: 35%;
+    width: 400px;
+    height: 205px;
+    margin-top: -150px;
+    margin-left: -210px;
+	background-color:white;
+	text-align: center;
+}
+
 
 #loginLetter{
 	font-size:36px;

@@ -55,15 +55,19 @@ if(isset($_POST['loginform']))
     
 	<form method="Post">
     <div id="login">
-     <br/>
-     <span id="loginLetter">Username</span><input type="text" name="username"> <br/>
-	 <span id="loginLetter">Password</span><input type="password" name="password"><br/>
-	 <span id="loginLetter">Phone</span><input type="text" name="phone"><br/>	
-
+	<h2>LOG IN </h2>
+	 	 <span id="loginLetter"></span><input type="text" name="phone" placeholder="Phone number"><br/>	
+		<span id="loginLetter"></span><input type="password" name="password" placeholder="Password"><br/>
      
      <input type="submit" value="Login!" name="loginform"/>
-	 <input type="button" value="CreateAccount" name="CreateAcc"/>
     </div>
+	
+	<div id="signUpBox">
+		<h2>SIGN UP </h2>
+		Not yet a member? <br/>
+		Start your job search in just minutes! <br/> <br/>
+		<input type="button" value="CreateAccount" name="CreateAcc"/>
+	</div>
 	</form>
     
   </div>
