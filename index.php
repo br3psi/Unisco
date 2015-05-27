@@ -47,7 +47,7 @@ if(isset($_POST['loginform']))
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body background="img/UniscoLogo.jpg" >
+<body background="img/UniscoWeb.png" >
   <div>
     <header>
       
