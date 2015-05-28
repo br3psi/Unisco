@@ -42,7 +42,7 @@ if(isset($_POST['loginform']))
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body background="img/UniscoWeb.png" class="img-responsive" >
+<body >
 		<form method="Post">
 		
 		<div class="row">
@@ -55,7 +55,7 @@ if(isset($_POST['loginform']))
 					 <input type="submit" value="Login!" name="loginform"/>
 				</div>
 			</div>
-			<div class="col-md-4 ">
+			<div class="col-md-4 col-md-offset">
 				<div id="signUpBox">
 					<h2>SIGN UP </h2>
 					Not yet a member? <br/>
