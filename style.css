@@ -3,49 +3,62 @@ html, body{
 	height:100%;
 }
 body{
-background: url('img/UniscoWeb.png') no-repeat center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
+background: url('img/UniscoWeb.png') no-repeat center center; 
+background-size: cover;
 
+}
+#loginBox
+{
+	height:100%;
 }
 .row
 {
-	width:100%;
+	
+	width:80vh;
 	position:absolute;
-	bottom:25%;
+    /* height: 205px; */
 	overflow: hidden;
 }
+
 #login, #signUpBox {
-    max-width:300px;
-    min-width:250px;
-    padding:10px 50px;
-    border:2px solid gray;
+  /*   max-width:300px;
+    min-width:250px; */
+/*     padding:10px 50px;
+ */ 
+	/* width: 30vh;
+    height: 25vh; */
+	position:relative;
+	border:2px solid gray;
     border-radius:10px;
     font-family:raleway;
 	background-color:#861715;
 }
 
 #signUpBox{
+	/* width: 100%;
+    height: 100%; */
 	/* bottom: 5px;
 	position: absolute; */
 /* 	float: right;
    top: 87%;
     left: 62%;*/
-    width: 400px;
-    height: 205px;
+    /* width: 400px;
+    height: 205px; */
    /* margin-top: -150px;
     margin-left: -210px;*/
 	background-color:white;
 	text-align: center;
 }
 #login{
+	/* width: 100%;
+    height: 100%; */
 	/*bottom: 5px;
 	position: absolute;
 	float: left;
     top: 87%;
     left: 35%; */
-    width: 400px;
-    height: 205px;
+    /* width: 400px;
+    height: 205px; */
     /* margin-top: -150px;
     margin-left: -210px; */
 	background-color:white;

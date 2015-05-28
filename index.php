@@ -37,7 +37,6 @@ if(isset($_POST['loginform']))
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +45,7 @@ if(isset($_POST['loginform']))
 		<form method="Post">
 		
 		<div class="row">
-			<div class="col-md-3 col-md-offset-3">
+			<div class="col-md-4 col-md-offset-3">
 				<div id="login">
 					<h2>LOG IN </h2>
 						 <span id="loginLetter"></span><input type="text" name="phone" placeholder="Phone number"><br/>	
@@ -55,7 +54,7 @@ if(isset($_POST['loginform']))
 					 <input type="submit" value="Login!" name="loginform"/>
 				</div>
 			</div>
-			<div class="col-md-4 col-md-offset">
+			<div class="col-md-4 col-md-offset" id="loginBox">
 				<div id="signUpBox">
 					<h2>SIGN UP </h2>
 					Not yet a member? <br/>
