@@ -1,9 +1,12 @@
 body{
 	
-	background-repeat:no-repeat;
 }
 html{
-
+background: url('img/UniscoWeb.png') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 
 #login, #signUpBox {
@@ -15,30 +18,33 @@ html{
     font-family:raleway;
 	background-color:#861715;
 }
-
+.row
+{
+	margin-bottom:50px;
+}
 #signUpBox{
-	bottom: 5px;
-	position: absolute;
-	float: right;
-    top: 87%;
-    left: 62%;
+	/* bottom: 5px;
+	position: absolute; */
+/* 	float: right;
+   top: 87%;
+    left: 62%;*/
     width: 400px;
     height: 205px;
-    margin-top: -150px;
-    margin-left: -210px;
+   /* margin-top: -150px;
+    margin-left: -210px;*/
 	background-color:white;
 	text-align: center;
 }
 #login{
-	bottom: 5px;
+	/*bottom: 5px;
 	position: absolute;
 	float: left;
     top: 87%;
-    left: 35%;
+    left: 35%; */
     width: 400px;
     height: 205px;
-    margin-top: -150px;
-    margin-left: -210px;
+    /* margin-top: -150px;
+    margin-left: -210px; */
 	background-color:white;
 	text-align: center;
 }

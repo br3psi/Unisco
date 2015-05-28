@@ -37,39 +37,35 @@ if(isset($_POST['loginform']))
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body background="img/UniscoWeb.png" >
-  <div>
-    <header>
-      
-    </header>
-    
-	<form method="Post">
-    <div id="login">
-	<h2>LOG IN </h2>
-	 	 <span id="loginLetter"></span><input type="text" name="phone" placeholder="Phone number"><br/>	
-		<span id="loginLetter"></span><input type="password" name="password" placeholder="Password"><br/>
-     
-     <input type="submit" value="Login!" name="loginform"/>
-    </div>
-	
-	<div id="signUpBox">
-		<h2>SIGN UP </h2>
-		Not yet a member? <br/>
-		Start your job search in just minutes! <br/> <br/>
-		<input type="button" value="CreateAccount" name="CreateAcc"/>
-	</div>
+<body background="img/UniscoWeb.png" class="img-responsive" >
+		<form method="Post">
+		
+		<div class="row">
+			<div class="col-md-3 col-md-offset-3">
+				<div id="login">
+					<h2>LOG IN </h2>
+						 <span id="loginLetter"></span><input type="text" name="phone" placeholder="Phone number"><br/>	
+						<span id="loginLetter"></span><input type="password" name="password" placeholder="Password"><br/>
+					 
+					 <input type="submit" value="Login!" name="loginform"/>
+				</div>
+			</div>
+			<div class="col-md-4 ">
+				<div id="signUpBox">
+					<h2>SIGN UP </h2>
+					Not yet a member? <br/>
+					Start your job search in just minutes! <br/> <br/>
+					<input type="button" value="CreateAccount" name="CreateAcc"/>
+				</div>
+			</div>
+		</div>
+
 	</form>
     
-  </div>
 </body>
 </html>
