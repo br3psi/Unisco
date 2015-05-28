@@ -13,6 +13,7 @@ background: url('img/UniscoWeb.png') no-repeat center center fixed;
 	width:100%;
 	position:absolute;
 	bottom:25%;
+	overflow: hidden;
 }
 #login, #signUpBox {
     max-width:300px;
