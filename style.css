@@ -14,12 +14,18 @@ background-size: cover;
 }
 .row
 {
-	width:50%;
+	width:70%;
 	position:absolute;
     /* height: 205px; */
 	overflow: hidden;
 	bottom:30%;
 	left:30%;
+}
+
+#title
+{
+	font-weight:bold;
+	font-size:22px;
 }
 
 #login, #signUpBox {
@@ -29,6 +35,7 @@ background-size: cover;
  */ 
 	/* width: 30vh;
     height: 25vh; */
+	padding-bottom:10px;
 	position:relative;
 	border:2px solid gray;
     border-radius:10px;

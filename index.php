@@ -40,6 +40,8 @@ if(isset($_POST['loginform']))
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="popup.css" rel="stylesheet">
+<script src="js/popup.js"></script>
 </head>
 <body >
 		<form method="Post">
@@ -51,20 +53,38 @@ if(isset($_POST['loginform']))
 						 <span id="loginLetter"></span><input type="text" name="phone" placeholder="Phone number" id="inputBox"><br/>	
 						<span id="loginLetter"></span><input type="password" name="password" placeholder="Password" id="inputBox"><br/>
 					 
-					 <input type="submit" value="Login!" name="loginform" />
+					 <input type="submit" value="Login!" name="loginform" id="inputBox"/>
 				</div>
 			</div>
 			<div class="col-xs-4" id="loginBox">
 				<div id="signUpBox">
 					<span id="title">SIGN UP </span>
+					<br/>
 					Not yet a member? <br/>
 					Start your job search in just minutes! <br/> <br/>
-					<input type="button" value="CreateAccount" name="CreateAcc" />
+					<input type="button" value="CreateAccount" name="CreateAcc" onclick="div_show()" id="inputBox"/>
 				</div>
 			</div>
 		</div>
 
 	</form>
-    
+    <div id="abc">
+            Popup Div Starts Here 
+            <div id="popupContact">
+                <form action="#" id="form" method="post" name="form">
+                    <img id="close" src="images/3.png" onclick ="div_hide()">
+                    <h2>Get Started Now</h2>
+                    
+                    <input id="fName" name="fName" placeholder="First Name" type="text">
+                    <input id="lName" name="lName" placeholder="Last Name" type="text">
+                    <input id="phoneNum" name="phoneNum" placeholder="Phone Number" type="text">
+                    <input id="password" name="password" placeholder="Create Password" type="password">
+                    <input id="password" name="password" placeholder="Retype Password" type="password">
+                    <br/> <br/>
+                    <a href="javascript:%20check_empty()" id="submit">Create Account</a>
+                </form>
+            </div> 
+            <!-- Popup Div Ends Here -->
+        </div>
 </body>
 </html>
