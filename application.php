@@ -29,10 +29,9 @@
 <body >
 		<form method="POST">
 			<div>
-				APPLICATION FOR EMPLOYMENT <BR/>
-				<div id="personalInformation">
-					PLEASE COMPLETE PAGES 1-4. 
-					
+				<h2>APPLICATION FOR EMPLOYMENT</h2> 
+				<div id="personalInformationDiv">
+					<h3>Basic Information</h3> <br/>
 					Date: <input type="date" name="appDate"> <br/><br/>
 					Last Name: <input type="text" name="lastName"> First Name: <input type="text" name="firstName">
 					Middle:<input type="text" name="middleName"> Maiden: <input type="text" name="maidenName"> <br/> <br/>
@@ -41,13 +40,35 @@
 					How long <input type="text" name="presentAddressTime"> Social Security No. <input type="text" name="ssn" placeholder="###-##-####"><br/><br/>
 					Phone Number: <input type="text" name="phoneNumber" placeHolder="(###)###-####"> <br/> <br/>
 					Date of Birth: <input type="date" name="dob" placeholder="DD-MM-YYYY"> <br/> <br/> <br/>
+					Available to work: <select name="workTime">
+										<option value="partTime">Part time</option>
+										<option value="fullTime">Full time</option>
+										<option value="bothTimes">Both</option>
+										</select>
+										
+				</div>
+				<br/>
+				
+				<div id="educationDiv">
+					<h3>Education </h3>
+					Do you have a high school diploma/GED? <input type="radio" name="highSchool" value="yes">yes 
+														<input type="radio" name="highSchool" value="no">no <br/> <br/>
+					College education: <select name="collegeEducation">
+										<option valye="none">N/A</option>
+										<option value="communityCollege">Community College</option>
+										<option value="fourYearInstitution">4 year institution</option>
+										</select> <br/> <br/>
+					Have you graduated? <input type="radio" name="collegeGraduated" value="yes">yes 
+														<input type="radio" name="collegeGraduated" value="no">no <br/>				
 				</div>
 				 <br/>
-				<div id="crimesAndLicense">
-					Have you been convicted of a crime? <input type="radio" name="crime" value="yes">yes 
-														<input type="radio" name="crime" value="no">no <br/>
-					If yes, explain number of conviction(s), nature(s) leading to conviction(s), how recently such offense(s) was/were committed, sentenced(s) imposed, and type(s) of rehabilition:
-					<input type="textarea" name="crimeDetails"> <br/> <br/>
+				<div id="crimesAndLicenseDiv">
+					Have you ever  been convicted of a misdemeanor or felony? <input type="radio" name="crime" value="yes">yes 
+														<input type="radio" name="crime" value="no">no <br/> <br/>
+					
+					Do you authorize Unisco to conduct a background check?<input type="radio" name="backgroundCheck" value="yes">yes 
+														<input type="radio" name="backgroundCheck" value="no">no <br/> <br/> <br
+>
 					
 					DO YOU HAVE A DRIVER'S LICENSE? <input type="radio" name="driverLicense">yes
 													<input type="radio" name="driverLicense">no <br/> <br/>
@@ -64,8 +85,8 @@
 					Have you had any accidents during the past three years? If so, how many? <input type="number" name="accidentsNumber"> <br/> <br/>
 					Have you had any moving violations during the past three years? If so, how many? <input type="number" name="movingViolationsNumber"> <br/> </br>
 				</div> 
-				<div id="officeSkills">	
-					<h3 id="officeOnly"> OFFICE ONLY </h3> <br/>
+				<div id="officeSkillsDiv">	
+					<h3 id="officeOnlyDiv"> Office Only </h3> <br/>
 					 Typing? <input type="radio" name="typing">yes
 							 <input type="radio" name="typing">no	<br/>
 							 WPM <input type="number" name="wpmTyping"> <br/> <br/>
@@ -76,15 +97,16 @@
 										<option value="pc">PC</option>
 								  </select> <br/> <br/>
 					10-key <input type="radio" name="10key">yes
-						   <input type="radio" name="10key">no	<br/> <br/>
+						   <input type="radio" name="10key">no	<br/> 
 					Word Processing <input type="radio" name="wordProcessing">yes
 							 <input type="radio" name="wordProcessing">no	<br/>
 							 WPM <input type="number" name="wpmWordProcessing"> <br/> 
 				</div>	
 				<br/>
-				<div id="twoReferences">
-					Please list two references other than relatives or previous employers <br/>
-					<div id="relativeOne">
+				<div id="twoReferencesDiv">
+					<h3>References </h3> <br/> 
+					Please list two references other than relatives or previous employers <br/><br/>
+					<div id="relativeOneDiv">
 						Name <input type="text" name="refeName1"> <br/> <br/>
 						Position <input type="text" name="refPosition1"> <br/> <br/>
 						Company <input type="text" name="refCompany1"> <br/><br/>
@@ -94,7 +116,7 @@
 					
 					<br/> <br/>
 				
-					<div id="relativeTwo">
+					<div id="relativeTwoDiv">
 						Name <input type="text" name="refeName2"> <br/> <br/>
 						Position <input type="text" name="refPosition2"> <br/> <br/>
 						Company <input type="text" name="refCompany2"> <br/><br/>
@@ -104,9 +126,9 @@
 				</div>
 				
 				 <br/>
-				 <div id="miltary">
+				 <div id="miltaryDiv">
 					 
-					 <h3>MILITARY</h3>
+					 <h3>Military</h3>
 					 HAVE YOU EVER BEEN IN THE ARMED FORCES? <input type="radio" name="armedForces">yes
 							 <input type="radio" name="armedForces">no	<br/> <br/>
 					ARE YOU A MEMBER OF THE NATIONAL GUARD? <input type="radio" name="nationalGuard">yes
@@ -117,11 +139,11 @@
 					
 				</div>
 				<br/> 
-				<div id="workExperience">
+				<div id="workExperienceDiv">
 				<h3>Work Experience</h3>
 				Please list your last two jobs beginning with your most recent job held. <br/> <br/>
 				
-				<div id="jobOne">
+				<div id="jobOneDiv">
 						Job 1: <br/><br/>
 						Name of employer: <input type="text" name="jobEmployerName1"> <br/> <br/>
 						Address <input type="text" name="jobStreetAddress1" placeholder="number and street">
@@ -136,7 +158,7 @@
 						List jobs you held, duties performed, skills used or learned, and advancements or promotions  <input type="textarea" name="jobDuties1"> <br/> <br/>
 					</div>
 					<br/> <br/>
-					<div id="jobTwo">
+					<div id="jobTwoDiv">
 						Job 2: <br/> <br/>
 						Name of employer: <input type="text" name="jobEmployerName2"> <br/> <br/>
 						Address <input type="text" name="jobStreetAddress2" placeholder="number and street">
@@ -149,25 +171,16 @@
 						Your job title  <input type="text" name="jobTitle2"> <br/> <br/>
 						Reasons for leaving  <input type="textarea" name="jobLeavingReasons2"> <br/><br/>
 						List jobs you held, duties performed, skills used or learned, and advancements or promotions  <input type="textarea" name="jobDuties2"> <br/> <br/>					
+						May we contact your present/last employer? <input type="radio" name="contactEmployer">yes
+															<input type="radio" name="contactEmployer">no	<br/> <br/>
 					</div>
 				</div>
-				
-				May we contact your present/last employer? <input type="radio" name="contactEmployer">yes
-															<input type="radio" name="contactEmployer">no	<br/> <br/>
+				<br/>
 				Did you complete this application yourself? <input type="radio" name="selCompletedApplication">yes
 															<input type="radio" name="selfCompletedApplication">no	<br/> <br/>
 				If not, who did? <input type="text" name="personCompletedApplication"> <br/> <br/>
 				
 				<input type="submit" name="submitApplication" value="Submit" id="submitButton">
-															
-				
-				
-								   
-						 
-				
-				
-				
-				
 			</div>
 			
 		</form>

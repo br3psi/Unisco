@@ -2,39 +2,44 @@ form{
 	border: 1px solid;
 	padding: 10px;
 }
-h1{
+h2{
 	text-align: center;
 }
-#personalInformation{
-	border: 1px solid;
-	padding: 10px;
-}
-#crimesAndLicense{
-	border: 1px solid;
-	padding: 10px;
-}
-#officeSkills{
-	border: 1px solid;
-	padding: 10px;
-}
-#officeOnly{
-	text-align:center;
-	border: 1px solid;
-	padding: 10px;
-}
-#twoReferences{
+#personalInformationDiv{
 	border: 1px solid;
 	padding: 10px;
 }
 
-#relative2{
-	float: right;
-}
-#miltary{
+#educationDiv{
 	border: 1px solid;
 	padding: 10px;
 }
-#workExperience{
+#crimesAndLicenseDiv{
+	border: 1px solid;
+	padding: 10px;
+}
+#officeSkillsDiv{
+	border: 1px solid;
+	padding: 10px;
+}
+h3{
+	text-align:center;
+	border: 1px solid;
+	padding: 10px;
+}
+#twoReferencesDiv{
+	border: 1px solid;
+	padding: 10px;
+}
+
+#relative2Div{
+	float: right;
+}
+#miltaryDiv{
+	border: 1px solid;
+	padding: 10px;
+}
+#workExperienceDiv{
 	border: 1px solid;
 	padding: 10px;
 }
