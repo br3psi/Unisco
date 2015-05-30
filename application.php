@@ -86,7 +86,7 @@
 					Have you had any moving violations during the past three years? If so, how many? <input type="number" name="movingViolationsNumber"> <br/> </br>
 				</div> 
 				<div id="officeSkillsDiv">	
-					<h3 id="officeOnlyDiv"> Office Only </h3> <br/>
+					<h3 id="officeSkillsDiv"> Office Skills </h3> <br/>
 					 Typing? <input type="radio" name="typing">yes
 							 <input type="radio" name="typing">no	<br/>
 							 WPM <input type="number" name="wpmTyping"> <br/> <br/>
