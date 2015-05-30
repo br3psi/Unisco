@@ -1,0 +1,40 @@
+form{
+	border: 1px solid;
+	padding: 10px;
+}
+h1{
+	text-align: center;
+}
+#personalInformation{
+	border: 1px solid;
+	padding: 10px;
+}
+#crimesAndLicense{
+	border: 1px solid;
+	padding: 10px;
+}
+#officeSkills{
+	border: 1px solid;
+	padding: 10px;
+}
+#officeOnly{
+	text-align:center;
+	border: 1px solid;
+	padding: 10px;
+}
+#twoReferences{
+	border: 1px solid;
+	padding: 10px;
+}
+
+#relative2{
+	float: right;
+}
+#miltary{
+	border: 1px solid;
+	padding: 10px;
+}
+#workExperience{
+	border: 1px solid;
+	padding: 10px;
+}
