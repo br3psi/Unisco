@@ -1,0 +1,21 @@
+html, body
+{
+	width:100%;
+	height:100%;
+}
+#uploadResume, #uploadApplication
+{
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	width:100%;
+	border:2px solid black;
+}
+
+.row-fluid
+{
+	width:100%;
+	margin-left:30%;
+	margin-top:20%;
+
+}
