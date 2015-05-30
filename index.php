@@ -93,7 +93,7 @@ if(isset($_POST['info']))
 	
 	<div id="numCode">
 		<div id="popupCode">
-			<form id="codeForm" method="post" name="codeForm">
+			<form action="submitResume.php" id="codeForm" method="post" name="codeForm">
 				<img id="close" src="img/close.png" onclick ="div_hideCode()">
 				<h2>Enter code</h2>
 				<input id="userCode" type="text" name="userCode" placeholder="Enter code">
