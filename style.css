@@ -1,3 +1,4 @@
+
 html, body{
 	width:100%;
 	height:100%;
@@ -13,11 +14,12 @@ background-size: cover;
 }
 .row
 {
-	
-	width:80vh;
+	width:50%;
 	position:absolute;
     /* height: 205px; */
 	overflow: hidden;
+	bottom:30%;
+	left:30%;
 }
 
 #login, #signUpBox {
@@ -67,5 +69,69 @@ background-size: cover;
 
 
 #loginLetter{
-	font-size:36px;
+	font-size:2em;
 }
+h2
+{
+	font-size:50%;
+}
+#inputBox
+{
+	width: 80%;
+}
+
+@media only screen and (max-device-width: 640px)
+{
+	.row
+	{
+		width: 70%;
+	}
+	body
+	{
+		background: url('img/UniscoWeb.png') no-repeat center center; 
+		background-position:50% 50%;
+		background-size: 100%;
+		height:100%;
+		width:100%;
+
+
+	}
+	#login, #signUpBox {
+		width:75px;
+		height:75px;
+		
+		border:2px solid gray;
+		border-radius:10px;
+		font-family:raleway;
+		background-color:#861715;
+	}
+	#title{
+		font-size:15px;
+	}
+	#inputBox
+	{
+		height:20%;
+		width:40%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

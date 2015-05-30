@@ -45,21 +45,21 @@ if(isset($_POST['loginform']))
 		<form method="Post">
 		
 		<div class="row">
-			<div class="col-md-4 col-md-offset-3">
+			<div class="col-xs-4">
 				<div id="login">
-					<h2>LOG IN </h2>
-						 <span id="loginLetter"></span><input type="text" name="phone" placeholder="Phone number"><br/>	
-						<span id="loginLetter"></span><input type="password" name="password" placeholder="Password"><br/>
+					<span id="title">LOG IN </span>
+						 <span id="loginLetter"></span><input type="text" name="phone" placeholder="Phone number" id="inputBox"><br/>	
+						<span id="loginLetter"></span><input type="password" name="password" placeholder="Password" id="inputBox"><br/>
 					 
-					 <input type="submit" value="Login!" name="loginform"/>
+					 <input type="submit" value="Login!" name="loginform" />
 				</div>
 			</div>
-			<div class="col-md-4 col-md-offset" id="loginBox">
+			<div class="col-xs-4" id="loginBox">
 				<div id="signUpBox">
-					<h2>SIGN UP </h2>
+					<span id="title">SIGN UP </span>
 					Not yet a member? <br/>
 					Start your job search in just minutes! <br/> <br/>
-					<input type="button" value="CreateAccount" name="CreateAcc"/>
+					<input type="button" value="CreateAccount" name="CreateAcc" />
 				</div>
 			</div>
 		</div>
