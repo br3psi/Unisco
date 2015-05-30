@@ -91,6 +91,7 @@
 					</div>
 				</div>
 				 <br/>
+				<input type="submit" name="submitApplication" value="Submit" id="submitButton">
 			</div>
 			
 		</form>
