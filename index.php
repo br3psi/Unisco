@@ -15,7 +15,11 @@ if(isset($_POST['loginform']))
 ));
 	echo "Sent message {$message->sid}";
 }
-
+if(isset($_POST['info']))
+{
+	echo "Hello";
+	echo "<script> div_showCode();</script>";
+}
 ?>
 
 <!DOCTYPE HTML>
@@ -69,22 +73,34 @@ if(isset($_POST['loginform']))
 
 	</form>
     <div id="abc">
-            Popup Div Starts Here 
-            <div id="popupContact">
-                <form action="#" id="form" method="post" name="form">
-                    <img id="close" src="images/3.png" onclick ="div_hide()">
-                    <h2>Get Started Now</h2>
-                    
-                    <input id="fName" name="fName" placeholder="First Name" type="text">
-                    <input id="lName" name="lName" placeholder="Last Name" type="text">
-                    <input id="phoneNum" name="phoneNum" placeholder="Phone Number" type="text">
-                    <input id="password" name="password" placeholder="Create Password" type="password">
-                    <input id="password" name="password" placeholder="Retype Password" type="password">
-                    <br/> <br/>
-                    <a href="javascript:%20check_empty()" id="submit">Create Account</a>
-                </form>
-            </div> 
+		Popup Div Starts Here 
+		<div id="popupContact">
+			<form  id="form" method="post" name="form">
+				<img id="close" src="img/close.png" onclick ="div_hide()">
+				<h2>Get Started Now</h2>
+				
+				<input id="fName" name="fName" placeholder="First Name" type="text">
+				<input id="lName" name="lName" placeholder="Last Name" type="text">
+				<input id="phoneNum" name="phoneNum" placeholder="Phone Number" type="text">
+				<input id="password" name="password" placeholder="Create Password" type="password">
+				<input id="password" name="password" placeholder="Retype Password" type="password">
+				<br/> <br/>
+				<a href="javascript:%20check_empty()" id="submit" >Create Account</a>
+			</form>
+		</div> 
             <!-- Popup Div Ends Here -->
-        </div>
+    </div>
+	
+	<div id="numCode">
+		<div id="popupCode">
+			<form id="codeForm" method="post" name="codeForm">
+				<img id="close" src="img/close.png" onclick ="div_hideCode()">
+				<h2>Enter code</h2>
+				<input id="userCode" type="text" name="userCode" placeholder="Enter code">
+				<a href="javascript:%20check_code()" id="submitCode">Submit Code</a>
+			</form>
+		</div>
+	</div>
+		
 </body>
 </html>

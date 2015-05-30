@@ -9,10 +9,14 @@ function check_empty()
 	} 
 	else 
 	{
-		document.getElementById('form').submit();
+		//document.getElementById('form').submit();
 		alert("Form Submitted Successfully...");
+		div_showCode();
+		
 	}
+	
 }
+
 //Function To Display Popup
 function div_show() 
 {
@@ -23,4 +27,25 @@ function div_show()
 function div_hide()
 {
 	document.getElementById('abc').style.display = "none";
+}
+/////////////////////////////////////////////////
+function check_code()
+{
+	if(document.getElementById('userCode').value == "")
+	{
+		alert("Enter code!");
+	}
+	else
+	{
+		document.getElementById('codeForm').submit();
+	}
+}
+function div_hideCode()
+{
+	document.getElementById('numCode').style.display = "none";
+	document.getElementById('abc').style.display = "none";
+}
+function div_showCode()
+{
+	document.getElementById('numCode').style.display = "block";
 }

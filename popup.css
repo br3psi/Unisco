@@ -6,7 +6,19 @@ CSS settings for HTML div Exact Center
     width:100%;
     height:100%;
     opacity:1;
-    top:0;33
+    top:0;
+    left:50;
+    display:none;
+    position:fixed;
+    background-color:#313131;
+    overflow:auto
+}
+#numCode
+{
+	width:100%;
+    height:100%;
+    opacity:1;
+    top:0;
     left:50;
     display:none;
     position:fixed;
@@ -19,14 +31,14 @@ img #close {
     top:-14px;
     cursor:pointer
 }
-div #popupContact {
+div #popupContact, #popupCode {
     position:absolute;
     left:50%;
     top:17%;
     margin-left:-202px;
     font-family:'Raleway',sans-serif
 }
-#form {
+#form, #codeForm {
     max-width:400px;
     min-width:250px;
     padding:10px 50px;
