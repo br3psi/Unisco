@@ -26,6 +26,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <link href="css/jobListing.css" rel="stylesheet">
   <script>
 				function getJobList() {  
 					$.ajax({
@@ -39,7 +40,7 @@
 			$('#filtersDiv').html("");
 			for(i in data)
 			{
-				$('#filtersDiv').append(data[i].jobCompany + ": " + data[i].jobPosition + "<input type=button value=Apply  name=Apply/>" + "<br/>");
+				$('#filtersDiv').append(data[i].jobCompany + ": " + data[i].jobPosition + "<input type=button value=Apply  name=Apply id=applyButton/>" + "<br/>");
 
 			}
   		}})
