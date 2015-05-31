@@ -81,7 +81,7 @@ function getDescription(jobId)
 {
 	$.ajax({
 	type:"GET",
-	url: "js/getDescription.php",
+	url: "getDescription.php",
 	data:{"jobId":jobId},
 	success: function(data,status){
 		$('#description').html("");
