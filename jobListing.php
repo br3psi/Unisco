@@ -43,7 +43,7 @@
 				
 				$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
 					 +data[i].jobCompany + ": "
- 					 + data[i].jobPosition + " " + data[i].jobDescription +  "</span> "
+ 					 + data[i].jobPosition + ": " + data[i].jobDescription +  "</span> "
  					+ "<span id=buttonSpan></span>" 
 					+ "<button onclick=appliedFunction()>Apply</button><br/><br/>");
 
