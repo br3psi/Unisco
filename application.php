@@ -27,7 +27,7 @@
 
 </head>
 <body >
-		<form method="POST">
+		<form method="POST" action="jobListing.php">
 			<div>
 				<h2>APPLICATION FOR EMPLOYMENT</h2> 
 				<div id="personalInformationDiv">
@@ -44,7 +44,8 @@
 										<option value="partTime">Part time</option>
 										<option value="fullTime">Full time</option>
 										<option value="bothTimes">Both</option>
-										</select>
+										</select> <br/> <br/>
+					Please provide your LinkedIn <input type="text" name="linkedIn" value="">
 										
 				</div>
 				<br/>
