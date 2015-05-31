@@ -29,22 +29,13 @@
   <script>
 				function getJobList() {  
 					$.ajax({
-						type: "get",
-						url: "getJobs.php",
-						dataType: "json",
-						data:{"zip":$('#zipcode').val()},
-						success: function(data,status) {
-							$('filtersDiv').html("");
-							for(i = 0 ;i < data.size; i++)
-							{
-								$('filtersDiv').append(data['jobCompany'] + " " + data['jobPosition'] + "<br/>");
-							}
-							// $('#timesTaken').html(data['times']);
-							
-						},
-						complete: function(data,status) { //optional, used for debugging purposes
-						}
-					});
+  			type:"get", 
+  			url:"getJobs.php",
+  			dataType: "json",
+  			data:{"zip":$("#zipcode").val()},
+  		success: function(data,status){
+  			console.log("hello");
+  		}})
 				}	
    </script>
    
