@@ -18,6 +18,26 @@ html, body
 	padding: 15px;
 	margin-left: auto;
 	margin-right: auto;
-	width:100%; 
+	width:95%; 
 	text-align: center;
+}
+
+#editAccountSpan
+{
+	padding-top: 10px;
+}
+#editIcon
+{
+	display: inline;
+	padding-top: 10px;
+	text-align: center;
+}
+#logoutDiv
+{
+	float:right;
+}
+#editAccountDiv
+{
+	float:left;
+	padding-right: 10px
 }

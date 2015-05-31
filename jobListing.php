@@ -73,7 +73,21 @@
    
 </head>
 <body >
-	<div id="allJobsDiv">			
+	
+	<div id="allJobsDiv">
+	<div style="float:right" id="editIcon">
+		<div id="editAccountDiv">
+			<a href="application.php" ><img src="img/editIcon.png"  style="width:30px;height:30p;"></a> 
+			<br/>
+			<span id="editAccountSpan">Edit Account  </span>
+		</div>
+
+		<div id="logoutDiv">
+			<a href="logout.php" ><img src="img/logOut.png"  style="width:30px;height:30p;"></a> 
+			<br/>
+			<span id="editAccountSpan">Log Out</span>
+		</div>
+	</div>			
 		<h3>Start applying to jobs by inputing a zipcode </h3> <br/> 
 		
 		Select job type 
