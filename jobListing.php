@@ -26,7 +26,9 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
   <link href="jobListing.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="descriptionPopup.css">
   <script>
 		function getJobList() {  
 					$.ajax({
@@ -43,7 +45,7 @@
 				
 				$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
 					 +data[i].jobCompany + ": "
- 					 + data[i].jobPosition + ": " + data[i].jobDescription +  "</span> "
+ 					 + data[i].jobPosition + ": " + "<a href=javascript:%20showDescription() id=description>Description</a>" +  "</span> "
  					+ "<span id=buttonSpan></span>" 
 					+ "<button onclick=appliedFunction()>Apply</button><br/><br/>");
 
@@ -74,8 +76,16 @@
 						
 			</div>		
 		
+		<div id="jobDescription">
+			<div id="descriptionPopup">
+				<img id="close" src="img/close.png" onclick ="div_hideCode()">
+				<h2>Job Description</h2>
+				
+				<button onclick="closeDescription()" id="closeDes">Close</button>
+			</div>
+		</div>
+
 		<script>
-			$('#zipcode').change(getJobList);
 
 			function appliedFunction(){
 				alert("Thank you for applying");

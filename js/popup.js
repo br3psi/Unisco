@@ -64,3 +64,13 @@ function sendCode()
   	}
   	});
 }
+
+function showDescription()
+{
+	document.getElementById('jobDescription').style.display = "block";
+}
+
+function closeDescription()
+{
+	document.getElementById('jobDescription').style.display = "none";
+}
