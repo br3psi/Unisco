@@ -49,7 +49,7 @@ function div_hideCode()
 function div_showCode()
 {
 	$.ajax({
-  			url:"../sendCode.php",
+  			url:"sendCode.php",
   		success: function(data,status){
 			console.log("hello");
   			//alert(data['lastLogin']);
