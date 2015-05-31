@@ -68,7 +68,7 @@ function sendCode()
 function showDescription(jobId)
 {
 	
-	getDescription(jobId);
+	
 	document.getElementById('jobDescription').style.display = "block";
 }
 

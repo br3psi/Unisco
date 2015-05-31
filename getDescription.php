@@ -1,5 +1,4 @@
-<?php
-
+$user = $stmt->fetch();<?php
 function getConnection()
 	{
 		$host = "localhost";
@@ -10,18 +9,18 @@ function getConnection()
 		$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $dbConn;
 	}
-
-	$dbConn= getConnection();
+$dbConn= getConnection();
 	$id = $_GET['jobId'];
-	$sql = "SElECT * FROM Job WHERE jobId = :jobId";
-		$namedParameters = array();
+	$sql = "SElECT * FROM Job WHERE jobId = :jobIdNum";
+
+$namedParameters = array();
 		$namedParameters[':jobIdNum'] = $id;
 		$stmt = $dbConn->prepare($sql); 
-		$stmt->execute($namedParameters); 
-		$result = $stmt ->fetch();
-		
-		$jRes = new array();
-		$jRes['description'] = $result['jobDescription'];
-		$jsonRes = json_encode($jRes);
-		print ($jsonRes);
+		$stmt->execute($namedParameters);		
+		$user = $stmt->fetch();
+		$ara = array();
+		$ara['des'] = $user['jobDescription'];
+		echo json_encode($ara);
+
+
 ?>
