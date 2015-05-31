@@ -5,11 +5,10 @@ require "twilio-php-master/Services/Twilio.php";
 	
 	$client = new Services_Twilio($AccountSid, $AuthToken);
 	
-	$message = $client->account->messages->sendMessage(array(
-				"From" => "8315851661",
-				"To" => "+18315120937",
-				"Body" => "Testing",
+	$message = $client->account->messages->create(array(
+
+				"From" => "+18315851661",
+				"To" => $_GET['num'],
+				"Body" => "Testing"
 ));
-echo "Good Call";
-return;
 ?>

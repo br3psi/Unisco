@@ -10,9 +10,8 @@ function check_empty()
 	else 
 	{
 		//document.getElementById('form').submit();
-		alert("Form Submitted Successfully...");
-		
-		
+		//alert("Form Submitted Successfully...");
+			
 		div_showCode();
 	}
 	
@@ -48,11 +47,20 @@ function div_hideCode()
 }
 function div_showCode()
 {
-	$.ajax({
-  			url:"sendCode.php",
-  		success: function(data,status){
-			console.log("hello");
-  			//alert(data['lastLogin']);
-  		}});
+
+	sendCode();
+
 	document.getElementById('numCode').style.display = "block";
+}
+
+function sendCode()
+{
+	$.ajax({
+	type:"GET",
+	url: "js/sendCode.php",
+	data:{"num":$('#phoneNum').val()},
+	success: function(data,status){
+	
+  	}
+  	});
 }
