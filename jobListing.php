@@ -33,7 +33,7 @@
   			type:"get", 
   			url:"getJobs.php",
   			dataType: "json",
-  			data:{"zip":$("#zipcode").val(), "jobType":$('#jobTypeSpan :selected').val();},
+  			data:{"zip":$("#zipcode").val(), "jobType":$('#jobTypeSpan :selected').val()},
   		success: function(data,status){
   			//console.log("hello");
 			//$('#filtersDiv').css('background-color','red');
@@ -75,7 +75,7 @@
 			</div>		
 		
 		<script>
-			$('#zipcode').change(getJobList	;
+			$('#zipcode').change(getJobList);
 
 			function appliedFunction(){
 				alert("Thank you for applying");
