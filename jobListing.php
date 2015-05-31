@@ -1,22 +1,8 @@
 <?php
 
-	function getConnection(){
-		$host = "http://52.8.2.193/";
-		$dbname = "Unisco";
-		$username = "root";
-		$password = "root";
-		$dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-		$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		return $dbConn;
-	}
 	
-	function getJobs{
-		$dbConn= getConnection();
-		$sql = "SElECT * FROM Job";
-		$stmt = $dbConn->prepare($sql); 
-		$stmt->execute(); 
-		return $stmt ->fetchAll();
-	}
+	
+	
 
 ?>
 
@@ -38,21 +24,22 @@
   <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-</head>
-<body >
-		<form method="POST">
-		Zipcode: <input type="number" name="zipcode"> <br/>
-		
-		<div id="filtersDiv">
-			<script>
-				function getJobs(score) {  
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+				function getJobList(score) {  
 					$.ajax({
 						type: "get",
-						url: "http://52.8.2.193/",
+						url: "getJobs.php",
 						dataType: "json",
-						data:{"score": score},
-						success: function(data,status) { 
-							$('#timesTaken').html(data['times']);
+						data:{"zip":$('zipcode').val()},
+						success: function(data,status) {
+							$('filtersDiv').html("");
+							for(i = 0 ;i < data.length; i++)
+							{
+								$('filtersDiv').append(data['jobCompany'] + " " + data['jobPosition'] + "<br/>");
+							}
+							// $('#timesTaken').html(data['times']);
 							
 						},
 						complete: function(data,status) { //optional, used for debugging purposes
@@ -60,8 +47,19 @@
 					});
 				}	
    </script>
-					
-		</div>		
+   
+</head>
+<body >
+		<form method="POST">
+		Zipcode: <input type="texts" name="zipcode" id="zipcode"> 
+				 
+			<div id="filtersDiv">
+				
+						
+			</div>		
 		</form>
+		<script>
+			$('zipcode').change(getJobList);
+		</script>
 </body>
 </html>
