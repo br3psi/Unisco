@@ -92,7 +92,9 @@
 					</div>
 				</div>
 				 <br/>
-				<input type="submit" name="submitApplication" value="Submit" id="submitButton">
+				 
+				 <h3 id="finishingApplication"><a href="submitResume.php"> <b>Click here</b></a> to finish your application with your resume <span class="orSpan"> Or
+				 <span class="orSpan"><a href="application.php"><b>Click here</b></a> to finish your application without your resume </span> </h3>
 			</div>
 			
 		</form>

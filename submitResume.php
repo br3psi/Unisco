@@ -31,8 +31,7 @@ session_start();
 		<div class="row-fluid">
 			<div class="col-xs-2">
 				<div id="uploadResume">
-					<h2>Resume</h2>
-					<span>Upload Resume</span>
+					<h2>Upload Resume</h2>
 					
 						<form action="resumeApplication.php" method="post" enctype="multipart/form-data" >
 			
@@ -48,13 +47,6 @@ session_start();
 					</div>
 			</div>
 			
-			<div class="col-xs-2">
-				<div id="uploadApplication">
-					<h2>Fill Application</h2>
-					
-					<a href="application.php">Start Application</a>
-				</div>
-			</div>
 		</div>
 </body>
 </html>
