@@ -66,8 +66,8 @@
 			<option value="any">Customer Service</option>
 		</select> </span>
 		
-		<span id="zipSpan">Zipcode: <input type="texts" name="zipcode" id="zipcode"> </span><br/><br/>
-				 
+		<span id="zipSpan">Zipcode: <input type="texts" name="zipcode" id="zipcode"> </span>
+		<button name="gsearchButton">Search </button>		 
 			<div id="filtersDiv">
 				
 						
