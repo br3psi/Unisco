@@ -41,7 +41,7 @@
 			for(i in data)
 			{
 				
-				$('#filtersDiv').append(data[i].jobId + " " + "<span id=spaceSpan>"
+				$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
 					 +data[i].jobCompany + ": "
  					 + data[i].jobPosition + " " + data[i].jobDescription +  "</span> "
  					+ "<span id=buttonSpan></span>" 
