@@ -27,7 +27,7 @@
 
 </head>
 <body >
-		<form method="POST">
+		<form method="POST"  action="jobListing.php">
 			<div>
 				<h2>APPLICATION FOR EMPLOYMENT</h2> 
 				<div id="personalInformationDiv">
