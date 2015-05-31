@@ -12,10 +12,10 @@ function getConnection()
 	}
 
 	$dbConn= getConnection();
-
-	$sql = "SElECT * FROM Job where jobId = :jobId";
+	$id = $_GET['jobId'];
+	$sql = "SElECT * FROM Job WHERE jobId = :jobId";
 		$namedParameters = array();
-		$namedParameters[':jobId'] = $_GET['jobId'];
+		$namedParameters[':jobId'] = $id;
 		$stmt = $dbConn->prepare($sql); 
 		$stmt->execute($namedParameters); 
 		$result = $stmt ->fetch();
