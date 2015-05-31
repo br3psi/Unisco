@@ -15,12 +15,13 @@ function getConnection()
 	$id = $_GET['jobId'];
 	$sql = "SElECT * FROM Job WHERE jobId = :jobId";
 		$namedParameters = array();
-		$namedParameters[':jobId'] = $id;
+		$namedParameters[':jobIdNum'] = $id;
 		$stmt = $dbConn->prepare($sql); 
 		$stmt->execute($namedParameters); 
 		$result = $stmt ->fetch();
 		
 		$jRes = new array();
 		$jRes['description'] = $result['jobDescription'];
-		echo json_encode($jRes);
+		$jsonRes = json_encode($jRes);
+		print ($jsonRes);
 ?>
