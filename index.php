@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 if(isset($_POST['loginform']))
 {
 	
@@ -77,7 +77,7 @@ if(isset($_POST['info']))
 				<input id="password" name="password" placeholder="Create Password" type="password">
 				<input id="password" name="password" placeholder="Retype Password" type="password">
 				<br/> <br/>
-				<a href="javascript:%20check_empty()" id="submit" >Create Account</a>
+				<input type="button" onclick="check_empty()" id="submit" value="Create Account"/>
 			</form>
 		</div> 
             <!-- Popup Div Ends Here -->
