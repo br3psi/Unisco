@@ -77,15 +77,3 @@ function closeDescription()
 	document.getElementById('jobDescription').style.display = "none";
 }
 
-function getDescription(jobId)
-{
-	$.ajax({
-	type:"GET",
-	url: "getDescription.php",
-	data:{"jobId":jobId},
-	success: function(data,status){
-		$('#description').html("");
-		$('#description').append(data['description']);
-  	}
-  	});
-}

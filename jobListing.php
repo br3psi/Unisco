@@ -45,13 +45,26 @@
 				
 				$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
 					 +data[i].jobCompany + ": "
- 					 + data[i].jobPosition + ": " + "<a href=javascript:%20showDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
+ 					 + data[i].jobPosition + ": " + "<a href=javascript:%20getDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
  					+ "<span id=buttonSpan></span>" 
 					+ "<button onclick=appliedFunction()>Apply</button><br/><br/>");
 
 			}
   		}})
-				}	
+				}
+
+	function getDescription(jobId)
+{
+	$.ajax({
+	type:"GET",
+	url: "getDescription.php",
+	data:{"jobId":jobId},
+	success: function(data,status){
+		$('#description').html("");
+		$('#description').append(data['description']);
+  	}
+  	});
+}	
    </script>
    
 </head>
