@@ -65,8 +65,18 @@ function sendCode()
   	});
 }
 
-function showDescription()
+function showDescription(jobId)
 {
+	$.ajax({
+	type:"GET",
+	url: "js/getDescription.php",
+	data:{"jobId":jobId},
+	success: function(data,status){
+		$('#description').html("");
+		$('#description').append(data['description']);
+  	}
+  	});
+
 	document.getElementById('jobDescription').style.display = "block";
 }
 

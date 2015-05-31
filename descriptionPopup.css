@@ -20,7 +20,9 @@ div #popupContact, #descriptionPopup {
     left:50%;
     top:17%;
     margin-left:-202px;
-    font-family:'Raleway',sans-serif
+    font-family:'Raleway',sans-serif;
+    background-color:#FFFFFF;
+
 }
 
 p {
@@ -79,7 +81,6 @@ textarea {
     font-weight:700
 } */
 #closeDes {
-    width:10%;
     height:45px;
     border-radius:3px;
     background-color:#861715;

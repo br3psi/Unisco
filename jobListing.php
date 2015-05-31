@@ -45,7 +45,7 @@
 				
 				$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
 					 +data[i].jobCompany + ": "
- 					 + data[i].jobPosition + ": " + "<a href=javascript:%20showDescription() id=description>Description</a>" +  "</span> "
+ 					 + data[i].jobPosition + ": " + "<a href=javascript:%20showDescription(data[i].jobId) id=description>Description</a>" +  "</span> "
  					+ "<span id=buttonSpan></span>" 
 					+ "<button onclick=appliedFunction()>Apply</button><br/><br/>");
 
@@ -78,9 +78,8 @@
 		
 		<div id="jobDescription">
 			<div id="descriptionPopup">
-				<img id="close" src="img/close.png" onclick ="div_hideCode()">
 				<h2>Job Description</h2>
-				
+				<span id="description"></span>
 				<button onclick="closeDescription()" id="closeDes">Close</button>
 			</div>
 		</div>
