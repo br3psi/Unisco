@@ -64,8 +64,9 @@
 			<option value="any">Any job</option>
 			<option value="retail">Retail</option>
 			<option value="restaurant">Restaurants</option>
-			<option value="transportation">Transportation</option>
+			<option value="management">Management</option>
 			<option value="customer service">Customer Service</option>
+			<option value="janitorial service"> Janitorial Service</option>
 		</select>
 		</span>
 		
