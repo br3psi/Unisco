@@ -40,7 +40,12 @@
 			$('#filtersDiv').html("");
 			for(i in data)
 			{
-				$('#filtersDiv').append("<span id=spaceSpan>" +data[i].jobCompany + ": " + data[i].jobPosition + "</span> " + "<span id=buttonSpan></span>" + "<button onclick=appliedFunction()>Apply</button><br/><br/>");
+				
+				$('#filtersDiv').append(data[i].jobId + " " + "<span id=spaceSpan>"
+					 +data[i].jobCompany + ": "
+ 					 + data[i].jobPosition + " " + data[i].jobDescription +  "</span> "
+ 					+ "<span id=buttonSpan></span>" 
+					+ "<button onclick=appliedFunction()>Apply</button><br/><br/>");
 
 			}
   		}})
