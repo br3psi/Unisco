@@ -68,7 +68,7 @@ function sendCode()
 function showDescription(jobId)
 {
 	
-	getDescription();
+	getDescription(jobId);
 	document.getElementById('jobDescription').style.display = "block";
 }
 
@@ -77,7 +77,7 @@ function closeDescription()
 	document.getElementById('jobDescription').style.display = "none";
 }
 
-function getDescription()
+function getDescription(jobId)
 {
 	$.ajax({
 	type:"GET",
