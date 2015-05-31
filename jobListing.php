@@ -33,7 +33,7 @@
   			type:"get", 
   			url:"getJobs.php",
   			dataType: "json",
-  			data:{"zip":$("#zipcode").val()},
+  			data:{"zip":$("#zipcode").val(), "jobType":$('#jobTypeSpan :selected').val();},
   		success: function(data,status){
   			//console.log("hello");
 			//$('#filtersDiv').css('background-color','red');
@@ -59,22 +59,23 @@
 		
 		Select job type 
 		<span id="jobTypeSpan"><select name="jobType">
-			<option value="any">Any job</option
+			<option value="any">Any job</option>
 			<option value="retail">Retail</option>
 			<option value="restaurant">Restaurants</option>
 			<option value="transportation">Transportation</option>
-			<option value="any">Customer Service</option>
-		</select> </span>
+			<option value="customer service">Customer Service</option>
+		</select>
+		</span>
 		
 		<span id="zipSpan">Zipcode: <input type="texts" name="zipcode" id="zipcode"> </span>
-		<button name="gsearchButton">Search </button>		 
+		<button name="gsearchButton" onclick="getJobList()">Search </button>		 
 			<div id="filtersDiv">
 				
 						
 			</div>		
 		
 		<script>
-			$('#zipcode').change(getJobList);
+			$('#zipcode').change(getJobList	;
 
 			function appliedFunction(){
 				alert("Thank you for applying");

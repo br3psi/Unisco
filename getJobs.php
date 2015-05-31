@@ -10,14 +10,36 @@
 		return $dbConn;
 	}
 
+	$jobType = $_GET['jobType'];
+	$zipCode = $_GET['zip'];
+
 	$dbConn= getConnection();
-	$sql = "SElECT * FROM Job where jobZip = :zip";
-	$namedParameters = array();
-	$namedParameters[':zip'] = $_GET['zip'];
-	$stmt = $dbConn->prepare($sql); 
-	$stmt->execute($namedParameters); 
-	$result = $stmt ->fetchAll();
-	
-	$jRes = json_encode($result);
-	print($jRes);
+
+	if($jobType == "any")
+	{
+		
+		$sql = "SElECT * FROM Job where jobZip = :zip";
+		$namedParameters = array();
+		$namedParameters[':zip'] = $zipCode;
+		$stmt = $dbConn->prepare($sql); 
+		$stmt->execute($namedParameters); 
+		$result = $stmt ->fetchAll();
+		
+		$jRes = json_encode($result);
+		print($jRes);
+	}
+	else
+	{
+		$sql = "SElECT * FROM Job where jobZip = :zip AND jobType = :jobType";
+		$namedParameters = array();
+		$namedParameters[':zip'] = $zipCode;
+		$namedParameters[':jobType'] = $jobType;
+		$stmt = $dbConn->prepare($sql); 
+		$stmt->execute($namedParameters); 
+		$result = $stmt ->fetchAll();
+		
+		$jRes = json_encode($result);
+		print($jRes);
+
+	}
 ?>
