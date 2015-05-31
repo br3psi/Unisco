@@ -18,5 +18,6 @@
 	$stmt->execute($namedParameters); 
 	$result = $stmt ->fetchAll();
 	
-	json_encode($result);
+	$jRes = json_encode($result);
+	print($jRes);
 ?>

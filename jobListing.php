@@ -34,23 +34,30 @@
   			dataType: "json",
   			data:{"zip":$("#zipcode").val()},
   		success: function(data,status){
-  			console.log("hello");
+  			//console.log("hello");
+			//$('#filtersDiv').css('background-color','red');
+			$('#filtersDiv').html("");
+			for(i in data)
+			{
+				$('#filtersDiv').append(data[i].jobCompany + ": " + data[i].jobPosition + "<input type=button value=Apply  name=Apply/>" + "<br/>");
+
+			}
   		}})
 				}	
    </script>
    
 </head>
 <body >
-		<form method="POST">
+		
 		Zipcode: <input type="texts" name="zipcode" id="zipcode"> 
 				 
 			<div id="filtersDiv">
 				
 						
 			</div>		
-		</form>
+		
 		<script>
-			$('zipcode').change(getJobList);
+			$('#zipcode').change(getJobList);
 		</script>
 </body>
 </html>
