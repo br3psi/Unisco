@@ -49,6 +49,7 @@ function div_hideCode()
 function div_showCode()
 {
 	$.ajax({
+			type:"get",
   			url:"sendCode.php",
   		success: function(data,status){
 			console.log("hello");

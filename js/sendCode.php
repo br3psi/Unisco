@@ -5,7 +5,7 @@ require "twilio-php-master/Services/Twilio.php";
 	
 	$client = new Services_Twilio($AccountSid, $AuthToken);
 	
-	$message = $client->account->messages->sendMessage(array(
+	$message = $client->account->messages->create(array(
 				"From" => "8315851661",
 				"To" => "+18315120937",
 				"Body" => "Testing",
