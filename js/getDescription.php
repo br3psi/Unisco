@@ -20,5 +20,5 @@ $sql = "SElECT * FROM Job where jobId = :jobId";
 		
 		$jRes = new array();
 		$jRes['description'] = $result['jobDescription'];
-		json_encode($jRes);
+		echo json_encode($jRes);
 ?>
