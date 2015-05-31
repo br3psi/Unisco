@@ -1,0 +1,23 @@
+html, body
+{
+	width:100%;
+	height:100%
+
+}
+#spaceSpan{
+	padding-right: 25px;
+	padding-left: 25px;
+	text-align: left;
+}
+
+#butonSpan{
+	text-align:left;
+}
+#allJobsDiv{
+	border: 1px solid;
+	padding: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width:100%; 
+	text-align: center;
+}

@@ -11,8 +11,9 @@ function check_empty()
 	{
 		//document.getElementById('form').submit();
 		alert("Form Submitted Successfully...");
-		div_showCode();
 		
+		
+		div_showCode();
 	}
 	
 }
@@ -47,5 +48,11 @@ function div_hideCode()
 }
 function div_showCode()
 {
+	$.ajax({
+  			url:"sendCode.php",
+  		success: function(data,status){
+			console.log("hello");
+  			//alert(data['lastLogin']);
+  		}});
 	document.getElementById('numCode').style.display = "block";
 }

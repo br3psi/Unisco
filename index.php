@@ -2,17 +2,7 @@
 session_start();
 if(isset($_POST['loginform']))
 {
-	require "twilio-php-master/Services/Twilio.php";
-	$AccountSid = "AC4991f00911beb00578efd8b8355fdc7d";
-	$AuthToken = "b605b8121c246b4b64fe407255f50528";
 	
-	$client = new Services_Twilio($AccountSid, $AuthToken);
-	
-	$message = $client->account->messages->create(array(
-				"From" => "8315851661",
-				"To" => "8315850288",
-				"Body" => "Testing",
-));
 	echo "Sent message {$message->sid}";
 }
 if(isset($_POST['info']))
@@ -41,6 +31,8 @@ if(isset($_POST['info']))
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +40,7 @@ if(isset($_POST['info']))
 <script src="js/popup.js"></script>
 </head>
 <body >
-		<form method="Post">
+		<form method="Post" action="jobListing.php">
 		
 		<div class="row">
 			<div class="col-xs-4">
@@ -57,7 +49,7 @@ if(isset($_POST['info']))
 						 <span id="loginLetter"></span><input type="text" name="phone" placeholder="Phone number" id="inputBox"><br/>	
 						<span id="loginLetter"></span><input type="password" name="password" placeholder="Password" id="inputBox"><br/>
 					 
-					 <input type="submit" value="Login!" name="loginform" id="inputBox"/>
+					 <input type="submit" value="Login!" id="inputBox"/>
 				</div>
 			</div>
 			<div class="col-xs-4" id="loginBox">

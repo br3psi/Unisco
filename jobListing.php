@@ -26,7 +26,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <link href="css/jobListing.css" rel="stylesheet">
+  <link href="jobListing.css" rel="stylesheet">
   <script>
 				function getJobList() {  
 					$.ajax({
@@ -40,7 +40,7 @@
 			$('#filtersDiv').html("");
 			for(i in data)
 			{
-				$('#filtersDiv').append(data[i].jobCompany + ": " + data[i].jobPosition + "<input type=button value=Apply  name=Apply id=applyButton/>" + "<br/>");
+				$('#filtersDiv').append("<span id=spaceSpan>" +data[i].jobCompany + ": " + data[i].jobPosition + "</span> " + "<span id=buttonSpan></span>" + "<button onclick=appliedFunction()>Apply</button><br/><br/>");
 
 			}
   		}})
@@ -49,8 +49,9 @@
    
 </head>
 <body >
-		
-		Zipcode: <input type="texts" name="zipcode" id="zipcode"> 
+	<div id="allJobsDiv">			
+		<h3>Start applying to jobs by inputing a zipcode </h3> <br/> 
+		Zipcode: <input type="texts" name="zipcode" id="zipcode"> <br/><br/>
 				 
 			<div id="filtersDiv">
 				
@@ -59,6 +60,11 @@
 		
 		<script>
 			$('#zipcode').change(getJobList);
+
+			function appliedFunction(){
+				alert("Thank you for applying");
+			}
 		</script>
+	</div>
 </body>
 </html>
