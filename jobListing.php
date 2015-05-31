@@ -35,7 +35,7 @@
 						data:{"zip":$('#zipcode').val()},
 						success: function(data,status) {
 							$('filtersDiv').html("");
-							for(i = 0 ;i < data.length; i++)
+							for(i = 0 ;i < data.size; i++)
 							{
 								$('filtersDiv').append(data['jobCompany'] + " " + data['jobPosition'] + "<br/>");
 							}
