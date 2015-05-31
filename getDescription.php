@@ -1,4 +1,4 @@
-$user = $stmt->fetch();<?php
+<?php
 function getConnection()
 	{
 		$host = "localhost";
@@ -10,7 +10,7 @@ function getConnection()
 		return $dbConn;
 	}
 $dbConn= getConnection();
-	$id = $_GET['jobId'];
+	$id = $_GET['jobIdNum'];
 	$sql = "SElECT * FROM Job WHERE jobId = :jobIdNum";
 
 $namedParameters = array();

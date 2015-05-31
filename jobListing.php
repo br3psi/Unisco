@@ -45,7 +45,7 @@
 				
 				$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
 					 +data[i].jobCompany + ": "
- 					 + data[i].jobPosition + ": " + "<a href=javascript:getDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
+ 					 + data[i].jobPosition + ": " + "<a href=javascript:%20getDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
  					+ "<span id=buttonSpan></span>" 
 					+ "<button onclick=appliedFunction()>Apply</button><br/><br/>");
 
@@ -59,10 +59,13 @@
 	$.ajax({
 	type:"GET",
 	url: "getDescription.php",
-	data:{"jobId":jobId},
+	dataType:"json",
+	data:{"jobIdNum":jobId},
 	success: function(data,status){
-		$('#description').html("");
-		$('#description').append(data['des']);
+		$('#descriptionDiv').html("");
+		$('#descriptionDiv').append(data['des']);
+		console.log(data['des']);
+		console.log("hello");
   	}
   	});
 }	
@@ -94,8 +97,11 @@
 		<div id="jobDescription">
 			<div id="descriptionPopup">
 				<h2>Job Description</h2>
-				<span id="description"></span>
-				<button onclick="closeDescription()" id="closeDes">Close</button>
+				<div id="descriptionDiv">
+
+				</div>
+			<button onclick="closeDescription()" id="closeDes">Close</button>
+
 			</div>
 		</div>
 
