@@ -67,6 +67,18 @@ function sendCode()
 
 function showDescription(jobId)
 {
+	
+	getDescription();
+	document.getElementById('jobDescription').style.display = "block";
+}
+
+function closeDescription()
+{
+	document.getElementById('jobDescription').style.display = "none";
+}
+
+function getDescription()
+{
 	$.ajax({
 	type:"GET",
 	url: "js/getDescription.php",
@@ -76,11 +88,4 @@ function showDescription(jobId)
 		$('#description').append(data['description']);
   	}
   	});
-
-	document.getElementById('jobDescription').style.display = "block";
-}
-
-function closeDescription()
-{
-	document.getElementById('jobDescription').style.display = "none";
 }
