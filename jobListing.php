@@ -28,7 +28,7 @@
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <link href="jobListing.css" rel="stylesheet">
   <script>
-				function getJobList() {  
+		function getJobList() {  
 					$.ajax({
   			type:"get", 
   			url:"getJobs.php",
@@ -56,7 +56,17 @@
 <body >
 	<div id="allJobsDiv">			
 		<h3>Start applying to jobs by inputing a zipcode </h3> <br/> 
-		Zipcode: <input type="texts" name="zipcode" id="zipcode"> <br/><br/>
+		
+		Select job type 
+		<span id="jobTypeSpan"><select name="jobType">
+			<option value="any">Any job</option
+			<option value="retail">Retail</option>
+			<option value="restaurant">Restaurants</option>
+			<option value="transportation">Transportation</option>
+			<option value="any">Customer Service</option>
+		</select> </span>
+		
+		<span id="zipSpan">Zipcode: <input type="texts" name="zipcode" id="zipcode"> </span><br/><br/>
 				 
 			<div id="filtersDiv">
 				
