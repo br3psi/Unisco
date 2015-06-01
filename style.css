@@ -1,144 +1,136 @@
-
+@import "http://fonts.googleapis.com/css?family=Raleway";
 html, body{
+	box-sizing:border-box;
 	width:100%;
-	height:100%;
+	height:100%
+	font-family:raleway;
+	overflow-x: hidden;
 }
-body{
-background: url('img/UniscoWeb.png') no-repeat center center; 
-background-size: cover;
 
+
+#top{
+	background: url('img/temp-logo.png') no-repeat center center; 
+	background-color: #000;
+	width: 100%;
+	height: 50%;
+	border-bottom: 1px solid #fff;
 }
-#loginBox
-{
-	height:100%;
+
+#bot{
+	background: #E6E6E6;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s cubic-bezier(0, 0, 0, 0.99);
 }
-.row
-{
-	width:70%;
-	position:absolute;
-    /* height: 205px; */
+
+#lander-content{
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+}
+
+
+#signup{
 	overflow: hidden;
-	bottom:30%;
-	left:30%;
-}
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
 
-#title
-{
-	font-weight:bold;
-	font-size:22px;
-}
-
-#login, #signUpBox {
-  /*   max-width:300px;
-    min-width:250px; */
-/*     padding:10px 50px;
- */ 
-	/* width: 30vh;
-    height: 25vh; */
-	padding-bottom:10px;
-	position:relative;
-	border:2px solid gray;
-    border-radius:10px;
-    font-family:raleway;
-	background-color:#861715;
-}
-
-#signUpBox{
-	/* width: 100%;
-    height: 100%; */
-	/* bottom: 5px;
-	position: absolute; */
-/* 	float: right;
-   top: 87%;
-    left: 62%;*/
-    /* width: 400px;
-    height: 205px; */
-   /* margin-top: -150px;
-    margin-left: -210px;*/
-	background-color:white;
-	text-align: center;
-}
-#login{
-	/* width: 100%;
-    height: 100%; */
-	/*bottom: 5px;
+	z-index: 10;
 	position: absolute;
-	float: left;
-    top: 87%;
-    left: 35%; */
-    /* width: 400px;
-    height: 205px; */
-    /* margin-top: -150px;
-    margin-left: -210px; */
-	background-color:white;
+	top:0;
+	left:0;
+	transition: transform 0.5s cubic-bezier(0, 0, 0, 0.99);
+	transform: translate(200%,0%);
+	width: 50%;
+	height: 100vh;
+	background: #fff;
+}
+
+
+#abc{
+	padding: 50px;
+	transition: transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+	height: 50%;
+}
+
+
+
+
+
+#numCode{
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	top: 0;
+	position: absolute;
+	height: 100%;
+	padding: 50px;
+	transition: transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+	transform: translate(200%,0%);
+	width: 100%;
+  	background: rgba(253, 255, 225, 1);
+}
+
+#numCode-enter{
+	width: 100%;
+	height:50%;
 	text-align: center;
 }
 
+#fader{
+	
+	transition: background 0.5s cubic-bezier(0, 0, 0, 0.99);
+	background: rgba(0,0,0,0);
+	display: none;
 
-#loginLetter{
-	font-size:2em;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
 }
-h2
-{
-	font-size:50%;
+.msg{
+	height: 100%;
+	padding: 50px;
+	display: flex;
+	align-items: flex-start;
+	align-content:flex-start;
+	justify-content:flex-start;
+	flex-direction: column;
+	width: 50%;
+	transition: color 0.3s cubic-bezier(0, 0, 0, 0.99);
+	text-align: center;
 }
-#inputBox
-{
-	width: 80%;
-}
 
-@media only screen and (max-device-width: 640px)
-{
-	.row
-	{
-		width: 70%;
-	}
-	body
-	{
-		background: url('img/UniscoWeb.png') no-repeat center center; 
-		background-position:50% 50%;
-		background-size: 100%;
-		height:100%;
-		width:100%;
-
-
-	}
-	#login, #signUpBox {
-		width:75px;
-		height:75px;
-		
-		border:2px solid gray;
-		border-radius:10px;
-		font-family:raleway;
-		background-color:#861715;
-	}
-	#title{
-		font-size:15px;
-	}
-	#inputBox
-	{
-		height:20%;
-		width:40%;
-	}
+.msg h3{
+	
 }
 
 
+.input-group{
+	margin:5px;
+}
 
+#sendapp{
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content:center;
+}
 
+#application{
+	padding: 20px;
+	background: #EFEFEF;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.panel{
+	margin: 10px;
+}

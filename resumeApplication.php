@@ -21,82 +21,313 @@
   <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="css/application.css" rel="stylesheet">
+  <link href="prefixed.css" rel="stylesheet">
+  <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body >
+<body style='height:auto !important;'>
+	<div id = 'application'>
 		<form method="POST" action="jobListing.php">
 			<div>
-				<h2>APPLICATION FOR EMPLOYMENT</h2> 
-				<div id="personalInformationDiv">
-					<h3>Basic Information</h3> <br/>
-					Date: <input type="date" name="appDate"> <br/><br/>
-					Last Name: <input type="text" name="lastName"> First Name: <input type="text" name="firstName">
-					Middle:<input type="text" name="middleName"> Maiden: <input type="text" name="maidenName"> <br/> <br/>
-					Present Address: <input type="text" name="address" placeholder="Number and street"> City: <input type="text" name="city">
-					State: <input type="text" name="state"> Zipcode: <input type="number" name="zipcode"> <br/> <br/>
-					How long <input type="text" name="presentAddressTime"> Social Security No. <input type="text" name="ssn" placeholder="###-##-####"><br/><br/>
-					Phone Number: <input type="text" name="phoneNumber" placeHolder="(###)###-####"> <br/> <br/>
-					Date of Birth: <input type="date" name="dob" placeholder="DD-MM-YYYY"> <br/> <br/> <br/>
-					Available to work: <select name="workTime">
+				<h2>APPLICATION FOR EMPLOYMENT</h2>
+				<form action="application.php">
+					<button id="finishingApplication" type="submit" class="btn btn-warning" href="submitResume.php">Skip Application</button>
+				</form>
+				<br>
+				<br>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Basic Information</h4>
+					</div>
+					<div class="panel-body">
+						<div class=" row">
+							<div class = 'col-md-4'>
+								<div class="input-group">
+									<span class="input-group-addon">Date</span>
+									<input type="text" class="form-control"  name="appDate" aria-describe>
+								</div>
+							</div>
+							<div class = 'col-md-4'>
+								<div class="input-group">
+									<span class="input-group-addon">Last Name</span>
+									<input type="text" class="form-control"  name="lastName" aria-describe>
+								</div>
+							</div>
+							<div class = 'col-md-4'>	
+								<div class="input-group">
+									<span class="input-group-addon">First Name</span>
+									<input type="text" class="form-control"  name="firstName" aria-describe>
+								</div>
+							</div>
+						</div>
+					<div class="row">
+						<div class = 'col-md-6'>
+							<div class="input-group">
+								<span class="input-group-addon">Maiden Name</span>
+								<input type="text" class="form-control"  name="middleName" aria-describe>
+							</div>
+						</div>
+						<div class = 'col-md-6'>
+							<div class="input-group">
+								<span class="input-group-addon">Middle Name</span>
+								<input type="text" class="form-control"  name="maidenName" aria-describe>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class = 'col-md-4'>
+							<div class="input-group">
+								<span class="input-group-addon">Present Address</span>
+								<input type="text" class="form-control"  name="address" aria-describe>
+							</div>
+						</div>
+						<div class = 'col-md-4'>
+							<div class="input-group">
+								<span class="input-group-addon" >City</span>
+								<input type="text" class="form-control"  name="city" aria-describe>
+							</div>
+						</div>
+						<div class = 'col-xs-4'>
+							<div class="input-group">
+								<span class="input-group-addon" >State</span>
+								<input type="text" class="form-control"  name="state" aria-describe>
+							</div>
+						</div>
+						<div class = 'col-xs-4'>
+							<div class="input-group">
+								<span class="input-group-addon" >Zipcode</span>
+								<input type="text" class="form-control"  name="zipcode" aria-describe>
+							</div>
+						</div>
+						<div class = 'col-md-4'>
+							<div class="input-group">
+								<span class="input-group-addon">How Long?</span>
+								<input type="text" class="form-control"  name="presentAddressTime" aria-describe>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class = 'col-md-4'>
+							<div class="input-group">
+								<span class="input-group-addon">Social Security No.</span>
+								<input type="text" class="form-control"  name="ssn" aria-describe placeholder="###-##-####">
+							</div>
+						</div>
+
+						<div class = 'col-md-4'>
+							<div class="input-group">
+								<span class="input-group-addon">Phone Number</span>
+								<input name="phoneNumber" type="text" class="form-control"  aria-describe placeHolder="(###)###-####">
+							</div>
+						</div>
+
+						<div class = 'col-md-4'>
+							<div class="input-group">
+								<span class="input-group-addon">Date of Birth</span>
+								<input name="phoneNumber" type="date" class="form-control"  aria-describe placeholder="DD-MM-YYYY">
+							</div>
+						</div>
+
+						<div class = 'col-md-4'>
+							<div class="input-group">
+								<span class="input-group-addon">Available to work</span>
+								<select class="form-control" name="workTime">
 										<option value="partTime">Part time</option>
 										<option value="fullTime">Full time</option>
 										<option value="bothTimes">Both</option>
-										</select> <br/> <br/>
-					Please provide your LinkedIn <input type="text" name="linkedIn" value="">
-										
+										</select>
+							</div>
+						</div>
+						<div class = 'col-md-4'>
+							<div class="input-group">
+								<input class = "btn btn-info" type="button" value="connect to linkedIn"/>	
+							</div>
+						</div>
+									
+					</div>
 				</div>
-				 <br/>
-				<div id="crimesAndLicenseDiv">
-					Have you ever  been convicted of a misdemeanor or felony? <input type="radio" name="crime" value="yes">yes 
-														<input type="radio" name="crime" value="no">no <br/> <br/>
 					
-					Do you authorize Unisco to conduct a background check?<input type="radio" name="backgroundCheck" value="yes">yes 
-														<input type="radio" name="backgroundCheck" value="no">no <br/> <br/> <br
->
-					
-					DO YOU HAVE A DRIVER'S LICENSE? <input type="radio" name="driverLicense">yes
-													<input type="radio" name="driverLicense">no <br/> <br/>
-					What is your means of transportation to work? <input type="text" name="transportation"> <br/> <br/>
-					
-					Driver's license Number: <input type="text" name="licenseNumber"> State of issue <input type="text" name="licenseState">
-					License type: <select name="licenseType">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Crimes and License</h4> <span class="label label-warning">Check if applies</span>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class = 'col-lg-6'>
+								<div class="input-group">
+									<span class="form-control">Have you ever  been convicted of a misdemeanor or felony?</span>
+									<label class="input-group-addon">
+										<input  type="checkbox" name="crime" value="no" name="crime">
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class = 'col-lg-6'>
+								<div class="input-group">
+									<span class="form-control">Do you authorize Unisco to conduct a background check?</span>
+									<label class="input-group-addon">
+										<input  type="checkbox" name="crime" value="no" name="backgroundCheck">
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class = 'col-lg-6'>
+								<div class="input-group">
+									<span class="form-control">DO YOU HAVE A DRIVER'S LICENSE?</span>
+									<label class="input-group-addon">
+										<input  type="checkbox" name="crime" value="no" name="driverLicense">
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class = 'col-lg-6'>
+								<div class="input-group">
+									<span class="input-group-addon" >What is your means of transportation to work?</span>
+									<input type="text" class="form-control"  name="transportation" >
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class = 'col-md-6'>
+								<div class="input-group">
+									<span class="input-group-addon" >Driver's license Number</span>
+									<input type="text" class="form-control" name="licenseNumber">
+								</div>
+							</div>
+							<div class = 'col-md-6'>
+								<div class="input-group">
+									<span class="input-group-addon" >License type</span>
+									 <select class="form-control" name="licenseType">
 										<option value="operator"> Operator</option>
 										<option value="commercial"> Commercial (CDL)</option>
 										<option value="Cheuffer"> Chauffer </option>
 								  </select>
-					Expiration Date: <input type="date" name="licenseDate"> <br/> <br/>
-					
-					Have you had any accidents during the past three years? If so, how many? <input type="number" name="accidentsNumber"> <br/> <br/>
-					Have you had any moving violations during the past three years? If so, how many? <input type="number" name="movingViolationsNumber"> <br/> </br>
-				</div> 	
-				<br/>
-				<div id="twoReferencesDiv">
-					<h3>References </h3> <br/> 
-					Please list two references other than relatives or previous employers <br/><br/>
-					<div id="relativeOneDiv">
-						Name <input type="text" name="refeName1"> <br/> <br/>
-						Position <input type="text" name="refPosition1"> <br/> <br/>
-						Company <input type="text" name="refCompany1"> <br/><br/>
-						Address <input type="text" name="refAddress1"> <br/><br/>
-						Telephone <input type="tel" name="refPhoneNumber1"> <br/><br/>
-					</div>
-					
-					<br/> 
-				
-					<div id="relativeTwoDiv">
-						Name <input type="text" name="refeName2"> <br/> <br/>
-						Position <input type="text" name="refPosition2"> <br/> <br/>
-						Company <input type="text" name="refCompany2"> <br/><br/>
-						Address <input type="text" name="refAddress2"> <br/><br/>
-						Telephone <input type="tel" name="refPhoneNumber2"> <br/><br/> 
+								</div>
+							</div>
+							<div class = 'col-md-6'>
+								<div class="input-group">
+									<span class="input-group-addon" >Expiration Date</span>
+									<input class="form-control" type="date" name="licenseDate">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class = 'col-lg-6'>
+								<div class="input-group">
+									<span class="input-group-addon" >Have you had any accidents during the past three years? If so, how many?</span>
+									<input type="number" class="form-control" name="accidentsNumber">
+								</div>
+							</div>
+							<div class = 'col-lg-6'>
+								<div class="input-group">
+									<span class="input-group-addon" >Have you had any moving violations during the past three years? If so, how many?</span>
+									<input class="form-control" type="number" name="movingViolationsNumber">
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				 <br/>
+
+				<div class="panel panel-default" >
+					<div class="panel-heading">
+						<h4>References </h4><p>Please list two references other than relatives or previous employers</p>
+					</div>
+					<div class="panel-body">
+						<div class="panel panel-info"  >
+							<div class="panel-heading">
+								Reference # 1
+							</div>
+							<div class="panel-body">
+								<div class = 'col-md-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >Name</span>
+										<input class="form-control" type="text" name="refeName1">
+									</div>
+								</div>
+								<div class = 'col-md-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >Position</span>
+										<input class="form-control" type="text" name="refPosition1">
+									</div>
+								</div>
+								<div class = 'col-md-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >Company</span>
+										<input class="form-control" type="text"name="refCompany1">
+									</div>
+								</div>
+								<div class = 'col-md-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >Address</span>
+										<input class="form-control" type="text" name="refAddress1">
+									</div>
+								</div>
+								<div class = 'col-md-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >Telephone</span>
+										<input class="form-control" type="text" name="refPhoneNumber1">
+									</div>
+								</div>																								
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="panel panel-info"  >
+							<div class="panel-heading">
+								Reference # 2
+							</div>
+							<div class="panel-body">
+								<div class = 'col-md-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >Name</span>
+										<input class="form-control" type="text" name="refeName2">
+									</div>
+								</div>
+								<div class = 'col-md-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >Position</span>
+										<input class="form-control" type="text" name="refPosition2">
+									</div>
+								</div>
+								<div class = 'col-md-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >Company</span>
+										<input class="form-control" type="text"name="refCompany2">
+									</div>
+								</div>
+								<div class = 'col-md-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >Address</span>
+										<input class="form-control" type="text" name="refAddress2">
+									</div>
+								</div>
+								<div class = 'col-md-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >Telephone</span>
+										<input class="form-control" type="text" name="refPhoneNumber2">
+									</div>
+								</div>																								
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
 				 
-				 <h3 id="finishingApplication"><a href="submitResume.php"> <b>Click here</b></a> to finish your application with your resume <span class="orSpan"> Or
-				 <span class="orSpan"><a href="application.php"><b>Click here</b></a> to finish your application without your resume </span> </h3>
+				 
 			</div>
-			
+				<div id = 'sendapp'>
+					<form method="POST" action="submitResume.php">
+						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
+					</form>
+				</div>		
 		</form>
+	</div>
 </body>
 </html>
