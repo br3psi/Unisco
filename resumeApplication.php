@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link href="prefixed.css" rel="stylesheet">
-  <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet">
 </head>
 <body style='height:auto !important;'>
 	<div id = 'header'>

@@ -2,8 +2,8 @@
 html, body{
 	box-sizing:border-box;
 	width:100%;
-	height:100%
-	font-family:raleway;
+	height:100%;
+	font-family: Raleway !important;
 	overflow-x: hidden;
 }
 
@@ -17,7 +17,7 @@ html, body{
 }
 
 #bot{
-	background: #E6E6E6;
+	background: #333;
     height: 50%;
     width: 100%;
     display: flex;
@@ -50,7 +50,7 @@ html, body{
 	transform: translate(200%,0%);
 	width: 50%;
 	height: 100vh;
-	background: #fff;
+	background: #3E3E3E;
 }
 
 

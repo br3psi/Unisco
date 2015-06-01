@@ -32,9 +32,9 @@ if(isset($_POST['info']))
 
 <script src="js/___jquery-2.1.3.js"></script>
 
-<link rel="stylesheet" type="text/css" href="prefixed.css">
-<link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link href="bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="prefixed.css">
 <script src="js/popup.js"></script>
 </head>
 <body >
@@ -57,16 +57,28 @@ if(isset($_POST['info']))
 						<h4>LOG IN</h1>
 					</div>
 					<div class = 'panel-body'>
+						<row>
+								<div class = 'col-md-6 '>
+									<input class='form-control' type="text" name="phone" placeholder="Phone number" id="inputBox">
+								</div>
+								<div class = 'col-md-6 '>
+									<input class='form-control' type="password" name="password" placeholder="Password" id="inputBox">
+								</div>
+						</row>
+						</br>
+						</br>
+						</br>
+						<input class = "btn btn-default " type="submit" value="Login!" id="inputBox"/>   
+						<input class = "btn btn-primary " type="button" value="Not yet a member?" name="CreateAcc" onclick="show_reg()" id="inputBox" style = 'float:right'/>
+								
+							
 						
-						<input class='form-control' type="text" name="phone" placeholder="Phone number" id="inputBox">
-						</br>
-						<input class='form-control' type="password" name="password" placeholder="Password" id="inputBox">
-						</br>
-						<input class = "btn btn-default" type="submit" value="Login!" id="inputBox"/>
-						 
-						<input class = "btn btn-primary" type="button" value="Not yet a member?" name="CreateAcc" onclick="show_reg()" id="inputBox"/>
+						
+						
 					</div>
+					
 				</div>
+			
 			</div>
 		</div>
 	</div>
