@@ -25,6 +25,9 @@
   <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style='height:auto !important;'>
+	<div id = 'header'>
+	
+	</div>
 	<div id = 'application'>
 		<form method="POST" action="jobListing.php">
 			<div>

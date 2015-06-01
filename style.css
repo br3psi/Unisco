@@ -127,10 +127,21 @@ html, body{
 }
 
 #application{
+	margin-top: 80px;
 	padding: 20px;
 	background: #EFEFEF;
 }
 
 .panel{
 	margin: 10px;
+}
+
+#header{
+	position: fixed;
+	z-index: 10;
+	background: url('img/temp-logo-small.png') no-repeat left top; 
+	background-color: #000;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #fff;
 }
