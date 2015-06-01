@@ -28,7 +28,7 @@ html, body
 }
 #editIcon
 {
-	display: inline;
+	display: inline-block;
 	padding-top: 10px;
 	text-align: center;
 }
@@ -40,4 +40,8 @@ html, body
 {
 	float:left;
 	padding-right: 10px
+}
+#editResumeDiv
+{
+	float:left;
 }
