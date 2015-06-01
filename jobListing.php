@@ -75,9 +75,17 @@
 <body >
 	
 	<div id="allJobsDiv">
+
 	<div style="float:right" id="editIcon">
+		<div id="editResumeDiv">
+			<a href="" ><img src="img/resumeIcon.png"  style="width:30px;height:30p;"></a> 
+			<br/>
+			<span id="editAccountSpan">Upload/  </span>
+			<br/>
+			<span id="editAccountSpan">change resume</span>
+		</div>
 		<div id="editAccountDiv">
-			<a href="application.php" ><img src="img/editIcon.png"  style="width:30px;height:30p;"></a> 
+			<a href="resumeApplicationEdit.php" ><img src="img/editIcon.png"  style="width:30px;height:30p;"></a> 
 			<br/>
 			<span id="editAccountSpan">Edit Account  </span>
 		</div>
