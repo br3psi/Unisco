@@ -329,6 +329,10 @@
 					<form method="POST" action="submitResume.php">
 						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
 					</form>
+					<span id="orSpan">OR</span>
+					<form method="POST" action="application.php">
+					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="resumeApplicationEdit.php">Finish Application</button>
+					</form>
 				</div>		
 		</form>
 	</div>

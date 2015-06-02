@@ -219,3 +219,11 @@ html, body{
 	height: 80px;
 	border-bottom: 1px solid #fff;
 }
+
+#orSpan
+{
+	padding-left:15px;
+	padding-right:15px;
+	font-size:18px;
+	font-weight:bold;
+}
