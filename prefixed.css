@@ -3,7 +3,7 @@ html, body{
 	box-sizing:border-box;
 	width:100%;
 	height:100%;
-	font-family: Raleway !important;
+	font-family:raleway;
 	overflow-x: hidden;
 }
 
@@ -13,15 +13,11 @@ html, body{
 	background-color: #000;
 	width: 100%;
 	height: 50%;
-	border-bottom: 1px solid #3E3E3E;
-}
-
-input:-webkit-autofill{
-	background-color: #151515;
+	border-bottom: 1px solid #fff;
 }
 
 #bot{
-	background: #333;
+	background: #E6E6E6;
     height: 50%;
     width: 100%;
     display: -webkit-box;
@@ -88,7 +84,7 @@ input:-webkit-autofill{
 	        transform: translate(200%,0%);
 	width: 50%;
 	height: 100vh;
-	background: #292929;
+	background: #fff;
 }
 
 
@@ -216,10 +212,10 @@ input:-webkit-autofill{
 
 #header{
 	position: fixed;
-  z-index: 10;
-  background: url('img/temp-logo-small.png') no-repeat left top;
-  background-color: #000;
-  width: 100%;
-  height: 80px;
-  border-bottom: 1px solid #3E3E3E;
+	z-index: 10;
+	background: url('img/temp-logo-small.png') no-repeat left top; 
+	background-color: #000;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #fff;
 }
