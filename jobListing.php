@@ -103,31 +103,33 @@
 		</div>
 		
 	</div>
+
 	<div class="panel panel-default" id = "allJobsDiv">
-		<div class="panel-body">
-			Basic panel example
+		<div class="panel-heading">
+		<h4>Start applying to jobs by inputing a zipcode</h4>
 		</div>
-	</div>
-	<div id = "allJobsDiv">
-		<h3>Start applying to jobs by inputing a zipcode </h3> <br/> 
+			<div class="panel-body">
+				<div class="input-group">
+					<span class="input-group-addon" >Job type</span>
+					 <select class="form-control" name="jobType">
+						<option value="any">Any job</option>
+						<option value="retail">Retail</option>
+						<option value="restaurant">Restaurants</option>
+						<option value="management">Management</option>
+						<option value="customer service">Customer Service</option>
+						<option value="janitorial service"> Janitorial Service</option>
+				 	 </select>
+				</div>
+			</div>
+			<div class="input-group">
+		      <input name="zipcode" id="zipcode" type="text" class="form-control" placeholder="Enter a Zipcode">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button" onclick='getJobList()'>Search</button>
+		      </span>
+		    </div><!-- /input-group -->
+
+
 		
-		Select job type 
-		<span id="jobTypeSpan"><select name="jobType">
-			<option value="any">Any job</option>
-			<option value="retail">Retail</option>
-			<option value="restaurant">Restaurants</option>
-			<option value="management">Management</option>
-			<option value="customer service">Customer Service</option>
-			<option value="janitorial service"> Janitorial Service</option>
-		</select>
-		</span>
-		
-		<span id="zipSpan">Zipcode: <input type="texts" name="zipcode" id="zipcode"> </span>
-		<button name="gsearchButton" onclick="getJobList()">Search </button>		 
-			<div id="filtersDiv">
-				
-						
-			</div>		
 		
 		<div id="jobDescription">
 			<div id="descriptionPopup">
@@ -139,13 +141,13 @@
 
 			</div>
 		</div>
-
-		<script>
-
-			function appliedFunction(){
-				alert("Thank you for applying");
-			}
-		</script>
 	</div>
+	<script>
+		function appliedFunction(){
+			alert("Thank you for applying");
+		}
+	</script>	
+
+
 </body>
 </html>

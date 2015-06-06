@@ -1,27 +1,27 @@
-html, body{
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: linear-gradient(45deg,#F0FFF2,#B5EEF4); 
-}
+html, body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -moz-linear-gradient(45deg, #F0FFF2, #B5EEF4);
+    background: -o-linear-gradient(45deg, #F0FFF2, #B5EEF4);
+    background: -webkit-linear-gradient(45deg, #F0FFF2, #B5EEF4);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F0FFF2), color-stop(1, #B5EEF4));
+    filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr=#F0FFF2, EndColorStr=#B5EEF4)";
+    background: linear-gradient(45deg, #F0FFF2, #B5EEF4)
+    }
 
-#uploadResume
-{
-	position: inherit;
-	padding-left:10px;
-	padding-right:10px;
-	padding-bottom:10px;
-	
-	width: 250px;
-	
-}
+#uploadResume {
+    position: inherit;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 250px
+    }
 
-.row-fluid
-{
-	width:100%;
-	margin-left:20%;
-	margin-top:10%;
-
-}
+.row-fluid {
+    width: 100%;
+    margin-left: 20%;
+    margin-top: 10%
+    }

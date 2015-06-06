@@ -1,156 +1,168 @@
 @import "http://fonts.googleapis.com/css?family=Raleway";
-
 @font-face {
-  font-family: Kirvy;
-  src: url("css/Kirvy-Regular.otf");
-}
+    font-family: Kirvy;
+    src: url(css/Kirvy-Regular.otf)
+    }
 
-html, body{
-	box-sizing:border-box;
-	width:100%;
-	height:100%
-	font-family:raleway;
-	overflow-x: hidden;
-}
+html, body {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden
+    }
 
+#top {
+    background: url(img/temp-logo.png) no-repeat center center;
+    background-color: #000;
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #fff
+    }
 
-#top{
-	background: url('img/temp-logo.png') no-repeat center center; 
-	background-color: #000;
-	width: 100%;
-	height: 50%;
-	border-bottom: 1px solid #fff;
-}
-
-#bot{
-	background: #E6E6E6;
+#bot {
+    background: #E6E6E6;
     height: 50%;
     width: 100%;
     display: flex;
     align-content: center;
     align-items: center;
     justify-content: center;
+    -moz-transition: -moz-transform 0.5s cubic-bezier(0, 0, 0, 0.99);
+    -o-transition: -o-transform 0.5s cubic-bezier(0, 0, 0, 0.99);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0, 0, 0.99);
+    transition: transform 0.5s cubic-bezier(0, 0, 0, 0.99)
+    }
+
+#lander-content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh
+    }
+
+#signup {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -moz-transition: -moz-transform 0.5s cubic-bezier(0, 0, 0, 0.99);
+    -o-transition: -o-transform 0.5s cubic-bezier(0, 0, 0, 0.99);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0, 0, 0.99);
     transition: transform 0.5s cubic-bezier(0, 0, 0, 0.99);
-}
+    -moz-transform: translate(200%, 0%);
+    -ms-transform: translate(200%, 0%);
+    -o-transform: translate(200%, 0%);
+    -webkit-transform: translate(200%, 0%);
+    transform: translate(200%, 0%);
+    width: 50%;
+    height: 100vh;
+    background: #fff
+    }
 
-#lander-content{
-	display: flex;
-	flex-direction: column;
-	width: 100vw;
-	height: 100vh;
-}
+#abc {
+    padding: 50px;
+    -moz-transition: -moz-transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+    -o-transition: -o-transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+    transition: transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+    height: 50%
+    }
 
+.title {
+    color: #535151;
+    font-family: Kirvy
+    }
 
-#signup{
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	justify-content: center;
+#numCode {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    padding: 50px;
+    -moz-transition: -moz-transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+    -o-transition: -o-transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+    transition: transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+    -moz-transform: translate(200%, 0%);
+    -ms-transform: translate(200%, 0%);
+    -o-transform: translate(200%, 0%);
+    -webkit-transform: translate(200%, 0%);
+    transform: translate(200%, 0%);
+    width: 100%;
+    background: rgba(253, 255, 225, 1)
+    }
 
-	z-index: 10;
-	position: absolute;
-	top:0;
-	left:0;
-	transition: transform 0.5s cubic-bezier(0, 0, 0, 0.99);
-	transform: translate(200%,0%);
-	width: 50%;
-	height: 100vh;
-	background: #fff;
-}
+#numCode-enter {
+    width: 100%;
+    height: 50%;
+    text-align: center
+    }
 
+#fader {
+    -moz-transition: -moz-background 0.5s cubic-bezier(0, 0, 0, 0.99);
+    -o-transition: -o-background 0.5s cubic-bezier(0, 0, 0, 0.99);
+    -webkit-transition: -webkit-background 0.5s cubic-bezier(0, 0, 0, 0.99);
+    transition: background 0.5s cubic-bezier(0, 0, 0, 0.99);
+    background: rgba(0, 0, 0, 0);
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0
+    }
 
-#abc{
-	padding: 50px;
-	transition: transform 0.4s cubic-bezier(0, 0, 0, 0.99);
-	height: 50%;
-}
+.msg {
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    -moz-transition: color 0.3s cubic-bezier(0, 0, 0, 0.99);
+    -o-transition: color 0.3s cubic-bezier(0, 0, 0, 0.99);
+    -webkit-transition: color 0.3s cubic-bezier(0, 0, 0, 0.99);
+    transition: color 0.3s cubic-bezier(0, 0, 0, 0.99);
+    text-align: center
+    }
 
-.title{
-	color:#535151;
-	font-family: Kirvy;
-}
+.input-group {
+    margin: 5px
+    }
 
+#sendapp {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center
+    }
 
+#application {
+    margin-top: 80px;
+    padding: 20px;
+    background: #EFEFEF
+    }
 
-#numCode{
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	top: 0;
-	position: absolute;
-	height: 100%;
-	padding: 50px;
-	transition: transform 0.4s cubic-bezier(0, 0, 0, 0.99);
-	transform: translate(200%,0%);
-	width: 100%;
-  	background: rgba(253, 255, 225, 1);
-}
+.panel {
+    margin: 10px
+    }
 
-#numCode-enter{
-	width: 100%;
-	height:50%;
-	text-align: center;
-}
-
-#fader{
-	
-	transition: background 0.5s cubic-bezier(0, 0, 0, 0.99);
-	background: rgba(0,0,0,0);
-	display: none;
-
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top:0;
-	left:0;
-}
-.msg{
-	height: 100%;
-	padding: 50px;
-	display: flex;
-	align-items: flex-start;
-	align-content:flex-start;
-	justify-content:flex-start;
-	flex-direction: column;
-	width: 50%;
-	transition: color 0.3s cubic-bezier(0, 0, 0, 0.99);
-	text-align: center;
-}
-
-.msg h3{
-	
-}
-
-
-.input-group{
-	margin:5px;
-}
-
-#sendapp{
-	padding: 20px;
-	display: flex;
-	align-items: center;
-	text-align: center;
-	justify-content:center;
-}
-
-#application{
-	margin-top: 80px;
-	padding: 20px;
-	background: #EFEFEF;
-}
-
-.panel{
-	margin: 10px;
-}
-
-#header{
-	position: fixed;
-	z-index: 10;
-	background: url('img/temp-logo-small.png') no-repeat left top; 
-	background-color: #000;
-	width: 100%;
-	height: 80px;
-	border-bottom: 1px solid #fff;
-}
+#header {
+    position: fixed;
+    z-index: 10;
+    background: url(img/temp-logo-small.png) no-repeat left top;
+    background-color: #000;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #fff
+    }
