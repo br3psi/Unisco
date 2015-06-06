@@ -74,9 +74,14 @@ html, body {
     }
 
 .title {
-    color: #535151;
+     color: #363434;
     font-family: Raleway
+
     }
+.title p{
+	color: #282828;
+	font-family: sans-serif;
+}
 
 #numCode {
     justify-content: center;

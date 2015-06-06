@@ -38,7 +38,7 @@
 				<br>
 				<br>
 				<div class="panel panel-default">
-					<div class="panel-heading">
+					<div class="panel-heading title">
 						<h4>Basic Information</h4>
 					</div>
 					<div class="panel-body">
@@ -152,7 +152,7 @@
 				</div>
 					
 				<div class="panel panel-default">
-					<div class="panel-heading">
+					<div class="panel-heading title ">
 						<h4>Crimes and License</h4> <span class="label label-warning">Check if applies</span>
 					</div>
 					<div class="panel-body">
@@ -238,7 +238,7 @@
 				</div>
 
 				<div class="panel panel-default" >
-					<div class="panel-heading">
+					<div class="panel-heading title">
 						<h4>References </h4><p>Please list two references other than relatives or previous employers</p>
 					</div>
 					<div class="panel-body">

@@ -1,5 +1,6 @@
 html, body {
-    width: 100%
+    width: 100%;
+    background: #F3F3F3;
     }
 
 #options_wrapper {
@@ -58,10 +59,15 @@ html, body {
     }
 
 #allJobsDiv {
-    margin: 0;
-    margin-top: 90px;
-    width: 100%;
-    height: auto
+  margin: 0;
+  border: 0px;
+  margin-top: 79px;
+  width: 100%;
+  height: auto;
+  border: 0px;
+  border-radius: 0px !important;
+  border-bottom: 1px solid #DDD;
+  background: #FFF;
     }
 
 #editAccountSpan {
