@@ -27,8 +27,15 @@
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/popup.js"></script>
-  <link href="jobListing.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="prefixed.css">
+	<link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="jobListing.css" rel="stylesheet">
+
+
   <link rel="stylesheet" type="text/css" href="descriptionPopup.css">
+
+
   <script>
 		function getJobList() {  
 					$.ajax({
@@ -73,29 +80,35 @@
    
 </head>
 <body >
-	
-	<div id="allJobsDiv">
+	<div id = 'header'>
+		<div id = 'options_wrapper'>
+			<div id = 'options'>
+				<div class = 'option'>
+					<a href=""><span class = 'glyphicon  glyphicon-open-file'></span>
+					<p>Update Resume</p></a>
+				</div>
 
-	<div style="float:right" id="editIcon">
-		<div id="editResumeDiv">
-			<a href="" ><img src="img/resumeIcon.png"  style="width:30px;height:30p;"></a> 
-			<br/>
-			<span id="editAccountSpan">Upload/  </span>
-			<br/>
-			<span id="editAccountSpan">change resume</span>
-		</div>
-		<div id="editAccountDiv">
-			<a href="resumeApplicationEdit.php" ><img src="img/editIcon.png"  style="width:30px;height:30p;"></a> 
-			<br/>
-			<span id="editAccountSpan">Edit Account  </span>
-		</div>
+				<div class = 'option'>
+					<a href="resumeApplicationEdit.php"><span class = 'glyphicon  glyphicon-edit'></span>
+					<p>Edit Account</p></a>
+				</div>
 
-		<div id="logoutDiv">
-			<a href="logout.php" ><img src="img/logOut.png"  style="width:30px;height:30p;"></a> 
-			<br/>
-			<span id="editAccountSpan">Log Out</span>
+				<div class = 'option'><a href="logout.php" >
+					<span class = 'glyphicon  glyphicon-log-out'></span>
+					<p>Log Out</p></a>
+
+				</div>				
+				
+			</div>
 		</div>
-	</div>			
+		
+	</div>
+	<div class="panel panel-default" id = "allJobsDiv">
+		<div class="panel-body">
+			Basic panel example
+		</div>
+	</div>
+	<div id = "allJobsDiv">
 		<h3>Start applying to jobs by inputing a zipcode </h3> <br/> 
 		
 		Select job type 

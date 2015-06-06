@@ -1,8 +1,14 @@
 @import "http://fonts.googleapis.com/css?family=Raleway";
+
+@font-face {
+  font-family: Kirvy;
+  src: url("css/Kirvy-Regular.otf");
+}
+
 html, body{
 	box-sizing:border-box;
 	width:100%;
-	height:100%;
+	height:100%
 	font-family:raleway;
 	overflow-x: hidden;
 }
@@ -20,35 +26,16 @@ html, body{
 	background: #E6E6E6;
     height: 50%;
     width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-            align-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0, 0, 0.99);
-            transition: transform 0.5s cubic-bezier(0, 0, 0, 0.99);
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s cubic-bezier(0, 0, 0, 0.99);
 }
 
 #lander-content{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	flex-direction: column;
 	width: 100vw;
 	height: 100vh;
 }
@@ -56,32 +43,17 @@ html, body{
 
 #signup{
 	overflow: hidden;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	-webkit-align-content: center;
-	    -ms-flex-line-pack: center;
-	        align-content: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
 
 	z-index: 10;
 	position: absolute;
 	top:0;
 	left:0;
-	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0, 0, 0.99);
-	        transition: transform 0.5s cubic-bezier(0, 0, 0, 0.99);
-	-webkit-transform: translate(200%,0%);
-	    -ms-transform: translate(200%,0%);
-	        transform: translate(200%,0%);
+	transition: transform 0.5s cubic-bezier(0, 0, 0, 0.99);
+	transform: translate(200%,0%);
 	width: 50%;
 	height: 100vh;
 	background: #fff;
@@ -90,37 +62,27 @@ html, body{
 
 #abc{
 	padding: 50px;
-	-webkit-transition: -webkit-transform 0.4s cubic-bezier(0, 0, 0, 0.99);
-	        transition: transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+	transition: transform 0.4s cubic-bezier(0, 0, 0, 0.99);
 	height: 50%;
+}
+
+.title{
+	color:#535151;
+	font-family: Kirvy;
 }
 
 
 
-
-
 #numCode{
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
+	justify-content: center;
+	align-items: center;
 	display: flex;
 	top: 0;
 	position: absolute;
 	height: 100%;
 	padding: 50px;
-	-webkit-transition: -webkit-transform 0.4s cubic-bezier(0, 0, 0, 0.99);
-	        transition: transform 0.4s cubic-bezier(0, 0, 0, 0.99);
-	-webkit-transform: translate(200%,0%);
-	    -ms-transform: translate(200%,0%);
-	        transform: translate(200%,0%);
+	transition: transform 0.4s cubic-bezier(0, 0, 0, 0.99);
+	transform: translate(200%,0%);
 	width: 100%;
   	background: rgba(253, 255, 225, 1);
 }
@@ -133,9 +95,7 @@ html, body{
 
 #fader{
 	
-	-webkit-transition: background 0.5s cubic-bezier(0, 0, 0, 0.99);
-	
-	        transition: background 0.5s cubic-bezier(0, 0, 0, 0.99);
+	transition: background 0.5s cubic-bezier(0, 0, 0, 0.99);
 	background: rgba(0,0,0,0);
 	display: none;
 
@@ -148,29 +108,13 @@ html, body{
 .msg{
 	height: 100%;
 	padding: 50px;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: start;
-	-webkit-align-items: flex-start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
-	-webkit-align-content:flex-start;
-	    -ms-flex-line-pack:start;
-	        align-content:flex-start;
-	-webkit-box-pack:start;
-	-webkit-justify-content:flex-start;
-	    -ms-flex-pack:start;
-	        justify-content:flex-start;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	align-items: flex-start;
+	align-content:flex-start;
+	justify-content:flex-start;
+	flex-direction: column;
 	width: 50%;
-	-webkit-transition: color 0.3s cubic-bezier(0, 0, 0, 0.99);
-	        transition: color 0.3s cubic-bezier(0, 0, 0, 0.99);
+	transition: color 0.3s cubic-bezier(0, 0, 0, 0.99);
 	text-align: center;
 }
 
@@ -185,19 +129,10 @@ html, body{
 
 #sendapp{
 	padding: 20px;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	align-items: center;
 	text-align: center;
-	-webkit-box-pack:center;
-	-webkit-justify-content:center;
-	    -ms-flex-pack:center;
-	        justify-content:center;
+	justify-content:center;
 }
 
 #application{
@@ -218,12 +153,4 @@ html, body{
 	width: 100%;
 	height: 80px;
 	border-bottom: 1px solid #fff;
-}
-
-#orSpan
-{
-	padding-left:15px;
-	padding-right:15px;
-	font-size:18px;
-	font-weight:bold;
 }

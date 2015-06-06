@@ -31,7 +31,7 @@
 	<div id = 'application'>
 		<form method="POST" action="jobListing.php">
 			<div>
-				<h2>APPLICATION FOR EMPLOYMENT</h2>
+				<h2 class = 'title'>General Information Application</h2>
 				<form action="application.php">
 					<button id="finishingApplication" type="submit" class="btn btn-warning" href="submitResume.php">Skip Application</button>
 				</form>
@@ -326,13 +326,9 @@
 				 
 			</div>
 				<div id = 'sendapp'>
-					<form method="POST" action="submitResume.php">
-						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
-					</form>
+					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
 					<span id="orSpan">OR</span>
-					<form method="POST" action="application.php">
 					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="resumeApplicationEdit.php">Finish Application</button>
-					</form>
 				</div>		
 		</form>
 	</div>
