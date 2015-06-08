@@ -103,7 +103,22 @@ function check_code()
 	}
 	else
 	{
-		document.getElementById('codeForm').submit();
+		$.ajax({
+		type:"POST",
+		url: "js/checkCode.php",
+		data:{"num":$('#phoneNum').val(),"code":$('#userCode').val()},
+		success: function(data,status){
+			if(data['message'] == "wrong")
+			{
+				alert("You Entered the wrong code!!");
+			}
+			else
+			{
+				document.getElementById('codeForm').submit();
+			}
+	  	}
+	  	});
+		
 	}
 }
 
@@ -125,7 +140,7 @@ function div_showCode(){
 function sendCode()
 {
 	$.ajax({
-	type:"GET",
+	type:"POST",
 	url: "js/sendCode.php",
 	data:{"num":$('#phoneNum').val()},
 	success: function(data,status){
