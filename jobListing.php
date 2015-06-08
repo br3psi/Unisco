@@ -27,8 +27,15 @@
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/popup.js"></script>
-  <link href="jobListing.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="prefixed.css">
+	<link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="jobListing.css" rel="stylesheet">
+
+
   <link rel="stylesheet" type="text/css" href="descriptionPopup.css">
+
+
   <script>
 		function getJobList() {  
 					$.ajax({
@@ -73,48 +80,61 @@
    
 </head>
 <body >
-	
-	<div id="allJobsDiv">
+	<div id = 'header'>
+		<div id = 'options_wrapper'>
+			<div id = 'options'>
+				<div class = 'option'>
+					<a href=""><span class = 'glyphicon  glyphicon-open-file'></span>
+					<p>Update Resume</p></a>
+				</div>
 
-	<div style="float:right" id="editIcon">
-		<div id="editResumeDiv">
-			<a href="" ><img src="img/resumeIcon.png"  style="width:30px;height:30p;"></a> 
-			<br/>
-			<span id="editAccountSpan">Upload/  </span>
-			<br/>
-			<span id="editAccountSpan">change resume</span>
-		</div>
-		<div id="editAccountDiv">
-			<a href="resumeApplicationEdit.php" ><img src="img/editIcon.png"  style="width:30px;height:30p;"></a> 
-			<br/>
-			<span id="editAccountSpan">Edit Account  </span>
-		</div>
+				<div class = 'option'>
+					<a href="resumeApplicationEdit.php"><span class = 'glyphicon  glyphicon-edit'></span>
+					<p>Edit Account</p></a>
+				</div>
 
-		<div id="logoutDiv">
-			<a href="logout.php" ><img src="img/logOut.png"  style="width:30px;height:30p;"></a> 
-			<br/>
-			<span id="editAccountSpan">Log Out</span>
-		</div>
-	</div>			
-		<h3>Start applying to jobs by inputing a zipcode </h3> <br/> 
-		
-		Select job type 
-		<span id="jobTypeSpan"><select name="jobType">
-			<option value="any">Any job</option>
-			<option value="retail">Retail</option>
-			<option value="restaurant">Restaurants</option>
-			<option value="management">Management</option>
-			<option value="customer service">Customer Service</option>
-			<option value="janitorial service"> Janitorial Service</option>
-		</select>
-		</span>
-		
-		<span id="zipSpan">Zipcode: <input type="texts" name="zipcode" id="zipcode"> </span>
-		<button name="gsearchButton" onclick="getJobList()">Search </button>		 
-			<div id="filtersDiv">
+				<div class = 'option'><a href="logout.php" >
+					<span class = 'glyphicon  glyphicon-log-out'></span>
+					<p>Log Out</p></a>
+
+				</div>				
 				
-						
-			</div>		
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="panel panel-default" id = "allJobsDiv">
+		<div class="panel-heading title">
+		<h4>Start applying to jobs by inputing a zipcode</h4>
+		</div>
+			<div class="panel-body">
+				<div class = 'col-md-3'>
+					<div class="input-group">
+						<span class="input-group-addon" >Job type</span>
+						 <select class="form-control" name="jobType">
+							<option value="any">Any job</option>
+							<option value="retail">Retail</option>
+							<option value="restaurant">Restaurants</option>
+							<option value="management">Management</option>
+							<option value="customer service">Customer Service</option>
+							<option value="janitorial service"> Janitorial Service</option>
+					 	 </select>
+					</div>
+				</div>
+				<div class = 'col-xs-3'>
+					<div class="input-group">
+				      <input name="zipcode" id="zipcode" type="text" class="form-control" placeholder="Enter a Zipcode">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button" onclick='getJobList()'>Search</button>
+				      </span>
+				    </div><!-- /input-group -->
+				</div>
+			</div>
+			
+
+
+		
 		
 		<div id="jobDescription">
 			<div id="descriptionPopup">
@@ -126,13 +146,13 @@
 
 			</div>
 		</div>
-
-		<script>
-
-			function appliedFunction(){
-				alert("Thank you for applying");
-			}
-		</script>
 	</div>
+	<script>
+		function appliedFunction(){
+			alert("Thank you for applying");
+		}
+	</script>	
+
+
 </body>
 </html>

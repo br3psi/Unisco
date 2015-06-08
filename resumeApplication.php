@@ -31,14 +31,14 @@
 	<div id = 'application'>
 		<form method="POST" action="jobListing.php">
 			<div>
-				<h2>APPLICATION FOR EMPLOYMENT</h2>
+				<h2 class = 'title'>General Information Application</h2>
 				<form action="application.php">
 					<button id="finishingApplication" type="submit" class="btn btn-warning" href="submitResume.php">Skip Application</button>
 				</form>
 				<br>
 				<br>
 				<div class="panel panel-default">
-					<div class="panel-heading">
+					<div class="panel-heading title">
 						<h4>Basic Information</h4>
 					</div>
 					<div class="panel-body">
@@ -152,7 +152,7 @@
 				</div>
 					
 				<div class="panel panel-default">
-					<div class="panel-heading">
+					<div class="panel-heading title ">
 						<h4>Crimes and License</h4> <span class="label label-warning">Check if applies</span>
 					</div>
 					<div class="panel-body">
@@ -238,7 +238,7 @@
 				</div>
 
 				<div class="panel panel-default" >
-					<div class="panel-heading">
+					<div class="panel-heading title">
 						<h4>References </h4><p>Please list two references other than relatives or previous employers</p>
 					</div>
 					<div class="panel-body">
@@ -329,7 +329,7 @@
 					<form method="POST" action="submitResume.php">
 						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
 					</form>
-					<span id="orSpan">OR</span>
+					<span id="orSpan" style = 'margin: 50px;'>OR</span>
 					<form method="POST" action="application.php">
 					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="resumeApplicationEdit.php">Finish Application</button>
 					</form>

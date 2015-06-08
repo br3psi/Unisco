@@ -27,26 +27,21 @@ session_start();
 <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
-<body >
-		<div class="row-fluid">
-			<div class="col-xs-2">
-				<div id="uploadResume">
-					<h2>Upload Resume</h2>
-					
-						<form action="resumeApplication.php" method="post" enctype="multipart/form-data" >
-			
-							Select resume: <input type='file' name="fileName" />
-							</br>
-							<input type="submit" name="uploadForm"/>
-							
-							</br>
-		  
-		  
-			
-						</form>
-					</div>
+<body>
+	<div class = 'col-md-6 '>
+		<div id="login" class = 'panel panel-primary'>
+			<div class = 'panel-heading'>
+				<h4>Upload Resume</h1>
 			</div>
-			
+			<div class = 'panel-body'>
+				<form action="resumeApplication.php" method="post" enctype="multipart/form-data" >
+					Select resume: <input type='file' name="fileName" />
+					</br>
+					<input type="submit" name="uploadForm"/>
+					</br>
+				</form>
+			</div>
 		</div>
+	</div>
 </body>
 </html>

@@ -1,4 +1,10 @@
 @import "http://fonts.googleapis.com/css?family=Raleway";
+
+@font-face {
+  font-family: Kirvy;
+  src: url("css/Kirvy-Regular.otf");
+}
+
 html, body{
 	box-sizing:border-box;
 	width:100%;
@@ -9,7 +15,7 @@ html, body{
 
 
 #top{
-	background: url('img/temp-logo.png') no-repeat center center; 
+	background: url('css/field.jpg') no-repeat center center; 
 	background-color: #000;
 	width: 100%;
 	height: 50%;
@@ -60,7 +66,9 @@ html, body{
 	height: 50%;
 }
 
-
+h2{
+	font-family: Kirvy;
+}
 
 
 
