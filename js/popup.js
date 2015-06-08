@@ -3,20 +3,48 @@ function check_empty()
 {
 	if (document.getElementById('fName').value == "" ||
      	document.getElementById('lName').value == "" || 
-		document.getElementById('phoneNum').value == "")
+		document.getElementById('phoneNum').value == "" ||
+		document.getElementById('password').value == "" ||
+		document.getElementById('confirmPassword').value == "")
 	{
 		alert("Fill All Fields !");
 	} 
-	else 
+	else if (document.getElementById('password').value != 
+		document.getElementById('confirmPassword').value)
 	{
+		alert("Password is not the same! Retype password.");
 		//document.getElementById('form').submit();
 		//alert("Form Submitted Successfully...");
+	}	
+	else
+	{
+		$.ajax({
+		type:"POST",
+		url: "php/createAccount.php",
+		data:{"firstName":$('#fName').val(),"lastName":$('#lName').val(),
+			  "phoneNum":$('#phoneNum').val(),"password":$('#password').val()},
+
+		success: function(data,status){
+			if(data['message'] == "Phone number taken")
+			{
+				$('#phoneCheck').html("");
+				$('#phoneCheck').append(data['message']);
+				$('#phoneCheck').style("color","red");
+				$('#phoneNum').focus();
+			}
+			else
+			{
+				$('#phoneCheck').html("<img src=img/availableicon.jpg style=width:14px;height:14px >");
 			
-		div_showCode();
+				div_showCode();
+			}
+	  	}
+	  	});
+		
 	}
 	
-}
 
+}
 
 function init(){
 	$('#fader').on('click',function(){
@@ -119,3 +147,29 @@ function closeDescription()
 }
 
 $(window).on('load',init);
+
+function checkPhoneNum()
+{
+
+	$.ajax({
+	type:"POST",
+	url: "php/checkPhoneAvailability.php",
+	data:{"phoneNum":$('#phoneNum').val()},
+	success: function(data,status){
+		if(data['message'] == "Phone number taken")
+		{
+			$('#phoneCheck').html("");
+			$('#phoneCheck').append(data['message']);
+			$('#phoneCheck').style("color","red");
+			$('#phoneNum').focus();
+		}
+		else
+		{
+			$('#phoneCheck').html("<img src=img/availableicon.jpg style=width:14px;height:14px >");
+			
+
+		}
+  	}
+  	});
+
+}

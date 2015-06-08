@@ -79,7 +79,7 @@ if(isset($_POST['info']))
 		<h3>GET STARTED NOW</h3>
 		<p>Dont worry, registration only takes a few minutes!</p>
 		</br>
-		<p>We offer:</p>
+		<!-- <p>We offer:</p> -->
 	</div>
 
 </div>
@@ -98,10 +98,11 @@ if(isset($_POST['info']))
 			<input class='form-control well-lg' id="lName" name="lName" placeholder="Last Name" type="text">
 			<br>
 			<input class='form-control well-lg' id="phoneNum" name="phoneNum" placeholder="Phone Number" type="text">
+			<span id="phoneCheck"></span>
 			<br>
 			<input class='form-control well-lg' id="password" name="password" placeholder="Create Password" type="password">
 			<br>
-			<input class='form-control well-lg' id="password" name="password" placeholder="Retype Password" type="password">
+			<input class='form-control well-lg' id="confirmPassword" name="password" placeholder="Retype Password" type="password">
 			<br/> <br/>
 			<input class = "btn btn-primary well-lg" type="button" onclick="check_empty()" id="submit" value="Create Account"/>
 		</form>
@@ -129,7 +130,10 @@ if(isset($_POST['info']))
 	</div>	
 </div>
 
-
+<script>
+	
+	$('phoneNum').change(checkPhoneNum);
+</script>
 
 
 
