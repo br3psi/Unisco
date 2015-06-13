@@ -61,7 +61,7 @@
   			type:"get", 
   			url:"getJobs.php",
   			dataType: "json",
-  			data:{"zip":$("#zipcode").val(), "jobType":$('#jobTypeSpan :selected').val()},
+  			data:{"zip":$("#zipcode").val(), "jobType":$('.input-group :selected').val()},
   		success: function(data,status){
   			console.log("Retrieved Jobs");
 			//$('#filtersDiv').css('background-color','red');
