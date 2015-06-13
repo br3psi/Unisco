@@ -63,7 +63,7 @@
   			dataType: "json",
   			data:{"zip":$("#zipcode").val(), "jobType":$('#jobTypeSpan :selected').val()},
   		success: function(data,status){
-  			//console.log("hello");
+  			console.log("Retrieved Jobs");
 			//$('#filtersDiv').css('background-color','red');
 			$('#filtersDiv').html("");
 			for(i in data)
