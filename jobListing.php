@@ -151,7 +151,7 @@
 				</div>
 			</div>
 			
-
+			<div id="filtersDiv"></div>
 
 		
 		
