@@ -20,7 +20,5 @@
 		$ara['message'] = "Phone number taken";
 		echo json_encode($ara);
 	}
-	else
-		return;
-
+	
 ?>
