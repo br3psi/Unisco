@@ -18,7 +18,7 @@
 	if($jobType == "any")
 	{
 		
-		$sql = "SElECT * FROM Job where jobZip = :zip";
+		$sql = "SElECT * FROM Job WHERE jobZip = :zip";
 		$namedParameters = array();
 		$namedParameters[':zip'] = $zipCode;
 		$stmt = $dbConn->prepare($sql); 
@@ -30,7 +30,7 @@
 	}
 	else
 	{
-		$sql = "SElECT * FROM Job where jobZip = :zip AND jobType = :jobType";
+		$sql = "SElECT * FROM Job WHERE jobZip = :zip AND jobType = :jobType";
 		$namedParameters = array();
 		$namedParameters[':zip'] = $zipCode;
 		$namedParameters[':jobType'] = $jobType;
