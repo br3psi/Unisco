@@ -167,12 +167,14 @@
 		</div>
 	</div>
 	<script>
-		function appliedFunction(storeNumber){
+		function appliedFunction(storeNumber)
+		{
+			var aplicantId = <?php $_SERVER['applicantId'] ?>;
 
 			$.ajax({
 				type:"POST",
 				url: "php/apply.php",
-				data:{"storeNumber":storeNumber,"applicantId":<?php $_SERVER['applicantId'] ?>},
+				data:{"storeNumber":storeNumber,"applicantId": aplicantId },
 
 				success: function(data,status){
 					
