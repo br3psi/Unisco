@@ -176,7 +176,7 @@ function checkPhoneNum()
 		{
 			$('#phoneCheck').html("");
 			$('#phoneCheck').append(data['message']);
-			$('#phoneCheck').style("color","red");
+			$('#phoneCheck').css("color","red");
 			$('#phoneNum').focus();
 		}
 		else
