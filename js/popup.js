@@ -169,7 +169,7 @@ function checkPhoneNum()
 	$.ajax({
 	type:"POST",
 	dataType:"json",
-	url: "php/checkPhoneAvailability.php",
+	url: "php//checkPhoneAvailability.php",
 	data:{"phoneNum":$('#phoneNum').val()},
 	success: function(data,status){
 		if(data['message'] == "Phone number taken")
