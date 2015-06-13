@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_POST['loginform']))
-{
-	echo "Sent message {$message->sid}";
-}
+// if(isset($_POST['loginform']))
+// {
+// 	echo "Sent message {$message->sid}";
+// }
 if(isset($_POST['info']))
 {
 	echo "Hello";

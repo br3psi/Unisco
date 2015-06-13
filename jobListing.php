@@ -1,8 +1,27 @@
 <?php
 
-	
-	
-	
+	if(isset($_POST['phone']))
+	{
+		session_start();
+		require 'php/dbConnection.php';
+
+		$dbConn = getConnection();
+
+		$sql = "SELECT * FROM Applicant WHERE password = :password AND phone = :phone";
+		$namedParameters = array();
+		$namedParameters[':password'] = sha1($_POST['password']);
+		$namedParameters[':phone'] = $_POST['phone'];
+
+		$stmt = $dbConn->prepare($sql); 
+		$stmt->execute($namedParameters); 
+		$result = $stmt ->fetch();
+
+		$_SERVER['applicantId'] = $result['applicantId'];
+	}
+	else
+	{
+		header("Location: index.php");
+	}
 
 ?>
 
@@ -49,12 +68,12 @@
 			$('#filtersDiv').html("");
 			for(i in data)
 			{
-				
+				var storeNumb = data[i].storeNumber;
 				$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
 					 +data[i].jobCompany + ": "
  					 + data[i].jobPosition + ": " + "<a href=javascript:%20getDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
  					+ "<span id=buttonSpan></span>" 
-					+ "<button onclick=appliedFunction()>Apply</button><br/><br/>");
+					+ "<button onclick=appliedFunction(" + storeNumb + ")>Apply</button><br/><br/>");
 
 			}
   		}})
@@ -148,8 +167,22 @@
 		</div>
 	</div>
 	<script>
-		function appliedFunction(){
-			alert("Thank you for applying");
+		function appliedFunction(storeNumber){
+
+			$.ajax({
+				type:"POST",
+				url: "php/apply.php",
+				data:{"storeNumber":storeNumber,"applicantId":<?php $_SERVER['applicantId'] ?>},
+
+				success: function(data,status){
+					
+					alert("Thank you for applying");
+			  	}
+	  		});
+
+			
+
+
 		}
 	</script>	
 
