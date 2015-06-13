@@ -26,8 +26,8 @@
 		$result = $stmt ->fetchAll();
 		
 		$jRes = json_encode($result);
-		echo "hello any";
-		print($jRes);
+		
+		echo($jRes);
 	}
 	else
 	{
@@ -40,8 +40,8 @@
 		$result = $stmt ->fetchAll();
 		
 		$jRes = json_encode($result);
-		echo "hello Specific";
-		print($jRes);
+		
+		echo($jRes);
 
 	}
 ?>

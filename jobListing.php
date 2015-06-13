@@ -56,7 +56,8 @@
 
 
   <script type="text/javascript">
-		function getJobList(){  
+		function getJobList()
+		{  
 			$.ajax({
   			type:"GET", 
   			url:"getJobs.php",
