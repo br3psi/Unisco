@@ -156,7 +156,7 @@ function getDescription(jobId)
 				</div>
 			</div>
 			
-			<div id="filtersDiv" style="height:200px"></div>
+			<div id="filtersDiv" style="height:100%"></div>
 
 		
 		
