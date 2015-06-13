@@ -181,7 +181,8 @@ function checkPhoneNum()
 		}
 		else
 		{
-			$('#phoneCheck').html("<img src=img/availableicon.jpg style=width:14px;height:14px >");
+			$('#phoneCheck').html("");
+			$('#phoneCheck').append("<img src=img/availableicon.jpg style=width:14px;height:14px >");
 			
 
 		}
