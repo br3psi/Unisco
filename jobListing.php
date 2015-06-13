@@ -56,7 +56,7 @@
 
 
   <script>
-		function getJobList() {  
+		function getJobList(){  
 					$.ajax({
   			type:"get", 
   			url:"getJobs.php",
@@ -78,7 +78,7 @@
 			}
   		}
   	});
-				}
+	}
 
 	function getDescription(jobId)
 {
@@ -146,7 +146,7 @@
 					<div class="input-group">
 				      <input name="zipcode" id="zipcode" type="text" class="form-control" placeholder="Enter a Zipcode">
 				      <span class="input-group-btn">
-				        <button class="btn btn-default" type="button" onclick='getJobList()'>Search</button>
+				        <button class="btn btn-default" type="button" onclick="getJobList()">Search</button>
 				      </span>
 				    </div><!-- /input-group -->
 				</div>
