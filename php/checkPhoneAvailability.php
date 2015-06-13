@@ -16,7 +16,7 @@
 		
 	if(!empty($result))
 	{
-		$ara = new $arrayName();
+		$ara = array();
 		$ara['message'] = "Phone number taken";
 		echo json_encode($ara);
 	}
