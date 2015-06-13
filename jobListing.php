@@ -57,31 +57,31 @@
 
   <script type="text/javascript">
 		function getJobList(){  
-					$.ajax({
-  			type:"get", 
+			$.ajax({
+  			type:"GET", 
   			url:"getJobs.php",
   			dataType: "json",
   			data:{"zip":$("#zipcode").val(), "jobType":$('.input-group :selected').val()},
-  		success: function(data,status)
-  		{
-  			console.log("Retrieved Jobs");
-			//$('#filtersDiv').css('background-color','red');
-			$('#filtersDiv').html("");
-			for(i in data)
-			{
-				var storeNumb = data[i].storeNumber;
-				$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
-					 +data[i].jobCompany + ": "
- 					 + data[i].jobPosition + ": " + "<a href=javascript:%20getDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
- 					+ "<span id=buttonSpan></span>" 
-					+ "<button onclick=appliedFunction(" + storeNumb + ")>Apply</button><br/><br/>");
+	  		success: function(data,status)
+	  		{
+	  			console.log("Retrieved Jobs");
+				//$('#filtersDiv').css('background-color','red');
+				$('#filtersDiv').html("");
+				for(i in data)
+				{
+					var storeNumb = data[i].storeNumber;
+					$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
+						 +data[i].jobCompany + ": "
+	 					 + data[i].jobPosition + ": " + "<a href=javascript:%20getDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
+	 					+ "<span id=buttonSpan></span>" 
+						+ "<button onclick=appliedFunction(" + storeNumb + ")>Apply</button><br/><br/>");
 
-			}
-  		}
-  	})
+				}
+	  		}
+  	});
 	}
 
-	function getDescription(jobId)
+function getDescription(jobId)
 {
 	$('#jobDescription').css('display','block');
 	$.ajax({
