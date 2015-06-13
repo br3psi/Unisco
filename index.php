@@ -98,7 +98,7 @@ if(isset($_POST['info']))
 			<input class='form-control well-lg' id="lName" name="lName" placeholder="Last Name" type="text">
 			<br>
 			<input class='form-control well-lg' id="phoneNum" name="phoneNum" placeholder="Phone Number" type="text">
-			<span id="phoneCheck"></span>
+			<span style="float:right" id="phoneCheck"></span>
 			<br>
 			<input class='form-control well-lg' id="password" name="password" placeholder="Create Password" type="password">
 			<br>
@@ -132,7 +132,7 @@ if(isset($_POST['info']))
 
 <script>
 	
-	$('phoneNum').change(checkPhoneNum);
+	$('#phoneNum').change(checkPhoneNum);
 </script>
 
 
