@@ -169,7 +169,7 @@
 	<script>
 		function appliedFunction(storeNumber)
 		{
-			var aplicantId = <?php  echo $_SERVER['applicantId']; ?>;
+			var aplicantId = <?php  echo 1; ?>;
 
 			$.ajax({
 				type:"POST",
