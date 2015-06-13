@@ -79,6 +79,8 @@
 				}
 	  		}
   	});
+				  			console.log("Retrieved Jobs outside");
+
 	}
 
 function getDescription(jobId)
