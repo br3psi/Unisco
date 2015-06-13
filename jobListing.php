@@ -76,7 +76,8 @@
 					+ "<button onclick=appliedFunction(" + storeNumb + ")>Apply</button><br/><br/>");
 
 			}
-  		}})
+  		}
+  	});
 				}
 
 	function getDescription(jobId)
