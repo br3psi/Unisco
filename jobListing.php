@@ -55,7 +55,7 @@
   <link rel="stylesheet" type="text/css" href="descriptionPopup.css">
 
 
-  <script>
+  <script type="text/javascript">
 		function getJobList(){  
 					$.ajax({
   			type:"get", 
