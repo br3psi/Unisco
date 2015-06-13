@@ -152,7 +152,7 @@
 				</div>
 			</div>
 			
-			<div id="filtersDiv"></div>
+			<div id="filtersDiv" style="height:200px"></div>
 
 		
 		
