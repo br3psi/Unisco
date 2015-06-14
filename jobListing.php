@@ -174,9 +174,12 @@ function getDescription(jobId)
 		</div>
 	</div>
 	<script>
+
+		var aplicantId = <?php  echo $_SERVER['applicantId']; ?>;
+
 		function appliedFunction(storeNumber)
 		{
-			var aplicantId = <?php  echo $_SERVER['applicantId']; ?>;
+			
 
 			$.ajax({
 				type:"POST",
