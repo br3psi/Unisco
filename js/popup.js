@@ -108,6 +108,7 @@ function check_code()
 		type:"POST",
 		url: "php/checkCode.php",
 		data:{"num":$('#phoneNum').val(),"code":$('#userCode').val()},
+		dataType:"json",
 		success: function(data,status){
 			if(data['message'] == "wrong")
 			{
