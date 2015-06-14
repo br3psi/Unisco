@@ -1,6 +1,5 @@
 <?php
-
-	require 'php/dbConnection.php';
+	require 'dbConnection.php';
 
 	$dbConn = getConnection();
 	$storeNum = $_POST['storeNumber'];
