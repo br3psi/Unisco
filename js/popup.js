@@ -23,7 +23,7 @@ function check_empty()
 		url: "php/createAccount.php",
 		data:{"firstName":$('#fName').val(),"lastName":$('#lName').val(),
 			  "phoneNum":$('#phoneNum').val(),"password":$('#password').val()},
-
+		dataType: "json",
 		success: function(data,status){
 			if(data['message'] == "Phone number taken")
 			{
