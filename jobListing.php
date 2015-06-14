@@ -15,7 +15,7 @@
 		$stmt = $dbConn->prepare($sql); 
 		$stmt->execute($namedParameters); 
 		$result = $stmt ->fetch();
-
+		echo $result['applicantId'];
 		$_SERVER['applicantId'] = $result['applicantId'];
 	}
 	else
