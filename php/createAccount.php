@@ -25,11 +25,11 @@
 	}
 	else
 	{
-		$sql = "INSERT INTO Applicant (firstName, lastame, phone, password)
-			    VALUES (:firstName,:lastame,:phone,:password)";
+		$sql = "INSERT INTO Applicant (firstName, lastName, phone, password)
+			    VALUES (:firstName,:lastName,:phone,:password)";
 		$namedParameters = array();
 		$namedParameters[':firstName'] = $firstName;
-		$namedParameters[':lastame'] = $lastame;
+		$namedParameters[':lastName'] = $lastName;
 		$namedParameters[':phone'] = $phoneNum;
 		$namedParameters[':password'] = $pass;
 		$stmt = $dbConn->prepare($sql); 
