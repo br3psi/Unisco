@@ -1,4 +1,63 @@
 <?php
+	//inserting basic information to database
+
+function getConnection()
+	{
+		$host = "localhost";
+		$dbname = "Unisco";
+		$username = "root";
+		$password = "root";
+		$dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+		$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		return $dbConn;
+	}
+
+	//$jobType = $_POST['jobType'];
+	
+	$dbConn= getConnection();
+
+	$sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, timeLiving, SSN, phoneNum, DOB, availability, linkedIn, felony,
+	backgroundCheck, transportation, driversLicense, driverLicenseNum, driverLicenseExpiration, licenseType, accidents, movingViolations, refOneName, refOnePosition, refOneCompany, refOneAddress, 
+	refOnePhoneNum, refTwoName, refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum,) VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :city, :state, :zipcode, 
+	:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :backgroundCheck, :transportation, :driverLicense, :licenseNumber, :licenseDate, :licenseType, :accidentsNumber, 
+	:movingViolationsNumber, :refOneName, :refOnePosition, :refOneCompany, :refOneAddress, :refOnePhoneNum, :refTwoName, :refTwoPosition, :refTwoCompany, :refTwoAddress, :refTwoPhoneNum)";
+	$stmt = $dbConn->prepare($sql);
+	$namedParameters = array(":firstName"=> $_POST['firstName'],
+                         ":lastName"=> $_POST['lastName'],
+                         ":middleName"=> $POST['middleName'],
+                         ":maidenName"=>$POST['maidenName'],
+                         ":addressStreet"=> $POST['addressStreet'],
+						 ":addressCity"=>$_POST['city'],
+						 ":addressState"=>$_POST['state'],
+						 ":addressCity"=>$_POST['city'],
+						 ":addressState"=>$_POST['state'],
+						 ":zipcode"=>$_POST['zipcode'],
+						 ":presentAddressTime"=>$_POST['presentAddressTime'],
+						 ":ssn"=>$_POST['ssn'],
+						 ":phoneNum"=>$_POST['phoneNum'],
+						 ":dob"=>$_POST['dob'],
+						 ":availability"=>$_POST['availability'],
+						 ":linkedIn"=>$_POST['linkedIn'],
+						 ":backgroundCheck"=>$_POST['backgroundCheck'],
+						 ":transportation"=>$_POST['transportation'],
+						 ":driverLicense"=>$_POST['driverLicense'],
+						 ":licenseNumber"=>$_POST['licenseNumber'],
+						 ":licenseDate"=>$_POST['licenseDate'],
+						 ":licenseType"=>$_POST['licenseType'],
+						 ":accidentsNumber"=>$_POST['accidentsNumber'],
+						 ":movingViolationsNumber"=>$_POST['movingViolationsNumber'],
+						 ":refOneName"=>$_POST['licenseType'],
+						 ":refOnePosition"=>$_POST['refOnePosition'],
+						 ":refOneCompany"=>$_POST['refOneCompany'],
+						 ":refOneAddress"=>$_POST['refOneAddress'],
+						 ":refOnePhoneNum"=>$_POST['refOnePhoneNum'],
+						 ":refTwoName"=>$_POST['refTwoName'],
+						 ":refTwoPosition"=>$_POST['refTwoPosition'],
+						 ":refTwoCompany"=>$_POST['refTwoCompany'],
+						 ":refTwoAddress"=>$_POST['refTwoAddress'],
+						 ":refTwoPhoneNum"=>$_POST['refTwoPhoneNum']);
+	$stmt->execute($namedParameters);
+
 
 
 ?>
@@ -81,7 +140,7 @@
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">Present Address</span>
-								<input type="text" class="form-control"  name="address" aria-describe>
+								<input type="text" class="form-control"  name="addressStreet" aria-describe>
 							</div>
 						</div>
 						<div class = 'col-md-4'>
@@ -121,21 +180,21 @@
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">Phone Number</span>
-								<input name="phoneNumber" type="text" class="form-control"  aria-describe placeHolder="(###)###-####">
+								<input name="phoneNum" type="text" class="form-control"  aria-describe placeHolder="(###)###-####">
 							</div>
 						</div>
 
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">Date of Birth</span>
-								<input name="phoneNumber" type="date" class="form-control"  aria-describe placeholder="DD-MM-YYYY">
+								<input name="dob" type="date" class="form-control"  aria-describe placeholder="DD-MM-YYYY">
 							</div>
 						</div>
 
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">Available to work</span>
-								<select class="form-control" name="workTime">
+								<select class="form-control" name="availability">
 										<option value="partTime">Part time</option>
 										<option value="fullTime">Full time</option>
 										<option value="bothTimes">Both</option>
@@ -144,7 +203,7 @@
 						</div>
 						<div class = 'col-md-4'>
 							<div class="input-group">
-								<input class = "btn btn-info" type="button" value="connect to linkedIn"/>	
+								<input class = "btn btn-info" type="button" name="linkedIn" value="connect to linkedIn"/>	
 							</div>
 						</div>
 									
@@ -161,7 +220,7 @@
 								<div class="input-group">
 									<span class="form-control">Have you ever  been convicted of a misdemeanor or felony?</span>
 									<label class="input-group-addon">
-										<input  type="checkbox" name="crime" value="no" name="crime">
+										<input  type="checkbox" name="felony" value="yes" >
 									</label>
 								</div>
 							</div>
@@ -171,7 +230,7 @@
 								<div class="input-group">
 									<span class="form-control">Do you authorize Unisco to conduct a background check?</span>
 									<label class="input-group-addon">
-										<input  type="checkbox" name="crime" value="no" name="backgroundCheck">
+										<input  type="checkbox" value="yes" name="backgroundCheck">
 									</label>
 								</div>
 							</div>
@@ -181,7 +240,7 @@
 								<div class="input-group">
 									<span class="form-control">DO YOU HAVE A DRIVER'S LICENSE?</span>
 									<label class="input-group-addon">
-										<input  type="checkbox" name="crime" value="no" name="driverLicense">
+										<input  type="checkbox" value="yes" name="driverLicense">
 									</label>
 								</div>
 							</div>
@@ -250,31 +309,31 @@
 								<div class = 'col-md-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >Name</span>
-										<input class="form-control" type="text" name="refeName1">
+										<input class="form-control" type="text" name="refOneName">
 									</div>
 								</div>
 								<div class = 'col-md-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >Position</span>
-										<input class="form-control" type="text" name="refPosition1">
+										<input class="form-control" type="text" name="refOnePosition">
 									</div>
 								</div>
 								<div class = 'col-md-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >Company</span>
-										<input class="form-control" type="text"name="refCompany1">
+										<input class="form-control" type="text"name="refOneCompany">
 									</div>
 								</div>
 								<div class = 'col-md-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >Address</span>
-										<input class="form-control" type="text" name="refAddress1">
+										<input class="form-control" type="text" name="refOneAddress">
 									</div>
 								</div>
 								<div class = 'col-md-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >Telephone</span>
-										<input class="form-control" type="text" name="refPhoneNumber1">
+										<input class="form-control" type="text" name="refOnePhoneNum">
 									</div>
 								</div>																								
 							</div>
@@ -289,31 +348,31 @@
 								<div class = 'col-md-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >Name</span>
-										<input class="form-control" type="text" name="refeName2">
+										<input class="form-control" type="text" name="refTwoName">
 									</div>
 								</div>
 								<div class = 'col-md-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >Position</span>
-										<input class="form-control" type="text" name="refPosition2">
+										<input class="form-control" type="text" name="refTwoPosition">
 									</div>
 								</div>
 								<div class = 'col-md-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >Company</span>
-										<input class="form-control" type="text"name="refCompany2">
+										<input class="form-control" type="text"name="refTwoCompany">
 									</div>
 								</div>
 								<div class = 'col-md-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >Address</span>
-										<input class="form-control" type="text" name="refAddress2">
+										<input class="form-control" type="text" name="refTwoAddress">
 									</div>
 								</div>
 								<div class = 'col-md-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >Telephone</span>
-										<input class="form-control" type="text" name="refPhoneNumber2">
+										<input class="form-control" type="text" name="refTwoPhoneNum">
 									</div>
 								</div>																								
 							</div>
