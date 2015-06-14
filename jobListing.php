@@ -176,7 +176,7 @@ function getDescription(jobId)
 	<script>
 		function appliedFunction(storeNumber)
 		{
-			var aplicantId = <?php  echo 1; ?>;
+			var aplicantId = <?php  echo $_SERVER['applicantId']; ?>;
 
 			$.ajax({
 				type:"POST",
