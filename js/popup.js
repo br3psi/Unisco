@@ -106,7 +106,7 @@ function check_code()
 	{
 		$.ajax({
 		type:"POST",
-		url: "js/checkCode.php",
+		url: "php/checkCode.php",
 		data:{"num":$('#phoneNum').val(),"code":$('#userCode').val()},
 		success: function(data,status){
 			if(data['message'] == "wrong")
