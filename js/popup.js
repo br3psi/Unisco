@@ -20,7 +20,7 @@ function check_empty()
 	{
 		$.ajax({
 		type:"POST",
-		url: "../php/createAccount.php",
+		url: "php/createAccount.php",
 		data:{"firstName":$('#fName').val(),"lastName":$('#lName').val(),
 			  "phoneNum":$('#phoneNum').val(),"password":$('#password').val()},
 		dataType: "json",
