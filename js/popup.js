@@ -31,11 +31,12 @@ function check_empty()
 				$('#phoneCheck').append(data['message']);
 				$('#phoneCheck').css("color","red");
 				$('#phoneNum').focus();
+				console.log("error createAccount");
 			}
 			else
 			{
-				$('#phoneCheck').html("<img src=img/availableicon.jpg style=width:14px;height:14px >");
-			
+				// $('#phoneCheck').html("<img src=img/availableicon.jpg style=width:14px;height:14px >");
+				console.log("Passed");
 				div_showCode();
 			}
 	  	}
