@@ -19,7 +19,7 @@
 		
 	if(!empty($result))
 	{
-		$ara = new $arrayName();
+		$ara = array();
 		$ara['message'] = "Phone number taken";
 		echo json_encode($ara);
 	}
@@ -35,7 +35,7 @@
 		$stmt = $dbConn->prepare($sql); 
 		$stmt->execute($namedParameters); 
 
-		$ara = new $arrayName();
+		$ara = array();
 		$ara['message'] = "Phone number available";
 		echo json_encode($ara);
 	}
