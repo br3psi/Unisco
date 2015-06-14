@@ -26,7 +26,7 @@
 	else
 	{
 		$sql = "INSERT INTO Applicant (firstName, lastame, phone, password)
-			    VALUES (':firstName',':lastame',':phone',':password')";
+			    VALUES (:firstName,:lastame,:phone,:password)";
 		$namedParameters = array();
 		$namedParameters[':firstName'] = $firstName;
 		$namedParameters[':lastame'] = $lastame;
