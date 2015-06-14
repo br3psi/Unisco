@@ -34,6 +34,10 @@
 		$namedParameters[':password'] = $pass;
 		$stmt = $dbConn->prepare($sql); 
 		$stmt->execute($namedParameters); 
+
+		$ara = new $arrayName();
+		$ara['message'] = "Phone number available";
+		echo json_encode($ara);
 	}
 
 ?>
