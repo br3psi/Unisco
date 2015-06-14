@@ -158,6 +158,8 @@ function showDescription(jobId)
 
 function closeDescription()
 {
+	$(".input-group").css('display','table-cell');
+	$('.form-control').css('display','table-cell');
 	document.getElementById('jobDescription').style.display = "none";
 }
 

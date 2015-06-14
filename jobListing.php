@@ -87,7 +87,8 @@
 function getDescription(jobId)
 {
 	$('#jobDescription').css('display','block');
-	$("html").css('opacity','1');
+	$(".input-group").css('display','none');
+	$('.form-control').css('display','none');
 	$.ajax({
 	type:"GET",
 	url: "getDescription.php",
