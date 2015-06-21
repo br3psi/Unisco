@@ -389,7 +389,7 @@ echo "hello";
 
 				<div id = 'sendapp'>
 					
-						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
+						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" onclick="submitResume.php">Upload Resume</button>
 					
 					<span id="orSpan" style = 'margin: 50px;'>OR</span>
 					
