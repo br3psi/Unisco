@@ -1,5 +1,68 @@
 <?php
+	//inserting basic information to database
 
+function getConnection()
+	{
+		$host = "localhost";
+		$dbname = "Unisco";
+		$username = "root";
+		$password = "root";
+		$dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+		$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		return $dbConn;
+	}
+
+	//$jobType = $_POST['jobType'];
+	
+	$dbConn= getConnection();
+
+	$sql = "INSERT INTO application (highSchoolDiplomaGED, collegeEducation, collegeGraduated, type, typeWPM, haveComputer, computerType, tenKeyComputer, wordProcessing, wordProcessingWPM, military,
+	militarySpecialty, militaryStartDate, militaryEndDate, nationalGuard, nationalGuardSpecialty, nationalGuardStartDate, nationalGuardEndDate,
+	jobOneEmployerName, jobOneAddress, jobOnePhonNum, jobOneSupervisorName, jobOneStartDate, jobOneEndDate, jobOneJobTitle, jobOneLeavingReasons, jobOneDuties, jobTwoEmployerName, jobTwoAddress,
+	jobTwoPhoneNum, jobTwoSupervisorName, jobTwoStartDate, jobTwoEndDate, jobTwoJObTitle, jobTwoLeavingReasons, jobTwoDuties, contactLastEmployer, applicantCompletedApplication, whoCompletedApplication) 
+	VALUES (:highSchoolDiplomaGED, :collegeEducation, :collegeGraduated, :type, :typeWPM, :haveComputer, :computerType, :tenKeyComputer, 
+	:wordProcessing, :wordProcessingWPM, :military, :militarySpecialty, :militaryStartDate, :militaryEndDate, :nationalGuard, :nationalGuardSpecialty, :nationalGuardStartDate, :nationalGuardEndDate, 
+	:jobOneEmployerName, :jobOneAddress, :jobOnePhoneNum, :jobOneSupervisorName, :jobOneStartDate, :jobOneEndDate, :jobOneTitle, :jobOneLeavingReasons, :jobOneDuties, 
+	:jobTwoEmployerName, :jobTwoAddress, :jobTwoPhoneNum, :jobTwoSupervisorName, :jobTwoStartDate, :jobTwoEndDate, :jobTwoTitle, :jobTwoLeavingReasons, :jobTwoDuties, :contactLastEmployer, 
+	:applicantCompletedApplication, :whoCompletedApplication)";
+	$stmt = $dbConn->prepare($sql);
+	$namedParameters = array(":highSchoolDiplomaGED"=> $_POST['highSchoolDiplomaGED'],
+                         ":collegeEducation"=> $_POST['collegeEducation'],
+                         ":collegeGraduated"=> $POST['collegeGraduated'],
+                         ":type"=>$POST['type'],
+                         ":typeWPM"=> $POST['typeWPM'],
+						 ":haveComputer"=>$_POST['haveComputer'],
+						 ":computerType"=>$_POST['computerType'],
+						 ":tenKeyComputer"=>$_POST['tenKeyComputer'],
+						 ":wordProcessing"=>$_POST['wordProcessing'],
+						 ":wordProcessingWPM"=>$_POST['wordProcessingWPM'],
+						 ":military"=>$_POST['military'],
+						 ":militarySpecialty"=>$_POST['militarySpecialty'],
+						 ":militaryStartDate"=>$_POST['militaryStartDate'],
+						 ":militaryEndDate"=>$_POST['militaryEndDate'],
+						 ":nationalGuard"=>$_POST['nationalGuard'],
+						 ":nationalGuardSpecialty"=>$_POST['nationalGuardSpecialty'],
+						 ":nationalGuardStartDate"=>$_POST['nationalGuardStartDate'],
+						 ":nationalGuardEndDate"=>$_POST['nationalGuardEndDate'],
+						 ":jobOneEmployerName"=>$_POST['jobOneEmployerName'],
+						 ":jobOneAddress"=>$_POST['jobOneAddress'],
+						 ":jobOnePhoneNum"=>$_POST['jobOnePhoneNum'],
+						 ":jobOneStartDate"=>$_POST['jobOneStartDate'],
+						 ":jobOneEndDate"=>$_POST['jobOneEndDate'],
+						 ":jobOneTitle"=>$_POST['jobOneTitle'],
+						 ":jobOneLeavingReasons"=>$_POST['jobOneLeavingReasons'],
+						 ":jobOneDuties"=>$_POST['jobOneDuties'],
+						 ":jobTwoEmployerName"=>$_POST['jobTwoEmployerName'],
+						 ":jobTwoAddress"=>$_POST['jobTwoAddress'],
+						 ":jobTwoPhoneNum"=>$_POST['jobTwoPhoneNum'],
+						 ":jobTwoStartDate"=>$_POST['jobTwoStartDate'],
+						 ":jobTwoEndDate"=>$_POST['jobTwoEndDate'],
+						 ":jobTwoLeavingReasons"=>$_POST['jobTwoLeavingReasons'],
+						 ":jobTwoDuties"=>$_POST['jobTwoDuties'],
+						 ":contactLastEmployer"=>$_POST['contactLastEmployer'],
+						 ":applicantCompletedApplication"=>$_POST['applicantCompletedApplication],
+						 ":whoCompletedApplication"=>$_POST['whoCompletedApplication']);
+	$stmt->execute($namedParameters);
 
 ?>
 
@@ -43,7 +106,7 @@
 							<div class="md-3 input-group">
 								<span class="form-control">Do you have a high school diploma/GED?</span>
 								<label class="input-group-addon">
-									<input type="checkbox" name="highSchool" value="no" value="yes">
+									<input type="checkbox" name="highSchoolDiplomaGED" value="no" value="yes">
 								</label>
 							</div>
 							<div class="md-3 input-group">
@@ -57,7 +120,7 @@
 							<div class="md-3 input-group">
 								<span class="form-control">Have you graduated?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="ollegeGraduated" value="no" name="crime">
+									<input  type="checkbox" name="collegeGraduated" value="no" name="crime">
 								</label>
 							</div>
 
@@ -72,18 +135,18 @@
 							<div class="md-3 input-group">
 								<span class="form-control">Can you type?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="typing" value="no" >
+									<input  type="checkbox" name="type" value="no" >
 								</label>
 							</div>
 
 							<div class="md-3 input-group">
 								<span class="input-group-addon">WPM</span>
-								<input  class="form-control" type="number" name="wpmTyping">		
+								<input  class="form-control" type="number" name="typeWPM">		
 							</div>
 							<div class="md-3 input-group">
 								<span class="form-control">Do you have a Personal Computer?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="computer" value="no">
+									<input  type="checkbox" name="haveComputer" value="no">
 								</label>
 							</div>
 							<div class="md-3 input-group">
@@ -96,19 +159,19 @@
 							<div class="md-3 input-group">
 								<span class="form-control">10 Key Computer?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="10key" value="no">
+									<input  type="checkbox" name="tenKeyComputer" value="yes">
 								</label>
 							</div>
 							<div class="md-3 input-group">
 								<span class="form-control">Word Processing?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="wordProcessing" value="no">
+									<input  type="checkbox" name="wordProcessing" value="yes">
 								</label>
 							</div>	
 							<div class="md-3 input-group">
 								<span class="input-group-addon">Word Processing WMP</span>
 								
-								<input class="form-control" type="number" name="wpmWordProcessing">
+								<input class="form-control" type="number" name="wordProcessingWPM">
 								
 							</div>	
 						</div>
@@ -121,13 +184,30 @@
 							<div class="md-3 input-group">
 								<span class="form-control">HAVE YOU EVER BEEN IN THE ARMED FORCES?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="armedForces" value="no">
+									<input  type="checkbox" name="armedForces" value="yes">
 								</label>
 							</div>
 							<div class="md-3 input-group">
+								<span class="input-group-addon">Specialty</span>
+								
+								<input class="form-control" type="text" name="militarySpecialty">
+								
+							</div>
+							<div class="md-3 input-group">
+								<span class="input-group-addon">Date Enlisted</span>
+								
+								<input class="form-control" type="date" name="militaryStartDate">
+								
+							</div>
+							<div class="md-3 input-group">
+								<span class="input-group-addon">Discharge Date</span>
+								
+								<input class="form-control" type="date" name="militaryEndDate">	
+							</div>	
+							<div class="md-3 input-group">
 								<span class="form-control">ARE YOU A MEMBER OF THE NATIONAL GUARD?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="nationalGuard" value="no">
+									<input  type="checkbox" name="nationalGuard" value="yes">
 								</label>
 							</div>
 							<div class="md-3 input-group">
@@ -139,13 +219,13 @@
 							<div class="md-3 input-group">
 								<span class="input-group-addon">Date Enlisted</span>
 								
-								<input class="form-control" type="date" name="nationalGuardEnterDate">
+								<input class="form-control" type="date" name="nationalGuardStartDate">
 								
 							</div>
 							<div class="md-3 input-group">
 								<span class="input-group-addon">Discharge Date</span>
 								
-								<input class="form-control" type="date" name="nationalGuardDischargeDate">
+								<input class="form-control" type="date" name="nationalGuardEndDate">
 								
 							</div>	
 						</div>
@@ -165,47 +245,44 @@
 									
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Name of employer</span>	
-										<input class="form-control" type="text" name="jobEmployerName1">
+										<input class="form-control" type="text" name="jobOneEmployerName">
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Address</span>	
-										<input  class="form-control" type="text" name="jobStreetAddress1" placeholder="number and street">
-										<input   class="form-control" type="text" name="jobCity1" placeholder="city"> 
-										<input  class="form-control" type="text" name="jobState1" placeholder="state">
-										<input  class="form-control" type="text" name="jobzipcode1" placeHolder="zipcode">
+										<input  class="form-control" type="text" name="jobOneAddress">
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Phone number</span>	
-										<input class="form-control" type="tel" name="jobPhoneNumber1">
+										<input class="form-control" type="tel" name="jobOnePhoneNum">
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Name of last supervisor</span>	
-										<input class="form-control" type="text" name="jobSupervisorName1">
+										<input class="form-control" type="text" name="jobOneSupervisorName">
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Dates:</span>	
-										<input class="form-control" type="text" name="jobStartDate1">
+										<input class="form-control" type="text" name="jobOneStartDate">
 										<span class="input-group-addon">to</span>
-										<input class="form-control" type="text" name="jobEndDate1">
+										<input class="form-control" type="text" name="jobOneEndDate">
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Your job title</span>	
-										<input class="form-control" type="text" name="jobTitle1"> 
+										<input class="form-control" type="text" name="jobOneTitle"> 
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Reasons for leaving</span>	
-										<input class="form-control" type="textarea" name="jobLeavingReasons1">
+										<input class="form-control" type="textarea" name="jobOneLeavingReasons">
 									</div>	
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">List jobs you held, duties performed, skills used or learned, and advancements or promotions</span>	
-										<input class="form-control" type="textarea" name="jobDuties1">
+										<input class="form-control" type="textarea" name="jobOneDuties">
 									</div>																															
 								</div>
 							</div>
@@ -217,47 +294,44 @@
 									
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Name of employer</span>	
-										<input class="form-control" type="text" name="jobEmployerName2">
+										<input class="form-control" type="text" name="jobTwoEmployerName">
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Address</span>	
-										<input class="form-control" type="text" name="jobStreetAddress2" placeholder="number and street">
-										<input class="form-control" type="text" name="jobCity2" placeholder="city"> 
-										<input class="form-control" type="text" name="jobState2" placeholder="state">
-										<input class="form-control" type="text" name="jobzipcode2" placeHolder="zipcode">
+										<input class="form-control" type="text" name="jobTwoAddress">
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Phone number</span>	
-										<input class="form-control" type="tel" name="jobPhoneNumber2">
+										<input class="form-control" type="tel" name="jobTwoPhoneNum">
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Name of last supervisor</span>	
-										<input class="form-control" type="text" name="jobSupervisorName2">
+										<input class="form-control" type="text" name="jobTwoSupervisorName">
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Dates:</span>	
-										<input class="form-control" type="text" name="jobStartDate2">
+										<input class="form-control" type="text" name="jobTwoStartDate">
 										<span class="input-group-addon">to</span>
-										<input class="form-control" type="text" name="jobEndDate2">
+										<input class="form-control" type="text" name="jobTwoEndDate">
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Your job title</span>	
-										<input class="form-control" type="text" name="jobTitle2"> 
+										<input class="form-control" type="text" name="jobTwoTitle"> 
 									</div>
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">Reasons for leaving</span>	
-										<input class="form-control" type="textarea" name="jobLeavingReasons2">
+										<input class="form-control" type="textarea" name="jobTwoLeavingReasons">
 									</div>	
 
 									<div class="md-3 input-group">
 										<span class="input-group-addon">List jobs you held, duties performed, skills used or learned, and advancements or promotions</span>	
-										<input class="form-control" type="textarea" name="jobDuties2">
+										<input class="form-control" type="textarea" name="jobTwoDuties">
 									</div>																															
 								</div>
 							</div>
@@ -272,13 +346,13 @@
 									<div class="md-3 input-group">
 										<span class="form-control">Did you complete this application yourself? </span>
 										<label class="input-group-addon">
-											<input  type="checkbox" name="selfCompletedApplication" value="no">
+											<input  type="checkbox" name="applicantCompletedApplication" value="no">
 										</label>
 									</div>
 									<div class="md-3 input-group">
 										<span class="form-control">If not, who did? </span>
 										<label class="input-group-addon">
-											<input  type="text" name="personCompletedApplication">
+											<input  type="text" name="whoCompletedApplication">
 										</label>
 									</div>
 								</div>
