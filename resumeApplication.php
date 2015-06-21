@@ -90,7 +90,7 @@ if(isset($_POST['firstName']))
 	
 	</div>
 	<div id = 'application'>
-		<form method="POST" action="jobListing.php">
+		<form method="POST" action="resumeApplication.php">
 			<div>
 				<h2 class = 'title'>General Information Application</h2>
 				<form action="application.php">
@@ -391,8 +391,8 @@ if(isset($_POST['firstName']))
 						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
 					</form>
 					<span id="orSpan" style = 'margin: 50px;'>OR</span>
-					<form method="POST" action="application.php">
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="resumeApplication.php">Finish Application</button>
+					<form method="POST" action="resumeApplication.php">
+					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Finish Application</button>
 					</form>
 				</div>		
 		</form>
