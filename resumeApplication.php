@@ -18,11 +18,17 @@ if(isset($_POST['firstName']))
 echo "hello";
 	$dbConn= getConnection();
 
-	$sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, timeLiving, SSN, phoneNum, DOB, availability, linkedIn, felony,
-	backgroundCheck, transportation, driversLicense, driverLicenseNum, driverLicenseExpiration, licenseType, accidents, movingViolations, refOneName, refOnePosition, refOneCompany, refOneAddress, 
-	refOnePhoneNum, refTwoName, refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum) VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :city, :state, :zipcode, 
-	:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :backgroundCheck, :transportation, :driverLicense, :licenseNumber, :licenseDate, :licenseType, :accidentsNumber, 
-	:movingViolationsNumber, :refOneName, :refOnePosition, :refOneCompany, :refOneAddress, :refOnePhoneNum, :refTwoName, :refTwoPosition, :refTwoCompany, :refTwoAddress, :refTwoPhoneNum)";
+	$sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, 
+											timeLiving, SSN, phoneNum, DOB, availability, linkedIn, backgroundCheck, transportation, 
+											driversLicense, driverLicenseNum, driverLicenseExpiration, licenseType, accidents, movingViolations,
+											refOneName, refOnePosition, refOneCompany, refOneAddress, refOnePhoneNum, refTwoName,
+											 refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum) 
+
+			VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :city, :state, :zipcode, 
+					:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :backgroundCheck,
+					 :transportation, :driverLicense, :licenseNumber, :licenseDate, :licenseType, :accidentsNumber, 
+					:movingViolationsNumber, :refOneName, :refOnePosition, :refOneCompany, :refOneAddress, :refOnePhoneNum, 
+					:refTwoName, :refTwoPosition, :refTwoCompany, :refTwoAddress, :refTwoPhoneNum)";
 	$stmt = $dbConn->prepare($sql);
 	$namedParameters = array(":firstName"=> $_POST['firstName'],
                          ":lastName"=> $_POST['lastName'],
