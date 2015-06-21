@@ -33,7 +33,7 @@ echo					 $_POST['phoneNum']; echo "<br/>";
 echo					 $_POST['dob']; echo "<br/>";
 echo					 $_POST['availability']; echo "<br/>";
 echo					 $_POST['linkedIn']; echo "<br/>";
-echo					 "<script> $("input[name=felony]").val(); </script>" echo "<br/>";
+echo					 "<script> $("input[name=felony]").val(); </script>"; echo "<br/>";
 echo					 $_POST['backgroundCheck']; echo "<br/>";
 echo					 $_POST['transportation']; echo "<br/>";
 echo					 $_POST['driverLicense']; echo "<br/>";
