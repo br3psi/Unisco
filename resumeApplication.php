@@ -16,53 +16,53 @@ if(!empty($_POST['firstName']))
 	//$jobType = $_POST['jobType'];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 echo "hello";
-	// $dbConn= getConnection();
+	$dbConn= getConnection();
 
-	// $sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, 
-	// 										timeLiving, SSN, phoneNum, DOB, availability, linkedIn, felony, backgroundCheck, transportation, 
-	// 										driversLicense, driverLicenseNum, driverLicenseExpiration, licenseType, accidents, movingViolations,
-	// 										refOneName, refOnePosition, refOneCompany, refOneAddress, refOnePhoneNum, refTwoName,
-	// 										 refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum) 
+	$sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, 
+											timeLiving, SSN, phoneNum, DOB, availability, linkedIn, felony, backgroundCheck, transportation, 
+											driversLicense, driverLicenseNum, driverLicenseExpiration, licenseType, accidents, movingViolations,
+											refOneName, refOnePosition, refOneCompany, refOneAddress, refOnePhoneNum, refTwoName,
+											 refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum) 
 
-	// 		VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :addressCity, :addressState, :zipcode, 
-	// 				:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :felony, :backgroundCheck,
-	// 				 :transportation, :driverLicense, :licenseNumber, :licenseDate, :licenseType, :accidentsNumber, 
-	// 				:movingViolationsNumber, :refOneName, :refOnePosition, :refOneCompany, :refOneAddress, :refOnePhoneNum, 
-	// 				:refTwoName, :refTwoPosition, :refTwoCompany, :refTwoAddress, :refTwoPhoneNum)";
-	// $stmt = $dbConn->prepare($sql);
-	// $namedParameters = array(":firstName"=> $_POST['firstName'],
- //                         ":lastName"=> $_POST['lastName'],
- //                         ":middleName"=> $POST['middleName'],
- //                         ":maidenName"=>$POST['maidenName'],
- //                         ":addressStreet"=> $POST['addressStreet'],
-	// 					 ":addressCity"=>$_POST['city'],
-	// 					 ":addressState"=>$_POST['state'],
-	// 					 ":zipcode"=>$_POST['zipcode'],
-	// 					 ":presentAddressTime"=>$_POST['presentAddressTime'],
-	// 					 ":ssn"=>$_POST['ssn'],
-	// 					 ":phoneNum"=>$_POST['phoneNum'],
-	// 					 ":dob"=>$_POST['dob'],
-	// 					 ":availability"=>$_POST['availability'],
-	// 					 ":linkedIn"=>$_POST['linkedIn'],
-	// 					 ":felony"=>$_POST['felony'],
-	// 					 ":backgroundCheck"=>$_POST['backgroundCheck'],
-	// 					 ":transportation"=>$_POST['transportation'],
-	// 					 ":driverLicense"=>$_POST['driverLicense'],
-	// 					 ":licenseNumber"=>$_POST['licenseNumber'],
-	// 					 ":licenseDate"=>$_POST['licenseDate'],
-	// 					 ":licenseType"=>$_POST['licenseType'],
-	// 					 ":accidentsNumber"=>$_POST['accidentsNumber'],
-	// 					 ":movingViolationsNumber"=>$_POST['movingViolationsNumber'],
-	// 					 ":refOneName"=>$_POST['licenseType'],
-	// 					 ":refOnePosition"=>$_POST['refOnePosition'],
-	// 					 ":refOneCompany"=>$_POST['refOneCompany'],
-	// 					 ":refOneAddress"=>$_POST['refOneAddress'],
-	// 					 ":refOnePhoneNum"=>$_POST['refOnePhoneNum'],
-	// 					 ":refTwoName"=>$_POST['refTwoName'],
-	// 					 ":refTwoPosition"=>$_POST['refTwoPosition'],
-	// 					 ":refTwoCompany"=>$_POST['refTwoCompany'],
-	// 					 ":refTwoAddress"=>$_POST['refTwoAddress'],
-	// 					 ":refTwoPhoneNum"=>$_POST['refTwoPhoneNum']);
+			VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :addressCity, :addressState, :zipcode, 
+					:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :felony, :backgroundCheck,
+					 :transportation, :driverLicense, :licenseNumber, :licenseDate, :licenseType, :accidentsNumber, 
+					:movingViolationsNumber, :refOneName, :refOnePosition, :refOneCompany, :refOneAddress, :refOnePhoneNum, 
+					:refTwoName, :refTwoPosition, :refTwoCompany, :refTwoAddress, :refTwoPhoneNum)";
+	$stmt = $dbConn->prepare($sql);
+	$namedParameters = array(":firstName"=> $_POST['firstName'],
+                         ":lastName"=> $_POST['lastName'],
+                         ":middleName"=> $POST['middleName'],
+                         ":maidenName"=>$POST['maidenName'],
+                         ":addressStreet"=> $POST['addressStreet'],
+						 ":addressCity"=>$_POST['city'],
+						 ":addressState"=>$_POST['state'],
+						 ":zipcode"=>$_POST['zipcode'],
+						 ":presentAddressTime"=>$_POST['presentAddressTime'],
+						 ":ssn"=>$_POST['ssn'],
+						 ":phoneNum"=>$_POST['phoneNum'],
+						 ":dob"=>$_POST['dob'],
+						 ":availability"=>$_POST['availability'],
+						 ":linkedIn"=>$_POST['linkedIn'],
+						 ":felony"=>$_POST['felony'],
+						 ":backgroundCheck"=>$_POST['backgroundCheck'],
+						 ":transportation"=>$_POST['transportation'],
+						 ":driverLicense"=>$_POST['driverLicense'],
+						 ":licenseNumber"=>$_POST['licenseNumber'],
+						 ":licenseDate"=>$_POST['licenseDate'],
+						 ":licenseType"=>$_POST['licenseType'],
+						 ":accidentsNumber"=>$_POST['accidentsNumber'],
+						 ":movingViolationsNumber"=>$_POST['movingViolationsNumber'],
+						 ":refOneName"=>$_POST['licenseType'],
+						 ":refOnePosition"=>$_POST['refOnePosition'],
+						 ":refOneCompany"=>$_POST['refOneCompany'],
+						 ":refOneAddress"=>$_POST['refOneAddress'],
+						 ":refOnePhoneNum"=>$_POST['refOnePhoneNum'],
+						 ":refTwoName"=>$_POST['refTwoName'],
+						 ":refTwoPosition"=>$_POST['refTwoPosition'],
+						 ":refTwoCompany"=>$_POST['refTwoCompany'],
+						 ":refTwoAddress"=>$_POST['refTwoAddress'],
+						 ":refTwoPhoneNum"=>$_POST['refTwoPhoneNum']);
 	// $stmt->execute($namedParameters);
 	header("Location: application.php");
 }
