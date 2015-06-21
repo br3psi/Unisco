@@ -15,7 +15,7 @@ if(isset($_POST['firstName']))
 {
 	//$jobType = $_POST['jobType'];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+echo "hello";
 	$dbConn= getConnection();
 
 	$sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, timeLiving, SSN, phoneNum, DOB, availability, linkedIn, felony,
