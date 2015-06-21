@@ -98,7 +98,7 @@ echo "hello";
 			<div>
 				<h2 class = 'title'>General Information Application</h2>
 				<form method="post" action="application.php">
-					<button id="finishingApplication" type="submit" class="btn btn-warning" href="application.php" >Skip Application</button>
+					<button id="finishingApplication" type="submit" class="btn btn-warning" onclick="application.php" >Skip Application</button>
 				</form>
 				<br>
 				<br>
