@@ -13,7 +13,7 @@ function getConnection()
 	}
 if(isset($_POST['firstName']))
 {
-	$jobType = $_POST['jobType'];
+	//$jobType = $_POST['jobType'];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	$dbConn= getConnection();
