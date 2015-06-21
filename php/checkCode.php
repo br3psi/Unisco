@@ -2,7 +2,7 @@
 	require 'dbConnection.php';
 
 	$dbConn = getConnection();
-	$code = $_POST['code'];
+	$code = $_POST['userCode'];
 	$phone = $_POST['num'];
 	$sql = "SELECT * FROM Applicant where phone = :phone AND code = :code";
 	$namedParameters = array();
