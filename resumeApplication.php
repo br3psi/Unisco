@@ -125,6 +125,9 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link href="prefixed.css" rel="stylesheet">
   <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 </head>
 <body style='height:auto !important;'>
 	<div id = 'header'>
