@@ -11,7 +11,7 @@ function getConnection()
 		$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $dbConn;
 	}
-if(isset($_POST['firstName']))
+if(!empty($_POST['firstName']))
 {
 	//$jobType = $_POST['jobType'];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
