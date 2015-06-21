@@ -60,9 +60,10 @@ function getConnection()
 						 ":jobTwoLeavingReasons"=>$_POST['jobTwoLeavingReasons'],
 						 ":jobTwoDuties"=>$_POST['jobTwoDuties'],
 						 ":contactLastEmployer"=>$_POST['contactLastEmployer'],
-						 ":applicantCompletedApplication"=>$_POST['applicantCompletedApplication],
+						 ":applicantCompletedApplication"=>$_POST['applicantCompletedApplication'],
 						 ":whoCompletedApplication"=>$_POST['whoCompletedApplication']);
 	$stmt->execute($namedParameters);
+	
 
 ?>
 
