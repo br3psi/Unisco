@@ -387,21 +387,21 @@ echo "hello";
 					</div>
 				</div>
 
-				
+				<div id = 'sendapp'>
+					
+						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
+					
+					<span id="orSpan" style = 'margin: 50px;'>OR</span>
+					
+					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Finish Application</button>
+					
+				</div>	
 				 
 				 
 			</div>
 				
 		</form>
-		<div id = 'sendapp'>
-					<form method="POST" action="submitResume.php">
-						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
-					</form>
-					<span id="orSpan" style = 'margin: 50px;'>OR</span>
-					
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Finish Application</button>
-					
-				</div>		
+			
 	</div>
 </body>
 </html>
