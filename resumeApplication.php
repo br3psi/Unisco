@@ -16,6 +16,7 @@ if(!empty($_POST['firstName']))
 	//$jobType = $_POST['jobType'];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 echo "hello";
+ echo "<br/>";
 echo $_POST['firstName'];
 echo "<br/>";
  echo                     $_POST['lastName'];
