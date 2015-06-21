@@ -16,39 +16,39 @@ if(!empty($_POST['firstName']))
 	//$jobType = $_POST['jobType'];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 echo "hello";
-echo$_POST['firstName'],
- echo                     $_POST['lastName'],
- echo                  $POST['middleName'],
- echo                    $POST['maidenName'],
- echo                   $POST['addressStreet'],
- echo					 $_POST['city'],
-echo					 $_POST['state'],
-echo					 $_POST['zipcode'],
-echo					 $_POST['presentAddressTime'],
-echo					 $_POST['ssn'],
-echo					 $_POST['phoneNum'],
-echo					 $_POST['dob'],
-echo					 $_POST['availability'],
-echo					 $_POST['linkedIn'],
-echo					 $_POST['felony'],
-echo					 $_POST['backgroundCheck'],
-echo					 $_POST['transportation'],
-echo					 $_POST['driverLicense'],
-echo					 $_POST['licenseNumber'],
-echo					 $_POST['licenseDate'],
-echo					 $_POST['licenseType'],
-echo					 $_POST['accidentsNumber'],
-echo					 $_POST['movingViolationsNumber'],
-echo					 $_POST['licenseType'],
-echo					 $_POST['refOnePosition'],
-echo					 $_POST['refOneCompany'],
-echo					 $_POST['refOneAddress'],
-echo					 $_POST['refOnePhoneNum'],
-echo					 $_POST['refTwoName'],
-echo					 $_POST['refTwoPosition'],
-echo					 $_POST['refTwoCompany'],
-echo					 $_POST['refTwoAddress'],
-echo					$_POST['refTwoPhoneNum']);
+echo $_POST['firstName'];
+ echo                     $_POST['lastName'];
+ echo                  $POST['middleName'];
+ echo                    $POST['maidenName'];
+ echo                   $POST['addressStreet'];
+ echo					 $_POST['city'];
+echo					 $_POST['state'];
+echo					 $_POST['zipcode'];
+echo					 $_POST['presentAddressTime'];
+echo					 $_POST['ssn'];
+echo					 $_POST['phoneNum'];
+echo					 $_POST['dob'];
+echo					 $_POST['availability'];
+echo					 $_POST['linkedIn'];
+echo					 $_POST['felony'];
+echo					 $_POST['backgroundCheck'];
+echo					 $_POST['transportation'];
+echo					 $_POST['driverLicense'];
+echo					 $_POST['licenseNumber'];
+echo					 $_POST['licenseDate'];
+echo					 $_POST['licenseType'];
+echo					 $_POST['accidentsNumber'];
+echo					 $_POST['movingViolationsNumber'];
+echo					 $_POST['licenseType'];
+echo					 $_POST['refOnePosition'];
+echo					 $_POST['refOneCompany'];
+echo					 $_POST['refOneAddress'];
+echo					 $_POST['refOnePhoneNum'];
+echo					 $_POST['refTwoName'];
+echo					 $_POST['refTwoPosition'];
+echo					 $_POST['refTwoCompany'];
+echo					 $_POST['refTwoAddress'];
+echo					$_POST['refTwoPhoneNum'];
 	$dbConn= getConnection();
 
 	$sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, 
