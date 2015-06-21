@@ -94,7 +94,7 @@ echo "hello";
 	
 	</div>
 	<div id = 'application'>
-		<form method="POST" >
+		<form method="post" >
 			<div>
 				<h2 class = 'title'>General Information Application</h2>
 				<form method="post" action="application.php">
