@@ -33,7 +33,7 @@ echo					 $_POST['phoneNum']; echo "<br/>";
 echo					 $_POST['dob']; echo "<br/>";
 echo					 $_POST['availability']; echo "<br/>";
 echo					 $_POST['linkedIn']; echo "<br/>";
-echo					 $_POST['felony']; echo "<br/>";
+echo					 <script> $("input[name=felony]").val(); </script>; echo "<br/>";
 echo					 $_POST['backgroundCheck']; echo "<br/>";
 echo					 $_POST['transportation']; echo "<br/>";
 echo					 $_POST['driverLicense']; echo "<br/>";
@@ -80,7 +80,7 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 						 ":dob"=>$_POST['dob'],
 						 ":availability"=>$_POST['availability'],
 						 ":linkedIn"=>$_POST['linkedIn'],
-						 ":felony"=>$_POST['felony'],
+						 ":felony"=> <script> $("input[name=felony]").val(); </script>;,
 						 ":backgroundCheck"=>$_POST['backgroundCheck'],
 						 ":transportation"=>$_POST['transportation'],
 						 ":driverLicense"=>$_POST['driverLicense'],
