@@ -16,7 +16,6 @@ if(isset($_POST['firstName']))
 	//$jobType = $_POST['jobType'];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 echo "hello";
-header("Location: application.php");
 	$dbConn= getConnection();
 
 	$sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, timeLiving, SSN, phoneNum, DOB, availability, linkedIn, felony,
@@ -60,7 +59,7 @@ header("Location: application.php");
 						 ":refTwoAddress"=>$_POST['refTwoAddress'],
 						 ":refTwoPhoneNum"=>$_POST['refTwoPhoneNum']);
 	$stmt->execute($namedParameters);
-	
+	header("Location: application.php");
 }
 
 ?>
@@ -95,7 +94,7 @@ header("Location: application.php");
 			<div>
 				<h2 class = 'title'>General Information Application</h2>
 				<form action="application.php">
-					<button id="finishingApplication" type="submit" class="btn btn-warning" href="submitResume.php">Skip Application</button>
+					<button id="finishingApplication" type="submit" class="btn btn-warning" href="application.php">Skip Application</button>
 				</form>
 				<br>
 				<br>
