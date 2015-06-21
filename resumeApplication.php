@@ -80,7 +80,7 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 						 ":dob"=>$_POST['dob'],
 						 ":availability"=>$_POST['availability'],
 						 ":linkedIn"=>$_POST['linkedIn'],
-						 ":felony"=> echo"<script> $("input[name=felony]").val(); </script>" ,
+						 ":felony"=> echo"<script> $("input[name=felony]").val(); </script>"; ,
 						 ":backgroundCheck"=>$_POST['backgroundCheck'],
 						 ":transportation"=>$_POST['transportation'],
 						 ":driverLicense"=>$_POST['driverLicense'],
