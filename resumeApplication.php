@@ -68,7 +68,7 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 	$stmt = $dbConn->prepare($sql);
 	$namedParameters = array(":firstName"=> $_POST['firstName'],
                          ":lastName"=> $_POST['lastName'],
-                         ":middleName"=> 'none'],
+                         ":middleName"=> 'none',
                          ":maidenName"=>'none',
                          ":addressStreet"=> 'none',
 						 ":addressCity"=>$_POST['city'],
