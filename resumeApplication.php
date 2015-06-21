@@ -59,7 +59,7 @@ if(isset($_POST['firstName']))
 						 ":refTwoAddress"=>$_POST['refTwoAddress'],
 						 ":refTwoPhoneNum"=>$_POST['refTwoPhoneNum']);
 	$stmt->execute($namedParameters);
-	header("Location: resumeApplicationEdit.php");
+	header("Location: application.php");
 }
 
 ?>

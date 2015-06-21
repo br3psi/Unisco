@@ -13,7 +13,8 @@ function getConnection()
 	}
 
 	//$jobType = $_POST['jobType'];
-	
+	if(isset($_POST['highSchoolDiplomaGED']))
+	{
 	$dbConn= getConnection();
 
 	$sql = "INSERT INTO application (highSchoolDiplomaGED, collegeEducation, collegeGraduated, type, typeWPM, haveComputer, computerType, tenKeyComputer, wordProcessing, wordProcessingWPM, military,
@@ -63,8 +64,8 @@ function getConnection()
 						 ":applicantCompletedApplication"=>$_POST['applicantCompletedApplication'],
 						 ":whoCompletedApplication"=>$_POST['whoCompletedApplication']);
 	$stmt->execute($namedParameters);
-	
-
+	header("Location: jobListing.php");
+}
 ?>
 
 <!DOCTYPE HTML>
@@ -362,7 +363,7 @@ function getConnection()
 					</div>
 				</div>
 				<div id = 'sendapp'>
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="jobListing.php">Submit</button>
+					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="application.php">Submit</button>
 				</div>
 		</form>
 </body>
