@@ -19,13 +19,13 @@ echo "hello";
 	$dbConn= getConnection();
 
 	$sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, 
-											timeLiving, SSN, phoneNum, DOB, availability, linkedIn, backgroundCheck, transportation, 
+											timeLiving, SSN, phoneNum, DOB, availability, linkedIn, felony, backgroundCheck, transportation, 
 											driversLicense, driverLicenseNum, driverLicenseExpiration, licenseType, accidents, movingViolations,
 											refOneName, refOnePosition, refOneCompany, refOneAddress, refOnePhoneNum, refTwoName,
 											 refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum) 
 
 			VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :addressCity, :addressState, :zipcode, 
-					:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :backgroundCheck,
+					:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :felony, :backgroundCheck,
 					 :transportation, :driverLicense, :licenseNumber, :licenseDate, :licenseType, :accidentsNumber, 
 					:movingViolationsNumber, :refOneName, :refOnePosition, :refOneCompany, :refOneAddress, :refOnePhoneNum, 
 					:refTwoName, :refTwoPosition, :refTwoCompany, :refTwoAddress, :refTwoPhoneNum)";
@@ -44,6 +44,7 @@ echo "hello";
 						 ":dob"=>$_POST['dob'],
 						 ":availability"=>$_POST['availability'],
 						 ":linkedIn"=>$_POST['linkedIn'],
+						 ":felony"=>$_POST['felony'],
 						 ":backgroundCheck"=>$_POST['backgroundCheck'],
 						 ":transportation"=>$_POST['transportation'],
 						 ":driverLicense"=>$_POST['driverLicense'],
