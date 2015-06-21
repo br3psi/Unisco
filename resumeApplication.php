@@ -391,7 +391,7 @@ if(isset($_POST['firstName']))
 						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
 					</form>
 					<span id="orSpan" style = 'margin: 50px;'>OR</span>
-					<form method="POST" action="resumeApplication.php">
+					<form method="POST" >
 					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Finish Application</button>
 					</form>
 				</div>		
