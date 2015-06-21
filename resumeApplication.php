@@ -63,7 +63,7 @@ echo "hello";
 						 ":refTwoCompany"=>$_POST['refTwoCompany'],
 						 ":refTwoAddress"=>$_POST['refTwoAddress'],
 						 ":refTwoPhoneNum"=>$_POST['refTwoPhoneNum']);
-	// $stmt->execute($namedParameters);
+	 $stmt->execute($namedParameters);
 	header("Location: application.php");
 }
 
