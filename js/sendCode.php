@@ -14,7 +14,7 @@ require "twilio-php-master/Services/Twilio.php";
 				"Body" => $codeNum
 ));
 
-require 'php/dbConnection.php';
+require '../php/dbConnection.php';
 
 	$dbConn = getConnection();
 	$sql = "UPDATE 	Applicant SET code = :code";

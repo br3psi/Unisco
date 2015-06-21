@@ -19,21 +19,25 @@
 		
 	if(!empty($result))
 	{
-		$ara = new $arrayName();
+		$ara = array();
 		$ara['message'] = "Phone number taken";
 		echo json_encode($ara);
 	}
 	else
 	{
-		$sql = "INSERT INTO Applicant (firstName, lastame, phone, password)
-			    VALUES (':firstName',':lastame',':phone',':password')";
+		$sql = "INSERT INTO Applicant (firstName, lastName, phone, password)
+			    VALUES (:firstName,:lastName,:phone,:password)";
 		$namedParameters = array();
 		$namedParameters[':firstName'] = $firstName;
-		$namedParameters[':lastame'] = $lastame;
+		$namedParameters[':lastName'] = $lastName;
 		$namedParameters[':phone'] = $phoneNum;
 		$namedParameters[':password'] = $pass;
 		$stmt = $dbConn->prepare($sql); 
 		$stmt->execute($namedParameters); 
+		
+		$ara = array();
+		$ara['message'] = "Phone number available";
+		echo json_encode($ara);
 	}
 
 ?>

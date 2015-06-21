@@ -1,5 +1,5 @@
 <?php
-	require 'php/dbConnection.php';
+	require 'dbConnection.php';
 
 	$dbConn = getConnection();
 	$code = $_POST['code'];
@@ -15,13 +15,13 @@
 	if(!empty($result))
 	{
 
-		$ara = new $arrayName();
+		$ara = array();
 		$ara['message'] = "wrong";
 		echo json_encode($ara);
 	}
 	else
 	{
-		$ara = new $arrayName();
+		$ara = array();
 		$ara['message'] = "right";
 		echo json_encode($ara);
 	}

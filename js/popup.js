@@ -20,7 +20,7 @@ function check_empty()
 	{
 		$.ajax({
 		type:"POST",
-		url: "../php/createAccount.php",
+		url: "php/createAccount.php",
 		data:{"firstName":$('#fName').val(),"lastName":$('#lName').val(),
 			  "phoneNum":$('#phoneNum').val(),"password":$('#password').val()},
 		dataType: "json",
@@ -31,11 +31,12 @@ function check_empty()
 				$('#phoneCheck').append(data['message']);
 				$('#phoneCheck').css("color","red");
 				$('#phoneNum').focus();
+				console.log("error createAccount");
 			}
 			else
 			{
-				$('#phoneCheck').html("<img src=img/availableicon.jpg style=width:14px;height:14px >");
-			
+				// $('#phoneCheck').html("<img src=img/availableicon.jpg style=width:14px;height:14px >");
+				console.log("Passed");
 				div_showCode();
 			}
 	  	}
@@ -105,8 +106,9 @@ function check_code()
 	{
 		$.ajax({
 		type:"POST",
-		url: "js/checkCode.php",
+		url: "php/checkCode.php",
 		data:{"num":$('#phoneNum').val(),"code":$('#userCode').val()},
+		dataType:"json",
 		success: function(data,status){
 			if(data['message'] == "wrong")
 			{

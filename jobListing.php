@@ -15,7 +15,7 @@
 		$stmt = $dbConn->prepare($sql); 
 		$stmt->execute($namedParameters); 
 		$result = $stmt ->fetch();
-
+		echo $result['applicantId'];
 		$_SERVER['applicantId'] = $result['applicantId'];
 	}
 	else
@@ -174,9 +174,12 @@ function getDescription(jobId)
 		</div>
 	</div>
 	<script>
+
+		var aplicantId = <?php $applicantId =  $_SERVER['applicantId']; Print($applicantId); ?>;
+
 		function appliedFunction(storeNumber)
 		{
-			var aplicantId = <?php  echo 1; ?>;
+			
 
 			$.ajax({
 				type:"POST",
