@@ -24,7 +24,7 @@ echo "hello";
 											refOneName, refOnePosition, refOneCompany, refOneAddress, refOnePhoneNum, refTwoName,
 											 refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum) 
 
-			VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :city, :state, :zipcode, 
+			VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :addressCity, :addressState, :zipcode, 
 					:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :backgroundCheck,
 					 :transportation, :driverLicense, :licenseNumber, :licenseDate, :licenseType, :accidentsNumber, 
 					:movingViolationsNumber, :refOneName, :refOnePosition, :refOneCompany, :refOneAddress, :refOnePhoneNum, 
