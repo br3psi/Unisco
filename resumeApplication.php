@@ -31,8 +31,6 @@ echo "hello";
                          ":addressStreet"=> $POST['addressStreet'],
 						 ":addressCity"=>$_POST['city'],
 						 ":addressState"=>$_POST['state'],
-						 ":addressCity"=>$_POST['city'],
-						 ":addressState"=>$_POST['state'],
 						 ":zipcode"=>$_POST['zipcode'],
 						 ":presentAddressTime"=>$_POST['presentAddressTime'],
 						 ":ssn"=>$_POST['ssn'],
