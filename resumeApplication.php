@@ -391,7 +391,9 @@ echo "hello";
 				 
 				 
 			</div>
-				<div id = 'sendapp'>
+				
+		</form>
+		<div id = 'sendapp'>
 					<form method="POST" action="submitResume.php">
 						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
 					</form>
@@ -400,7 +402,6 @@ echo "hello";
 					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Finish Application</button>
 					
 				</div>		
-		</form>
 	</div>
 </body>
 </html>
