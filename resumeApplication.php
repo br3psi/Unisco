@@ -20,7 +20,7 @@ if(isset($_POST['firstName']))
 
 	$sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, timeLiving, SSN, phoneNum, DOB, availability, linkedIn, felony,
 	backgroundCheck, transportation, driversLicense, driverLicenseNum, driverLicenseExpiration, licenseType, accidents, movingViolations, refOneName, refOnePosition, refOneCompany, refOneAddress, 
-	refOnePhoneNum, refTwoName, refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum,) VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :city, :state, :zipcode, 
+	refOnePhoneNum, refTwoName, refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum) VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :city, :state, :zipcode, 
 	:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :backgroundCheck, :transportation, :driverLicense, :licenseNumber, :licenseDate, :licenseType, :accidentsNumber, 
 	:movingViolationsNumber, :refOneName, :refOnePosition, :refOneCompany, :refOneAddress, :refOnePhoneNum, :refTwoName, :refTwoPosition, :refTwoCompany, :refTwoAddress, :refTwoPhoneNum)";
 	$stmt = $dbConn->prepare($sql);
