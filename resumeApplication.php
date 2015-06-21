@@ -1,6 +1,6 @@
 <?php
 	//inserting basic information to database
-
+/* 
 function getConnection()
 	{
 		$host = "localhost";
@@ -11,7 +11,7 @@ function getConnection()
 		$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $dbConn;
 	}
-
+ */
 	//$jobType = $_POST['jobType'];
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
@@ -58,8 +58,6 @@ function getConnection()
 	// 					 ":refTwoAddress"=>$_POST['refTwoAddress'],
 	// 					 ":refTwoPhoneNum"=>$_POST['refTwoPhoneNum']);
 	// $stmt->execute($namedParameters);
-
-
 
 ?>
 
