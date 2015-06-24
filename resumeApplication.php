@@ -54,11 +54,11 @@ echo					 $_POST['refTwoAddress']; echo "<br/>";
 echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 	$dbConn= getConnection();
 
-	$sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, 
-											timeLiving, SSN, phoneNum, DOB, availability, linkedIn, felony, backgroundCheck, transportation, 
-											driversLicense, driverLicenseNum, driverLicenseExpiration, licenseType, accidents, movingViolations,
-											refOneName, refOnePosition, refOneCompany, refOneAddress, refOnePhoneNum, refTwoName,
-											 refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum) 
+	$sql = "INSERT INTO `basicApplication`(`firstName`, `lastName`, `middleName`, `maidenName`, `addressStreet`,
+	 `addressCity`, `addressState`, `zipcode`, `timeLiving`, `SSN`, `phoneNum`, `DOB`, `availability`, `linkedIn`, `felony`, 
+	 `backgroundCheck`, `transportation`, `driversLicense`, `driversLicenseNum`, `driversLicenseExpiration`, `LicenseType`, 
+	 `accidents`, `movingViolations`, `refOneName`, `refOnePosition`, `refOneCompany`, `refOneAddress`, `refOnePhoneNum`, 
+	 `refTwoName`, `refTwoPosition`, `refTwoCompany`, `refTwoAddress`, `refTwoPhoneNum`)
 
 			VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :addressCity, :addressState, :zipcode, 
 					:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :felony, :backgroundCheck,
@@ -89,7 +89,7 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 						 ":licenseType"=>$_POST['licenseType'],
 						 ":accidentsNumber"=>$_POST['accidentsNumber'],
 						 ":movingViolationsNumber"=>$_POST['movingViolationsNumber'],
-						 ":refOneName"=>$_POST['licenseType'],
+						 ":refOneName"=>$_POST['refOneName'],
 						 ":refOnePosition"=>$_POST['refOnePosition'],
 						 ":refOneCompany"=>$_POST['refOneCompany'],
 						 ":refOneAddress"=>$_POST['refOneAddress'],
@@ -431,7 +431,7 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 				 
 				 
 			</div>
-				
+				<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Finish Application</button>
 		</form>
 		<div id = 'sendapp'>
 					<form method="POST" action="submitResume.php">
@@ -439,7 +439,7 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 					</form>
 					<span id="orSpan" style = 'margin: 50px;'>OR</span>
 					
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Finish Application</button>
+					
 					
 				</div>		
 	</div>
