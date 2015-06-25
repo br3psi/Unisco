@@ -1,4 +1,4 @@
-<?php/* 
+<?php
 	//inserting basic information to database
 
 function getConnection()
@@ -13,7 +13,7 @@ function getConnection()
 	}
 
 	//$jobType = $_POST['jobType'];
-	if(isset($_POST['highSchoolDiplomaGED']))
+	if(!empty($_POST['highSchoolDiplomaGED']))
 	{
 	$dbConn= getConnection();
 
@@ -63,15 +63,12 @@ function getConnection()
 						 ":contactLastEmployer"=>$_POST['contactLastEmployer'],
 						 ":applicantCompletedApplication"=>$_POST['applicantCompletedApplication'],
 						 ":whoCompletedApplication"=>$_POST['whoCompletedApplication']);
-<<<<<<< HEAD
-	$stmt->execute($namedParameters); */
+
+	$stmt->execute($namedParameters); 
 	
 
-=======
-	$stmt->execute($namedParameters);
 	header("Location: jobListing.php");
 }
->>>>>>> e8078d2b64c181819c8d09ba2c28a9ba836b172c
 ?>
 
 <!DOCTYPE HTML>
