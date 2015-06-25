@@ -1,6 +1,6 @@
 <?php
 	//inserting basic information to database
-/* 
+
 function getConnection()
 	{
 		$host = "localhost";
@@ -11,53 +11,99 @@ function getConnection()
 		$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $dbConn;
 	}
- */
-	//$jobType = $_POST['jobType'];
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	// $dbConn= getConnection();
 
-	// $sql = "INSERT INTO basicApplication (firstName, lastName, middleName, maidenName, addressStreet, addressCity, addressState, zipcode, timeLiving, SSN, phoneNum, DOB, availability, linkedIn, felony,
-	// backgroundCheck, transportation, driversLicense, driverLicenseNum, driverLicenseExpiration, licenseType, accidents, movingViolations, refOneName, refOnePosition, refOneCompany, refOneAddress, 
-	// refOnePhoneNum, refTwoName, refTwoPosition, refTwoCompany, refTwoAddress, refTwoPhoneNum,) VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :city, :state, :zipcode, 
-	// :presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :backgroundCheck, :transportation, :driverLicense, :licenseNumber, :licenseDate, :licenseType, :accidentsNumber, 
-	// :movingViolationsNumber, :refOneName, :refOnePosition, :refOneCompany, :refOneAddress, :refOnePhoneNum, :refTwoName, :refTwoPosition, :refTwoCompany, :refTwoAddress, :refTwoPhoneNum)";
-	// $stmt = $dbConn->prepare($sql);
-	// $namedParameters = array(":firstName"=> $_POST['firstName'],
- //                         ":lastName"=> $_POST['lastName'],
- //                         ":middleName"=> $POST['middleName'],
- //                         ":maidenName"=>$POST['maidenName'],
- //                         ":addressStreet"=> $POST['addressStreet'],
-	// 					 ":addressCity"=>$_POST['city'],
-	// 					 ":addressState"=>$_POST['state'],
-	// 					 ":addressCity"=>$_POST['city'],
-	// 					 ":addressState"=>$_POST['state'],
-	// 					 ":zipcode"=>$_POST['zipcode'],
-	// 					 ":presentAddressTime"=>$_POST['presentAddressTime'],
-	// 					 ":ssn"=>$_POST['ssn'],
-	// 					 ":phoneNum"=>$_POST['phoneNum'],
-	// 					 ":dob"=>$_POST['dob'],
-	// 					 ":availability"=>$_POST['availability'],
-	// 					 ":linkedIn"=>$_POST['linkedIn'],
-	// 					 ":backgroundCheck"=>$_POST['backgroundCheck'],
-	// 					 ":transportation"=>$_POST['transportation'],
-	// 					 ":driverLicense"=>$_POST['driverLicense'],
-	// 					 ":licenseNumber"=>$_POST['licenseNumber'],
-	// 					 ":licenseDate"=>$_POST['licenseDate'],
-	// 					 ":licenseType"=>$_POST['licenseType'],
-	// 					 ":accidentsNumber"=>$_POST['accidentsNumber'],
-	// 					 ":movingViolationsNumber"=>$_POST['movingViolationsNumber'],
-	// 					 ":refOneName"=>$_POST['licenseType'],
-	// 					 ":refOnePosition"=>$_POST['refOnePosition'],
-	// 					 ":refOneCompany"=>$_POST['refOneCompany'],
-	// 					 ":refOneAddress"=>$_POST['refOneAddress'],
-	// 					 ":refOnePhoneNum"=>$_POST['refOnePhoneNum'],
-	// 					 ":refTwoName"=>$_POST['refTwoName'],
-	// 					 ":refTwoPosition"=>$_POST['refTwoPosition'],
-	// 					 ":refTwoCompany"=>$_POST['refTwoCompany'],
-	// 					 ":refTwoAddress"=>$_POST['refTwoAddress'],
-	// 					 ":refTwoPhoneNum"=>$_POST['refTwoPhoneNum']);
-	// $stmt->execute($namedParameters);
+if(!empty($_POST['firstName']))
+{
+	//$jobType = $_POST['jobType'];
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+echo "hello";
+ echo "<br/>";
+echo $_POST['firstName'];
+echo "<br/>";
+ echo                     $_POST['lastName'];
+ echo "<br/>";
+ echo                  'nn'; echo "<br/>";
+ echo                   'nn'; echo "<br/>";
+ echo                   'nn'; echo "<br/>";
+ echo					 $_POST['city']; echo "<br/>";
+echo					 $_POST['state']; echo "<br/>";
+echo					 $_POST['zipcode']; echo "<br/>";
+echo					 $_POST['presentAddressTime']; echo "<br/>";
+echo					 $_POST['ssn']; echo "<br/>";
+echo					 $_POST['phoneNum']; echo "<br/>";
+echo					 $_POST['dob']; echo "<br/>";
+echo					 $_POST['availability']; echo "<br/>";
+echo					 'bbbb'; echo "<br/>";
+echo					 $_POST['felony']; echo "<br/>";
+echo					 $_POST['backgroundCheck']; echo "<br/>";
+echo					 $_POST['transportation']; echo "<br/>";
+echo					 $_POST['driverLicense']; echo "<br/>";
+echo					 $_POST['licenseNumber']; echo "<br/>";
+echo					 $_POST['licenseDate']; echo "<br/>";
+echo					 $_POST['licenseType']; echo "<br/>";
+echo					 $_POST['accidentsNumber']; echo "<br/>";
+echo					 $_POST['movingViolationsNumber']; echo "<br/>";
+echo					 $_POST['licenseType']; echo "<br/>";
+echo					 $_POST['refOnePosition']; echo "<br/>";
+echo					 $_POST['refOneCompany']; echo "<br/>";
+echo					 $_POST['refOneAddress']; echo "<br/>";
+echo					 $_POST['refOnePhoneNum']; echo "<br/>";
+echo					 $_POST['refTwoName']; echo "<br/>";
+echo					 $_POST['refTwoPosition']; echo "<br/>";
+echo					 $_POST['refTwoCompany']; echo "<br/>";
+echo					 $_POST['refTwoAddress']; echo "<br/>";
+echo					$_POST['refTwoPhoneNum']; echo "<br/>";
+	$dbConn= getConnection();
+
+
+	$sql = "INSERT INTO `basicApplication`(`firstName`, `lastName`, `middleName`, `maidenName`, `addressStreet`,
+	 `addressCity`, `addressState`, `zipcode`, `timeLiving`, `SSN`, `phoneNum`, `DOB`, `availability`, `linkedIn`, `felony`, 
+	 `backgroundCheck`, `transportation`, `driversLicense`, `driversLicenseNum`, `driversLicenseExpiration`, `LicenseType`, 
+	 `accidents`, `movingViolations`, `refOneName`, `refOnePosition`, `refOneCompany`, `refOneAddress`, `refOnePhoneNum`, 
+	 `refTwoName`, `refTwoPosition`, `refTwoCompany`, `refTwoAddress`, `refTwoPhoneNum`)
+
+			VALUES (:firstName, :lastName, :middleName, :maidenName, :addressStreet, :addressCity, :addressState, :zipcode, 
+					:presentAddressTime, :ssn, :phoneNum, :dob, :availability, :linkedIn, :felony, :backgroundCheck,
+					 :transportation, :driverLicense, :licenseNumber, :licenseDate, :licenseType, :accidentsNumber, 
+					:movingViolationsNumber, :refOneName, :refOnePosition, :refOneCompany, :refOneAddress, :refOnePhoneNum, 
+					:refTwoName, :refTwoPosition, :refTwoCompany, :refTwoAddress, :refTwoPhoneNum)";
+	$stmt = $dbConn->prepare($sql);
+	$namedParameters = array(":firstName"=> $_POST['firstName'],
+                         ":lastName"=> $_POST['lastName'],
+                         ":middleName"=> 'none',
+                         ":maidenName"=>'none',
+                         ":addressStreet"=> 'none',
+						 ":addressCity"=>$_POST['city'],
+						 ":addressState"=>$_POST['state'],
+						 ":zipcode"=>$_POST['zipcode'],
+						 ":presentAddressTime"=>$_POST['presentAddressTime'],
+						 ":ssn"=>$_POST['ssn'],
+						 ":phoneNum"=>$_POST['phoneNum'],
+						 ":dob"=>$_POST['dob'],
+						 ":availability"=>$_POST['availability'],
+						 ":linkedIn"=>'none',
+						 ":felony"=>$_POST['felony'],
+						 ":backgroundCheck"=>$_POST['backgroundCheck'],
+						 ":transportation"=>$_POST['transportation'],
+						 ":driverLicense"=>$_POST['driverLicense'],
+						 ":licenseNumber"=>$_POST['licenseNumber'],
+						 ":licenseDate"=>$_POST['licenseDate'],
+						 ":licenseType"=>$_POST['licenseType'],
+						 ":accidentsNumber"=>$_POST['accidentsNumber'],
+						 ":movingViolationsNumber"=>$_POST['movingViolationsNumber'],
+						 ":refOneName"=>$_POST['refOneName'],
+						 ":refOnePosition"=>$_POST['refOnePosition'],
+						 ":refOneCompany"=>$_POST['refOneCompany'],
+						 ":refOneAddress"=>$_POST['refOneAddress'],
+						 ":refOnePhoneNum"=>$_POST['refOnePhoneNum'],
+						 ":refTwoName"=>$_POST['refTwoName'],
+						 ":refTwoPosition"=>$_POST['refTwoPosition'],
+						 ":refTwoCompany"=>$_POST['refTwoCompany'],
+						 ":refTwoAddress"=>$_POST['refTwoAddress'],
+						 ":refTwoPhoneNum"=>$_POST['refTwoPhoneNum']);
+	 $stmt->execute($namedParameters);
+	header("Location: application.php");
+}
 
 ?>
 
@@ -81,18 +127,22 @@ function getConnection()
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link href="prefixed.css" rel="stylesheet">
   <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 </head>
 <body style='height:auto !important;'>
 	<div id = 'header'>
 	
 	</div>
 	<div id = 'application'>
-		<form method="POST" action="jobListing.php">
-			<div>
-				<h2 class = 'title'>General Information Application</h2>
-				<form action="application.php">
-					<button id="finishingApplication" type="submit" class="btn btn-warning" href="submitResume.php">Skip Application</button>
+		<h2 class = 'title'>General Information Application</h2>
+				<form method="post" action="application.php">
+					<button id="finishingApplication" type="submit" class="btn btn-warning" href="application.php" >Skip Application</button>
 				</form>
+		<form method="post" >
+			<div>
+				
 				<br>
 				<br>
 				<div class="panel panel-default">
@@ -383,16 +433,17 @@ function getConnection()
 				 
 				 
 			</div>
-				<div id = 'sendapp'>
+				<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Finish Application</button>
+		</form>
+		<div id = 'sendapp'>
 					<form method="POST" action="submitResume.php">
 						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
 					</form>
 					<span id="orSpan" style = 'margin: 50px;'>OR</span>
-					<form method="POST" action="application.php">
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="resumeApplicationEdit.php">Finish Application</button>
-					</form>
+					
+					
+					
 				</div>		
-		</form>
 	</div>
 </body>
 </html>
