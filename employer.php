@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	require 'php/dbConnection.php';
-
+	echo $_SERVER['storeNumber'];
 	$dbConn = getConnection();
 
 	$sql = "SELECT * FROM Applicant inner JOIN Applied on Applied.applicantId = Applicant.applicantId 
