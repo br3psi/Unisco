@@ -1,8 +1,8 @@
 <?php
+		session_start();
 
 	if(isset($_POST['phone']))
 	{
-		session_start();
 		require 'php/dbConnection.php';
 
 		$dbConn = getConnection();
