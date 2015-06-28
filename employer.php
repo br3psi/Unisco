@@ -12,8 +12,8 @@
 	$stmt = $dbConn->prepare($sql); 
 	$stmt->execute($namedParameters); 
 	$result = $stmt ->fetchAll();
-
-?>
+	print_r($result);
+	?>
 
 <!DOCTYPE HTML>
 <html lang="en">
