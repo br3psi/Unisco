@@ -64,8 +64,6 @@ function getConnection()
 						 ":applicantCompletedApplication"=>$_POST['applicantCompletedApplication'],
 						 ":whoCompletedApplication"=>$_POST['whoCompletedApplication']);
 	$stmt->execute($namedParameters); 
-	
-
 	header("Location: jobListing.php");
 }
 ?>
@@ -110,13 +108,13 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">Do you have a high school diploma/GED?</span>
 								<label class="input-group-addon">
-									<input type="checkbox" name="highSchoolDiplomaGED" value="no" value="yes">
+									<input type="checkbox" name="highSchoolDiplomaGED"  value="yes">
 								</label>
 							</div>
 							<div class="md-3 input-group">
 								<span class="input-group-addon">College education:</span>
-								<select class="form-control" name="collegeEducation">
-									<option valye="none">N/A</option>
+								<select class="form-control" name="collegeEducation" required>
+									<option value="none">N/A</option>
 									<option value="communityCollege">Community College</option>
 									<option value="fourYearInstitution">4 year institution</option>
 								</select>
@@ -124,7 +122,7 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">Have you graduated?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="collegeGraduated" value="no" name="crime">
+									<input  type="checkbox" name="collegeGraduated" value="yes" >
 								</label>
 							</div>
 
@@ -139,7 +137,7 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">Can you type?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="type" value="no" >
+									<input  type="checkbox" name="type" value="yes" >
 								</label>
 							</div>
 
@@ -150,7 +148,7 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">Do you have a Personal Computer?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="haveComputer" value="no">
+									<input  type="checkbox" name="haveComputer" value="yes">
 								</label>
 							</div>
 							<div class="md-3 input-group">
@@ -344,13 +342,13 @@ function getConnection()
 									<div class="md-3 input-group">
 										<span class="form-control">May we contact your present/last employer? </span>
 										<label class="input-group-addon">
-											<input  type="checkbox" name="contactEmployer" value="no">
+											<input  type="checkbox" name="contactEmployer" value="yes">
 										</label>
 									</div>
 									<div class="md-3 input-group">
 										<span class="form-control">Did you complete this application yourself? </span>
 										<label class="input-group-addon">
-											<input  type="checkbox" name="applicantCompletedApplication" value="no">
+											<input  type="checkbox" name="applicantCompletedApplication" value="yes">
 										</label>
 									</div>
 									<div class="md-3 input-group">

@@ -116,20 +116,14 @@ if(!empty($_POST['firstName']))
 						<div class=" row">
 							<div class = 'col-md-4'>
 								<div class="input-group">
-									<span class="input-group-addon">Date</span>
-									<input type="text" class="form-control"  name="appDate" aria-describe>
-								</div>
-							</div>
-							<div class = 'col-md-4'>
-								<div class="input-group">
 									<span class="input-group-addon">Last Name</span>
-									<input type="text" class="form-control"  name="lastName" aria-describe>
+									<input type="text" class="form-control"  name="lastName" required aria-describe>
 								</div>
 							</div>
 							<div class = 'col-md-4'>	
 									<div class="input-group">
 									<span class="input-group-addon">First Name</span>
-									<input type="text" class="form-control"  name="firstName" aria-describe>
+									<input type="text" class="form-control"  name="firstName" required aria-describe>
 								</div>
 							</div>
 						</div>
@@ -152,31 +146,31 @@ if(!empty($_POST['firstName']))
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">Present Address</span>
-								<input type="text" class="form-control"  name="addressStreet" aria-describe>
+								<input type="text" class="form-control"  name="addressStreet"required aria-describe>
 							</div>
 						</div>
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon" >City</span>
-								<input type="text" class="form-control"  name="city" aria-describe>
+								<input type="text" class="form-control"  required name="city" required aria-describe>
 							</div>
 						</div>
 						<div class = 'col-xs-4'>
 							<div class="input-group">
 								<span class="input-group-addon" >State</span>
-								<input type="text" class="form-control"  name="state" aria-describe>
+								<input type="text" class="form-control"  name="state"  requiredaria-describe>
 							</div>
 						</div>
 						<div class = 'col-xs-4'>
 							<div class="input-group">
 								<span class="input-group-addon" >Zipcode</span>
-								<input type="text" class="form-control"  name="zipcode" aria-describe>
+								<input type="text" class="form-control"  name="zipcode" required aria-describe>
 							</div>
 						</div>
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">How Long?</span>
-								<input type="text" class="form-control"  name="presentAddressTime" aria-describe>
+								<input type="text" class="form-control"  name="presentAddressTime" required aria-describe>
 							</div>
 						</div>
 					</div>
@@ -185,32 +179,32 @@ if(!empty($_POST['firstName']))
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">Social Security No.</span>
-								<input type="text" class="form-control"  name="ssn" aria-describe placeholder="###-##-####">
+								<input type="text" class="form-control"  name="ssn" aria-describe required placeholder="###-##-####">
 							</div>
 						</div>
 
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">Phone Number</span>
-								<input name="phoneNum" type="text" class="form-control"  aria-describe placeHolder="(###)###-####">
+								<input name="phoneNum" type="text" class="form-control" required aria-describe placeHolder="(###)###-####">
 							</div>
 						</div>
 
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">Date of Birth</span>
-								<input name="dob" type="date" class="form-control"  aria-describe placeholder="DD-MM-YYYY">
+								<input name="dob" type="date" class="form-control"  required aria-describe placeholder="DD-MM-YYYY">
 							</div>
 						</div>
 
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">Available to work</span>
-								<select class="form-control" name="availability">
+								<select class="form-control" name="availability" required>
 										<option value="partTime">Part time</option>
 										<option value="fullTime">Full time</option>
 										<option value="bothTimes">Both</option>
-										</select>
+								</select>
 							</div>
 						</div>
 						<div class = 'col-md-4'>
@@ -262,7 +256,7 @@ if(!empty($_POST['firstName']))
 							<div class = 'col-lg-6'>
 								<div class="input-group">
 									<span class="input-group-addon" >What is your means of transportation to work?</span>
-									<input type="text" class="form-control"  name="transportation" >
+									<input type="text" class="form-control"  name="transportation" required >
 								</div>
 							</div>
 						</div>
@@ -397,16 +391,15 @@ if(!empty($_POST['firstName']))
 				 
 			</div>
 				<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Finish Application</button>
+			</div>
 		</form>
 		<div id = 'sendapp'>
+		<span id="orSpan" style = 'margin: 50px;'>OR</span>
 					<form method="POST" action="submitResume.php">
 						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
 					</form>
-					<span id="orSpan" style = 'margin: 50px;'>OR</span>
 					
-					
-					
-				</div>		
+						
 	</div>
 </body>
 </html>
