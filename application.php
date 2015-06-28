@@ -13,7 +13,7 @@ function getConnection()
 	}
 
 	//$jobType = $_POST['jobType'];
-	if(!empty($_POST['highSchoolDiplomaGED']))
+	if(!empty($_POST['collegeEducation']))
 	{
 	$dbConn= getConnection();
 
