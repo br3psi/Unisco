@@ -70,7 +70,7 @@
 		?>
 				<div>
 					<?php
-						// echo $applicant['firstName'];
+						 echo $applicant['firstName'];
 						// echo $applicant['lastName'];
 
 						// echo $applicant['phone'];
