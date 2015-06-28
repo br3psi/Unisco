@@ -16,43 +16,7 @@ if(!empty($_POST['firstName']))
 {
 	//$jobType = $_POST['jobType'];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-echo "hello";
- echo "<br/>";
-echo $_POST['firstName'];
-echo "<br/>";
- echo                     $_POST['lastName'];
- echo "<br/>";
- echo                  'nn'; echo "<br/>";
- echo                   'nn'; echo "<br/>";
- echo                   'nn'; echo "<br/>";
- echo					 $_POST['city']; echo "<br/>";
-echo					 $_POST['state']; echo "<br/>";
-echo					 $_POST['zipcode']; echo "<br/>";
-echo					 $_POST['presentAddressTime']; echo "<br/>";
-echo					 $_POST['ssn']; echo "<br/>";
-echo					 $_POST['phoneNum']; echo "<br/>";
-echo					 $_POST['dob']; echo "<br/>";
-echo					 $_POST['availability']; echo "<br/>";
-echo					 'bbbb'; echo "<br/>";
-echo					 $_POST['felony']; echo "<br/>";
-echo					 $_POST['backgroundCheck']; echo "<br/>";
-echo					 $_POST['transportation']; echo "<br/>";
-echo					 $_POST['driverLicense']; echo "<br/>";
-echo					 $_POST['licenseNumber']; echo "<br/>";
-echo					 $_POST['licenseDate']; echo "<br/>";
-echo					 $_POST['licenseType']; echo "<br/>";
-echo					 $_POST['accidentsNumber']; echo "<br/>";
-echo					 $_POST['movingViolationsNumber']; echo "<br/>";
-echo					 $_POST['licenseType']; echo "<br/>";
-echo					 $_POST['refOnePosition']; echo "<br/>";
-echo					 $_POST['refOneCompany']; echo "<br/>";
-echo					 $_POST['refOneAddress']; echo "<br/>";
-echo					 $_POST['refOnePhoneNum']; echo "<br/>";
-echo					 $_POST['refTwoName']; echo "<br/>";
-echo					 $_POST['refTwoPosition']; echo "<br/>";
-echo					 $_POST['refTwoCompany']; echo "<br/>";
-echo					 $_POST['refTwoAddress']; echo "<br/>";
-echo					$_POST['refTwoPhoneNum']; echo "<br/>";
+
 	$dbConn= getConnection();
 
 
@@ -70,9 +34,9 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 	$stmt = $dbConn->prepare($sql);
 	$namedParameters = array(":firstName"=> $_POST['firstName'],
                          ":lastName"=> $_POST['lastName'],
-                         ":middleName"=> 'none',
-                         ":maidenName"=>'none',
-                         ":addressStreet"=> 'none',
+                         ":middleName"=> $_POST['middleName'],
+                         ":maidenName"=>$_POST['maidenName'],
+                         ":addressStreet"=> $_POST['addressStreet'],
 						 ":addressCity"=>$_POST['city'],
 						 ":addressState"=>$_POST['state'],
 						 ":zipcode"=>$_POST['zipcode'],
@@ -81,7 +45,7 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 						 ":phoneNum"=>$_POST['phoneNum'],
 						 ":dob"=>$_POST['dob'],
 						 ":availability"=>$_POST['availability'],
-						 ":linkedIn"=>'none',
+						 ":linkedIn"=>$_POST['linkedIn'],
 						 ":felony"=>$_POST['felony'],
 						 ":backgroundCheck"=>$_POST['backgroundCheck'],
 						 ":transportation"=>$_POST['transportation'],
@@ -104,7 +68,6 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 	 $stmt->execute($namedParameters);
 	header("Location: application.php");
 }
-
 ?>
 
 <!DOCTYPE HTML>
@@ -164,7 +127,7 @@ echo					$_POST['refTwoPhoneNum']; echo "<br/>";
 								</div>
 							</div>
 							<div class = 'col-md-4'>	
-								<div class="input-group">
+									<div class="input-group">
 									<span class="input-group-addon">First Name</span>
 									<input type="text" class="form-control"  name="firstName" aria-describe>
 								</div>

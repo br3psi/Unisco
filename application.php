@@ -63,7 +63,6 @@ function getConnection()
 						 ":contactLastEmployer"=>$_POST['contactLastEmployer'],
 						 ":applicantCompletedApplication"=>$_POST['applicantCompletedApplication'],
 						 ":whoCompletedApplication"=>$_POST['whoCompletedApplication']);
-
 	$stmt->execute($namedParameters); 
 	
 
