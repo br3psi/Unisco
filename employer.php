@@ -7,7 +7,7 @@
 	$sql = "SELECT * FROM Applicant inner JOIN Applied on Applied.applicantId = Applicant.applicantId 
 			where Applied.storeNumber = :storeNumber";
 	$namedParameters = array();
-	$namedParameters[':storeNumber'] = $_SESSEION['storeNumber'];
+	$namedParameters[':storeNumber'] = $_SESSION['storeNumber'];
 
 	$stmt = $dbConn->prepare($sql); 
 	$stmt->execute($namedParameters); 
