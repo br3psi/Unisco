@@ -10,8 +10,8 @@
 	$namedParameters[':storeNumber'] = $_SERVER['storeNumber'];
 
 	$stmt = $dbConn->prepare($sql); 
-	// $stmt->execute($namedParameters); 
-	// $result = $stmt ->fetchAll();
+	$stmt->execute($namedParameters); 
+	$result = $stmt ->fetchAll();
 
 ?>
 
