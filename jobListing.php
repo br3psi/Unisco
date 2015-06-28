@@ -20,7 +20,7 @@
 
 		if($result['AccountType'] == 1)
 		{
-			$_SERVER['storeNumber'] = $result['storeNumber'];
+			$_SESSION['storeNumber'] = $result['storeNumber'];
 			header("Location: employer.php");
 		}
 	}

@@ -1,13 +1,13 @@
 <?php
 	session_start();
 	require 'php/dbConnection.php';
-	echo $_SERVER['storeNumber'];
+	echo $_SESSION['storeNumber'];
 	$dbConn = getConnection();
 
 	$sql = "SELECT * FROM Applicant inner JOIN Applied on Applied.applicantId = Applicant.applicantId 
 			where Applied.storeNumber = :storeNumber";
 	$namedParameters = array();
-	$namedParameters[':storeNumber'] = $_SERVER['storeNumber'];
+	$namedParameters[':storeNumber'] = $_SESSEION['storeNumber'];
 
 	$stmt = $dbConn->prepare($sql); 
 	$stmt->execute($namedParameters); 
