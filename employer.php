@@ -4,8 +4,8 @@
 
 	$dbConn = getConnection();
 
-	$sql = "SELECT * FROM `Applicant` join Applied ON Applicant.applicantId = Applied.applicantId join Employer
-			ON Applied.storeNumber = :storeNumber";
+	$sql = "SELECT * FROM `Employer` Join Applied on :storeNumber = Applied.storeNumber 
+			join Applicant on Applied.applicantId = Applicant.applicantId";
 	$namedParameters = array();
 	$namedParameters[':storeNumber'] = $_SERVER['storeNumber'];
 
