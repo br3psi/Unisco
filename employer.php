@@ -67,14 +67,14 @@
 	<div id="applicants">
 		<?php
 			foreach ($result as $applicant) {
-				?>
+		?>
 				<div>
-					<?= 
-						echo $applicant['firstName'];
-						echo $applicant['lastName'];
+					<?php
+						// echo $applicant['firstName'];
+						// echo $applicant['lastName'];
 
-						echo $applicant['phone'];
-						?>
+						// echo $applicant['phone'];
+					?>
 				</div>
 				<br/>
 				<br/>
