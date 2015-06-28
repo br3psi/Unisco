@@ -71,9 +71,9 @@
 				<div>
 					<?php
 						 echo $applicant['firstName'];
-						// echo $applicant['lastName'];
+						echo $applicant['lastName'];
 
-						// echo $applicant['phone'];
+						echo $applicant['phone'];
 					?>
 				</div>
 				<br/>
