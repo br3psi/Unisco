@@ -93,7 +93,7 @@ function getConnection()
 
 </head>
 <body >
-		<form method="POST" action="jobListing.php">
+		<form method="POST" >
 
 			<div class="panel panel-default">
 				<div class=" title panel-heading">
@@ -363,7 +363,7 @@ function getConnection()
 					</div>
 				</div>
 				<div id = 'sendapp'>
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="application.php">Submit</button>
+					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Submit</button>
 				</div>
 		</form>
 </body>
