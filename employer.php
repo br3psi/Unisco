@@ -1,19 +1,19 @@
 <?php
 	session_start();
 	require 'php/dbConnection.php';
-
+	//echo $_SESSION['storeNumber'];
 	$dbConn = getConnection();
 
-	$sql = "SELECT * FROM `Applicant` join Applied ON Applicant.applicantId = Applied.applicantId join Employer
-			ON Applied.storeNumber = :storeNumber";
+	$sql = "SELECT * FROM Applicant inner JOIN Applied on Applied.applicantId = Applicant.applicantId 
+			where Applied.storeNumber = :storeNumber";
 	$namedParameters = array();
-	$namedParameters[':storeNumber'] = $_SERVER['storeNumber'];
+	$namedParameters[':storeNumber'] = $_SESSION['storeNumber'];
 
 	$stmt = $dbConn->prepare($sql); 
 	$stmt->execute($namedParameters); 
 	$result = $stmt ->fetchAll();
-
-?>
+	//print_r($result);
+	?>
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -67,14 +67,15 @@
 	<div id="applicants">
 		<?php
 			foreach ($result as $applicant) {
-				?>
+		?>
 				<div>
-					<?= 
-						echo $applicant['firstName'];
+					<?php
+						 echo $applicant['firstName'];
+						 str_repeat('&nbsp;', 5);
 						echo $applicant['lastName'];
-
+						echo "<br/>";
 						echo $applicant['phone'];
-						?>
+					?>
 				</div>
 				<br/>
 				<br/>

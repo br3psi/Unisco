@@ -1,8 +1,8 @@
 <?php
+		session_start();
 
 	if(isset($_POST['phone']))
 	{
-		session_start();
 		require 'php/dbConnection.php';
 
 		$dbConn = getConnection();
@@ -20,7 +20,7 @@
 
 		if($result['AccountType'] == 1)
 		{
-			$_SERVER['storeNumber'] = $result['storeNumber'];
+			$_SESSION['storeNumber'] = $result['storeNumber'];
 			header("Location: employer.php");
 		}
 	}
