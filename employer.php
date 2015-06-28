@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	require 'php/dbConnection.php';
-	echo $_SESSION['storeNumber'];
+	//echo $_SESSION['storeNumber'];
 	$dbConn = getConnection();
 
 	$sql = "SELECT * FROM Applicant inner JOIN Applied on Applied.applicantId = Applicant.applicantId 
@@ -12,7 +12,7 @@
 	$stmt = $dbConn->prepare($sql); 
 	$stmt->execute($namedParameters); 
 	$result = $stmt ->fetchAll();
-	print_r($result);
+	//print_r($result);
 	?>
 
 <!DOCTYPE HTML>
@@ -71,8 +71,9 @@
 				<div>
 					<?php
 						 echo $applicant['firstName'];
+						 str_repeat('&nbsp;', 5);
 						echo $applicant['lastName'];
-
+						echo "<br/>";
 						echo $applicant['phone'];
 					?>
 				</div>
