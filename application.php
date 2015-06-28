@@ -29,9 +29,9 @@ function getConnection()
 	$stmt = $dbConn->prepare($sql);
 	$namedParameters = array(":highSchoolDiplomaGED"=> $_POST['highSchoolDiplomaGED'],
                          ":collegeEducation"=> $_POST['collegeEducation'],
-                         ":collegeGraduated"=> $POST['collegeGraduated'],
-                         ":type"=>$POST['type'],
-                         ":typeWPM"=> $POST['typeWPM'],
+                         ":collegeGraduated"=> $_POST['collegeGraduated'],
+                         ":type"=>$_POST['type'],
+                         ":typeWPM"=> $_POST['typeWPM'],
 						 ":haveComputer"=>$_POST['haveComputer'],
 						 ":computerType"=>$_POST['computerType'],
 						 ":tenKeyComputer"=>$_POST['tenKeyComputer'],
