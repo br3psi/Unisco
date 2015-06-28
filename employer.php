@@ -1,5 +1,17 @@
 <?php
+	session_start();
+	require 'php/dbConnection.php';
 
+	$dbConn = getConnection();
+
+	$sql = "SELECT * FROM `Applicant` join Applied ON Applicant.applicantId = Applied.applicantId join Employer
+			ON Applied.storeNumber = :storeNumber";
+	$namedParameters = array();
+	$namedParameters[':storeNumber'] = $_SERVER['storeNumber'];
+
+	$stmt = $dbConn->prepare($sql); 
+	$stmt->execute($namedParameters); 
+	$result = $stmt ->fetchAll();
 
 ?>
 
@@ -53,7 +65,22 @@
 	</div>
 
 	<div id="applicants">
+		<?php
+			foreach ($result as $applicant) {
+				?>
+				<div>
+					<?= 
+						echo $applicant['firstName'];
+						echo $applicant['lastName'];
 
+						echo $applicant['phone'];
+						?>
+				</div>
+				<br/>
+				<br/>
+		<?php
+			}
+		?>
 	</div>
 
 </body>

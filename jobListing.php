@@ -17,6 +17,12 @@
 		$result = $stmt ->fetch();
 		echo $result['applicantId'];
 		$_SERVER['applicantId'] = $result['applicantId'];
+
+		if($result['AccountType'] == 1)
+		{
+			$_SERVER['storeNumber'] = $result['storeNumber'];
+			header("Location: employer.php");
+		}
 	}
 	else
 	{
