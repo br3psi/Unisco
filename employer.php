@@ -71,7 +71,7 @@
 				<div>
 					<?php
 						 echo $applicant['firstName'];
-						 str_repeat('&nbsp;', 5);
+						 echo "&nbsp";
 						echo $applicant['lastName'];
 						echo "<br/>";
 						echo $applicant['phone'];
