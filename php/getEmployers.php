@@ -10,7 +10,8 @@
 	$stmt->execute(); 
 	$result = $stmt ->fetchAll();
 
-	$applicants = json_encode($result);
-	echo $applicants;
+	// $applicants =
+	echo json_encode($result);
+	// echo $applicants;
 	
 ?>
