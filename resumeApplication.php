@@ -1,6 +1,6 @@
 <?php
 	//inserting basic information to database
-
+session_start();
 function getConnection()
 	{
 		$host = "localhost";
@@ -66,6 +66,7 @@ if(!empty($_POST['firstName']))
 						 ":refTwoAddress"=>$_POST['refTwoAddress'],
 						 ":refTwoPhoneNum"=>$_POST['refTwoPhoneNum']);
 	 $stmt->execute($namedParameters);
+	// $_SESSION['phone'] = $_POST['phoneNum'];
 	header("Location: application.php");
 }
 ?>
