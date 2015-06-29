@@ -45,13 +45,15 @@
 </head>
 <body >
 
-	<nav>
 		<div>
 			<span><?php echo $_GET['firstName']; echo "&nbsp"; echo $_GET['lastName']; ?></span>
 
 		</div>
-	</nav>
 
+		<div>
+
+			
+		</div>
 	
 </body>
 </html>
