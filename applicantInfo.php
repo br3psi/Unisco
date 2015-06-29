@@ -44,7 +44,6 @@
 
 </head>
 <body >
-
 	
 	<nav>
 		<div>
@@ -53,8 +52,11 @@
 			echo $result['phoneNum'];
 			?>
 		</div>
-	</nav>
 
+		<div>
+
+			
+		</div>
 	
 </body>
 </html>

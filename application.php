@@ -1,6 +1,6 @@
 <?php
 	//inserting basic information to database
-
+session_start();
 function getConnection()
 	{
 		$host = "localhost";
@@ -16,19 +16,24 @@ function getConnection()
 	if(isset($_POST['submitApp']))
 	{
 	echo "Goes through!";
+	echo $_POST['collegeEducation'];
 	$dbConn= getConnection();
 
-	$sql = "INSERT INTO application (highSchoolDiplomaGED, collegeEducation, collegeGraduated, type, typeWPM, haveComputer, computerType, tenKeyComputer, wordProcessing, wordProcessingWPM, military,
-	militarySpecialty, militaryStartDate, militaryEndDate, nationalGuard, nationalGuardSpecialty, nationalGuardStartDate, nationalGuardEndDate,
-	jobOneEmployerName, jobOneAddress, jobOnePhonNum, jobOneSupervisorName, jobOneStartDate, jobOneEndDate, jobOneJobTitle, jobOneLeavingReasons, jobOneDuties, jobTwoEmployerName, jobTwoAddress,
-	jobTwoPhoneNum, jobTwoSupervisorName, jobTwoStartDate, jobTwoEndDate, jobTwoJObTitle, jobTwoLeavingReasons, jobTwoDuties, contactLastEmployer, applicantCompletedApplication, whoCompletedApplication) 
-	VALUES (:highSchoolDiplomaGED, :collegeEducation, :collegeGraduated, :type, :typeWPM, :haveComputer, :computerType, :tenKeyComputer, 
-	:wordProcessing, :wordProcessingWPM, :military, :militarySpecialty, :militaryStartDate, :militaryEndDate, :nationalGuard, :nationalGuardSpecialty, :nationalGuardStartDate, :nationalGuardEndDate, 
-	:jobOneEmployerName, :jobOneAddress, :jobOnePhoneNum, :jobOneSupervisorName, :jobOneStartDate, :jobOneEndDate, :jobOneTitle, :jobOneLeavingReasons, :jobOneDuties, 
-	:jobTwoEmployerName, :jobTwoAddress, :jobTwoPhoneNum, :jobTwoSupervisorName, :jobTwoStartDate, :jobTwoEndDate, :jobTwoTitle, :jobTwoLeavingReasons, :jobTwoDuties, :contactLastEmployer, 
-	:applicantCompletedApplication, :whoCompletedApplication)";
+	$sql = "INSERT INTO application (applicantId, highSchoolDiplomaGED, collegeEducation, collegeGraduated, type, typeWPM, haveComputer, computerType, tenKeyComputer, 
+									 wordProcessing, wordProcessingWPM, military, militarySpecialty, militaryStartDate, militaryEndDate, nationalGuard, 
+									 nationalGuardSpecialty, nationalGuardStartDate, nationalGuardEndDate, jobOneEmployerName, jobOneAddress, jobOnePhoneNum,
+									 jobOneSupervisorName, jobOneStartDate, jobOneEndDate, jobOneTitle, jobOneLeavingReasons, jobOneDuties, jobTwoEmployerName, 
+									 jobTwoAddress, jobTwoPhoneNum, jobTwoSupervisorName, jobTwoStartDate, jobTwoEndDate, jobTwoTitle, jobTwoLeavingReasons, 
+									 jobTwoDuties, contactLastEmployer, applicantCompletedApplication, whoCompletedApplication) 
+
+	VALUES (:applicantId, :highSchoolDiplomaGED, :collegeEducation, :collegeGraduated, :type, :typeWPM, :haveComputer, :computerType, :tenKeyComputer, 
+	:wordProcessing, :wordProcessingWPM, :military, :militarySpecialty, :militaryStartDate, :militaryEndDate, :nationalGuard, :nationalGuardSpecialty,
+	 :nationalGuardStartDate, :nationalGuardEndDate, :jobOneEmployerName, :jobOneAddress, :jobOnePhoneNum, :jobOneSupervisorName, :jobOneStartDate, 
+	 :jobOneEndDate, :jobOneTitle, :jobOneLeavingReasons, :jobOneDuties, :jobTwoEmployerName, :jobTwoAddress, :jobTwoPhoneNum, :jobTwoSupervisorName, 
+	 :jobTwoStartDate, :jobTwoEndDate, :jobTwoTitle, :jobTwoLeavingReasons, :jobTwoDuties, :contactLastEmployer, :applicantCompletedApplication, :whoCompletedApplication)";
 	$stmt = $dbConn->prepare($sql);
-	$namedParameters = array(":highSchoolDiplomaGED"=> $_POST['highSchoolDiplomaGED'],
+	$namedParameters = array(":applicantId"=>'35',
+						 ":highSchoolDiplomaGED"=> $_POST['highSchoolDiplomaGED'],
                          ":collegeEducation"=> $_POST['collegeEducation'],
                          ":collegeGraduated"=> $_POST['collegeGraduated'],
                          ":type"=>$_POST['type'],
@@ -49,6 +54,7 @@ function getConnection()
 						 ":jobOneEmployerName"=>$_POST['jobOneEmployerName'],
 						 ":jobOneAddress"=>$_POST['jobOneAddress'],
 						 ":jobOnePhoneNum"=>$_POST['jobOnePhoneNum'],
+						 ":jobOneSupervisorName"=>$_POST['jobOneSupervisorName'],
 						 ":jobOneStartDate"=>$_POST['jobOneStartDate'],
 						 ":jobOneEndDate"=>$_POST['jobOneEndDate'],
 						 ":jobOneTitle"=>$_POST['jobOneTitle'],
@@ -57,8 +63,10 @@ function getConnection()
 						 ":jobTwoEmployerName"=>$_POST['jobTwoEmployerName'],
 						 ":jobTwoAddress"=>$_POST['jobTwoAddress'],
 						 ":jobTwoPhoneNum"=>$_POST['jobTwoPhoneNum'],
+						 ":jobTwoSupervisorName"=>$_POST['jobTwoSupervisorName'],
 						 ":jobTwoStartDate"=>$_POST['jobTwoStartDate'],
 						 ":jobTwoEndDate"=>$_POST['jobTwoEndDate'],
+						 ":jobTwoTitle"=>$_POST['jobTwoTitle'],
 						 ":jobTwoLeavingReasons"=>$_POST['jobTwoLeavingReasons'],
 						 ":jobTwoDuties"=>$_POST['jobTwoDuties'],
 						 ":contactLastEmployer"=>$_POST['contactLastEmployer'],
@@ -188,7 +196,7 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">HAVE YOU EVER BEEN IN THE ARMED FORCES?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="armedForces" value="yes">
+									<input  type="checkbox" name="military" value="yes">
 								</label>
 							</div>
 							<div class="md-3 input-group">
@@ -344,7 +352,7 @@ function getConnection()
 									<div class="md-3 input-group">
 										<span class="form-control">May we contact your present/last employer? </span>
 										<label class="input-group-addon">
-											<input  type="checkbox" name="contactEmployer" value="yes">
+											<input  type="checkbox" name="contactLastEmployer" value="yes">
 										</label>
 									</div>
 									<div class="md-3 input-group">
