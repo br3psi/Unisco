@@ -16,6 +16,7 @@ function getConnection()
 	if(isset($_POST['submitApp']))
 	{
 	echo "Goes through!";
+	echo $_POST['collegeEducation'];
 	$dbConn= getConnection();
 
 	$sql = "INSERT INTO application (applicantId, highSchoolDiplomaGED, collegeEducation, collegeGraduated, type, typeWPM, haveComputer, computerType, tenKeyComputer, 
