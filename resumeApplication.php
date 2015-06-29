@@ -199,9 +199,9 @@ if(!empty($_POST['firstName']))
 							<div class="input-group">
 								<span class="input-group-addon">Available to work</span>
 								<select class="form-control" name="availability" required>
-										<option value="partTime">Part time</option>
-										<option value="fullTime">Full time</option>
-										<option value="bothTimes">Both</option>
+										<option value="part time">Part time</option>
+										<option value="full time">Full time</option>
+										<option value="part and full time">Both</option>
 								</select>
 							</div>
 						</div>
