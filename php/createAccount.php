@@ -36,7 +36,7 @@
 		$stmt = $dbConn->prepare($sql); 
 		$stmt->execute($namedParameters); 
 		
-		$lastId = $stmt->lastInsertId();
+		$lastId = $dbConn->lastInsertId();
 		$_SESSION['lastId'] = $lastId;
 		$ara = array();
 		$ara['message'] = "Phone number available";
