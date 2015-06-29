@@ -11,7 +11,7 @@ function displayActiveUsers()
 			for(i in data)
 			{
 				$('#activeEmployers').append("Employer Name: " + data[i].firstName + "  " + 
-				   data[i].lastName);
+				   data[i].lastName) + "<br/>";
 			}
 	  	}
 	  	});
