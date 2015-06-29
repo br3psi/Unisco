@@ -33,6 +33,10 @@
 			$_SESSION['storeNumber'] = $result['storeNumber'];
 			header("Location: employer.php");
 		}
+		elseif($result['AccountType'] == 3)
+		{
+			header("Location: employer.php");
+		}
 	}
 	else
 	{
