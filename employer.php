@@ -91,7 +91,8 @@ function getApplicantInfo(applicantId)
 				<div>
 					<?php
 						 echo "<a href=applicantInfo.php?firstName=".$applicant['firstName']."&lastName=". $applicant['lastName'] . 
-						 		"&id=" . $applicant['applicantId'] . " >" . $applicant['firstName'];
+						 		"&id=" . $applicant['applicantId'] . " >";
+								echo $applicant['firstName'];
 						 echo "&nbsp";
 						echo $applicant['lastName'];
 						echo "</a>";
