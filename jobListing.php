@@ -11,14 +11,15 @@
 		$namedParameters = array();
 		if(isset($_POST['phone']))
 		{
-			$namedParameters[':password'] = $_SESSION['password'];
-			$namedParameters[':phone'] = $_SESSION['phone'];
+			$namedParameters[':password'] = sha1($_POST['password']);
+			$namedParameters[':phone'] = $_POST['phone'];
+			
 		}
 		elseif(isset($_SESSION['phone']))
 		{
-			$namedParameters[':password'] = sha1($_POST['password']);
-			$namedParameters[':phone'] = $_POST['phone'];
-
+			
+			$namedParameters[':password'] = $_SESSION['password'];
+			$namedParameters[':phone'] = $_SESSION['phone'];
 		}
 			$stmt = $dbConn->prepare($sql); 
 			$stmt->execute($namedParameters); 
