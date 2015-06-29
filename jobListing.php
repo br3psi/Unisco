@@ -35,7 +35,7 @@
 		}
 		elseif($result['AccountType'] == 3)
 		{
-			header("Location: employer.php");
+			header("Location: admin.php");
 		}
 	}
 	else
