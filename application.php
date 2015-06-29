@@ -32,7 +32,7 @@ function getConnection()
 	 :jobOneEndDate, :jobOneTitle, :jobOneLeavingReasons, :jobOneDuties, :jobTwoEmployerName, :jobTwoAddress, :jobTwoPhoneNum, :jobTwoSupervisorName, 
 	 :jobTwoStartDate, :jobTwoEndDate, :jobTwoTitle, :jobTwoLeavingReasons, :jobTwoDuties, :contactLastEmployer, :applicantCompletedApplication, :whoCompletedApplication)";
 	$stmt = $dbConn->prepare($sql);
-	$namedParameters = array(":applicantId"=>'35',
+	$namedParameters = array(":applicantId"=>35,
 						 ":highSchoolDiplomaGED"=> $_POST['highSchoolDiplomaGED'],
                          ":collegeEducation"=> $_POST['collegeEducation'],
                          ":collegeGraduated"=> $_POST['collegeGraduated'],
