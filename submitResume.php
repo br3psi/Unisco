@@ -14,7 +14,7 @@
 	//$stmt = $dbConn->prepare($sql); 
 	//$stmt->execute($namedParameters); 
 	//$result = $stmt ->fetchAll();
-    if (isset($_POST['resume'])) {
+    if (isset($_POST['uploadForm'])) {
 		
         $temp = explode('.', $_FILES['file']['name']);
         $extn = strtolower(end($temp));
@@ -38,6 +38,7 @@
 
 
                     alert("Resume uploaded successfully!");
+                    header("Location: jobListing.php");
                 } catch(PDOException $e) { catchMySQLerror($e->getMessage()); }
 
             } else {
@@ -81,7 +82,7 @@
 				<h4>Upload Resume</h1>
 			</div>
 			<div class = 'panel-body'>
-				<form action="jobListing.php" method="post" enctype="multipart/form-data" >
+				<form  method="post" enctype="multipart/form-data" >
 					Select resume: <input type='file' name="fileName" />
 					</br>
 					<input type="submit" name="uploadForm"/>
