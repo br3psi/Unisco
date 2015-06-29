@@ -22,8 +22,8 @@ function getConnection()
 	$sql = "INSERT INTO application (applicantId, highSchoolDiplomaGED, collegeEducation, collegeGraduated, type, typeWPM, haveComputer, computerType, tenKeyComputer, 
 									 wordProcessing, wordProcessingWPM, military, militarySpecialty, militaryStartDate, militaryEndDate, nationalGuard, 
 									 nationalGuardSpecialty, nationalGuardStartDate, nationalGuardEndDate, jobOneEmployerName, jobOneAddress, jobOnePhoneNum,
-									 jobOneSupervisorName, jobOneStartDate, jobOneEndDate, jobOneTitle, jobOneLeavingReasons, jobOneDuties, jobTwoEmployerName, 
-									 jobTwoAddress, jobTwoPhoneNum, jobTwoSupervisorName, jobTwoStartDate, jobTwoEndDate, jobTwoTitle, jobTwoLeavingReasons, 
+									 jobOneSupervisorName, jobOneStartDate, jobOneEndDate, jobOneJobTitle, jobOneLeavingReasons, jobOneDuties, jobTwoEmployerName, 
+									 jobTwoAddress, jobTwoPhoneNum, jobTwoSupervisorName, jobTwoStartDate, jobTwoEndDate, jobTwoJobTitle, jobTwoLeavingReasons, 
 									 jobTwoDuties, contactLastEmployer, applicantCompletedApplication, whoCompletedApplication) 
 
 	VALUES (:applicantId, :highSchoolDiplomaGED, :collegeEducation, :collegeGraduated, :type, :typeWPM, :haveComputer, :computerType, :tenKeyComputer, 
