@@ -5,7 +5,7 @@
 	$dbConn = getConnection();
 
 
-	$sql = "SELECT * FROM Applicant where AccountType = 1";
+	$sql = "SELECT firstName, lastName FROM Applicant where AccountType = 1";
 	$stmt = $dbConn->prepare($sql); 
 	$stmt->execute(); 
 	$result = $stmt ->fetchAll();
