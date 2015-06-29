@@ -22,11 +22,11 @@
             // Filetype is correct. Check size
             if($_FILES['file']['size'] < 5632000) {
                 // Filesize is below maximum permitted. Add to the DB.
-                $mime = $_FILES['file']['type'];
+               /* $mime = $_FILES['file']['type'];
                 $size = $_FILES['file']['size'];
                 $name = $_FILES['file']['name'];
-                $tmpf = $_FILES['file']['tmp_name'];
-                $file = fopen($_FILES['file']['tmp_name'], "rb");
+                $tmpf = $_FILES['file']['tmp_name'];*/
+                $file = fopen($_FILES['file']['name'], "r");
 
                 try {
                     $sql = ("INSERT INTO Applicant (resume) VALUES (:file) WHERE :id = Applicant.applicantId");
@@ -35,6 +35,9 @@
                     $stm = $dbConn->prepare($sql);
                     $stmt->execute($namedParameters);
                     $result = $stm -> fetch();
+
+
+                    alert("Resume uploaded successfully!");
                 } catch(PDOException $e) { catchMySQLerror($e->getMessage()); }
 
             } else {

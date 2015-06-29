@@ -56,7 +56,23 @@
 			echo "Phone Number: " . $result['phoneNum']; echo "<br/>";
 			echo "Availability: " . $result['availability']; echo "<br/>";
 			echo "LinkedIn: " . $result['linkedIn'];
+
 		?>
+		<div id="leftSideMenu">
+		<div id="interestLevel">
+			<span>Interest Level</span>
+			<br/>
+			<input type="submit" value="yes"></input>
+			<input type="submit" value="no"></input>
+			<input type="submit" value="maybe"></input>
+		</div>
+		<div id="setInterview">
+			<input type="submit" value="Set up an interview"> </input>
+		</div>
+
+
+	</div>
+
 			
 		</div>
 	
