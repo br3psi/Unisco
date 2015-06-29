@@ -352,7 +352,7 @@ function getConnection()
 									<div class="md-3 input-group">
 										<span class="form-control">May we contact your present/last employer? </span>
 										<label class="input-group-addon">
-											<input  type="checkbox" name="contactEmployer" value="yes">
+											<input  type="checkbox" name="contactLastEmployer" value="yes">
 										</label>
 									</div>
 									<div class="md-3 input-group">
