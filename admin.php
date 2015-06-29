@@ -27,7 +27,9 @@
 
 <button onclick="displayActiveUsers()">Active Users</button>
 
+<div id="activeEmployers">
 
+</div>
 
 
 
