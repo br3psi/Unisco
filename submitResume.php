@@ -29,7 +29,7 @@
                 $file = fopen($_FILES['file']['tmp_name'], "rb");
 
                 try {
-                    $sql = ("INSERT INTO Applicant (resume) VALUES (:file) WHERE :id = Applicant.applicantId);
+                    $sql = ("INSERT INTO Applicant (resume) VALUES (:file) WHERE :id = Applicant.applicantId");
                     $namedParameters = array();
                     $namedParameters[':file'] = $file;
                     $stm = $dbConn->prepare($sql);
