@@ -10,7 +10,7 @@ function displayActiveUsers()
 			$('#activeEmployers').html("");
 			for(i in data)
 			{
-				$('#filtersDiv').append("Employer Name: " + data[i].firstName + "  " + 
+				$('#activeEmployers').append("Employer Name: " + data[i].firstName + "  " + 
 				   data[i].lastName);
 			}
 	  	}
