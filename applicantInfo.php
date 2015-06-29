@@ -6,7 +6,7 @@
 	$idValue = $_GET[id];
 	echo $id;
 
-	$sql = "SELECT * FROM basicApplication WHERE :idValue == applicantId";
+	$sql = "SELECT * FROM basicApplication WHERE :idValue = applicantId";
 	$namedParameters = array();
 	$namedParameters[':idValue'] = $idValue;
 
@@ -53,8 +53,8 @@
 	<nav>
 		<div>
 		<?php
-			echo $result['phoneNum'];
-			?>
+			
+		?>
 			
 		</div>
 	
