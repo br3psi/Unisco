@@ -1,6 +1,6 @@
 <?php
 	//inserting basic information to database
-
+session_start();
 function getConnection()
 	{
 		$host = "localhost";
@@ -18,20 +18,21 @@ function getConnection()
 	echo "Goes through!";
 	$dbConn= getConnection();
 
-	$sql = "INSERT INTO application (highSchoolDiplomaGED, collegeEducation, collegeGraduated, type, typeWPM, haveComputer, computerType, tenKeyComputer, 
+	$sql = "INSERT INTO application (applicantId, highSchoolDiplomaGED, collegeEducation, collegeGraduated, type, typeWPM, haveComputer, computerType, tenKeyComputer, 
 									 wordProcessing, wordProcessingWPM, military, militarySpecialty, militaryStartDate, militaryEndDate, nationalGuard, 
 									 nationalGuardSpecialty, nationalGuardStartDate, nationalGuardEndDate, jobOneEmployerName, jobOneAddress, jobOnePhoneNum,
 									 jobOneSupervisorName, jobOneStartDate, jobOneEndDate, jobOneTitle, jobOneLeavingReasons, jobOneDuties, jobTwoEmployerName, 
 									 jobTwoAddress, jobTwoPhoneNum, jobTwoSupervisorName, jobTwoStartDate, jobTwoEndDate, jobTwoTitle, jobTwoLeavingReasons, 
 									 jobTwoDuties, contactLastEmployer, applicantCompletedApplication, whoCompletedApplication) 
 
-	VALUES (:highSchoolDiplomaGED, :collegeEducation, :collegeGraduated, :type, :typeWPM, :haveComputer, :computerType, :tenKeyComputer, 
+	VALUES (:applicantId, :highSchoolDiplomaGED, :collegeEducation, :collegeGraduated, :type, :typeWPM, :haveComputer, :computerType, :tenKeyComputer, 
 	:wordProcessing, :wordProcessingWPM, :military, :militarySpecialty, :militaryStartDate, :militaryEndDate, :nationalGuard, :nationalGuardSpecialty,
 	 :nationalGuardStartDate, :nationalGuardEndDate, :jobOneEmployerName, :jobOneAddress, :jobOnePhoneNum, :jobOneSupervisorName, :jobOneStartDate, 
 	 :jobOneEndDate, :jobOneTitle, :jobOneLeavingReasons, :jobOneDuties, :jobTwoEmployerName, :jobTwoAddress, :jobTwoPhoneNum, :jobTwoSupervisorName, 
 	 :jobTwoStartDate, :jobTwoEndDate, :jobTwoTitle, :jobTwoLeavingReasons, :jobTwoDuties, :contactLastEmployer, :applicantCompletedApplication, :whoCompletedApplication)";
 	$stmt = $dbConn->prepare($sql);
-	$namedParameters = array(":highSchoolDiplomaGED"=> $_POST['highSchoolDiplomaGED'],
+	$namedParameters = array(":applicantId"=>'35',
+						 ":highSchoolDiplomaGED"=> $_POST['highSchoolDiplomaGED'],
                          ":collegeEducation"=> $_POST['collegeEducation'],
                          ":collegeGraduated"=> $_POST['collegeGraduated'],
                          ":type"=>$_POST['type'],
