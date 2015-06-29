@@ -62,11 +62,9 @@
 		<div>
 			<span>Interest Level</span>
 			<br/>
-			<input type="checkbox" value="yes">Yes</input>
-			<br/>
-			<input type="checkbox" value="no">No</input>
-			<br/>
-			<input type="checkbox" value="maybe">Maybe</input>
+			<input type="submit" value="yes">Yes</input>
+			<input type="submit" value="no">No</input>
+			<input type="submit" value="maybe">Maybe</input>
 		</div>
 
 	</div>
