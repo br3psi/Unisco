@@ -35,6 +35,9 @@
                     $stm = $dbConn->prepare($sql);
                     $stmt->execute($namedParameters);
                     $result = $stm -> fetch();
+
+
+                    alert("Resume uploaded successfully!");
                 } catch(PDOException $e) { catchMySQLerror($e->getMessage()); }
 
             } else {
