@@ -48,13 +48,13 @@
 	<nav>
 		<div>
 			<span><?php echo $_GET['firstName']; echo "&nbsp"; echo $_GET['lastName']; ?></span>
-			<?php
+			
+		</div>
+	<nav>
+		<div>
+		<?php
 			echo $result['phoneNum'];
 			?>
-		</div>
-
-		<div>
-
 			
 		</div>
 	
