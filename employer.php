@@ -105,15 +105,6 @@ function getApplicantInfo(applicantId)
 		?>
 	</div>
 
-<div id="applicantDescription">
-			<div id="applicantPopup">
-				<h2>Job Description</h2>
-				<div id="descriptionDiv">
 
-				</div>
-			<button onclick="closeDescription()" id="closeDes">Close</button>
-
-			</div>
-		</div>
 </body>
 </html>
