@@ -1,7 +1,8 @@
 <?php
 
 	require 'dbConnection.php';
-
+	session_start();
+	$_SESSION['phone'] = $_POST['phoneNum'];
 	$dbConn = getConnection();
 
 	$firstName = $_POST['firstName'];
@@ -35,6 +36,8 @@
 		$stmt = $dbConn->prepare($sql); 
 		$stmt->execute($namedParameters); 
 		
+		$lastId = $stmt->lastInsertId();
+		$_SESSION['lastId'] = $lastId;
 		$ara = array();
 		$ara['message'] = "Phone number available";
 		echo json_encode($ara);

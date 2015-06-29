@@ -1,7 +1,7 @@
 <?php
 		session_start();
 
-	if(isset($_POST['phone']))
+	if(isset($_POST['phone']) || $_SESSION['phone'])
 	{
 		require 'php/dbConnection.php';
 
