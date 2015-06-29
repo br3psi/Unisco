@@ -53,7 +53,9 @@
 	<nav>
 		<div>
 		<?php
-			echo $result['phoneNum'];
+			echo $result['phoneNum']; echo "<br/>";
+			echo $result['availability']; echo "<br/>";
+			echo $result['linkedIn'];
 		?>
 			
 		</div>
