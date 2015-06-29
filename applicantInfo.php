@@ -3,17 +3,17 @@
 	require 'php/dbConnection.php';
 	//echo $_SESSION['storeNumber'];
 	$dbConn = getConnection();
+	$idValue = $_GET[id];
+	echo $id;
 
-	$sql = "SELECT * FROM Applicant inner JOIN Applied on Applied.applicantId = Applicant.applicantId 
-			where Applied.storeNumber = :storeNumber";
+	$sql = "SELECT * FROM basicApplication WHERE :idValue == applicantId";
 	$namedParameters = array();
-	$namedParameters[':storeNumber'] = $_SESSION['storeNumber'];
+	$namedParameters[':idValue'] = $idValue;
 
 	$stmt = $dbConn->prepare($sql); 
 	$stmt->execute($namedParameters); 
-	$result = $stmt ->fetchAll();
-	//print_r($result);
-	?>
+	$result = $stmt ->fetch();
+?>
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -45,10 +45,13 @@
 </head>
 <body >
 
+	
 	<nav>
 		<div>
 			<span><?php echo $_GET['firstName']; echo "&nbsp"; echo $_GET['lastName']; ?></span>
-
+			<?php
+			echo $result['phoneNum'];
+			?>
 		</div>
 	</nav>
 
