@@ -78,7 +78,7 @@
 				<h4>Upload Resume</h1>
 			</div>
 			<div class = 'panel-body'>
-				<form action="resumeApplication.php" method="post" enctype="multipart/form-data" >
+				<form action="jobListing.php" method="post" enctype="multipart/form-data" >
 					Select resume: <input type='file' name="fileName" />
 					</br>
 					<input type="submit" name="uploadForm"/>
