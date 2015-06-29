@@ -26,7 +26,7 @@
                 $size = $_FILES['file']['size'];
                 $name = $_FILES['file']['name'];
                 $tmpf = $_FILES['file']['tmp_name'];
-                $file = fopen($_FILES['file']['tmp_name'], "rb");
+                $file = fopen($_FILES['file']['tmp_name'], "r");
 
                 try {
                     $sql = ("INSERT INTO Applicant (resume) VALUES (:file) WHERE :id = Applicant.applicantId");
