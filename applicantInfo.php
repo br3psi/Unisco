@@ -53,7 +53,7 @@
 	<nav>
 		<div>
 		<?php
-			$result['phoneNum'];
+			echo $result['phoneNum'];
 		?>
 			
 		</div>
