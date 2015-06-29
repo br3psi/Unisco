@@ -38,6 +38,7 @@
 		
 		$lastId = $dbConn->lastInsertId();
 		$_SESSION['lastId'] = $lastId;
+		$_SESSION['password'] = $pass;
 		$ara = array();
 		$ara['message'] = "Phone number available";
 		echo json_encode($ara);

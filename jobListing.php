@@ -9,15 +9,24 @@
 
 		$sql = "SELECT * FROM Applicant WHERE password = :password AND phone = :phone";
 		$namedParameters = array();
-		$namedParameters[':password'] = sha1($_POST['password']);
-		$namedParameters[':phone'] = $_POST['phone'];
+		if(isset($_POST['phone']))
+		{
+			$namedParameters[':password'] = $_SESSION['password'];
+			$namedParameters[':phone'] = $_SESSION['phone'];
+		}
+		else if(isset($_SESSION['phone']))
+		{
+			$namedParameters[':password'] = sha1($_POST['password']);
+			$namedParameters[':phone'] = $_POST['phone'];
 
-		$stmt = $dbConn->prepare($sql); 
-		$stmt->execute($namedParameters); 
-		$result = $stmt ->fetch();
-		echo $result['applicantId'];
-		$_SERVER['applicantId'] = $result['applicantId'];
-
+		}
+			$stmt = $dbConn->prepare($sql); 
+			$stmt->execute($namedParameters); 
+			$result = $stmt ->fetch();
+			//echo $result['applicantId'];
+			$_SESSION['applicantId'] = $result['applicantId'];
+		
+		
 		if($result['AccountType'] == 1)
 		{
 			$_SESSION['storeNumber'] = $result['storeNumber'];
@@ -181,7 +190,7 @@ function getDescription(jobId)
 	</div>
 	<script>
 
-		var aplicantId = <?php $applicantId =  $_SERVER['applicantId']; Print($applicantId); ?>;
+		var aplicantId = <?php $applicantId =  $_SESSION['applicantId']; Print($applicantId); ?>;
 
 		function appliedFunction(storeNumber)
 		{
