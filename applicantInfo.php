@@ -62,9 +62,9 @@
 		<div>
 			<span>Interest Level</span>
 			<br/>
-			<input type="submit" value="yes">Yes</input>
-			<input type="submit" value="no">No</input>
-			<input type="submit" value="maybe">Maybe</input>
+			<input type="submit" value="yes"></input>
+			<input type="submit" value="no"></input>
+			<input type="submit" value="maybe"></input>
 		</div>
 
 	</div>
