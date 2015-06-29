@@ -19,8 +19,10 @@
         $temp = explode('.', $_FILES['file']['name']);
         $extn = strtolower(end($temp));
         if(($extn == "pdf")) {
+        	echo "first if";
             // Filetype is correct. Check size
             if($_FILES['file']['size'] < 5632000) {
+            	ehco "2nd if";
                 // Filesize is below maximum permitted. Add to the DB.
                /* $mime = $_FILES['file']['type'];
                 $size = $_FILES['file']['size'];
@@ -29,7 +31,8 @@
                 $file = fopen($_FILES['file']['name'], "r");
 
                 try {
-                    $sql = ("INSERT INTO Applicant (resume) VALUES (:file) WHERE :id = Applicant.applicantId");
+                	echo "try";
+                    $sql = ("INSERT INTO Applicant(resume) VALUES(:file) WHERE :id = Applicant.applicantId");
                     $namedParameters = array();
                     $namedParameters[':file'] = $file;
                     $stm = $dbConn->prepare($sql);

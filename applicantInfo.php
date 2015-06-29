@@ -66,8 +66,20 @@
 			<input type="submit" value="no"></input>
 			<input type="submit" value="maybe"></input>
 		</div>
+		<br/>
 		<div id="setInterview">
-			<input type="submit" value="Set up an interview"> </input>
+			<input type="submit" id="interviewButton" value="Set up an interview"> </input>
+			<div id = "interviewDiv">
+				<div id = "interviewDiv2">
+					<form id="interviewForm" method="post" name="interviewForm">
+						Enter message in the textarea <br/>
+						<input type="textarea" name="textMessage" placeHolder="I'd like to set up an interview with you">
+						<input type="button" onclik="check_empty()" id="sendMessage" value="Send"/>
+
+					</form>
+
+				</div>
+			</div>
 		</div>
 
 
