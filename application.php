@@ -196,7 +196,7 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">HAVE YOU EVER BEEN IN THE ARMED FORCES?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="armedForces" value="yes">
+									<input  type="checkbox" name="military" value="yes">
 								</label>
 							</div>
 							<div class="md-3 input-group">
