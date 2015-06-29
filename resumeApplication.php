@@ -100,9 +100,6 @@ if(!empty($_POST['firstName']))
 	</div>
 	<div id = 'application'>
 		<h2 class = 'title'>General Information Application</h2>
-				<form method="post" action="application.php">
-					<button id="finishingApplication" type="submit" class="btn btn-warning" href="application.php" >Skip Application</button>
-				</form>
 		<form method="post" >
 			<div>
 				
@@ -384,11 +381,7 @@ if(!empty($_POST['firstName']))
 							</div>
 						</div>
 					</div>
-				</div>
-
-				
-				 
-				 
+				</div> 
 			</div>
 				<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Finish Application</button>
 			</div>
@@ -398,6 +391,7 @@ if(!empty($_POST['firstName']))
 					<form method="POST" action="submitResume.php">
 						<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="submitResume.php">Upload Resume</button>
 					</form>
+		</div>
 					
 						
 	</div>

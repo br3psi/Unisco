@@ -13,7 +13,7 @@ function getConnection()
 	}
 
 	//$jobType = $_POST['jobType'];
-	if(!empty($_POST['highSchoolDiplomaGED']))
+	if(!empty($_POST['collegeEducation']))
 	{
 	$dbConn= getConnection();
 
@@ -354,7 +354,7 @@ function getConnection()
 									<div class="md-3 input-group">
 										<span class="form-control">If not, who did? </span>
 										<label class="input-group-addon">
-											<input  type="text" name="whoCompletedApplication">
+											<input type="text" name="whoCompletedApplication">
 										</label>
 									</div>
 								</div>
