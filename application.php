@@ -13,8 +13,9 @@ function getConnection()
 	}
 
 	//$jobType = $_POST['jobType'];
-	if(!empty($_POST['collegeEducation']))
+	if(isset($_POST['submitApp']))
 	{
+	echo "Goes through!";
 	$dbConn= getConnection();
 
 	$sql = "INSERT INTO application (highSchoolDiplomaGED, collegeEducation, collegeGraduated, type, typeWPM, haveComputer, computerType, tenKeyComputer, wordProcessing, wordProcessingWPM, military,
@@ -114,6 +115,7 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="input-group-addon">College education:</span>
 								<select class="form-control" name="collegeEducation" required>
+									<option value="noValue"></option>
 									<option value="none">N/A</option>
 									<option value="communityCollege">Community College</option>
 									<option value="fourYearInstitution">4 year institution</option>
@@ -363,7 +365,7 @@ function getConnection()
 					</div>
 				</div>
 				<div id = 'sendapp'>
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" >Submit</button>
+					<button id="finishingApplication" name="submitApp" value="yes" type="submit" class="btn btn-primary well-lg" >Submit</button>
 				</div>
 		</form>
 </body>
