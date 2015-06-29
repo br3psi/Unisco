@@ -22,7 +22,7 @@
         	echo "first if";
             // Filetype is correct. Check size
             if($_FILES['file']['size'] < 5632000) {
-            	ehco "2nd if";
+            	echo "2nd if";
                 // Filesize is below maximum permitted. Add to the DB.
                /* $mime = $_FILES['file']['type'];
                 $size = $_FILES['file']['size'];
