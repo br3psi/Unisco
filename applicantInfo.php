@@ -47,7 +47,7 @@
 
 	<nav>
 		<div>
-			<span><?php echo $_GET['firstName']; echo "&nbsp"; echo $_GET['lastName'];</span>
+			<span><?php echo $_GET['firstName']; echo "&nbsp"; echo $_GET['lastName']; ?></span>
 
 		</div>
 	</nav>
