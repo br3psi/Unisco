@@ -97,8 +97,6 @@ function getApplicantInfo(applicantId)
 						echo "</a>";
 						echo "<br/>";
 						echo $applicant['phone'];
-						echo "<br/>"
-						echo $applicant['score'];
 					?>
 				</div>
 				<br/>
