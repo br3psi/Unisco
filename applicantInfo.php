@@ -41,70 +41,17 @@
 
 <script src="js/popup.js"></script> -->
 <link rel="stylesheet" type="text/css" href="css/employerSheet.css">
-<script>
-function getApplicantInfo(applicantId)
-{
-	$('#jobDescription').css('display','block');
-	// $(".input-group").css('display','none');
-	$('.panel-body').css('display','none');
-	$.ajax({
-	type:"POST",
-	url: "getDescription.php",
-	dataType:"json",
-	data:{"applicantId":applicantId},
-	success: function(data,status){
-		$('#descriptionDiv').html("");
-		$('#descriptionDiv').append(data['des']);
-		console.log(data['des']);
-		console.log("hello");
-  	}
-  	});
-}	
-   </script>
+
 </head>
 <body >
 
 	<nav>
 		<div>
-			<span>My Jobs</span>
+			<span><?php echo $_GET['firstName']; echo "&nbsp"; echo $_GET['lastName']; ?></span>
 
 		</div>
 	</nav>
 
-	<div id="leftSideMenu">
-		<div>
-			<span>Interest Level</span>
-			<br/>
-			<input type="checkbox" value="yes">Yes</input>
-			<br/>
-			<input type="checkbox" value="no">No</input>
-			<br/>
-			<input type="checkbox" value="maybe">Maybe</input>
-		</div>
-
-	</div>
-
-	<div id="applicants">
-		<?php
-			foreach ($result as $applicant) {
-		?>
-				<div>
-					<?php
-						 echo "<a href=applicantInfo.php?firstName=".$applicant['firstName']."&lastName=". $applicant['lastName'] . " >" . $applicant['firstName'];
-						 echo "&nbsp";
-						echo $applicant['lastName'];
-						echo "</a>";
-						echo "<br/>";
-						echo $applicant['phone'];
-					?>
-				</div>
-				<br/>
-				<br/>
-		<?php
-			}
-		?>
-	</div>
-
-
+	
 </body>
 </html>
