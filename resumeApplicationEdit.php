@@ -32,9 +32,10 @@
 		<form method="POST" action="jobListing.php">
 			<div>
 				<h2 class = 'title'>General Information Application</h2>
-				<form action="application.php">
+				
+				<!--<form action="application.php">
 					<button id="finishingApplication" type="submit" class="btn btn-warning" href="submitResume.php">Skip Application</button>
-				</form>
+				</form>-->
 				<br>
 				<br>
 				<div class="panel panel-default">
