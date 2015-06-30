@@ -29,7 +29,7 @@
 	
 	</div>
 	<div id = 'application'>
-		<form method="POST" action="jobListing.php">
+		<form method="POST">
 			<div>
 				<h2 class = 'title'>General Information Application</h2>
 				
