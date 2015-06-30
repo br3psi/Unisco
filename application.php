@@ -169,12 +169,6 @@ function getConnection()
 								</select>
 							</div>
 							<div class="md-3 input-group">
-								<span class="form-control">10 Key Computer?</span>
-								<label class="input-group-addon">
-									<input  type="checkbox" name="tenKeyComputer" value="yes">
-								</label>
-							</div>
-							<div class="md-3 input-group">
 								<span class="form-control">Word Processing?</span>
 								<label class="input-group-addon">
 									<input  type="checkbox" name="wordProcessing" value="yes">
@@ -194,7 +188,7 @@ function getConnection()
 						</div>
 						<div class="panel-body">
 							<div class="md-3 input-group">
-								<span class="form-control">HAVE YOU EVER BEEN IN THE ARMED FORCES?</span>
+								<span class="form-control">Have you ever been in the military?</span>
 								<label class="input-group-addon">
 									<input  type="checkbox" name="military" value="yes">
 								</label>
@@ -217,7 +211,7 @@ function getConnection()
 								<input class="form-control" type="date" name="militaryEndDate">	
 							</div>	
 							<div class="md-3 input-group">
-								<span class="form-control">ARE YOU A MEMBER OF THE NATIONAL GUARD?</span>
+								<span class="form-control">Are you a member of the National Guard?</span>
 								<label class="input-group-addon">
 									<input  type="checkbox" name="nationalGuard" value="yes">
 								</label>

@@ -128,14 +128,14 @@ if(!empty($_POST['firstName']))
 					<div class="row">
 						<div class = 'col-md-6'>
 							<div class="input-group">
-								<span class="input-group-addon">Maiden Name</span>
-								<input type="text" class="form-control"  name="middleName" aria-describe>
+								<span class="input-group-addon">Middle Name</span>
+								<input type="text" class="form-control"  name="maidenName" aria-describe>
 							</div>
 						</div>
 						<div class = 'col-md-6'>
 							<div class="input-group">
-								<span class="input-group-addon">Middle Name</span>
-								<input type="text" class="form-control"  name="maidenName" aria-describe>
+								<span class="input-group-addon">Maiden Name</span>
+								<input type="text" class="form-control"  name="middleName" aria-describe>
 							</div>
 						</div>
 					</div>
@@ -161,13 +161,13 @@ if(!empty($_POST['firstName']))
 						</div>
 						<div class = 'col-xs-4'>
 							<div class="input-group">
-								<span class="input-group-addon" >Zipcode</span>
+								<span class="input-group-addon" >Zip code</span>
 								<input type="text" class="form-control"  name="zipcode" required aria-describe>
 							</div>
 						</div>
 						<div class = 'col-md-4'>
 							<div class="input-group">
-								<span class="input-group-addon">How Long?</span>
+								<span class="input-group-addon">Time living at present address</span>
 								<input type="text" class="form-control"  name="presentAddressTime" required aria-describe>
 							</div>
 						</div>
@@ -203,6 +203,14 @@ if(!empty($_POST['firstName']))
 										<option value="full time">Full time</option>
 										<option value="part and full time">Both</option>
 								</select>
+							</div>
+							<div class="row">
+								<div class = 'col-lg-6'>
+									<div class="input-group">
+										<span class="input-group-addon" >What is your means of transportation to work?</span>
+										<input type="text" class="form-control"  name="transportation" required >
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class = 'col-md-4'>
@@ -242,19 +250,10 @@ if(!empty($_POST['firstName']))
 						<div class="row">
 							<div class = 'col-lg-6'>
 								<div class="input-group">
-									<span class="form-control">DO YOU HAVE A DRIVER'S LICENSE?</span>
+									<span class="form-control">Do you have a driver's license?</span>
 									<label class="input-group-addon">
 										<input  type="checkbox" value="yes" name="driverLicense">
 									</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class = 'col-lg-6'>
-								<div class="input-group">
-									<span class="input-group-addon" >What is your means of transportation to work?</span>
-									<input type="text" class="form-control"  name="transportation" required >
 								</div>
 							</div>
 						</div>
