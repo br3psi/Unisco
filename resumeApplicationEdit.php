@@ -327,7 +327,9 @@
 				 
 			</div>
 				<div id = 'sendapp'>
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="jobListing.php">Done Editing</button>
+					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="jobListing.php">Save and Apply</button>
+					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="index.php">Save and Log out</button>
+
 				</div>		
 		</form>
 	</div>
