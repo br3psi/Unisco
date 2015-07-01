@@ -37,6 +37,10 @@
 		{
 			header("Location: admin.php");
 		}
+		if(isset($_POST['phone']))
+		{
+			$_SESSION['phone'] = $_POST['phone'];
+		}
 	}
 	else
 	{
