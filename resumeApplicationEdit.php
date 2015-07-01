@@ -679,6 +679,7 @@ function getConnection()
 				<!--<div id = 'sendapp'>
 					<button id="finishingApplication" name="submitApp" value="yes" type="submit" class="btn btn-primary well-lg" >Submit</button>
 				</div>-->
+			</div>
 		</form>
 	</div>
 	</body>
