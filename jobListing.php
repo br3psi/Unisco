@@ -152,7 +152,6 @@ function getDescription(jobId)
 
 	<div class="panel panel-default" id = "allJobsDiv">
 		<div class="panel-heading title">
-		<h4>Start applying to jobs by inputing a zipcode</h4>
 		</div>
 			<div class="panel-body">
 				<div class = 'col-md-3'>
