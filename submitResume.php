@@ -88,8 +88,10 @@
 				<form  method="post" enctype="multipart/form-data" >
 					Select resume: <input type='file' name="fileName" />
 					</br>
-					<input type="submit" name="uploadForm"/>
-					<div class = 'col-md-4'>
+          <div class = 'col-md-4'>
+					 <input type="submit" name="uploadForm"/>
+          </div>
+					<div class = 'col-md-6'>
             <button type="submit" onclik="resumeApplication.php">Cancel</button>  
           </div>
 				</form>
