@@ -91,7 +91,7 @@
 				for(i in data)
 				{
 					var storeNumb = data[i].storeNumber;
-					$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
+					$('#filtersDiv').append("<img src=img/availableIcon.jpg style=width:14px;height:14px>" + " " + data[i].jobId + " " + "<span id=spaceSpan>"
 						 +data[i].jobCompany + ": "
 	 					 + data[i].jobPosition + ": " + "<a href=javascript:%20getDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
 	 					+ "<span id=buttonSpan></span>" 
@@ -154,7 +154,6 @@ function getDescription(jobId)
 
 	<div class="panel panel-default" id = "allJobsDiv">
 		<div class="panel-heading title">
-		<h4>Start applying to jobs by inputing a zipcode</h4>
 		</div>
 			<div class="panel-body">
 				<div class = 'col-md-3'>
