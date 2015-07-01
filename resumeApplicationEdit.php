@@ -672,6 +672,7 @@ function getConnection()
 						</div>
 					</div>
 				</div>
+			</div>
 				<div id = 'sendapp'>
 					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="jobListing.php">Save and Apply</button>
 					<button type="submit" class="btn btn-primary well-lg" href="index.php">Save and Log out</button>
