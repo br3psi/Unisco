@@ -89,8 +89,9 @@
 					Select resume: <input type='file' name="fileName" />
 					</br>
 					<input type="submit" name="uploadForm"/>
-					</br>
-          <button type="submit" onclik="resumeApplication.php">Cancel</button>  
+					<div class = 'col-md-4'>
+            <button type="submit" onclik="resumeApplication.php">Cancel</button>  
+          </div>
 				</form>
 			</div>
 		</div>
