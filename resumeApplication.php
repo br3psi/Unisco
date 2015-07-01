@@ -112,6 +112,7 @@ if(!empty($_POST['firstName']))
     // Handle the successful return from the API call
     function onSuccess(data) {
         console.log(data);
+        console.log(data['siteStandardProfileRequest'].url);
     }
 
     // Handle an error response from the API call
@@ -127,7 +128,7 @@ if(!empty($_POST['firstName']))
 </script>
 </head>
 <body style='height:auto !important;'>
-	<?php require '/header.php' ?>
+	<?php require 'header.php' ?>
 	<div id = 'application'>
 		<h2 class = 'title'>General Information Application</h2>
 		<form method="post" >
