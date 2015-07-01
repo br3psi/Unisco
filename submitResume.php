@@ -91,7 +91,7 @@
           <div class = 'col-md-4'>
 					 <input type="submit" name="uploadForm"/>
           </div>
-					<div class = 'col-md-6'>
+					<div class = 'col-md-8'>
             <button type="submit" onclik="resumeApplication.php">Cancel</button>  
           </div>
 				</form>
