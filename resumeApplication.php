@@ -127,7 +127,7 @@ if(!empty($_POST['firstName']))
 </script>
 </head>
 <body style='height:auto !important;'>
-	<?php require '/header.php' ?>
+	<?php require 'header.php' ?>
 	<div id = 'application'>
 		<h2 class = 'title'>General Information Application</h2>
 		<form method="post" >
