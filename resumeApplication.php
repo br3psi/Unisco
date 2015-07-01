@@ -208,7 +208,7 @@ if(!empty($_POST['firstName']))
 								<div class = 'col-lg-6'>
 									<div class="input-group">
 										<span class="input-group-addon" >What is your means of transportation to work?</span>
-										<input type="text" class="form-control"  name="transportation" required >
+										<input type="text" class="form-control"  name="transportation" required aria-describe>
 									</div>
 								</div>
 							</div>
