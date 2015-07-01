@@ -102,7 +102,7 @@ function getConnection()
 <body style='height:auto !important;'>
 	
 	<div id = 'application'>
-		<form method="POST">
+		<form method="POST" action="jobListing.php">
 			
 				<h2 class = 'title'>General Information Application</h2>
 				
@@ -112,7 +112,7 @@ function getConnection()
 				<br>
 
 				<br>
-				<div class="panel panel-default">
+			<div class="panel panel-default">
 					<div class="title panel-heading">
 						<h4>Basic Information</h4>
 					</div>
@@ -397,12 +397,7 @@ function getConnection()
 				</div>
 			</div>
 
-<!--==================================================================================================================================
-				<div id = 'sendapp'>
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="jobListing.php">Save and Apply</button>
-					<button type="submit" class="btn btn-primary well-lg" href="index.php">Save and Log out</button>
 
-				</div>	-->
 
 			<div class="panel panel-default">
 				<div class=" title panel-heading">
@@ -668,15 +663,15 @@ function getConnection()
 				</div>
 			</div>
 					
-				<!--<div id = 'sendapp'>
-					<button id="finishingApplication" name="submitApp" value="yes" type="submit" class="btn btn-primary well-lg" >Submit</button>
-				</div>-->
-				<div id = 'sendapp'>
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="jobListing.php">Save and Apply</button>
-					<button type="submit" class="btn btn-primary well-lg" href="index.php">Save and Log out</button>
-
-				</div>
+				
 		</form>
-	</div>
+		<div id = 'sendapp'>
+			<form action="jobListing.php">
+					<button type="submit" id="finishingApplication"  class="btn btn-primary well-lg" href="jobListing.php">Save and Apply</button>
+			</form>
+			<form action="index.php">
+					<button  type="submit" class="btn btn-primary well-lg" onclick="index.php">Save and Log out</button>
+			</form>
+		</div>
 	</body>
 </html>
