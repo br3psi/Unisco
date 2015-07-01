@@ -96,13 +96,15 @@ function getConnection()
   <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+ 	<link rel="stylesheet" type="text/css" href="css/fontello/css/home.css">
   <link href="prefixed.css" rel="stylesheet">
-  <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <link rel="stylesheet" href="https://sdk.ttcdn.co/tt-uikit-0.11.0.min.css"> 
 </head>
 <body style='height:auto !important;'>
-	
+	<?php require '/header.php' ?>
 	<div id = 'application'>
-		<form method="POST">
+		<form method="POST" action="jobListing.php">
 			
 				<h2 class = 'title'>General Information Application</h2>
 				
@@ -112,7 +114,7 @@ function getConnection()
 				<br>
 
 				<br>
-				<div class="panel panel-default">
+			<div class="panel panel-default">
 					<div class="title panel-heading">
 						<h4>Basic Information</h4>
 					</div>
@@ -219,7 +221,7 @@ function getConnection()
 						</div>
 						<div class = 'col-md-4'>
 							<div class="input-group">
-								<input class = "btn btn-info" type="button" value="connect to linkedIn"/>	
+								<input class = "btn btn-primary" type="button" value="connect to linkedIn"/>	
 							</div>
 						</div>
 									
@@ -235,8 +237,12 @@ function getConnection()
 							<div class = 'col-lg-6'>
 								<div class="input-group">
 									<span class="form-control">Have you ever  been convicted of a misdemeanor or felony?</span>
+
 									<label class="input-group-addon">
-										<input  type="checkbox" name="crime" value="no" name="crime">
+										<input type="radio" name="crime" value="yes" id="crime-yes">Yes
+									</label>
+									<label class="input-group-addon">
+										<input type="radio" name="crime" value="no" id="crime-no">No
 									</label>
 								</div>
 							</div>
@@ -246,8 +252,12 @@ function getConnection()
 								<div class="input-group">
 									<span class="form-control">Do you authorize Unisco to conduct a background check?</span>
 									<label class="input-group-addon">
-										<input  type="checkbox" name="crime" value="no" name="backgroundCheck">
+										<input type="radio" value="yes" name="backgroundCheck">Yes
 									</label>
+									<label class="input-group-addon">
+										<input type="radio" value="no" name="backgroundCheck">No
+									</label>
+
 								</div>
 							</div>
 						</div>
@@ -256,8 +266,12 @@ function getConnection()
 								<div class="input-group">
 									<span class="form-control">DO YOU HAVE A DRIVER'S LICENSE?</span>
 									<label class="input-group-addon">
-										<input  type="checkbox" name="crime" value="no" name="driverLicense">
+										<input type="radio" value="yes" name="driverLicense">Yes
 									</label>
+									<label class="input-group-addon">
+										<input type="radio" value="no" name="driverLicense">No
+									</label>
+									
 								</div>
 							</div>
 						</div>
@@ -397,12 +411,7 @@ function getConnection()
 				</div>
 			</div>
 
-<!--==================================================================================================================================
-				<div id = 'sendapp'>
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="jobListing.php">Save and Apply</button>
-					<button type="submit" class="btn btn-primary well-lg" href="index.php">Save and Log out</button>
 
-				</div>	-->
 
 			<div class="panel panel-default">
 				<div class=" title panel-heading">
@@ -417,7 +426,10 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">Do you have a high school diploma/GED?</span>
 								<label class="input-group-addon">
-									<input type="checkbox" name="highSchoolDiplomaGED"  value="yes">
+									<input type="radio" value="yes" name="highSchoolDiplomaGED">Yes
+								</label>
+								<label class="input-group-addon">
+									<input type="radio" value="no" name="highSchoolDiplomaGED">No
 								</label>
 							</div>
 							<div class="md-3 input-group">
@@ -432,9 +444,13 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">Have you graduated?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="collegeGraduated" value="yes" >
+									<input type="radio" value="yes" name="collegeGraduated">Yes
+								</label>
+								<label class="input-group-addon">
+									<input type="radio" value="no" name="collegeGraduated">No
 								</label>
 							</div>
+							
 
 
 						</div>
@@ -447,7 +463,10 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">Can you type?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="type" value="yes" >
+									<input type="radio" value="yes" name="type">Yes
+								</label>
+								<label class="input-group-addon">
+									<input type="radio" value="no" name="type">No
 								</label>
 							</div>
 
@@ -458,7 +477,10 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">Do you have a Personal Computer?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="haveComputer" value="yes">
+									<input type="radio" value="yes" name="haveComputer">Yes
+								</label>
+								<label class="input-group-addon">
+									<input type="radio" value="no" name="haveComputer">No
 								</label>
 							</div>
 							<div class="md-3 input-group">
@@ -471,8 +493,11 @@ function getConnection()
 							<div class="md-3 input-group">
 								<span class="form-control">Word Processing?</span>
 								<label class="input-group-addon">
-									<input  type="checkbox" name="wordProcessing" value="yes">
+									<input type="radio"  name="wordProcessing" value="yes">Yes
 								</label>
+								<label class="input-group-addon">
+									<input type="radio"  name="wordProcessing" value="no">No
+								</label>								
 							</div>	
 							<div class="md-3 input-group">
 								<span class="input-group-addon">Word Processing WMP</span>
@@ -489,9 +514,13 @@ function getConnection()
 						<div class="panel-body">
 							<div class="md-3 input-group">
 								<span class="form-control">Have you ever been in the military?</span>
-								<label class="input-group-addon">
-									<input  type="checkbox" name="military" value="yes">
+								
+																<label class="input-group-addon">
+									<input type="radio"  name="military" value="yes">Yes
 								</label>
+								<label class="input-group-addon">
+									<input type="radio"  name="military" value="no">No
+								</label>	
 							</div>
 							<div class="md-3 input-group">
 								<span class="input-group-addon">Specialty</span>
@@ -512,9 +541,13 @@ function getConnection()
 							</div>	
 							<div class="md-3 input-group">
 								<span class="form-control">Are you a member of the National Guard?</span>
+
 								<label class="input-group-addon">
-									<input  type="checkbox" name="nationalGuard" value="yes">
+									<input type="radio" name="nationalGuard" value="yes" >Yes
 								</label>
+								<label class="input-group-addon">
+									<input type="radio" name="nationalGuard" value="no" >No
+								</label>	
 							</div>
 							<div class="md-3 input-group">
 								<span class="input-group-addon">Specialty</span>
@@ -645,15 +678,23 @@ function getConnection()
 								<div class="panel-body">
 									<div class="md-3 input-group">
 										<span class="form-control">May we contact your present/last employer? </span>
+
 										<label class="input-group-addon">
-											<input  type="checkbox" name="contactLastEmployer" value="yes">
+											<input type="radio" name="contactLastEmployer" value="yes" >Yes
 										</label>
+										<label class="input-group-addon">
+											<input type="radio" name="contactLastEmployer" value="no" >No
+										</label>											
 									</div>
 									<div class="md-3 input-group">
 										<span class="form-control">Did you complete this application yourself? </span>
+
 										<label class="input-group-addon">
-											<input  type="checkbox" name="applicantCompletedApplication" value="yes">
+											<input type="radio" name="applicantCompletedApplication" value="yes" >Yes
 										</label>
+										<label class="input-group-addon">
+											<input type="radio" name="applicantCompletedApplication" value="no" >No
+										</label>											
 									</div>
 									<div class="md-3 input-group">
 										<span class="form-control">If not, who did? </span>
@@ -668,15 +709,16 @@ function getConnection()
 				</div>
 			</div>
 					
-				<!--<div id = 'sendapp'>
-					<button id="finishingApplication" name="submitApp" value="yes" type="submit" class="btn btn-primary well-lg" >Submit</button>
-				</div>-->
-				<div id = 'sendapp'>
-					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="jobListing.php">Save and Apply</button>
-					<button type="submit" class="btn btn-primary well-lg" href="index.php">Save and Log out</button>
-
-				</div>
+				
 		</form>
-	</div>
+		<div id = 'sendapp'>
+			<form action="jobListing.php">
+					<button type="submit" id="finishingApplication"  class="btn btn-primary well-lg" href="jobListing.php">Save and Apply</button>
+			</form>
+			<form action="index.php">
+					<button  type="submit" class="btn btn-primary well-lg" onclick="index.php">Save and Log out</button>
+			</form>
+		</div>
+	<script src="https://sdk.ttcdn.co/tt-uikit-0.11.0.min.js"></script>  
 	</body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+
 	//inserting basic information to database
 session_start();
 function getConnection()
@@ -85,7 +86,7 @@ if(!empty($_POST['firstName']))
   <meta name="author" content="Monse">
 
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
-
+	<link rel="stylesheet" type="text/css" href="css/fontello/css/home.css">
   <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -126,9 +127,7 @@ if(!empty($_POST['firstName']))
 </script>
 </head>
 <body style='height:auto !important;'>
-	<div id = 'header'>
-	
-	</div>
+	<?php require '/header.php' ?>
 	<div id = 'application'>
 		<h2 class = 'title'>General Information Application</h2>
 		<form method="post" >
@@ -261,8 +260,12 @@ if(!empty($_POST['firstName']))
 							<div class = 'col-lg-6'>
 								<div class="input-group">
 									<span class="form-control">Have you ever  been convicted of a misdemeanor or felony?</span>
+
 									<label class="input-group-addon">
-										<input  type="checkbox" name="felony" value="yes" >
+										<input type="radio" value="yes" name="felony">Yes
+									</label>
+									<label class="input-group-addon">
+										<input type="radio" value="no" name="felony">No
 									</label>
 								</div>
 							</div>
@@ -271,8 +274,12 @@ if(!empty($_POST['firstName']))
 							<div class = 'col-lg-6'>
 								<div class="input-group">
 									<span class="form-control">Do you authorize Unisco to conduct a background check?</span>
+	
 									<label class="input-group-addon">
-										<input  type="checkbox" value="yes" name="backgroundCheck">
+										<input type="radio" value="yes" name="backgroundCheck">Yes
+									</label>
+									<label class="input-group-addon">
+										<input type="radio" value="no" name="backgroundCheck">No
 									</label>
 								</div>
 							</div>
@@ -281,8 +288,12 @@ if(!empty($_POST['firstName']))
 							<div class = 'col-lg-6'>
 								<div class="input-group">
 									<span class="form-control">Do you have a driver's license?</span>
+
+																		<label class="input-group-addon">
+										<input type="radio" value="yes" name="driverLicense">Yes
+									</label>
 									<label class="input-group-addon">
-										<input  type="checkbox" value="yes" name="driverLicense">
+										<input type="radio" value="no" name="driverLicense">No
 									</label>
 								</div>
 							</div>
