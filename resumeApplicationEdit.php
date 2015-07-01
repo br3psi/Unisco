@@ -402,12 +402,7 @@ function getConnection()
 					<button id="finishingApplication" type="submit" class="btn btn-primary well-lg" href="jobListing.php">Save and Apply</button>
 					<button type="submit" class="btn btn-primary well-lg" href="index.php">Save and Log out</button>
 
-				</div>	-->	
-		</form>
-
-
-
-	<form method="POST" >
+				</div>	-->
 
 			<div class="panel panel-default">
 				<div class=" title panel-heading">
