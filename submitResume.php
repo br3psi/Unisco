@@ -90,6 +90,7 @@
 					</br>
 					<input type="submit" name="uploadForm"/>
 					</br>
+          <input type="submit" onclik="resumeApplication.php"/>
 				</form>
 			</div>
 		</div>
