@@ -100,9 +100,7 @@ function getConnection()
   <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style='height:auto !important;'>
-	<div id = 'header'>
 	
-	</div>
 	<div id = 'application'>
 		<form method="POST">
 			
@@ -112,7 +110,7 @@ function getConnection()
 					<button id="finishingApplication" type="submit" class="btn btn-warning" href="submitResume.php">Skip Application</button>
 				</form>-->
 				<br>
-				
+
 				<br>
 				<div class="panel panel-default">
 					<div class="title panel-heading">
@@ -682,5 +680,6 @@ function getConnection()
 					<button id="finishingApplication" name="submitApp" value="yes" type="submit" class="btn btn-primary well-lg" >Submit</button>
 				</div>-->
 		</form>
+	</div>
 	</body>
 </html>
