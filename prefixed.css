@@ -199,7 +199,7 @@ html, body {
 }
 
 #application {
-    margin-top: 80px;
+    margin-top: 0px;
     padding: 20px;
     background: #EFEFEF
 }
@@ -289,4 +289,17 @@ html, body {
 .table{
     font-size: 14px;
     font-family: Raleway;
+}
+
+.input-group .input-group-addon {
+    font-weight: normal;
+    color: #828282;
+    text-shadow: none;
+    background: #EFEFEF;
+    border-color: #d9dadc;
+}
+
+.input-group input:last-child {
+  padding-left: 10px;
+  border-left: none;
 }
