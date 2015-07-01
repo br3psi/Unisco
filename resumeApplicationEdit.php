@@ -112,6 +112,7 @@ function getConnection()
 					<button id="finishingApplication" type="submit" class="btn btn-warning" href="submitResume.php">Skip Application</button>
 				</form>-->
 				<br>
+				
 				<br>
 				<div class="panel panel-default">
 					<div class="title panel-heading">
