@@ -77,6 +77,12 @@
 <link rel="stylesheet" type="text/css" href="css/submitResume.css">
 <link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
 </head>
 <body>
 	<div class = 'col-md-6 '>
@@ -95,7 +101,7 @@
 				</form>
         <form actioin="resumeApplication.php">
             <div class = 'col-md-6'>
-              <button type="submit" onclik="resumeApplication.php">Cancel</button>  
+              <button type="submit" onclik="goBack()">Cancel</button>  
             </div>
           </form>
 			</div>
