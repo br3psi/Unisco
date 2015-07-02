@@ -99,11 +99,9 @@ function goBack() {
           </div>
 
 				</form>
-        <form actioin="resumeApplication.php">
             <div class = 'col-md-6'>
               <button type="submit" onclik="goBack()">Cancel</button>  
             </div>
-          </form>
 			</div>
 		</div>
 	</div>
