@@ -29,9 +29,9 @@ if(isset($_POST['uploadForm']))
     $dbConn = getConnection();
     $sql = "INSERT INTO Applicant (resume) VALUES(:file) WHERE :id = Applicant.applicantId)";
     $namedParameters = array();
-    $namedParameters[':file'] = $file;
-    $stm = $dbConn->prepare($sql);
-    $stmt->execute($namedParameters);
+    // $namedParameters[':file'] = $file;
+    // $stm = $dbConn->prepare($sql);
+    // $stmt->execute($namedParameters);
 
     // $stmt = $dbConn->prepare($sql);
     // $stmt->execute(array(":username"=>$_SESSION['username'],
