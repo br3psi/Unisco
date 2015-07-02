@@ -5,7 +5,7 @@
 	$dbConn = getConnection();
   define("__ROOT__",dirname(dirname(__FILE__)));
   echo __ROOT__;
-
+  echo $_SESSION['username'];
 if(isset($_POST['uploadForm']))
 {
   
