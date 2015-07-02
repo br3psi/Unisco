@@ -5,6 +5,14 @@
 	$dbConn = getConnection();
   define("__ROOT__",dirname(dirname(__FILE__)));
   echo __ROOT__;
+
+  if(isset($_POST['uploadForm']))
+{
+  
+  echo $_FILES['fileName']['tmp_name'];
+
+
+}
  //    $id = $_SESSION['lastId'];
  //    echo $id;
 
