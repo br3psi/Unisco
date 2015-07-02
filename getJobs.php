@@ -21,7 +21,6 @@
 	{
 		$jobType = 'management';
 	}
-	elseif($jobType == '')
 	$dbConn= getConnection();
 
 	if($jobType == "Any job")
