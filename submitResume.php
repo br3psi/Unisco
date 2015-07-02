@@ -12,32 +12,32 @@ if(isset($_POST['uploadForm']))
   echo $_FILES['fileName']['tmp_name'];
 
   $path = 'Unisco/resume/' . $_SESSION['username'];
-   mkdir('resume');
-  // if(!file_exists($path)) //checks if the user's folder exists
-  // {
-  //   mkdir('Unisco/resume/' . $_SESSION['username']);
-  // }
+   mkdir('Unisco/resume/' . $_SESSION['username']);
+  if(!file_exists($path)) //checks if the user's folder exists
+  {
+    mkdir('Unisco/resume/' . $_SESSION['username']);
+  }
 
-//   else
-//   {
+  else
+  {
 
-//     move_uploaded_file($_FILES['fileName']['tmp_name'], $path. "/" . $_FILES['fileName']['name']);
+    move_uploaded_file($_FILES['fileName']['tmp_name'], $path. "/" . $_FILES['fileName']['name']);
     
-//     $completePath = $path. "/" . $_FILES['fileName']['name'];
-//     //$_SESSION['']
+    $completePath = $path. "/" . $_FILES['fileName']['name'];
+    //$_SESSION['']
     
-//     $dbConn = getConnection();
-//     //$sql = "UPDATE lab7_user SET profilePicture = :profilePicture WHERE username = :username";
-//     $parameters = array();
+    $dbConn = getConnection();
+    //$sql = "UPDATE lab7_user SET profilePicture = :profilePicture WHERE username = :username";
+    $parameters = array();
     
-//     // $stmt = $dbConn->prepare($sql);
-//     // $stmt->execute(array(":username"=>$_SESSION['username'],
-//     //         ':profilePicture'=>$completePath));
+    // $stmt = $dbConn->prepare($sql);
+    // $stmt->execute(array(":username"=>$_SESSION['username'],
+    //         ':profilePicture'=>$completePath));
     
-//     // $_SESSION['profilePicture']=$completePath;
-//   }
+    // $_SESSION['profilePicture']=$completePath;
+  }
 
- }
+}
  //    $id = $_SESSION['lastId'];
  //    echo $id;
 
