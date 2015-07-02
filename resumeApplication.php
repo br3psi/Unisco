@@ -435,7 +435,7 @@ if(!empty($_POST['firstName']))
 		</form>
 
 		<div id = 'sendapp'>
-			<button id="finishingApplication" class="btn btn-primary" onclick='javascript:;'>Finish Application</button>
+			<a href="application.php"><button id="finishingApplication" class="btn btn-primary" onclick='javascript:;'>Finish Application</button>
 			<span id="orSpan" style = 'margin: 50px;'><b>OR</b></span>
 			<a href="submitResume.php"><button id="submittingResume"  class="btn btn-primary">Upload Resume</button></a>				
 		</div>			

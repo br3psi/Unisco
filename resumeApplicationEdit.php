@@ -238,9 +238,9 @@ function getConnection()
 					</div>
 					<div class="panel-body">
 						<div class="row">
-							<div class = 'col-lg-6'>
+							<div class = 'col-lg-12'>
 								<div class="input-group">
-									<span class="form-control">Have you ever  been convicted of a misdemeanor or felony?</span>
+									<span class="input-group-addon">Have you ever  been convicted of a misdemeanor or felony?</span>
 
 									<label class="input-group-addon">
 										<input type="radio" name="crime" value="yes" id="crime-yes">Yes
@@ -252,9 +252,9 @@ function getConnection()
 							</div>
 						</div>
 						<div class="row">
-							<div class = 'col-lg-6'>
+							<div class = 'col-lg-12'>
 								<div class="input-group">
-									<span class="form-control">Do you authorize Unisco to conduct a background check?</span>
+									<span class="input-group-addon">Do you authorize Unisco to conduct a background check?</span>
 									<label class="input-group-addon">
 										<input type="radio" value="yes" name="backgroundCheck">Yes
 									</label>
@@ -266,9 +266,9 @@ function getConnection()
 							</div>
 						</div>
 						<div class="row">
-							<div class = 'col-lg-6'>
+							<div class = 'col-lg-12'>
 								<div class="input-group">
-									<span class="form-control">DO YOU HAVE A DRIVER'S LICENSE?</span>
+									<span class="input-group-addon">DO YOU HAVE A DRIVER'S LICENSE?</span>
 									<label class="input-group-addon">
 										<input type="radio" value="yes" name="driverLicense">Yes
 									</label>
@@ -281,7 +281,7 @@ function getConnection()
 						</div>
 
 						<div class="row">
-							<div class = 'col-lg-6'>
+							<div class = 'col-lg-12'>
 								<div class="input-group">
 									<span class="input-group-addon" >What is your means of transportation to work?</span>
 									<input type="text" class="form-control"  name="transportation" >
@@ -314,13 +314,13 @@ function getConnection()
 							</div>
 						</div>
 						<div class="row">
-							<div class = 'col-lg-6'>
+							<div class = 'col-lg-12'>
 								<div class="input-group">
 									<span class="input-group-addon" >Have you had any accidents during the past three years? If so, how many?</span>
 									<input type="number" class="form-control" name="accidentsNumber">
 								</div>
 							</div>
-							<div class = 'col-lg-6'>
+							<div class = 'col-lg-12'>
 								<div class="input-group">
 									<span class="input-group-addon" >Have you had any moving violations during the past three years? If so, how many?</span>
 									<input class="form-control" type="number" name="movingViolationsNumber">
@@ -413,14 +413,14 @@ function getConnection()
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class = 'title'>Education</h4>
 					</div>
 					<div class="panel-body">
-						<div class="md-3 input-group">
-							<span class="form-control">Do you have a high school diploma/GED?</span>
+						<div class="col-md-4 input-group">
+							<span class="input-group-addon">Do you have a high school diploma/GED?</span>
 							<label class="input-group-addon">
 								<input type="radio" value="yes" name="highSchoolDiplomaGED">Yes
 							</label>
@@ -428,7 +428,7 @@ function getConnection()
 								<input type="radio" value="no" name="highSchoolDiplomaGED">No
 							</label>
 						</div>
-						<div class="md-3 input-group">
+						<div class="col-md-4 input-group">
 							<span class="input-group-addon">College education:</span>
 							<select class="form-control" name="collegeEducation" required>
 								<option value="noValue"></option>
@@ -437,8 +437,8 @@ function getConnection()
 								<option value="fourYearInstitution">4 year institution</option>
 							</select>
 						</div>
-						<div class="md-3 input-group">
-							<span class="form-control">Have you graduated?</span>
+						<div class="col-md-4 input-group">
+							<span class="input-group-addon">Have you graduated?</span>
 							<label class="input-group-addon">
 								<input type="radio" value="yes" name="collegeGraduated">Yes
 							</label>
@@ -457,8 +457,8 @@ function getConnection()
 						<h4 class = 'title'>Office Skills</h4>
 					</div>
 					<div class="panel-body">
-						<div class="md-3 input-group">
-							<span class="form-control">Can you type?</span>
+						<div class="col-md-4 input-group">
+							<span class="input-group-addon">Can you type?</span>
 							<label class="input-group-addon">
 								<input type="radio" value="yes" name="type">Yes
 							</label>
@@ -467,12 +467,12 @@ function getConnection()
 							</label>
 						</div>
 
-						<div class="md-3 input-group">
+						<div class="col-md-4 input-group">
 							<span class="input-group-addon">WPM</span>
 							<input  class="form-control" type="number" name="typeWPM">		
 						</div>
-						<div class="md-3 input-group">
-							<span class="form-control">Do you have a Personal Computer?</span>
+						<div class="col-md-4 input-group">
+							<span class="input-group-addon">Do you have a Personal Computer?</span>
 							<label class="input-group-addon">
 								<input type="radio" value="yes" name="haveComputer">Yes
 							</label>
@@ -480,15 +480,15 @@ function getConnection()
 								<input type="radio" value="no" name="haveComputer">No
 							</label>
 						</div>
-						<div class="md-3 input-group">
+						<div class="col-md-4 input-group">
 							<span class="input-group-addon">Type of Computer</span>
 							<select class="form-control" name="computerType">
 									<option value="mac">Mac</option>
 									<option value="pc">PC</option>
 							</select>
 						</div>
-						<div class="md-3 input-group">
-							<span class="form-control">Word Processing?</span>
+						<div class="col-md-4 input-group">
+							<span class="input-group-addon">Word Processing?</span>
 							<label class="input-group-addon">
 								<input type="radio"  name="wordProcessing" value="yes">Yes
 							</label>
@@ -496,7 +496,7 @@ function getConnection()
 								<input type="radio"  name="wordProcessing" value="no">No
 							</label>								
 						</div>	
-						<div class="md-3 input-group">
+						<div class="col-md-4 input-group">
 							<span class="input-group-addon">Word Processing WMP</span>
 							
 							<input class="form-control" type="number" name="wordProcessingWPM">
@@ -509,8 +509,8 @@ function getConnection()
 						<h4 class = 'title'>Military</h4>
 					</div>
 					<div class="panel-body">
-						<div class="md-3 input-group">
-							<span class="form-control">Have you ever been in the military?</span>
+						<div class="col-md-4 input-group">
+							<span class="input-group-addon">Have you ever been in the military?</span>
 							
 															<label class="input-group-addon">
 								<input type="radio"  name="military" value="yes">Yes
@@ -519,25 +519,25 @@ function getConnection()
 								<input type="radio"  name="military" value="no">No
 							</label>	
 						</div>
-						<div class="md-3 input-group">
+						<div class="col-md-4 input-group">
 							<span class="input-group-addon">Specialty</span>
 							
 							<input class="form-control" type="text" name="militarySpecialty">
 							
 						</div>
-						<div class="md-3 input-group">
+						<div class="col-md-4 input-group">
 							<span class="input-group-addon">Date Enlisted</span>
 							
 							<input class="form-control" type="date" name="militaryStartDate">
 							
 						</div>
-						<div class="md-3 input-group">
+						<div class="col-md-4 input-group">
 							<span class="input-group-addon">Discharge Date</span>
 							
 							<input class="form-control" type="date" name="militaryEndDate">	
 						</div>	
-						<div class="md-3 input-group">
-							<span class="form-control">Are you a member of the National Guard?</span>
+						<div class="col-md-4 input-group">
+							<span class="input-group-addon">Are you a member of the National Guard?</span>
 
 							<label class="input-group-addon">
 								<input type="radio" name="nationalGuard" value="yes" >Yes
@@ -546,19 +546,19 @@ function getConnection()
 								<input type="radio" name="nationalGuard" value="no" >No
 							</label>	
 						</div>
-						<div class="md-3 input-group">
+						<div class="col-md-4 input-group">
 							<span class="input-group-addon">Specialty</span>
 							
 							<input class="form-control" type="text" name="nationalGuardSpecialty">
 							
 						</div>
-						<div class="md-3 input-group">
+						<div class="col-md-4 input-group">
 							<span class="input-group-addon">Date Enlisted</span>
 							
 							<input class="form-control" type="date" name="nationalGuardStartDate">
 							
 						</div>
-						<div class="md-3 input-group">
+						<div class="col-md-4 input-group">
 							<span class="input-group-addon">Discharge Date</span>
 							
 							<input class="form-control" type="date" name="nationalGuardEndDate">
@@ -579,44 +579,44 @@ function getConnection()
 							</div>
 							<div class="panel-body">
 								
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Name of employer</span>	
 									<input class="form-control" type="text" name="jobOneEmployerName">
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Address</span>	
 									<input  class="form-control" type="text" name="jobOneAddress">
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Phone number</span>	
 									<input class="form-control" type="tel" name="jobOnePhoneNum">
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Name of last supervisor</span>	
 									<input class="form-control" type="text" name="jobOneSupervisorName">
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Dates:</span>	
 									<input class="form-control" type="text" name="jobOneStartDate">
 									<span class="input-group-addon">to</span>
 									<input class="form-control" type="text" name="jobOneEndDate">
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Your job title</span>	
 									<input class="form-control" type="text" name="jobOneTitle"> 
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Reasons for leaving</span>	
 									<input class="form-control" type="textarea" name="jobOneLeavingReasons">
 								</div>	
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">List jobs you held, duties performed, skills used or learned, and advancements or promotions</span>	
 									<input class="form-control" type="textarea" name="jobOneDuties">
 								</div>																															
@@ -628,44 +628,44 @@ function getConnection()
 							</div>
 							<div class="panel-body">
 								
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Name of employer</span>	
 									<input class="form-control" type="text" name="jobTwoEmployerName">
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Address</span>	
 									<input class="form-control" type="text" name="jobTwoAddress">
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Phone number</span>	
 									<input class="form-control" type="tel" name="jobTwoPhoneNum">
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Name of last supervisor</span>	
 									<input class="form-control" type="text" name="jobTwoSupervisorName">
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Dates:</span>	
 									<input class="form-control" type="text" name="jobTwoStartDate">
 									<span class="input-group-addon">to</span>
 									<input class="form-control" type="text" name="jobTwoEndDate">
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Your job title</span>	
 									<input class="form-control" type="text" name="jobTwoTitle"> 
 								</div>
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">Reasons for leaving</span>	
 									<input class="form-control" type="textarea" name="jobTwoLeavingReasons">
 								</div>	
 
-								<div class="md-3 input-group">
+								<div class="col-md-4 input-group">
 									<span class="input-group-addon">List jobs you held, duties performed, skills used or learned, and advancements or promotions</span>	
 									<input class="form-control" type="textarea" name="jobTwoDuties">
 								</div>																															
@@ -673,8 +673,8 @@ function getConnection()
 						</div>
 						<div class="panel panel-default">
 							<div class="panel-body">
-								<div class="md-3 input-group">
-									<span class="form-control">May we contact your present/last employer? </span>
+								<div class="col-md-4 input-group">
+									<span class="input-group-addon">May we contact your present/last employer? </span>
 
 									<label class="input-group-addon">
 										<input type="radio" name="contactLastEmployer" value="yes" >Yes
@@ -683,8 +683,8 @@ function getConnection()
 										<input type="radio" name="contactLastEmployer" value="no" >No
 									</label>											
 								</div>
-								<div class="md-3 input-group">
-									<span class="form-control">Did you complete this application yourself? </span>
+								<div class="col-md-4 input-group">
+									<span class="input-group-addon">Did you complete this application yourself? </span>
 
 									<label class="input-group-addon">
 										<input type="radio" name="applicantCompletedApplication" value="yes" >Yes
@@ -693,11 +693,11 @@ function getConnection()
 										<input type="radio" name="applicantCompletedApplication" value="no" >No
 									</label>											
 								</div>
-								<div class="md-3 input-group">
-									<span class="form-control">If not, who did? </span>
-									<label class="input-group-addon">
-										<input type="text" name="whoCompletedApplication">
-									</label>
+								<div class="col-md-4 input-group">
+									<span class="input-group-addon">If not, who did? </span>
+									
+									<input class="form-control" type="text" name="whoCompletedApplication">
+								
 								</div>
 							</div>
 						</div>																								

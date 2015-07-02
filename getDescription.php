@@ -11,7 +11,7 @@ function getConnection()
 	}
 $dbConn= getConnection();
 	$id = $_GET['jobIdNum'];
-	$sql = "SElECT * FROM Job WHERE jobId = :jobIdNum";
+	$sql = "SElECT * FROM ropJobs WHERE jobId = :jobIdNum";
 
 $namedParameters = array();
 		$namedParameters[':jobIdNum'] = $id;
