@@ -267,11 +267,11 @@ else
 			<div class="col-xs-3 col-md-3">
 				<select  name="jobType">
 					<option value="any">Any job</option>
-					<option value="retail">Retail</option>
-					<option value="restaurant">Restaurants</option>
-					<option value="management">Management</option>
-					<option value="customer service">Customer Service</option>
-					<option value="janitorial service"> Janitorial Service</option>
+					<option value="Medical assistant">Medial assistant</option>
+					<option value="Dental assistant">Dental assistant</option>
+					<option value="Welding">Welding</option>
+					<option value="Cosmetology">Cosmetology</option>
+					<option value="Truck driving">Truck driving</option>
 				</select>
 			</div>
 			<div class="col-xs-3 col-md-3">
