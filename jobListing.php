@@ -117,7 +117,7 @@ else
 				type:"GET", 
 				url:"getJobs.php",
 				dataType: "json",
-				data:{"zip":$("input[name=zipcode]").val(), "jobType":$('.input-group :selected').val()},
+				data:{"zip":$("input[name=zipcode]").val(), "jobType":$('.select2-chosen').text()},
 				success: function(data,status)
 				{
 					console.log("Retrieved Jobs");
