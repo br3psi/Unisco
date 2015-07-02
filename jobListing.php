@@ -91,6 +91,9 @@ else
 	<link rel="stylesheet" type="text/css" href="prefixed.css">
 	<link rel="stylesheet" type="text/css" href="css/fontello/css/home.css">
 	<script type="text/javascript">
+		var aplicantId = 0;
+	</script>
+	<script type="text/javascript">
 		var aplicantId = <?php $applicantId =  $_SESSION['applicantId']; Print($applicantId); ?>;
 	</script>
 
@@ -129,7 +132,7 @@ else
 					$('#jobList').append("<tr> <td class=status><span class=on></span></td><td>" + " " + data[i].jobId + " " + "</td><td><b>"
 						+data[i].jobCompany + "</b></td><td><b> "
 						+ data[i].jobPosition + "</b></td>" + "<td class ='job-options-td'><div class ='job-options'> "
-						+ " <button class='eq-pad btn btn-primary btn-sm' onclick='appliedFunction(" + storeNumb + ")'>Apply</button> "
+						+ " <button class='eq-pad btn btn-primary btn-sm' onclick='javascript:setApply(" + storeNumb + ")' >Apply</button> "
 						+ "<button data-toggle=modal  class='eq-pad btn btn-default btn-sm' href='#job-description' onclick='javascript:setDescription(" + data[i].jobId 
 						+ ")'>Description</button></div></td></tr>");
 
@@ -143,21 +146,7 @@ else
 			console.log("Retrieved Jobs outside");
 
 		}
-
-		// <tr>			
-		// 	<td class="status"><span class="on"></span></td>
-		// 	<td>112</td>
-		// 	<td><b>Target</b></td>
-		// 	<td><b>Manager</b></td>
-			
-		// 	<td class = 'job-options-td'>
-		// 		<div class = 'job-options'>
-		// 			<button class="eq-pad btn btn-primary btn-sm" onclick='appliedFunction(5)'>Apply</button>
-		// 			<button data-toggle="modal"  class="eq-pad btn btn-default btn-sm" href='#job-description' onclick='javascript:setDescription(5)'>Description</button>
-		// 		</div>
-		// 	</td>
-		// </tr>
-
+	
 		function appliedFunction(storeNumber){
 			$.ajax({
 				type:"POST",
@@ -242,6 +231,149 @@ else
 	  </div>
 	</div>
 
+
+	<style>
+	#job-confirmation{
+
+		}
+		.success-circle{
+			position: absolute;
+			top:50%;
+			left: 50%;
+			-webkit-transform: translate(-50%,-50%);
+			    -ms-transform: translate(-50%,-50%);
+			        transform: translate(-50%,-50%);
+			height: 300px;
+			width: 300px;
+			border-radius: 100%;
+			background: #fff;
+			box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+			-webkit-transform: translate(-50%,-50%) scale(0);
+			    -ms-transform: translate(-50%,-50%) scale(0);
+			        transform: translate(-50%,-50%) scale(0);
+	
+			-webkit-transition: -webkit-transform 0.5s cubic-bezier(0,1.51,.33,1);
+	
+			        transition: transform 0.5s cubic-bezier(0,1.51,.33,1);
+			-webkit-transform: translate(-50%,-50%) scale(0.7);
+			    -ms-transform: translate(-50%,-50%) scale(0.7);
+			        transform: translate(-50%,-50%) scale(0.7);
+		}
+
+
+		.check{
+			position: absolute;
+			top:50%;
+			left: 50%;
+			-webkit-transform: translate(-50%,-50%);
+			    -ms-transform: translate(-50%,-50%);
+			        transform: translate(-50%,-50%);		
+		}
+		.success-check {
+
+/*			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: dash 0.5s ease-in forwards;*/
+		}
+		.success-check2 {
+
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+
+			-webkit-transition: stroke-dashoffset 1s linear;
+
+			        transition: stroke-dashoffset 1s linear;
+		}
+
+		.apply-description{
+			-webkit-perspective: 20em;
+			        perspective: 20em;
+			font-family: Raleway;
+			font-size: 20px;
+			position: absolute;
+			top: 80%;
+			left: 0;
+			text-align: center;
+			-webkit-transform: translate(0%,-50%);
+			    -ms-transform: translate(0%,-50%);
+			        transform: translate(0%,-50%);
+			width: 100%;
+			height: 100px;
+			vertical-align: middle;
+			color: #fff;
+		}
+
+		.com-name, .pos-name{
+			font-size: 25px;
+			color: #00DD00;
+			display: inline-block;
+
+		}
+
+		.dynamic-text{
+
+			padding: 15px;
+			-webkit-transform: translateY(2px) rotateX(90deg);
+			        transform: translateY(2px) rotateX(90deg);
+			-webkit-transform-origin: top;
+			    -ms-transform-origin: top;
+			        transform-origin: top;
+			-webkit-animation: flip-out 0.5s cubic-bezier(.41,1.89,.52,.9) forwards;
+			        animation: flip-out 0.5s cubic-bezier(.41,1.89,.52,.9) forwards;
+		}
+
+		.pos-name .dynamic-text{
+			-webkit-animation-delay: 0.1s;
+			        animation-delay: 0.1s;
+		}
+
+		@-webkit-keyframes flip-out {
+		  to {
+		    -webkit-transform: translateY(2px) rotateX(0deg);
+		            transform: translateY(2px) rotateX(0deg);
+		  }
+		}
+
+		@keyframes flip-out {
+		  to {
+		    -webkit-transform: translateY(2px) rotateX(0deg);
+		            transform: translateY(2px) rotateX(0deg);
+		  }
+		}
+
+	</style>
+
+	<div id="job-confirmation" class="modal fade">
+		<div class="success-circle">
+			<svg class = 'check' width="160" height="160" xmlns="http://www.w3.org/2000/svg" version="1.1">
+				<polyline i begin="indefinite" class = 'success-check' points="30 80 70 120 130 40" stroke="black" stroke-width="13" stroke-linecap="round" fill="none" stroke-linejoin="round">
+				</polyline>
+				
+			</svg>
+			<svg class = 'check' width="160" height="160" xmlns="http://www.w3.org/2000/svg" version="1.1">
+				<polyline class = 'success-check2' points="30 80 70 120 130 40" stroke="#00DD00" stroke-width="13" stroke-linecap="round" fill="none" stroke-linejoin="round">
+				
+				</polyline>
+				
+			</svg>
+
+		</div>
+		<div class = 'apply-description'>
+			Applying For: <span class = 'com-name'><div class='dynamic-text'><b>TARGET </b></div></span><span class = 'pre-text'>as</span><span class = 'pos-name' ><div class='dynamic-text'><b> MANAGER</b></div></span>
+		</div>
+	</div>
+
+
+	<script>
+		$('.success-circle').on('mouseenter',function(){
+			$(this).css('transform','translate(-50%,-50%) scale(1)')
+		}).on('mouseleave',function(){
+			$(this).css('transform','translate(-50%,-50%) scale(0.7)')
+		});
+	</script>
+
+
+
 	<?php
 		include('header.php')
 	?>
@@ -295,7 +427,31 @@ else
 						}
 					});
 				}
+
+				function setApply(jobId){
+					$('#job-confirmation .success-check2').css('stroke-dashoffset',1000);
+					$('.success-circle').css({'pointer-events':'all'});
+							
+
+					$('#job-confirmation .success-circle').off('click');
+					$('#job-confirmation .success-circle').on('click',function(){
+					
+						$('.success-check2').css('stroke-dashoffset',0);
+						$('#job-confirmation .success-circle').off('click');
+						setTimeout(function() {
+							
+							alert('applied!');
+					
+						
+							$('.success-circle').css({'pointer-events':'none'});
+						}, 500);
+						appliedFunction(jobId)
+					})
+
+					
+				}
 			</script>
+
 			<table  class="table table-striped">
 				<thead>
 					<tr>
@@ -307,46 +463,7 @@ else
 					</tr>
 				</thead>
 				<tbody id = 'jobList'>
-					<!-- <tr>
-						
-						<td class="status"><span class="on"></span></td>
-						<td>112</td>
-						<td><b>Target</b></td>
-						<td><b>Manager</b></td>
-						
-						<td class = 'job-options-td'>
-							<div class = 'job-options'>
-								<button class="eq-pad btn btn-primary btn-sm" onclick='appliedFunction(5)'>Apply</button>
-								<button data-toggle="modal"  class="eq-pad btn btn-default btn-sm" href='#job-description' onclick='javascript:setDescription(5)'>Description</button>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="status"><span class="on"></span></td>
-						<td>112</td>
-						<td><b>Target</b></td>
-						<td><b>Manager</b></td>
-
-						<td class = 'job-options-td'>
-							<div class = 'job-options'>
-								<button class="eq-pad btn btn-primary btn-sm" onclick='appliedFunction(5)'>Apply</button>
-								<button data-toggle="modal"  class="eq-pad btn btn-default btn-sm" href='#job-description' onclick='javascript:setDescription(5)'>Description</button>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="status"><a href='javascript:%20getDescription(5)' id='description>escription'><span class="on"></span></a></td>
-						<td>112</td>
-						<td><b>Target</b></td>
-						<td><b>Manager</b></td>
-
-						<td class = 'job-options-td'>
-							<div class = 'job-options'>
-								<button class="eq-pad btn btn-primary btn-sm" onclick='appliedFunction(5)'>Apply</button>
-								<button data-toggle="modal"  class="eq-pad btn btn-default btn-sm" href='#job-description' onclick='javascript:setDescription(5)'>Description</button>
-							</div>
-						</td>
-					</tr> -->
+				
 				</tbody>
 			</table>
 		</div>
