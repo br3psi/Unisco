@@ -13,7 +13,7 @@
 		</li>
 
 		<li class = 'option'>
-			<a href="" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="Update Resume"><i class = 'icon-doc-text-inv'></i></a>
+			<a href="submitResume.php" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="Update Resume"><i class = 'icon-doc-text-inv'></i></a>
 		</li>
 
 	</ul>
