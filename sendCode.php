@@ -8,7 +8,7 @@ require "twilio-php-master/Services/Twilio.php";
 	$message = $client->account->messages->sendMessage(array(
 				"From" => "8315851661",
 				"To" => "+18315120937",
-				"Body" => "Testing",
+				"Body" => "Thank you for signing up. Your 4 digit code is: 4747",
 ));
 echo "Good Call";
 return;
