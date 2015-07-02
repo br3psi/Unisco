@@ -446,7 +446,7 @@ else
 							$('.success-circle').css({'pointer-events':'none'});
 						}, 500);
 						appliedFunction(jobId);
-					})
+					});
 
 					
 				}
