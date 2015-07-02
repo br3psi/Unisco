@@ -13,6 +13,15 @@
 	$jobType = $_GET['jobType'];
 	$zipCode = $_GET['zip'];
 
+	if($jobType == "Restaurants")
+	{
+		$jobType = 'restaurant';
+	}
+	elseif($jobType == 'Management')
+	{
+		$jobType = 'management';
+	}
+	elseif($jobType == '')
 	$dbConn= getConnection();
 
 	if($jobType == "Any job")
