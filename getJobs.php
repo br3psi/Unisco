@@ -13,12 +13,32 @@
 	$jobType = $_GET['jobType'];
 	$zipCode = $_GET['zip'];
 
+	if($jobType == "Medical assistant")
+	{
+		$jobType = 'Medical assistant';
+	}
+	elseif($jobType == 'Dental assistant')
+	{
+		$jobType = 'Dental assistant';
+	}
+	elseif($jobType == 'Welding')
+	{
+		$jobType = 'Welding';
+	}
+	elseif($jobType == 'Cosmetology')
+	{
+		$jobType = 'Cosmetology';
+	}
+	elseif($jobType == 'Truck driving')
+	{
+		$jobType = 'Truck driving';
+	}
 	$dbConn= getConnection();
 
-	if($jobType == "any")
+	if($jobType == "Any job")
 	{
 		
-		$sql = "SElECT * FROM Job WHERE jobZip = :zip";
+		$sql = "SElECT * FROM ropJobs WHERE jobZip = :zip";
 		$namedParameters = array();
 		$namedParameters[':zip'] = $zipCode;
 		$stmt = $dbConn->prepare($sql); 
@@ -31,7 +51,7 @@
 	}
 	else
 	{
-		$sql = "SElECT * FROM Job WHERE jobZip = :zip AND jobType = :jobType";
+		$sql = "SElECT * FROM ropJobs WHERE jobZip = :zip AND jobType = :jobType";
 		$namedParameters = array();
 		$namedParameters[':zip'] = $zipCode;
 		$namedParameters[':jobType'] = $jobType;

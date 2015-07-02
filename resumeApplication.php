@@ -111,8 +111,17 @@ if(!empty($_POST['firstName']))
 
     // Handle the successful return from the API call
     function onSuccess(data) {
-        console.log(data);
-        console.log(data['siteStandardProfileRequest'].url);
+        
+
+        $.ajax({
+		type:"POST",
+		url: "saveLinkedinUrl.php",
+		data:{"linkedinUrl":data['siteStandardProfileRequest'].url},
+		dataType: "json",
+		success: function(data,status){
+	  	}
+	  	});
+
     }
 
     // Handle an error response from the API call
@@ -426,7 +435,7 @@ if(!empty($_POST['firstName']))
 		</form>
 
 		<div id = 'sendapp'>
-			<button id="finishingApplication" class="btn btn-primary" onclick='javascript:;'>Finish Application</button>
+			<a href="application.php"><button id="finishingApplication" class="btn btn-primary" onclick='javascript:;'>Finish Application</button>
 			<span id="orSpan" style = 'margin: 50px;'><b>OR</b></span>
 			<a href="submitResume.php"><button id="submittingResume"  class="btn btn-primary">Upload Resume</button></a>				
 		</div>			
