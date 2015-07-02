@@ -11,11 +11,11 @@ if(isset($_POST['uploadForm']))
   
   echo $_FILES['fileName']['tmp_name'];
 
-  $path = '/Unisco/resume/' . $_SESSION['username'];
-
+  $path = 'Unisco/resume/' . $_SESSION['username'];
+   mkdir('Unisco/resume/' . $_SESSION['username']);
   if(!file_exists($path)) //checks if the user's folder exists
   {
-    mkdir('/Unisco/resume/' . $_SESSION['username']);
+    mkdir('Unisco/resume/' . $_SESSION['username']);
   }
 
   else
