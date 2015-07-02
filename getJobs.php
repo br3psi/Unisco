@@ -13,13 +13,25 @@
 	$jobType = $_GET['jobType'];
 	$zipCode = $_GET['zip'];
 
-	if($jobType == "Restaurants")
+	if($jobType == "Medical assistant")
 	{
-		$jobType = 'restaurant';
+		$jobType = 'Medical assistant';
 	}
-	elseif($jobType == 'Management')
+	elseif($jobType == 'Dental assistant')
 	{
-		$jobType = 'management';
+		$jobType = 'Dental assistant';
+	}
+	elseif($jobType == 'Welding')
+	{
+		$jobType = 'Welding';
+	}
+	elseif($jobType == 'Cosmetology')
+	{
+		$jobType = 'Cosmetology';
+	}
+	elseif($jobType == 'Truck driving')
+	{
+		$jobType = 'Truck driving';
 	}
 	$dbConn= getConnection();
 
