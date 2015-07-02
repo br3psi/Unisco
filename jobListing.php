@@ -267,7 +267,7 @@ else
 			<div class="col-xs-3 col-md-3">
 				<select  name="jobType">
 					<option value="any">Any job</option>
-					<option value="Medical assistant">Medial assistant</option>
+					<option value="Medical assistant">Medical assistant</option>
 					<option value="Dental assistant">Dental assistant</option>
 					<option value="Welding">Welding</option>
 					<option value="Cosmetology">Cosmetology</option>
