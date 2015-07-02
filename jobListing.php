@@ -307,7 +307,7 @@ else
 					</tr>
 				</thead>
 				<tbody id = 'jobList'>
-					<tr>
+					<!-- <tr>
 						
 						<td class="status"><span class="on"></span></td>
 						<td>112</td>
@@ -346,7 +346,7 @@ else
 								<button data-toggle="modal"  class="eq-pad btn btn-default btn-sm" href='#job-description' onclick='javascript:setDescription(5)'>Description</button>
 							</div>
 						</td>
-					</tr>
+					</tr> -->
 				</tbody>
 			</table>
 		</div>
