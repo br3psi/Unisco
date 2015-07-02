@@ -132,6 +132,7 @@ else
 						+ " <button class=eq-pad btn btn-primary btn-sm onclick='appliedFunction(" + storeNumber + ")'>Apply</button> "
 						+ "<button data-toggle=modal  class=eq-pad btn btn-default btn-sm href='#job-description' onclick='javascript:setDescription(" + data[i].jobId 
 						+ ")'>Description</button></div></td></tr>");
+
 						// +"<a href=javascript:%20getDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
 						// + "<span id=buttonSpan></span>" 
 						// + "<button onclick=appliedFunction(" + storeNumb + ")>Apply</button><br/><br/>");
@@ -274,7 +275,7 @@ else
 				</select>
 			</div>
 			<div class="col-xs-3 col-md-3">
-				<input type="search" placeholder="Enter a Zip Code" class="form-control">
+				<input type="search" name="zipcode" placeholder="Enter a Zip Code" class="form-control">
 			</div>
 			<button type="button" class="btn btn-primary" onclick="getJobList()">Search</button>
 		</form>
