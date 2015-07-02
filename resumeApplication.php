@@ -110,8 +110,17 @@ if(!empty($_POST['firstName']))
 
     // Handle the successful return from the API call
     function onSuccess(data) {
-        console.log(data);
-        console.log(data['siteStandardProfileRequest'].url);
+        
+
+        $.ajax({
+		type:"POST",
+		url: "saveLinkedinUrl.php",
+		data:{"linkedinUrl":data['siteStandardProfileRequest'].url},
+		dataType: "json",
+		success: function(data,status){
+	  	}
+	  	});
+
     }
 
     // Handle an error response from the API call
