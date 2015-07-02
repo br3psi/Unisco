@@ -151,7 +151,7 @@ else
 			$.ajax({
 				type:"POST",
 				url: "php/apply.php",
-				data:{"storeNumber":storeNumber,"applicantId": applicantId },
+				data:{"storeNumber":storeNumber,"applicantId": <?php echo $_SESSION['applicantId'] ?>},
 				success: function(data,status){alert("Thank you for applying");}
 			});
 		}	
