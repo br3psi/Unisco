@@ -15,7 +15,7 @@
 
 	$dbConn= getConnection();
 
-	if($jobType == "any")
+	if($jobType == "Any job")
 	{
 		
 		$sql = "SElECT * FROM Job WHERE jobZip = :zip";
