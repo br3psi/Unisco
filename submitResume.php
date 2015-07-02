@@ -100,7 +100,7 @@ function goBack() {
 
 				</form>
             <div class = 'col-md-6'>
-              <button type="submit" onclik="goBack()">Cancel</button>  
+              <button  onclik="goBack()">Cancel</button>  
             </div>
 			</div>
 		</div>
