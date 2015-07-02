@@ -101,6 +101,47 @@ function getConnection()
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <link rel="stylesheet" href="https://sdk.ttcdn.co/tt-uikit-0.11.0.min.css"> 
     <link href="prefixed.css" rel="stylesheet">
+
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+    api_key:   75mu9f6oip0v45
+    authorize: true
+    onLoad: onLinkedInLoad
+</script>
+
+<script type="text/javascript">
+    
+    // Setup an event listener to make an API call once auth is complete
+    function onLinkedInLoad() {
+        IN.Event.on(IN, "auth", getProfileData);
+    }
+
+    // Handle the successful return from the API call
+    function onSuccess(data) {
+        
+
+        $.ajax({
+		type:"POST",
+		url: "saveLinkedinUrl.php",
+		data:{"linkedinUrl":data['siteStandardProfileRequest'].url},
+		dataType: "json",
+		success: function(data,status){
+	  	}
+	  	});
+
+    }
+
+    // Handle an error response from the API call
+    function onError(error) {
+        console.log(error);
+    }
+
+    // Use the API call wrapper to request the member's basic profile data
+    function getProfileData() {
+        IN.API.Raw("/people/~").result(onSuccess).error(onError);
+    }
+
+</script>
+
 </head>
 <body style='height:auto !important;'>
 	<?php require 'header.php' ?>
@@ -222,7 +263,7 @@ function getConnection()
 						</div>
 						<div class = 'col-md-4'>
 							<div class="input-group">
-								<input class = "btn btn-primary" type="button" value="connect to linkedIn"/>	
+								<script type="in/Login"></script>	
 							</div>
 						</div>
 									
