@@ -3,55 +3,56 @@
 	require 'php/dbConnection.php';
 	//echo $_SESSION['storeNumber'];
 	$dbConn = getConnection();
+  define("__ROOT__",dirname(dirname(__FILE__)));
+  echo __ROOT__;
+ //    $id = $_SESSION['lastId'];
+ //    echo $id;
 
-    $id = $_SESSION['lastId'];
-    echo $id;
+	// //$sql = "INSERT INTO Applicant ('resume') VALUES ";
+	// //$namedParameters = array();
+	// //$namedParameters[':storeNumber'] = $_SESSION['storeNumber'];
 
-	//$sql = "INSERT INTO Applicant ('resume') VALUES ";
-	//$namedParameters = array();
-	//$namedParameters[':storeNumber'] = $_SESSION['storeNumber'];
-
-	//$stmt = $dbConn->prepare($sql); 
-	//$stmt->execute($namedParameters); 
-	//$result = $stmt ->fetchAll();
-    if (isset($_POST['uploadForm'])) {
+	// //$stmt = $dbConn->prepare($sql); 
+	// //$stmt->execute($namedParameters); 
+	// //$result = $stmt ->fetchAll();
+ //    if (isset($_POST['uploadForm'])) {
 		
-        $temp = explode('.', $_FILES['file']['name']);
-        $extn = strtolower(end($temp));
-        if(($extn == "pdf")) {
-        	echo "first if";
-            // Filetype is correct. Check size
-            if($_FILES['file']['size'] < 5632000) {
-            	echo "2nd if";
-                // Filesize is below maximum permitted. Add to the DB.
-               /* $mime = $_FILES['file']['type'];
-                $size = $_FILES['file']['size'];
-                $name = $_FILES['file']['name'];
-                $tmpf = $_FILES['file']['tmp_name'];*/
-                $file = fopen($_FILES['file']['name'], "r");
+ //        $temp = explode('.', $_FILES['file']['name']);
+ //        $extn = strtolower(end($temp));
+ //        if(($extn == "pdf")) {
+ //        	echo "first if";
+ //            // Filetype is correct. Check size
+ //            if($_FILES['file']['size'] < 5632000) {
+ //            	echo "2nd if";
+ //                // Filesize is below maximum permitted. Add to the DB.
+ //               /* $mime = $_FILES['file']['type'];
+ //                $size = $_FILES['file']['size'];
+ //                $name = $_FILES['file']['name'];
+ //                $tmpf = $_FILES['file']['tmp_name'];*/
+ //                $file = fopen($_FILES['file']['name'], "r");
 
-                try {
-                	echo "try";
-                    $sql = ("INSERT INTO Applicant(resume) VALUES(:file) WHERE :id = Applicant.applicantId");
-                    $namedParameters = array();
-                    $namedParameters[':file'] = $file;
-                    $stm = $dbConn->prepare($sql);
-                    $stmt->execute($namedParameters);
-                    $result = $stm -> fetch();
+ //                try {
+ //                	echo "try";
+ //                    $sql = ("INSERT INTO Applicant(resume) VALUES(:file) WHERE :id = Applicant.applicantId");
+ //                    $namedParameters = array();
+ //                    $namedParameters[':file'] = $file;
+ //                    $stm = $dbConn->prepare($sql);
+ //                    $stmt->execute($namedParameters);
+ //                    $result = $stm -> fetch();
 
 
-                    alert("Resume uploaded successfully!");
-                    header("Location: jobListing.php");
-                } catch(PDOException $e) { catchMySQLerror($e->getMessage()); }
+ //                    alert("Resume uploaded successfully!");
+ //                    header("Location: jobListing.php");
+ //                } catch(PDOException $e) { catchMySQLerror($e->getMessage()); }
 
-            } else {
-                // Filesize is over our limit. Send error message
-                $error = "Your file is too large. Please read the instructions about file type and size, above.";
-            }
-        } else {
-            $error = "Your file was the incorrect type. Please read the instructions about file type and size, above.";
-        }
-    }
+ //            } else {
+ //                // Filesize is over our limit. Send error message
+ //                $error = "Your file is too large. Please read the instructions about file type and size, above.";
+ //            }
+ //        } else {
+ //            $error = "Your file was the incorrect type. Please read the instructions about file type and size, above.";
+ //        }
+ //    }
 ?>
 
 <!DOCTYPE HTML>
