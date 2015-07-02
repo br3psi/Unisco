@@ -118,7 +118,7 @@ function getConnection()
     // Handle the successful return from the API call
     function onSuccess(data) {
         
-        console.log(data);
+        //console.log(data);
 
         $.ajax({
 		type:"POST",
