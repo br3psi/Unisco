@@ -4,32 +4,35 @@
 	//echo $_SESSION['storeNumber'];
 	$dbConn = getConnection();
   define("__ROOT__",dirname(dirname(__FILE__)));
-  echo __ROOT__;
-  echo $_SESSION['username'];
+  //echo __ROOT__;
+ // echo $_SESSION['username'];
 if(isset($_POST['uploadForm']))
 {
   
-  echo $_FILES['fileName']['tmp_name'];
+ // echo $_FILES['fileName']['tmp_name'];
 
   $path = 'Unisco/resume/' . $_SESSION['username'];
-   mkdir('Unisco/resume/' . $_SESSION['username']);
-  if(!file_exists($path)) //checks if the user's folder exists
-  {
-    mkdir('Unisco/resume/' . $_SESSION['username']);
-  }
+  // mkdir('Unisco/resume/' . $_SESSION['username']);
+  // if(!file_exists($path)) //checks if the user's folder exists
+  // {
+  //   mkdir('Unisco/resume/' . $_SESSION['username']);
+  // }
 
   else
   {
 
-    move_uploaded_file($_FILES['fileName']['tmp_name'], $path. "/" . $_FILES['fileName']['name']);
+   // move_uploaded_file($_FILES['fileName']['tmp_name'], $path. "/" . $_FILES['fileName']['name']);
     
     $completePath = $path. "/" . $_FILES['fileName']['name'];
     //$_SESSION['']
-    
+    $file = fopen($_FILES['file']['name'], "r");
     $dbConn = getConnection();
-    //$sql = "UPDATE lab7_user SET profilePicture = :profilePicture WHERE username = :username";
-    $parameters = array();
-    
+    $sql = "INSERT INTO Applicant (resume) VALUES(:file) WHERE :id = Applicant.applicantId)";
+    $namedParameters = array();
+    $namedParameters[':file'] = $file;
+    $stm = $dbConn->prepare($sql);
+    $stmt->execute($namedParameters);
+
     // $stmt = $dbConn->prepare($sql);
     // $stmt->execute(array(":username"=>$_SESSION['username'],
     //         ':profilePicture'=>$completePath));
@@ -71,7 +74,7 @@ if(isset($_POST['uploadForm']))
  //                    $namedParameters[':file'] = $file;
  //                    $stm = $dbConn->prepare($sql);
  //                    $stmt->execute($namedParameters);
- //                    $result = $stm -> fetch();
+ //                    $result = $stmt -> fetch();
 
 
  //                    alert("Resume uploaded successfully!");
