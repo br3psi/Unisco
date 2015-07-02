@@ -23,13 +23,13 @@ if(isset($_POST['uploadForm']))
 
    // move_uploaded_file($_FILES['fileName']['tmp_name'], $path. "/" . $_FILES['fileName']['name']);
     
-    $completePath = $path. "/" . $_FILES['fileName']['name'];
-    //$_SESSION['']
-    $file = fopen($_FILES['file']['name'], "r");
-    $dbConn = getConnection();
-    $sql = "INSERT INTO Applicant (resume) VALUES(:file) WHERE :id = Applicant.applicantId)";
-    $namedParameters = array();
-    // $namedParameters[':file'] = $file;
+   //  $completePath = $path. "/" . $_FILES['fileName']['name'];
+   //  //$_SESSION['']
+   //  $file = fopen($_FILES['file']['name'], "r");
+   //  $dbConn = getConnection();
+   // // $sql = "INSERT INTO Applicant (resume) VALUES(:file) WHERE :id = Applicant.applicantId)";
+   //  $namedParameters = array();
+   //  // $namedParameters[':file'] = $file;
     // $stm = $dbConn->prepare($sql);
     // $stmt->execute($namedParameters);
 
