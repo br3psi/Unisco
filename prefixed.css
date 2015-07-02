@@ -295,11 +295,26 @@ html, body {
     font-weight: normal;
     color: #828282;
     text-shadow: none;
-    background: #EFEFEF;
+    background: #ECECEC;
     border-color: #d9dadc;
 }
 
 .input-group input:last-child {
   padding-left: 10px;
   border-left: none;
+}
+
+.form-control{
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #EFEFEF;
+}
+
+.input-group input:last-child {
+  padding-left: 10px;
+  border-left: 1px solid #D9DADC;
+}
+.input-group {
+  margin: 0px;
+  padding: 5px;
 }
