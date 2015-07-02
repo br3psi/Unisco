@@ -37,7 +37,7 @@ if(isset($_POST['uploadForm']))
 //     // $_SESSION['profilePicture']=$completePath;
 //   }
 
-// }
+ }
  //    $id = $_SESSION['lastId'];
  //    echo $id;
 
