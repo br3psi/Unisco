@@ -103,7 +103,7 @@ function getConnection()
     <link href="prefixed.css" rel="stylesheet">
 </head>
 <body style='height:auto !important;'>
-	<?php require '/header.php' ?>
+	<?php require 'header.php' ?>
 	<div id = 'application'>
 		<form method="POST" action="jobListing.php">
 			
