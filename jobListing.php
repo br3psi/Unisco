@@ -27,7 +27,7 @@ if(isset($_POST['phone']) || $_SESSION['phone'])
 			//echo $result['applicantId'];
 	$_SESSION['applicantId'] = $result['applicantId'];
 
-
+	$_SESSION['username'] = $result['applicantId'];
 	if($result['AccountType'] == 1)
 	{
 		$_SESSION['storeNumber'] = $result['storeNumber'];

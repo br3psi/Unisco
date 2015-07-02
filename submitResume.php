@@ -6,11 +6,36 @@
   define("__ROOT__",dirname(dirname(__FILE__)));
   echo __ROOT__;
 
-  if(isset($_POST['uploadForm']))
+if(isset($_POST['uploadForm']))
 {
   
   echo $_FILES['fileName']['tmp_name'];
 
+  $path = 'resume/' . $_SESSION['username'];
+
+  if(!file_exists($path)) //checks if the user's folder exists
+  {
+    mkdir('resume/' . $_SESSION['username']);
+  }
+
+  else
+  {
+
+    move_uploaded_file($_FILES['fileName']['tmp_name'], $path. "/" . $_FILES['fileName']['name']);
+    
+    $completePath = $path. "/" . $_FILES['fileName']['name'];
+    //$_SESSION['']
+    
+    $dbConn = getConnection();
+    //$sql = "UPDATE lab7_user SET profilePicture = :profilePicture WHERE username = :username";
+    $parameters = array();
+    
+    // $stmt = $dbConn->prepare($sql);
+    // $stmt->execute(array(":username"=>$_SESSION['username'],
+    //         ':profilePicture'=>$completePath));
+    
+    // $_SESSION['profilePicture']=$completePath;
+  }
 
 }
  //    $id = $_SESSION['lastId'];
