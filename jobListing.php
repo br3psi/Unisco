@@ -122,7 +122,7 @@ else
 				{
 					console.log("Retrieved Jobs");
 				//$('#filtersDiv').css('background-color','red');
-				$('#filtersDiv').html("");
+				$('#jobList').html("");
 				for(i in data)
 				{
 					var storeNumb = data[i].storeNumber;
