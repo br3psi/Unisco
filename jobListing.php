@@ -173,7 +173,7 @@ else
 
 
 		#allJobsDiv{
-			height: 2000px;
+			height: auto;
 			margin-top: 65px;
 			background-color: #F4F5F5;
 		}
@@ -409,21 +409,22 @@ else
 				function setApply(jobId){
 					$('#job-confirmation .success-check2').css('stroke-dashoffset',1000);
 					$('.success-circle').css({'pointer-events':'all'});
-							
+					
+
 
 					$('#job-confirmation .success-circle').off('click');
 					$('#job-confirmation .success-circle').on('click',function(){
 					
 						$('.success-check2').css('stroke-dashoffset',0);
 						$('#job-confirmation .success-circle').off('click');
-						setTimeout(function() {
-							
-							alert('applied!');
-					
+
+						$.ajax({
+							type:"POST",
+							url: "php/apply.php",
+							data:{"storeNumber":storeNumber,"applicantId": <?php echo $_SESSION['applicantId'] ?>},
+							success: function(data,status){$('.success-circle').css({'pointer-events':'none'});}
+						});
 						
-							$('.success-circle').css({'pointer-events':'none'});
-						}, 500);
-						appliedFunction(jobId);
 					});
 
 					
