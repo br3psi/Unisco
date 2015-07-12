@@ -32,9 +32,9 @@ if(isset($_POST['info']))
 
 <script src="js/___jquery-2.1.3.js"></script>
 
-<link rel="stylesheet" type="text/css" href="prefixed.css">
-<link href="bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="stylesheet" href="https://sdk.ttcdn.co/tt-uikit-0.11.0.min.css">  
+<link rel="stylesheet" type="text/css" href="prefixed.css">
 <script src="js/popup.js"></script>
 </head>
 <body >

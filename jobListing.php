@@ -233,32 +233,10 @@ else
 
 
 	<style>
-	#job-confirmation{
+/*	#job-confirmation{
 
-		}
-		.success-circle{
-			position: absolute;
-			top:50%;
-			left: 50%;
-			-webkit-transform: translate(-50%,-50%);
-			    -ms-transform: translate(-50%,-50%);
-			        transform: translate(-50%,-50%);
-			height: 300px;
-			width: 300px;
-			border-radius: 100%;
-			background: #fff;
-			box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
-			-webkit-transform: translate(-50%,-50%) scale(0);
-			    -ms-transform: translate(-50%,-50%) scale(0);
-			        transform: translate(-50%,-50%) scale(0);
-	
-			-webkit-transition: -webkit-transform 0.5s cubic-bezier(0,1.51,.33,1);
-	
-			        transition: transform 0.5s cubic-bezier(0,1.51,.33,1);
-			-webkit-transform: translate(-50%,-50%) scale(0.7);
-			    -ms-transform: translate(-50%,-50%) scale(0.7);
-			        transform: translate(-50%,-50%) scale(0.7);
-		}
+		}*/
+		
 
 
 		.check{

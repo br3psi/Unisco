@@ -437,10 +437,15 @@ if(!empty($_POST['firstName']))
 		<div id = 'sendapp'>
 			<a href="application.php"><button id="finishingApplication" class="btn btn-primary" onclick='javascript:;'>Finish Application</button>
 			<span id="orSpan" style = 'margin: 50px;'><b>OR</b></span>
-			<a href="submitResume.php"><button id="submittingResume"  class="btn btn-primary">Upload Resume</button></a>				
-		</div>			
+			<a><button id="submittingResume" data-toggle=modal href='#submit-resume'  class="btn btn-primary">Upload Resume</button></a>				
+		</div>	
 
-	</div>
+
+
+
+
+
+	
 	<script src="https://sdk.ttcdn.co/tt-uikit-0.11.0.min.js"></script>  
 </body>
 </html>

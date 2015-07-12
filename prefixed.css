@@ -214,52 +214,38 @@ html, body {
 
 
 
+button:focus{
+     outline: none !important; 
 
-
-
-
-
-
-
-
-#header{
-  position: fixed;
-  z-index: 10;
-  background-color: #E9EAEB;
-  width: 100%;
-  height: 60px;
-  border-bottom: 1px solid #D1D2D3;
 }
 
-#header i{
-    font-size: 30px;
-    color: #253F4B;
-    text-shadow: 0px 0px 2px #fff;
-    padding-left: 20px;
+.btn-primary, .btn-success{
+    background-color: #54E2BC;
+    border-color: #33BE99;
+      font-family: Raleway;
+  font-weight: initial;
+  color: #004743;
+}
+.btn-primary:hover, .btn-success:hover{
+     background-color: #54E2E0;
+    border-color: #33A5BE;  
+    color: #004743;
 }
 
-#header .nav{
-    float: right;
-    width: 50%;
-    height: 100%;
+.btn-primary:focus, .btn-success:focus{
+    background-color: #54E2BC;
+    border-color: #33BE99;
+      font-family: Raleway;
+  font-weight: initial;
+  color: #004743;
+}
+.btn-primary:focus:hover, .btn-success:focus:hover{
+        background-color: #54E2E0;
+    border-color: #33A5BE;  
+    color: #004743; 
 }
 
-#header .nav li{
-  height: 100%;
-  border-left: 1px solid #D1D2D3;
-  float: right;
-}
-#header .nav li:hover{
-    background: rgba(20,0,0,0.01);
-}
 
-#header-logo{
-    float: left;
-    width: 220px;
-    height: 100%;
-    background: url(img/temp-logo-small.png) no-repeat center;
-    background-color: #000;
-}
 .eq-pad{
     margin: 3px;
 }
@@ -317,4 +303,44 @@ html, body {
 .input-group {
   margin: 0px;
   padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.success-circle{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+    -webkit-transform: translate(-50%,-50%) scale(0);
+        -ms-transform: translate(-50%,-50%) scale(0);
+            transform: translate(-50%,-50%) scale(0);
+
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0,1.51,.33,1);
+
+            transition: transform 0.5s cubic-bezier(0,1.51,.33,1);
+    -webkit-transform: translate(-50%,-50%) scale(0.7);
+        -ms-transform: translate(-50%,-50%) scale(0.7);
+            transform: translate(-50%,-50%) scale(0.7);
 }

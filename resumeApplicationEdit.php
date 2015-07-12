@@ -755,7 +755,7 @@ function getConnection()
 					<button type="submit" id="finishingApplication"  class="btn btn-primary well-lg" href="jobListing.php">Save and Apply</button>
 			</form>
 			<form action="index.php">
-					<button  type="submit" class="btn btn-primary well-lg" onclick="index.php">Save and Log out</button>
+					<button  style = 'margin-left: 10px;' type="submit" class="btn btn-primary well-lg" onclick="index.php">Save and Log out</button>
 			</form>
 		</div>
 	<script src="https://sdk.ttcdn.co/tt-uikit-0.11.0.min.js"></script>  
