@@ -100,6 +100,8 @@
 		        transform: translate(-50%,-50%);}
 	}
 	#submit-resume  i{
+		color: #113939;
+		
 		-webkit-animation:         jump 1s infinite;
 		        animation:         jump 1s infinite;
 		position: absolute;
@@ -136,7 +138,13 @@
 		padding-top: 210px;
 		content: ' ' !important;
 		border: none;
-		font-size: 15px;				
+		font-size: 15px;
+		 -webkit-transition: background 0.3s linear;
+		         transition: background 0.3s linear;				
+	}
+
+	.custom-in:hover{
+		background-color: #00FFC0;
 	}
 	.custom-in:active:before {
 	  background: rgba(0,0,0,0);
@@ -178,8 +186,9 @@
 	}
 
 	.submit-description2 input{
+		  background-color: #FFFFFF;
   margin-top: 30px;
-  background-color: #00FEFF;
+
   padding: 20px;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
   border-radius: 20px;
@@ -188,6 +197,8 @@
   font-family: Raleway;
   color: #026667;
   cursor: pointer;
+  -webkit-transition: background 0.3s linear;
+          transition: background 0.3s linear;
 	}
 	.submit-description2 input:hover{
 		background-color: #00FFC0;
