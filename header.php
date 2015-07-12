@@ -195,7 +195,7 @@
   border: none;
   font-weight: bold;
   font-family: Raleway;
-  color: #026667;
+  color: #113939;
   cursor: pointer;
   -webkit-transition: background 0.3s linear;
           transition: background 0.3s linear;
