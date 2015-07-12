@@ -178,14 +178,16 @@
 	}
 
 	.submit-description2 input{
-		  margin-top: 30px;
-		  background-color: #00FEFF;
-		  padding: 20px;
-		  box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-		  border-radius: 20px;
-		  border: none;
-		  font-family: Raleway;
-		  cursor: pointer;
+  margin-top: 30px;
+  background-color: #00FEFF;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  font-family: Raleway;
+  color: #026667;
+  cursor: pointer;
 	}
 	.submit-description2 input:hover{
 		background-color: #00FFC0;
