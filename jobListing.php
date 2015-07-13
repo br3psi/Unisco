@@ -401,8 +401,8 @@ else
 					$('#job-confirmation .success-check2').css('stroke-dashoffset',1000);
 					$('.success-circle').css({'pointer-events':'all'});
 					
-					$('.com-name b').html(com);
-					$('.pos-name b').html(pos);
+					$('.com-name b').text(com);
+					$('.pos-name b').text(pos);
 
 					$('#job-confirmation .success-circle').off('click');
 					$('#job-confirmation .success-circle').on('click',function(){
