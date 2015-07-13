@@ -400,7 +400,7 @@ else
 				function setApply(jobId,com,pos)
 				{
 					$('#job-confirmation .success-check2').css('stroke-dashoffset',1000);
-					$('.success-circle').css('pointer-events':'all');
+					$('.success-circle').css({'pointer-events':'all'});
 					
 					$('.com-name b').text(com);
 					$('.pos-name b').text(pos);
@@ -417,7 +417,7 @@ else
 							type:"POST",
 							url: "php/apply.php",
 							data:{"storeNumber":jobId,"applicantId": <?php echo $_SESSION['applicantId'] ?>},
-							success: function(data,status){$('.success-circle').css('pointer-events':'none');
+							success: function(data,status){$('.success-circle').css({'pointer-events':'none'});
 						}
 						});
 						
