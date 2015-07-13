@@ -218,6 +218,12 @@ button:focus{
      outline: none !important; 
 
 }
+ .btn, .btn:focus{
+      padding: 12px;
+ }
+ .btn i {
+    padding: 0px;
+ }
 
 .btn-primary, .btn-success{
     background-color: #54E2BC;
@@ -233,6 +239,7 @@ button:focus{
 }
 
 .btn-primary:focus, .btn-success:focus{
+
     background-color: #54E2BC;
     border-color: #33BE99;
       font-family: Raleway;

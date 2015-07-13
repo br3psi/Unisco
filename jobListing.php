@@ -100,29 +100,27 @@ else
 	<script type="text/javascript">
 
 
+
+
 		/*
-			Hey there,
+		
+		setApply(storeNumb,data[i].jobCompany,data[i].jobPosition)
+		
+		call this function on click, it will show popup
 
-			You should probably use a template for fetching job data or put everything in a php function loop. 
-			If you perfer to use  RESTful php approach i would recomment either using underscore templates (best idea) or rewriting everything in angular.
-			
-			--
-
-			Otherwise, you can uncomment it and set the strings according to the static content of the #jobList element.
 		*/
 
-
-
-
 		function getJobList()
-		{  
+		{ 
 			$.ajax({
 				type:"GET", 
 				url:"getJobs.php",
 				dataType: "json",
 				data:{"zip":$("input[name=zipcode]").val(), "jobType":$('.select2-chosen').text()},
 				success: function(data,status)
+
 				{
+					console.log(data)
 					console.log("Retrieved Jobs");
 				//$('#filtersDiv').css('background-color','red');
 				$('#jobList').html("");
@@ -132,7 +130,7 @@ else
 					$('#jobList').append("<tr> <td class=status><span class=on></span></td><td>" + " " + data[i].jobId + " " + "</td><td><b>"
 						+data[i].jobCompany + "</b></td><td><b> "
 						+ data[i].jobPosition + "</b></td>" + "<td class ='job-options-td'><div class ='job-options'> "
-						+ " <button class='eq-pad btn btn-primary btn-sm' onclick='javascript:setApply(" + storeNumb + ")' >Apply</button> "
+						+ " <button data-toggle=modal href = '#job-confirmation' class='eq-pad btn btn-primary btn-sm' onclick='javascript:setApply(" + storeNumb + ",\'" + data[i].jobCompany + "\',\' " + data[i].jobPosition + " ');' >Apply</button> "
 						+ "<button data-toggle=modal  class='eq-pad btn btn-default btn-sm' href='#job-description' onclick='javascript:setDescription(" + data[i].jobId 
 						+ ")'>Description</button></div></td></tr>");
 
@@ -147,14 +145,7 @@ else
 
 		}
 	
-		function appliedFunction(storeNumber){
-			$.ajax({
-				type:"POST",
-				url: "php/apply.php",
-				data:{"storeNumber":storeNumber,"applicantId": <?php echo $_SESSION['applicantId'] ?>},
-				success: function(data,status){alert("Thank you for applying");}
-			});
-		}	
+	
 	</script>
 
 </head>
@@ -406,11 +397,12 @@ else
 					});
 				}
 
-				function setApply(jobId){
+				function setApply(jobId,com,pos){
 					$('#job-confirmation .success-check2').css('stroke-dashoffset',1000);
 					$('.success-circle').css({'pointer-events':'all'});
 					
-
+					$('.com-name b').html(com);
+					$('.pos-name b').html(pos);
 
 					$('#job-confirmation .success-circle').off('click');
 					$('#job-confirmation .success-circle').on('click',function(){
@@ -421,7 +413,7 @@ else
 						$.ajax({
 							type:"POST",
 							url: "php/apply.php",
-							data:{"storeNumber":storeNumber,"applicantId": <?php echo $_SESSION['applicantId'] ?>},
+							data:{"storeNumber":jobId,"applicantId": <?php echo $_SESSION['applicantId'] ?>},
 							success: function(data,status){$('.success-circle').css({'pointer-events':'none'});}
 						});
 						

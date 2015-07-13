@@ -1,12 +1,6 @@
 <?php ?>
 
 <style>
- .btn{
- 	  padding: 12px;
- }
- .btn i {
- 	padding: 0px;
- }
 
 
 #header{
