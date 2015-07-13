@@ -123,7 +123,7 @@ else
 					console.log(data)
 					console.log("Retrieved Jobs");
 				//$('#filtersDiv').css('background-color','red');
-				$('#jobList').html("");
+					$('#jobList').html("");
 				for(i in data)
 				{
 					var storeNumb = data[i].storeNumber;
@@ -397,29 +397,31 @@ else
 					});
 				}
 
-				function setApply(jobId,com,pos){
+				function setApply(jobId,com,pos)
+				{
 					$('#job-confirmation .success-check2').css('stroke-dashoffset',1000);
-					$('.success-circle').css({'pointer-events':'all'});
+					$('.success-circle').css('pointer-events':'all');
 					
 					$('.com-name b').text(com);
 					$('.pos-name b').text(pos);
 
 					$('#job-confirmation .success-circle').off('click');
-					$('#job-confirmation .success-circle').on('click',function(){
+					$('#job-confirmation .success-circle').on('click',function()
+					{
 					
 						$('.success-check2').css('stroke-dashoffset',0);
 						$('#job-confirmation .success-circle').off('click');
 
-						$.ajax({
+						$.ajax(
+						{
 							type:"POST",
 							url: "php/apply.php",
 							data:{"storeNumber":jobId,"applicantId": <?php echo $_SESSION['applicantId'] ?>},
-							success: function(data,status){$('.success-circle').css({'pointer-events':'none'});}
+							success: function(data,status){$('.success-circle').css('pointer-events':'none');
+						}
 						});
 						
-					});
-
-					
+					});					
 				}
 			</script>
 
