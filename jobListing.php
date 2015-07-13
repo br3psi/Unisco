@@ -416,6 +416,7 @@ else
 						{
 							type:"POST",
 							url: "php/apply.php",
+							dataType:"json",
 							data:{"storeNumber":jobId,"applicantId": <?php echo $_SESSION['applicantId'] ?>},
 							success: function(data,status){$('.success-circle').css({'pointer-events':'none'});
 						}
