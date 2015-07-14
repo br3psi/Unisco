@@ -181,7 +181,7 @@
 
 	.submit-description2 input{
 		  background-color: #FFFFFF;
-  margin-top: 40px;
+  margin-top: 55px;
 
   padding: 20px;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
