@@ -1,4 +1,4 @@
-f<?php
+<?php
 session_start();
 
 if(isset($_POST['phone']) || $_SESSION['phone'])
@@ -329,8 +329,8 @@ else
 		</div>
 		<div class = 'apply-description'>
 
-			Thanks you for applaying to <span class = 'com-name'><div class='dynamic-text'><b>TARGET </b></div></span><span class = 'pre-text'>as</span><span class = 'pos-name' ><div class='dynamic-text'><b> MANAGER.</b></div></span>
-			You will receive a message shortly.
+			Thank you for applaying to <span class = 'com-name'><div class='dynamic-text'><b>TARGET </b></div></span><span class = 'pre-text'>as</span><span class = 'pos-name' ><div class='dynamic-text'><b> MANAGER.</b></div></span>
+			. You will receive a message shortly.
 		</div>
 	</div>
 
