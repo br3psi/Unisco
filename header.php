@@ -164,7 +164,7 @@
 	}
 	.submit-description2{
 		position: absolute;
-		top:65%;
+		top:70%;
 		left: 50%;
 		-webkit-transform: translate(-50%,-50%);
 		    -ms-transform: translate(-50%,-50%);
