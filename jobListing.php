@@ -130,7 +130,7 @@ else
 					$('#jobList').append("<tr> <td class=status><span class=on></span></td><td>" + " " + data[i].jobId + " " + "</td><td><b>"
 						+data[i].jobCompany + "</b></td><td><b> "
 						+ data[i].jobPosition + "</b></td>" + "<td class ='job-options-td'><div class ='job-options'> "
-						+ " <button data-toggle=modal href = '#job-confirmation' class='eq-pad btn btn-primary btn-sm' onclick='javascript:setApply(" + storeNumb + ",'" + data[i].jobCompany + "','" + data[i].jobPosition + "' )' >Apply</button> "
+						+ " <button data-toggle=modal href = '#job-confirmation' class='eq-pad btn btn-primary btn-sm' onclick='javascript:setApply(" + storeNumb + ",\"" + data[i].jobCompany + "\",\"" + data[i].jobPosition + "\"  )' >Apply</button> "
 						+ "<button data-toggle=modal  class='eq-pad btn btn-default btn-sm' href='#job-description' onclick='javascript:setDescription(" + data[i].jobId 
 						+ ")'>Description</button></div></td></tr>");
 
