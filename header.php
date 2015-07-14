@@ -195,6 +195,7 @@
           transition: background 0.3s linear;
 	}
 	.submit-description2 input:hover{
+		top: 20px;
 		background-color: #00FFC0;
 	}
 </style>
