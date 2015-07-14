@@ -128,6 +128,7 @@
 	}
 
 	.custom-in{
+		background-color: #861715;
 		  cursor: pointer;
 		padding-top: 210px;
 		content: ' ' !important;
@@ -163,6 +164,7 @@
 
 	}
 	.submit-description2{
+		background-color: #861715;
 		position: absolute;
 		top:70%;
 		left: 50%;
