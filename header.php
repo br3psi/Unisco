@@ -181,7 +181,7 @@
 
 	.submit-description2 input{
 		  background-color: #FFFFFF;
-  margin-top: 30px;
+  margin-top: 40px;
 
   padding: 20px;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
@@ -195,7 +195,7 @@
           transition: background 0.3s linear;
 	}
 	.submit-description2 input:hover{
-		top: 30px;
+		
 		background-color: #00FFC0;
 	}
 </style>
