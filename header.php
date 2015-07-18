@@ -128,7 +128,7 @@
 	}
 
 	.custom-in{
-		background-color: #861715;
+		background-color: #FF5550;
 		  cursor: pointer;
 		padding-top: 210px;
 		content: ' ' !important;
@@ -164,7 +164,6 @@
 
 	}
 	.submit-description2{
-		background-color: #861715;
 		position: absolute;
 		top:70%;
 		left: 50%;
@@ -182,7 +181,7 @@
 	}
 
 	.submit-description2 input{
-		  background-color: #FFFFFF;
+		  background-color: #FF5550;
   margin-top: 55px;
 
   padding: 20px;
