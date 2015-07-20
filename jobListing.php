@@ -127,7 +127,7 @@ else
 				for(i in data)
 				{
 					var storeNumb = data[i].storeNumber;
-					$('#jobList').append("<tr> <td class=status><span id=blink >Hiring</span></td><td>" + " " + data[i].jobId + " " + "</td><td><b>"
+					$('#jobList').append("<tr> <td class=status><span  >Hiring</span></td><td>" + " " + data[i].jobId + " " + "</td><td><b>"
 						+data[i].jobCompany + "</b></td><td><b> "
 						+ data[i].jobPosition + "</b></td>" + "<td class ='job-options-td'><div class ='job-options'> "
 						+ " <button data-toggle=modal href = '#job-confirmation' class='eq-pad btn btn-primary btn-sm' onclick='javascript:setApply(" + storeNumb + ",\"" + data[i].jobCompany + "\",\"" + data[i].jobPosition + "\"  )' >Apply</button> "
@@ -460,13 +460,13 @@ else
 		$(this).find('.job-options').css('opacity',0)
 	});
 </script>
-<script>
-$(document).ready(function() {
-    var f = document.getElementById('blink');
-    setInterval(function() {
-        f.style.display = (f.style.display == 'none' ? '' : 'none');
-    }, 1000); 
+// <script>
+// $(document).ready(function() {
+//     var f = document.getElementById('blink');
+//     setInterval(function() {
+//         f.style.display = (f.style.display == 'none' ? '' : 'none');
+//     }, 1000); 
     
-});
-</script>
+// });
+// </script>
 </html>
