@@ -89,7 +89,7 @@ else
 	<!-- styles -->
 	<link rel="stylesheet" href="https://sdk.ttcdn.co/tt-uikit-0.11.0.min.css">  
 	<link rel="stylesheet" type="text/css" href="prefixed.css">
-	<link rel="stylesheet" type="text/css" href="css/fontello/css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css">
 	<script type="text/javascript">
 		var aplicantId = 0;
 	</script>
