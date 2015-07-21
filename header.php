@@ -73,7 +73,7 @@
 
 		<li class='option'>
 			<div style = 'padding:0;margin:0;'>
-				<a href="" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="bank"><i class = 'glyphicon glyphicon-piggy-bank' aria-hidden="true"></i></a>
+				<a href="" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="bank"><span class = 'glyphicon glyphicon-piggy-bank' aria-hidden="true"></span></a>
 			</div>
 		</li>
 
