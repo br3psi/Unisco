@@ -73,7 +73,7 @@
 
 		<li class='option'>
 			<div style = 'padding:0;margin:0;'>
-				<a href="" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="bank"><i class = 'icon-bank'></i></a>
+				<a href="index.php" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="bank"><i class = 'icon-bank'></i></a>
 			</div>
 		</li>
 
