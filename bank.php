@@ -69,7 +69,7 @@
 
       foreach ($result as $job)
       {
-        echo "<td><b>" . $job[jobCompany] . "</b></td><td><b> " . $job[jobPosition] . "</b></td>";
+        echo "<tr><td><b>" . $job[jobCompany] . "</b></td><td><b> " . $job[jobPosition] . "</b></td></tr>";
       }
 
     ?>
