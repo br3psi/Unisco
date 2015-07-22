@@ -229,11 +229,11 @@ else
 		}*/
 		
 		.modal-header{
-			background-color: #C23636;
+			background-color: #00FFC0;
 		}
 
 		.modal-footer button{
-			background-color: #C23636;
+			background-color: #00FFC0;
 		}
 
 		.check{
