@@ -127,7 +127,7 @@ else
 				for(i in data)
 				{
 					var storeNumb = data[i].storeNumber;
-					$('#jobList').append("<tr> <td ><span id=blink style=color:green ><b>Hiring</b></span></td><td>" + " " + data[i].jobId + " " + "</td><td><b>"
+					$('#jobList').append("<tr> <td ><span class=blink style=color:green ><b>Hiring</b></span></td><td>" + " " + data[i].jobId + " " + "</td><td><b>"
 						+data[i].jobCompany + "</b></td><td><b> "
 						+ data[i].jobPosition + "</b></td>" + "<td class ='job-options-td'><div class ='job-options'> "
 						+ " <button data-toggle=modal href = '#job-confirmation' class='eq-pad btn btn-primary btn-sm' onclick='javascript:setApply(" + storeNumb + ",\"" + data[i].jobCompany + "\",\"" + data[i].jobPosition + "\"  )' >Apply</button> "
@@ -492,14 +492,14 @@ else
 
 	function blinkFont()
 	{
-		$('#blink').css('color',"green");
-		$('#blink').css('opacity','1');
+		$('.blink').css('color',"green");
+		$('.blink').css('opacity','1');
 		setTimeout("setblinkFont()",500);
 	}
 
 	function setblinkFont()
 	{
-		$('#blink').css('opacity','0');
+		$('.blink').css('opacity','0');
 		setTimeout("blinkFont()",500);
 	}
 </script>
