@@ -141,12 +141,13 @@ else
 				}
 			}
 		});
+			$(".status").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100);
+	
 			console.log("Retrieved Jobs outside");
 
 		}
 
-		$(".status").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100);
-	
+
 	
 	</script>
 </head>
