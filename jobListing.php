@@ -229,7 +229,7 @@ else
 		}*/
 		
 		.modal-header{
-			background-color: #D62020;
+			background-color: #C23636;
 		}
 
 		.check{
