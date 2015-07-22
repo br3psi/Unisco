@@ -1,18 +1,23 @@
 <?php
 session_start();
+
 if(isset($_POST['phone']) || $_SESSION['phone'])
 {
 	require 'php/dbConnection.php';
+
 	$dbConn = getConnection();
+
 	$sql = "SELECT * FROM Applicant WHERE password = :password AND phone = :phone";
 	$namedParameters = array();
 	if(isset($_POST['phone']))
 	{
 		$namedParameters[':password'] = sha1($_POST['password']);
 		$namedParameters[':phone'] = $_POST['phone'];
+
 	}
 	elseif(isset($_SESSION['phone']))
 	{
+
 		$namedParameters[':password'] = $_SESSION['password'];
 		$namedParameters[':phone'] = $_SESSION['phone'];
 	}
@@ -21,6 +26,7 @@ if(isset($_POST['phone']) || $_SESSION['phone'])
 	$result = $stmt ->fetch();
 			//echo $result['applicantId'];
 	$_SESSION['applicantId'] = $result['applicantId'];
+
 	$_SESSION['username'] = $result['applicantId'];
 	if($result['AccountType'] == 1)
 	{
@@ -41,6 +47,9 @@ else
 	header("Location: index.php");
 }
 	
+
+
+
 ?>
 
 <!DOCTYPE HTML>
@@ -89,12 +98,18 @@ else
 	</script>
 
 	<script type="text/javascript">
+
+
+
+
 		/*
 		
 		setApply(storeNumb,data[i].jobCompany,data[i].jobPosition)
 		
 		call this function on click, it will show popup
+
 		*/
+
 		function getJobList()
 		{ 
 			$.ajax({
@@ -103,6 +118,7 @@ else
 				dataType: "json",
 				data:{"zip":$("input[name=zipcode]").val(), "jobType":$('.select2-chosen').text()},
 				success: function(data,status)
+
 				{
 					console.log(data)
 					console.log("Retrieved Jobs");
@@ -117,13 +133,16 @@ else
 						+ " <button data-toggle=modal href = '#job-confirmation' class='eq-pad btn btn-primary btn-sm' onclick='javascript:setApply(" + storeNumb + ",\"" + data[i].jobCompany + "\",\"" + data[i].jobPosition + "\"  )' >Apply</button> "
 						+ "<button data-toggle=modal  class='eq-pad btn btn-default btn-sm' href='#job-description' onclick='javascript:setDescription(" + data[i].jobId 
 						+ ")'>Description</button></div></td></tr>");
+
 						// +"<a href=javascript:%20getDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
 						// + "<span id=buttonSpan></span>" 
 						// + "<button onclick=appliedFunction(" + storeNumb + ")>Apply</button><br/><br/>");
+
 				}
 			}
 		});
 			console.log("Retrieved Jobs outside");
+
 		}
 	
 	
@@ -132,17 +151,29 @@ else
 </head>
 
 
+
+
+
+
+
+
+
 <body>
 
 	<style>
+
+
 		#allJobsDiv{
 			height: auto;
 			margin-top: 65px;
 			background-color: #F4F5F5;
 		}
+
 		#allJobsDiv h3{
+
 			margin-left: 20px;
 		}
+
 		.search-bar{
 			
 		}
@@ -150,6 +181,7 @@ else
 			margin: 4px;
 			border-radius: 0px;
 		}
+
 		#filtersDiv{
 			margin: 4px;
 			
@@ -158,15 +190,23 @@ else
 			border: 1px solid rgba(0,0,0,0.1);
 			border-radius: 0px;
 		}
+
+	
+
+
 		.job-options-td{
 			width: 300px;
 		}
+
 		.job-options button{
 			float: right;
 		}
+
+
 	</style>
 
-	<div id="job-description">
+
+	<div id="job-description" class="modal fade">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -185,8 +225,11 @@ else
 
 	<style>
 /*	#job-confirmation{
+
 		}*/
 		
+
+
 		.check{
 			position: absolute;
 			top:50%;
@@ -196,16 +239,21 @@ else
 			        transform: translate(-50%,-50%);		
 		}
 		.success-check {
+
 /*			stroke-dasharray: 1000;
 			stroke-dashoffset: 1000;
 			animation: dash 0.5s ease-in forwards;*/
 		}
 		.success-check2 {
+
 			stroke-dasharray: 1000;
 			stroke-dashoffset: 1000;
+
 			-webkit-transition: stroke-dashoffset 1s linear;
+
 			        transition: stroke-dashoffset 1s linear;
 		}
+
 		.apply-description{
 			-webkit-perspective: 20em;
 			        perspective: 20em;
@@ -223,12 +271,16 @@ else
 			vertical-align: middle;
 			color: #fff;
 		}
+
 		.com-name, .pos-name{
 			font-size: 25px;
 			color: #00DD00;
 			display: inline-block;
+
 		}
+
 		.dynamic-text{
+
 			padding: 15px;
 			-webkit-transform: translateY(2px) rotateX(90deg);
 			        transform: translateY(2px) rotateX(90deg);
@@ -238,22 +290,26 @@ else
 			-webkit-animation: flip-out 0.5s cubic-bezier(.41,1.89,.52,.9) forwards;
 			        animation: flip-out 0.5s cubic-bezier(.41,1.89,.52,.9) forwards;
 		}
+
 		.pos-name .dynamic-text{
 			-webkit-animation-delay: 0.1s;
 			        animation-delay: 0.1s;
 		}
+
 		@-webkit-keyframes flip-out {
 		  to {
 		    -webkit-transform: translateY(2px) rotateX(0deg);
 		            transform: translateY(2px) rotateX(0deg);
 		  }
 		}
+
 		@keyframes flip-out {
 		  to {
 		    -webkit-transform: translateY(2px) rotateX(0deg);
 		            transform: translateY(2px) rotateX(0deg);
 		  }
 		}
+
 	</style>
 
 	<div id="job-confirmation" class="modal fade">
@@ -341,6 +397,7 @@ else
 						}
 					});
 				}
+
 				function setApply(jobId,com,pos)
 				{
 					$('#job-confirmation .success-check2').css('stroke-dashoffset',1000);
@@ -348,12 +405,14 @@ else
 					
 					$('.com-name b').text(com);
 					$('.pos-name b').text(pos);
+
 					$('#job-confirmation .success-circle').off('click');
 					$('#job-confirmation .success-circle').on('click',function()
 					{
 					
 						$('.success-check2').css('stroke-dashoffset',0);
 						$('#job-confirmation .success-circle').off('click');
+
 						$.ajax(
 						{
 							type:"POST",
