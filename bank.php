@@ -72,6 +72,7 @@
             <th>Position</th>
           </tr>
         </thead>
+        <tbody id = 'jobList'>
     <?php
 
       foreach ($result as $job)
@@ -80,7 +81,7 @@
       }
 
     ?>
-    <tbody id = 'jobList'>
+    
         
         </tbody>
       </table>
