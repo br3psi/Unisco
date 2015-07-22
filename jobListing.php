@@ -380,7 +380,7 @@ else
 						data:{"jobIdNum":jobId},
 						success: function(data,status){
 							$('#job-description .modal-body').html(data['des']);
-							$('#job-description .modal-header').css('background-color':'burlywood');
+							$('#job-description .modal-header').css('background-color','burlywood');
 							console.log(data['des']);
 							console.log("hello");
 						}
