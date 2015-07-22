@@ -228,7 +228,9 @@ else
 
 		}*/
 		
-
+		.modal-header{
+			background-color: burlywood;
+		}
 
 		.check{
 			position: absolute;
