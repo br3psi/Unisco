@@ -133,12 +133,17 @@ else
 						+ " <button data-toggle=modal href = '#job-confirmation' class='eq-pad btn btn-primary btn-sm' onclick='javascript:setApply(" + storeNumb + ",\"" + data[i].jobCompany + "\",\"" + data[i].jobPosition + "\"  )' >Apply</button> "
 						+ "<button data-toggle=modal  class='eq-pad btn btn-default btn-sm' href='#job-description' onclick='javascript:setDescription(" + data[i].jobId 
 						+ ")'>Description</button></div></td></tr>");
+						//$(".status").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100);
 						// +"<a href=javascript:%20getDescription("+data[i].jobId+") id=description>Description</a>" +  "</span> "
 						// + "<span id=buttonSpan></span>" 
 						// + "<button onclick=appliedFunction(" + storeNumb + ")>Apply</button><br/><br/>");
 
 				}
-										$(".status").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100);
+				$(".btn btn-primary").click(function){
+					while (true){
+					    $(".status").fadeTo('slow', 0.5).fadeTo('slow', 1.0);
+					  }
+				}
 
 			}
 		});
