@@ -486,9 +486,9 @@ else
 // });
 </script>
 <script>
-	$(document).ready(function(){
+	
 	blinkFont();
-	});
+	
 
 	function blinkFont()
 	{
