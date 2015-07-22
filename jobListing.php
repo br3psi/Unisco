@@ -202,18 +202,13 @@ else
 			float: right;
 		}
 
-		.job-description{
-			background-color: #F792A5;
-		}
-
-
 	</style>
 
 
 	<div id="job-description">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
-	      <div class="modal-header">
+	      <div class="modal-header" style:"background-color: #E6F792">
 	        Job Description
 	      </div>
 	      <div class="modal-body">
