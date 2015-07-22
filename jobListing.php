@@ -202,6 +202,10 @@ else
 			float: right;
 		}
 
+		.job-description{
+			background-color: # F792A5;
+		}
+
 
 	</style>
 
