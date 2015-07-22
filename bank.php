@@ -55,6 +55,13 @@
     margin-top: 5%;
   }
 
+  #header i{
+    font-size: 30px;
+    color: #253F4B;
+    text-shadow: 0px 0px 2px #fff;
+
+}
+
 </style>
 </head>
 <body >
