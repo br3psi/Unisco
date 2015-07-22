@@ -151,13 +151,6 @@ else
 </head>
 
 
-
-
-
-
-
-
-
 <body>
 
 	<style>
@@ -191,9 +184,6 @@ else
 			border-radius: 0px;
 		}
 
-	
-
-
 		.job-options-td{
 			width: 300px;
 		}
@@ -204,11 +194,10 @@ else
 
 	</style>
 
-
 	<div id="job-description">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
-	      <div class="modal-header" style:"background-color: #E6F792">
+	      <div class="modal-header">
 	        Job Description
 	      </div>
 	      <div class="modal-body">
@@ -391,6 +380,7 @@ else
 						data:{"jobIdNum":jobId},
 						success: function(data,status){
 							$('#job-description .modal-body').html(data['des']);
+							$('#job-description .modal-header').css('background-color':'burlywood');
 							console.log(data['des']);
 							console.log("hello");
 						}
