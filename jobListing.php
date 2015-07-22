@@ -127,7 +127,7 @@ else
 				for(i in data)
 				{
 					var storeNumb = data[i].storeNumber;
-					$('#jobList').append("<tr> <td ><span  > </span></td><td>" + " " + data[i].jobId + " " + "</td><td><b>"
+					$('#jobList').append("<tr> <td class=status><span  >Hiring</span></td><td>" + " " + data[i].jobId + " " + "</td><td><b>"
 						+data[i].jobCompany + "</b></td><td><b> "
 						+ data[i].jobPosition + "</b></td>" + "<td class ='job-options-td'><div class ='job-options'> "
 						+ " <button data-toggle=modal href = '#job-confirmation' class='eq-pad btn btn-primary btn-sm' onclick='javascript:setApply(" + storeNumb + ",\"" + data[i].jobCompany + "\",\"" + data[i].jobPosition + "\"  )' >Apply</button> "
@@ -144,10 +144,11 @@ else
 			console.log("Retrieved Jobs outside");
 
 		}
+
+		$(".status").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100);
 	
 	
 	</script>
-
 </head>
 
 
@@ -233,7 +234,7 @@ else
 		}
 
 		.modal-footer button{
-			background-color: #54E2BC;
+			background-color: #00FFC0;
 		}
 
 		.check{
