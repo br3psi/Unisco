@@ -29,6 +29,12 @@
       "css": "bank",
       "code": 59395,
       "src": "fontawesome"
+    },
+    {
+      "uid": "3ba4275937db277075fc47d6b5a69a2e",
+      "css": "back",
+      "code": 59396,
+      "src": "entypo"
     }
   ]
 }

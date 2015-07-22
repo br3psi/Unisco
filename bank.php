@@ -46,10 +46,17 @@
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+<style>
+  
+  .nav{
+    margin-top: 5%;
+  }
+
+</style>
 </head>
 <body >
 
-
+<span><button  onclick="goBack()" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="back"><i class = 'icon-back'></i></a></button>
 
 
 <div>
@@ -94,5 +101,11 @@
 </div>
 
 </body>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
 
 </html>
