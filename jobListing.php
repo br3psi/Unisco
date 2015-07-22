@@ -210,7 +210,7 @@ else
 	</style>
 
 
-	<div id="job-description" class="modal fade">
+	<div id="job-description">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
