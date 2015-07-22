@@ -232,6 +232,10 @@ else
 			background-color: #C23636;
 		}
 
+		.modal-footer button{
+			background-color: #C23636;
+		}
+
 		.check{
 			position: absolute;
 			top:50%;
