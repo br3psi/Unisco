@@ -139,11 +139,11 @@ else
 						// + "<button onclick=appliedFunction(" + storeNumb + ")>Apply</button><br/><br/>");
 
 				}
-				$(".btn btn-primary").click(function(){
+				/*$(".btn btn-primary").click(function(){
 					while (true){
 					    $(".status").fadeTo('slow', 0.5).fadeTo('slow', 1.0);
 					  }
-				});
+				}); */
 
 			}
 		});
