@@ -65,6 +65,7 @@
   <!-- Tab panes -->
   <div class="tab-content">
   <div role="tabpanel" class="tab-pane fade in active" id="applied">
+    <table  class="table table-striped">
     <?php
 
       foreach ($result as $job)
@@ -73,6 +74,10 @@
       }
 
     ?>
+    <tbody id = 'jobList'>
+        
+        </tbody>
+      </table>
   </div>
   <div role="tabpanel" class="tab-pane fade" id="pending">.Pending.</div>
   <div role="tabpanel" class="tab-pane fade" id="denied">.Denied.</div>
