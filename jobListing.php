@@ -492,14 +492,14 @@ else
 
 	function blinkFont()
 	{
-		document.getElementById("blink").style.color="green";
-		document.getElementById("blink").style.opacity='1';
+		$('#blink').css('color',"green");
+		$('#blink').css('opacity','1');
 		setTimeout("setblinkFont()",500);
 	}
 
 	function setblinkFont()
 	{
-		document.getElementById("blink").style.opacity='0';
+		$('#blink').css('opacity','0');
 		setTimeout("blinkFont()",500);
 	}
 </script>
