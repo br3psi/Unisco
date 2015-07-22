@@ -203,7 +203,7 @@ else
 		}
 
 		.job-description{
-			background-color: # F792A5;
+			background-color: #F792A5;
 		}
 
 
