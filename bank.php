@@ -1,4 +1,17 @@
 <?php
+  session_start();
+  require 'php/dbConnection.php';
+  $dbConn = getConnection();
+
+  $sql = "SELECT * FROM `Job` INNER JOIN Applied on Applied.storeNumber = Job.storeNumber WHERE Applied.applicantId = :applicantId";
+
+  $namedParameters = array();
+  $namedParameters[':applicantId'] = $_SESSION['applicantId'];
+  $stmt = $dbConn->prepare($sql); 
+  $stmt->execute($namedParameters); 
+  $result = $stmt ->fetchAll();
+
+      
 
 ?>
 
@@ -30,6 +43,9 @@
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 </head>
 <body >
 
@@ -48,7 +64,16 @@
 
   <!-- Tab panes -->
   <div class="tab-content">
-  <div role="tabpanel" class="tab-pane fade in active" id="applied">.Applied.</div>
+  <div role="tabpanel" class="tab-pane fade in active" id="applied">
+    <?php
+
+      foreach ($result as $job)
+      {
+        echo "<td><b>" . $job[jobCompany] . "</b></td><td><b> " . job[jobPosition] . "</b></td>";
+      }
+
+    ?>
+  </div>
   <div role="tabpanel" class="tab-pane fade" id="pending">.Pending.</div>
   <div role="tabpanel" class="tab-pane fade" id="denied">.Denied.</div>
   <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
