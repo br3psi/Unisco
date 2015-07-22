@@ -297,9 +297,9 @@ else
 		            transform: translateY(2px) rotateX(0deg);
 		  }
 		}
-		#job-description .modal-header{
+		/*#job-description .modal-header{
 			background-color: red;
-		}
+		}*/
 
 	</style>
 
