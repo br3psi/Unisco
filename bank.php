@@ -66,6 +66,12 @@
   <div class="tab-content">
   <div role="tabpanel" class="tab-pane fade in active" id="applied">
     <table  class="table table-striped">
+      <thead>
+          <tr>            
+            <th>Company</th>
+            <th>Position</th>
+          </tr>
+        </thead>
     <?php
 
       foreach ($result as $job)
