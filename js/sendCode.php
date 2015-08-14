@@ -1,18 +1,7 @@
 <?php
 
-function generateCode($length){
 
-    $number = '';
-    for ($i = 0; $i < $length; $i++){
-        $number .= rand(0,9);
-    }
-
-    return (int)$number;
-
-}
-
-
-$codeNum = generateCode(5);
+$codeNum = rand(1000, 9999);
 require "twilio-php-master/Services/Twilio.php";
 	$AccountSid = "AC4991f00911beb00578efd8b8355fdc7d";
 	$AuthToken = "b605b8121c246b4b64fe407255f50528";
