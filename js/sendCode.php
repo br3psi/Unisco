@@ -12,7 +12,7 @@ require "twilio-php-master/Services/Twilio.php";
 
 				"From" => "+18315851661",
 				"To" => $_POST['num'],
-				"Body" => "Thank you for signing up. Your 4 digit code is: " + $codeNum
+				"Body" => "Thank you for signing up. Your 4 digit code is: " . $codeNum
 	));
 
 require '../php/dbConnection.php';
