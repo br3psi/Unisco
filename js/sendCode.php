@@ -3,7 +3,7 @@
 function generateCode($length){
 
     $number = '';
-    for ($i = 0; $i < $length; $i++){
+    for ($i = 0; $i <= $length; $i++){
         $number .= rand(0,9);
     }
 
