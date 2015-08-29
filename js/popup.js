@@ -107,8 +107,8 @@ function check_code()
 {
 	if(document.getElementById('userCode').value == "")
 	{
-		alert("Enter code!");
-		$('.modal-body').html("Ener code!");
+		//alert("Enter code!");
+		$('.modal-body').html("Enter code!");
 		$('#myModal').modal('show');
 	}
 	else
