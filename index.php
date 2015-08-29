@@ -31,17 +31,63 @@ if(isset($_POST['info']))
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <script src="js/___jquery-2.1.3.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="https://sdk.ttcdn.co/tt-uikit-0.11.0.min.css">  
 <link rel="stylesheet" type="text/css" href="prefixed.css">
 <script src="js/popup.js"></script>
+
+<link rel="stylesheet" type="text/css" href="prefixed.css">
+<link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css">
+<style>
+	.modal-header{
+			background-color: #54E2BC;
+		}
+
+		.modal-footer button{
+			background-color: #00FFC0;
+		}
+</style>
+
 </head>
 <body >
 
+<!-- <div id="job-description" class="modal fade">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        Job Description
+	      </div>
+	      <div class="modal-body">
+	        Hello
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div> -->
 
 
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+             </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -104,10 +150,14 @@ if(isset($_POST['info']))
 			<br>
 			<input class='form-control well-lg' id="confirmPassword" name="password" placeholder="Retype Password" type="password">
 			<br/> <br/>
-			<input class = "btn btn-primary well-lg" type="button" onclick="check_empty()" id="submit" value="Create Account"/>
+			<!-- <button data-toggle=modal  class='eq-pad btn btn-default btn-sm'  onclick='javascript:check_empty()'>Description</button>
+			<input class = "btn btn-primary well-lg"  type="button" onclick="check_empty()" id="submit" value="Create Account"/> -->
+			<button id="myModal" type="button" class="btn btn-primary btn-lg" onClick="check_empty()" data-target="#myModal">Create Account</button>
 		</form>
 		
 	</div>
+
+
 
 	<!-- TEXT VALIDATION FORM -->
 	<div id="numCode">

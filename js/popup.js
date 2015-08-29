@@ -7,12 +7,14 @@ function check_empty()
 		document.getElementById('password').value == "" ||
 		document.getElementById('confirmPassword').value == "")
 	{
-		alert("Fill All Fields !");
+		$('.modal-body').html("Fill all fields!");
+		$('#myModal').modal('show');
 	} 
 	else if (document.getElementById('password').value != 
 		document.getElementById('confirmPassword').value)
 	{
-		alert("Password is not the same! Retype password.");
+		$('.modal-body').html("Passwords do not match!");
+		$('#myModal').modal('show');
 		//document.getElementById('form').submit();
 		//alert("Form Submitted Successfully...");
 	}	
@@ -46,7 +48,11 @@ function check_empty()
 	
 
 }
-
+function setMessage()
+{
+	$('#job-description .modal-body').html('loading...')
+	$('#job-description .modal-body').html("Fill  Fields!");
+}
 function init(){
 	$('#fader').on('click',function(){
 		if(reg_vis == true) close_reg();
@@ -101,6 +107,8 @@ function check_code()
 	if(document.getElementById('userCode').value == "")
 	{
 		alert("Enter code!");
+		$('.modal-body').html("Ener code!");
+		$('#myModal').modal('show');
 	}
 	else
 	{
@@ -112,7 +120,9 @@ function check_code()
 		success: function(data,status){
 			if(data['message'] == "wrong")
 			{
-				alert("You Entered the wrong code!!");
+				//alert("You Entered the wrong code!!");
+				$('.modal-body').html("You Entered the wrong code!");
+				$('#myModal').modal('show');
 			}
 			else
 			{
