@@ -7,7 +7,7 @@ function check_empty()
 		document.getElementById('password').value == "" ||
 		document.getElementById('confirmPassword').value == "")
 	{
-		alert("Fill All Fields !");
+		alert("FILL ALL FIELDS!!!!");
 	} 
 	else if (document.getElementById('password').value != 
 		document.getElementById('confirmPassword').value)
