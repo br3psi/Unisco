@@ -9,6 +9,7 @@ function check_empty()
 	{
 		$('.modal-body').html("Fill all fields!");
 		$('#myModal').modal('show');
+
 	} 
 	else if (document.getElementById('password').value != 
 		document.getElementById('confirmPassword').value)
