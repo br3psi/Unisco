@@ -20,14 +20,14 @@ function getConnection()
 	$dbConn= getConnection();
 
 	$sql = "INSERT INTO application (`applicantId`, `highSchoolDiplomaGED`, `collegeEducation`, `collegeGraduated`, `type`, `typeWPM`, `haveComputer`, 
-		`computerType`, `tenKeyComputer`, `wordProcessing`, `wordProcessingWPM`, `military`, `miltarySpecialty`, `militaryStartDate`, `militaryEndDate`,
+		`computerType`, `wordProcessing`, `wordProcessingWPM`, `military`, `miltarySpecialty`, `militaryStartDate`, `militaryEndDate`,
 		`nationalGuard`, `nationalGuardSpecialty`, `nationalGuardStartDate`, `nationalGuardEndDate`, `jobOneEmployerName`, `jobOneAddress`, `jobOnePhoneNum`,
 		`jobOneSupervisorName`, `jobOneStartDate`, `jobOneEndDate`, `jobOneJobTitle`, `jobOneLeavingReasons`, `jobOneDuties`, `jobTwoEmployerName`,
 		`jobTwoAddress`, `jobTwoPhoneNum`, `jobTwoSupervisorName`, `jobTwoStartDate`, `jobTwoEndDate`, `jobTwoJobTitle`, `jobTwoLeavingReasons`, `jobTwoDuties`, 
 		`contactLastEmployer`, `applicantCompletedApplication`, `whoCompletedApplication`) 
 
-	VALUES (:applicantId, :highSchoolDiplomaGED, :collegeEducation, :collegeGraduated, :type, :typeWPM, :haveComputer, :computerType, :tenKeyComputer, 
-	:wordProcessing, :wordProcessingWPM, :military, :militarySpecialty, :militaryStartDate, :militaryEndDate, :nationalGuard, :nationalGuardSpecialty,
+	VALUES (:applicantId, :highSchoolDiplomaGED, :collegeEducation, :collegeGraduated, :type, :typeWPM, :haveComputer, :computerType, :wordProcessing, :wordProcessingWPM, 
+		:military,	:militarySpecialty, :militaryStartDate, :nationalGuard,  :nationalGuardSpecialty,
 	 :nationalGuardStartDate, :nationalGuardEndDate, :jobOneEmployerName, :jobOneAddress, :jobOnePhoneNum, :jobOneSupervisorName, :jobOneStartDate, 
 	 :jobOneEndDate, :jobOneTitle, :jobOneLeavingReasons, :jobOneDuties, :jobTwoEmployerName, :jobTwoAddress, :jobTwoPhoneNum, :jobTwoSupervisorName, 
 	 :jobTwoStartDate, :jobTwoEndDate, :jobTwoTitle, :jobTwoLeavingReasons, :jobTwoDuties, :contactLastEmployer, :applicantCompletedApplication, :whoCompletedApplication)";
@@ -40,7 +40,6 @@ function getConnection()
                          ":typeWPM"=> $_POST['typeWPM'],
 						 ":haveComputer"=>$_POST['haveComputer'],
 						 ":computerType"=>$_POST['computerType'],
-						 ":tenKeyComputer"=>$_POST['tenKeyComputer'],
 						 ":wordProcessing"=>$_POST['wordProcessing'],
 						 ":wordProcessingWPM"=>$_POST['wordProcessingWPM'],
 						 ":military"=>$_POST['military'],
@@ -130,7 +129,7 @@ function getConnection()
 						<div class="col-md-4 input-group">
 							<span class="input-group-addon">College education:</span>
 							<select class="form-control" name="collegeEducation" required>
-								<option value="noValue"></option>
+								<option value="noValue">noVal</option>
 								<option value="none">N/A</option>
 								<option value="communityCollege">Community College</option>
 								<option value="fourYearInstitution">4 year institution</option>
