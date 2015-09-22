@@ -16,6 +16,8 @@ function getConnection()
 	if(isset($_POST['submitApp']))
 	{
 	echo "Goes through!";
+	echo $_SESSION['lastId'];
+	echo $_POST['highSchoolDiplomaGED'];
 	echo $_POST['collegeEducation'];
 	$dbConn= getConnection();
 	//39
