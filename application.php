@@ -21,9 +21,9 @@ function getConnection()
 	echo $_POST['collegeEducation'];
 	$dbConn= getConnection();
 	//39
-	$sql = "INSERT INTO application (`applicantId`, 
-		`highSchoolDiplomaGED`, 
-		`collegeEducation` 
+	$sql = "INSERT INTO application (applicantId, 
+		highSchoolDiplomaGED, 
+		collegeEducation 
 		-- `collegeGraduated`,
 		--  `type`, 
 		--  `typeWPM`, 
