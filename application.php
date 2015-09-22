@@ -23,7 +23,7 @@ function getConnection()
 	//39
 	$sql = "INSERT INTO application (`applicantId`, 
 		`highSchoolDiplomaGED`, 
-		`collegeEducation`, 
+		`collegeEducation` 
 		-- `collegeGraduated`,
 		--  `type`, 
 		--  `typeWPM`, 
@@ -64,7 +64,7 @@ function getConnection()
 
 	VALUES (:applicantId,
 	 :highSchoolDiplomaGED,
-	  :collegeEducation, 
+	  :collegeEducation 
 	--   :collegeGraduated, 
 	--   :type,
 	--    :typeWPM, 
