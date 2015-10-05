@@ -501,9 +501,8 @@ else
 	}
 
 	function sendCode(number)
-
-	
 		{
+		console.log(number);
 		$.ajax({
 		type:"POST",
 		url: "sendThankyouMsg.php",
