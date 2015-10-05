@@ -437,9 +437,9 @@ else
 								$('.success-circle').css({'pointer-events':'none'});
 							}
 						});
-						
+						sendCode();	
 					});	
-					sendCode();				
+								
 				}
 			</script>
 
@@ -501,14 +501,14 @@ else
 	}
 
 	function sendCode()
-	{
-	$.ajax({
-	type:"POST",
-	url: "sendThankyouMsg.php",
-	data:{"num":$('#phoneNum').val()},
-	success: function(data,status){
-	
-  	}
+		{
+		$.ajax({
+		type:"POST",
+		url: "sendThankyouMsg.php",
+		data:{"num":$('#phoneNum').val()},
+		success: function(data,status){
+		
+	  	}
   	});
 }
 
