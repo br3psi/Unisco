@@ -438,7 +438,8 @@ else
 							}
 						});
 						
-					});					
+					});	
+					sendCode();				
 				}
 			</script>
 
@@ -486,8 +487,6 @@ else
 <script>
 	
 	blinkFont();
-	
-
 	function blinkFont()
 	{
 		$('.blink').css('color',"green");
@@ -500,5 +499,18 @@ else
 		$('.blink').css('opacity','0');
 		setTimeout("blinkFont()",500);
 	}
+
+	function sendCode()
+	{
+	$.ajax({
+	type:"POST",
+	url: "sendThankyouMsg.php",
+	data:{"num":$('#phoneNum').val()},
+	success: function(data,status){
+	
+  	}
+  	});
+}
+
 </script>
 </html>
