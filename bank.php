@@ -61,6 +61,13 @@
     text-shadow: 0px 0px 2px #fff;
 
 }
+#header-logo{
+    float: left;
+    width: 220px;
+    height: 100%;
+    background: url(img/temp-logo-small.png) no-repeat center;
+    background-color: #000;
+}
 #gobackButton{
   background-color: #00FFC0;
    margin-top: 1px;
@@ -70,13 +77,7 @@
    right:5%;
    border-radius: 5px;
 }
-#header-logo{
-    float: left;
-    width: 220px;
-    height: 100%;
-    background: url(img/temp-logo-small.png) no-repeat center;
-    background-color: #000;
-}
+
 
 
 </style>
