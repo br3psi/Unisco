@@ -89,14 +89,24 @@
 //  //            $error = "Your file was the incorrect type. Please read the instructions about file type and size, above.";
 //  //        }
 //  //    }
-require 'php/dbConnection.php';
-$dbConn= getConnection();
-  
-  $sql = "INSERT INTO application (resume) VALUES (:fileName)";
-  $stmt = $dbConn->prepare($sql);
-  $namedParameters = array(":fileName"=> $_POST[resume]);
 
+  
+ 
+ 
+
+  session_start();
+  require 'php/dbConnection.php';
+  $dbConn = getConnection();
+
+  $sql = "INSERT INTO application (resume) VALUES (:fileName) WHERE Applied.applicantId = :applicantId";
+
+  $namedParameters = array();
+  $namedParameters[':applicantId'] = $_SESSION['applicantId'];
+  $stmt = $dbConn->prepare($sql); 
   $stmt->execute($namedParameters); 
+  $result = $stmt ->fetchAll();
+
+       
 
 
 
@@ -130,6 +140,11 @@ $dbConn= getConnection();
 function goBack() {
     window.history.back();
 }
+function saveFileName(){
+  <?php
+
+  ?>
+}
 </script>
 
 </head>
@@ -144,7 +159,7 @@ function goBack() {
 					Select resume: <input type='text' name="fileName" />
 					</br>
           <div class = 'col-md-4'>
-					 <input type="submit" name="uploadForm"/>
+					 <input type="submit" name="uploadForm" onClick = "saveFileName()"/>
           </div>
 
 				</form>
