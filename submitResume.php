@@ -141,7 +141,7 @@ function goBack() {
 			</div>
 			<div class = 'panel-body'>
 				<form  method="post" enctype="multipart/form-data" >
-					Select resume: <input type='file' name="fileName" />
+					Select resume: <input type='text' name="fileName" />
 					</br>
           <div class = 'col-md-4'>
 					 <input type="submit" name="uploadForm"/>
