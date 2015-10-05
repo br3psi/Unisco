@@ -84,9 +84,12 @@
 <body >
 
 <!--<span><button  onclick="goBack()" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="back"><i class = 'icon-back'></i></a></button>-->
+ <div id = 'header' >
+  <a href='index.php' style = 'cursor:pointer;'>
   <div id = 'header-logo'></div>
-
-<form action="jobListing.php">
+  </a>
+  <ul class="nav navbar-nav">
+</div>
     <input id = "gobackButton" type="submit" value="Go back">
 </form>
 <div>
