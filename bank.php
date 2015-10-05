@@ -70,12 +70,22 @@
    right:5%;
    border-radius: 5px;
 }
+#header-logo{
+    float: left;
+    width: 220px;
+    height: 100%;
+    background: url(img/temp-logo-small.png) no-repeat center;
+    background-color: #000;
+}
+
 
 </style>
 </head>
 <body >
 
 <!--<span><button  onclick="goBack()" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="back"><i class = 'icon-back'></i></a></button>-->
+  <div id = 'header-logo'></div>
+
 <form action="jobListing.php">
     <input id = "gobackButton" type="submit" value="Go back">
 </form>
