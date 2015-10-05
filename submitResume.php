@@ -100,9 +100,11 @@
 
   $sql = "INSERT INTO application (resume) VALUES (:fileName) WHERE Applied.applicantId = :applicantId";
 
-  $namedParameters = array();
-  $namedParameters[':applicantId'] = $_SESSION['applicantId'];
-  $stmt = $dbConn->prepare($sql); 
+ // $namedParameters = array();
+  //$namedParameters[':applicantId'] = $_SESSION['applicantId'];
+  
+  $stmt = $dbConn->prepare($sql);
+  $namedParameters = array(':applicantId' => $_SESSION['applicantId']); 
   $stmt->execute($namedParameters); 
   $result = $stmt ->fetchAll();
 
