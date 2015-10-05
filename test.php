@@ -18,7 +18,16 @@ function getConnection()
 	//echo "Goes through!";
 	//echo $_POST['collegeEducation'];
 	$dbConn= getConnection();
+	
+	$sql = "INSERT INTO application (applicantId, 
+		highSchoolDiplomaGED, 
+		collegeEducation ) VALUES (:applicantId, :highSchoolDiplomaGED, :collegeEducation)";
+	$stmt = $dbConn->prepare($sql);
+	$namedParameters = array(":applicantId"=> 55,
+						 ":highSchoolDiplomaGED"=> $_POST['highSchoolDiplomaGED'],
+                         ":collegeEducation"=> $_POST['collegeEducation']);
 
+$stmt->execute($namedParameters); 
 	// $sql = "INSERT INTO application (`applicantId`, `highSchoolDiplomaGED`, `collegeEducation`, `collegeGraduated`, `type`, `typeWPM`, `haveComputer`, 
 	// 	`computerType`, `tenKeyComputer`, `wordProcessing`, `wordProcessingWPM`, `military`, `miltarySpecialty`, `militaryStartDate`, `militaryEndDate`,
 	// 	`nationalGuard`, `nationalGuardSpecialty`, `nationalGuardStartDate`, `nationalGuardEndDate`, `jobOneEmployerName`, `jobOneAddress`, `jobOnePhoneNum`,
