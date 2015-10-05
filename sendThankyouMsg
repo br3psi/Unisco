@@ -11,7 +11,7 @@ require "twilio-php-master/Services/Twilio.php";
 	$message = $client->account->messages->create(array(
 
 				"From" => "+18315851661",
-				"To" => $_SESSION['phone'],
+				"To" => $_POST['phone'],
 				"Body" => "Thank you for applying" . $codeNum
 	));
 
