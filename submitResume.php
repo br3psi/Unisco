@@ -89,6 +89,18 @@
 //  //            $error = "Your file was the incorrect type. Please read the instructions about file type and size, above.";
 //  //        }
 //  //    }
+require 'php/dbConnection.php';
+$dbConn= getConnection();
+  
+  $sql = "INSERT INTO application (resume) VALUES (:fileName)";
+  $stmt = $dbConn->prepare($sql);
+  $namedParameters = array(":fileName"=> $_POST[resume]);
+
+  $stmt->execute($namedParameters); 
+
+
+
+
 ?>
 
 <!DOCTYPE HTML>
