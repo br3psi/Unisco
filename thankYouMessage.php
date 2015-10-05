@@ -11,7 +11,7 @@ require "twilio-php-master/Services/Twilio.php";
 
 				"From" => "+18315851661",
 				"To" => $_POST['num'],
-				"Body" => "Thank you for applying" . $codeNum
+				"Body" => "Thank you for applying. Confirmation code: " . $codeNum
 	));
 
 
