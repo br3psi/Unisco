@@ -105,7 +105,8 @@
   
   $stmt = $dbConn->prepare($sql);
   $namedParameters = array(':applicantId' => $_SESSION['applicantId']); 
-  $stmt->execute($namedParameters); 
+  $stmt->execute($namedParameters);
+   
   $result = $stmt ->fetchAll();
 
        
