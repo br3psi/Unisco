@@ -63,9 +63,6 @@
 }
 #gobackButton{
   background-color: #00FFC0;
-   line-height: 12px;
-   font-size: 8pt;
-   font-family: tahoma;
    margin-top: 1px;
    margin-right: 2px;
    position:absolute;
