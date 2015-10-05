@@ -1,5 +1,5 @@
 <?php
-require '../php/dbConnection.php';
+require 'php/dbConnection.php';
 
 	$dbConn = getConnection();
 $codeNum = rand(1000, 9999);
