@@ -10,9 +10,6 @@
   $stmt = $dbConn->prepare($sql); 
   $stmt->execute($namedParameters); 
   $result = $stmt ->fetchAll();
-
-      
-
 ?>
 <!DOCTYPE HTML>
 
