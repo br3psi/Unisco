@@ -15,6 +15,7 @@
 
 ?>
 <!DOCTYPE HTML>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -66,8 +67,9 @@
 <body >
 
 <!--<span><button  onclick="goBack()" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="back"><i class = 'icon-back'></i></a></button>-->
-<span><button name="button" href = "jobListing.php">Click me</button></span>
-
+<form action="jobListing.php">
+    <input type="submit" value="Go back">
+</form>
 <div>
 
   <!-- Nav tabs -->
