@@ -63,8 +63,6 @@
 }
 #gobackButton{
   background-color: #00FFC0;
-  padding-top: 5%;
-  padding-left: 5%;
 }
 
 </style>
