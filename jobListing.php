@@ -501,11 +501,13 @@ else
 	}
 
 	function sendCode()
+
+	
 		{
 		$.ajax({
 		type:"POST",
 		url: "sendThankyouMsg.php",
-		data:{"num":$('#phoneNum').val()},
+		data:{"num":$_SESSION['phone'].val()},
 		success: function(data,status){
 		
 	  	}
