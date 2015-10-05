@@ -414,6 +414,7 @@ else
 
 				function setApply(jobId,com,pos)
 				{
+					sendCode();	
 					$('#job-confirmation .success-check2').css('stroke-dashoffset',1000);
 					$('.success-circle').css({'pointer-events':'all'});
 					
@@ -437,9 +438,8 @@ else
 								$('.success-circle').css({'pointer-events':'none'});
 							}
 						});
-						sendCode();	
 					});	
-								
+
 				}
 			</script>
 
