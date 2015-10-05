@@ -64,14 +64,13 @@
 #gobackButton{
   background-color: #00FFC0;
    line-height: 12px;
-     width: 18px;
-     font-size: 8pt;
-     font-family: tahoma;
-     margin-top: 1px;
-     margin-right: 2px;
-     position:absolute;
-     top:0;
-     right:0;
+   font-size: 8pt;
+   font-family: tahoma;
+   margin-top: 1px;
+   margin-right: 2px;
+   position:absolute;
+   top:5%;
+   right:5%;
 }
 
 </style>
