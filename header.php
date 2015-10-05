@@ -77,13 +77,13 @@
 			</div>
 		</li>
 
-<!--
+
 		<li class = 'option'>
 			<div data-toggle=modal href='#submit-resume' style = 'padding:0;margin:0;'>
 				<a href="submitResume.php" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="Update Resume"><i class = 'icon-doc-text-inv'></i></a>
 			</div>
 		</li>
--->
+
 	</ul>
 </div>
 
