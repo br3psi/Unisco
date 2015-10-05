@@ -88,6 +88,7 @@
   </a>
   <ul class="nav navbar-nav">
 </div>
+<form action="jobListing.php">
     <input id = "gobackButton" type="submit" value="Go back">
 </form>
 <div>
