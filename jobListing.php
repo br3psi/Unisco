@@ -414,7 +414,7 @@ else
 
 				function setApply(jobId,com,pos)
 				{
-					sendCode(<?php $_SESSION['phone']?>);	
+					sendCode(<?php $_POST['phone']?>);	
 					$('#job-confirmation .success-check2').css('stroke-dashoffset',1000);
 					$('.success-circle').css({'pointer-events':'all'});
 					
