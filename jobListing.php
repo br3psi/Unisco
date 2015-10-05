@@ -505,7 +505,7 @@ else
 		console.log(number);
 		$.ajax({
 		type:"POST",
-		url: "sendThankyouMsg.php",
+		url: "thankYouMessage.php",
 		data:{"num":number},
 		success: function(data,status){
 		
