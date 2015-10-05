@@ -16,21 +16,92 @@ function getConnection()
 	if(isset($_POST['submitApp']))
 	{
 	echo "Goes through!";
+	echo $_SESSION['lastId'];
+	echo $_POST['highSchoolDiplomaGED'];
 	echo $_POST['collegeEducation'];
 	$dbConn= getConnection();
+	//39
+	$sql = "INSERT INTO application (applicantId, 
+		highSchoolDiplomaGED, 
+		collegeEducation ,
+		'collegeGraduated',
+		 'type', 
+		 'typeWPM', 
+		 'haveComputer', 
+		'computerType',
+		 'wordProcessing',
+		  'wordProcessingWPM',
+		   'military',
+		    'miltarySpecialty',
+		     'militaryStartDate',
+		      'militaryEndDate',
+		'nationalGuard',
+		 'nationalGuardSpecialty', 
+		 'nationalGuardStartDate', 
+		 'nationalGuardEndDate',
+		  'jobOneEmployerName',
+		   'jobOneAddress',
+		    'jobOnePhoneNum',
+		'jobOneSupervisorName',
+		 'jobOneStartDate',
+		  'jobOneEndDate', 
+		  'jobOneJobTitle', 
+		  'jobOneLeavingReasons',
+		   'jobOneDuties',
+		    'jobTwoEmployerName',
+		'jobTwoAddress',
+		 'jobTwoPhoneNum',
+		  'jobTwoSupervisorName', 
+		  'jobTwoStartDate',
+		   'jobTwoEndDate',
+		    'jobTwoJobTitle', 
+		    'jobTwoLeavingReasons',
+		     'jobTwoDuties', 
+		'contactLastEmployer',
+		 'applicantCompletedApplication', 
+		 'whoCompletedApplication'
+		) 
 
-	$sql = "INSERT INTO application (`applicantId`, `highSchoolDiplomaGED`, `collegeEducation`, `collegeGraduated`, `type`, `typeWPM`, `haveComputer`, 
-		`computerType`, `tenKeyComputer`, `wordProcessing`, `wordProcessingWPM`, `military`, `miltarySpecialty`, `militaryStartDate`, `militaryEndDate`,
-		`nationalGuard`, `nationalGuardSpecialty`, `nationalGuardStartDate`, `nationalGuardEndDate`, `jobOneEmployerName`, `jobOneAddress`, `jobOnePhoneNum`,
-		`jobOneSupervisorName`, `jobOneStartDate`, `jobOneEndDate`, `jobOneJobTitle`, `jobOneLeavingReasons`, `jobOneDuties`, `jobTwoEmployerName`,
-		`jobTwoAddress`, `jobTwoPhoneNum`, `jobTwoSupervisorName`, `jobTwoStartDate`, `jobTwoEndDate`, `jobTwoJobTitle`, `jobTwoLeavingReasons`, `jobTwoDuties`, 
-		`contactLastEmployer`, `applicantCompletedApplication`, `whoCompletedApplication`) 
-
-	VALUES (:applicantId, :highSchoolDiplomaGED, :collegeEducation, :collegeGraduated, :type, :typeWPM, :haveComputer, :computerType, :tenKeyComputer, 
-	:wordProcessing, :wordProcessingWPM, :military, :militarySpecialty, :militaryStartDate, :militaryEndDate, :nationalGuard, :nationalGuardSpecialty,
-	 :nationalGuardStartDate, :nationalGuardEndDate, :jobOneEmployerName, :jobOneAddress, :jobOnePhoneNum, :jobOneSupervisorName, :jobOneStartDate, 
-	 :jobOneEndDate, :jobOneTitle, :jobOneLeavingReasons, :jobOneDuties, :jobTwoEmployerName, :jobTwoAddress, :jobTwoPhoneNum, :jobTwoSupervisorName, 
-	 :jobTwoStartDate, :jobTwoEndDate, :jobTwoTitle, :jobTwoLeavingReasons, :jobTwoDuties, :contactLastEmployer, :applicantCompletedApplication, :whoCompletedApplication)";
+	VALUES (:applicantId,
+	 :highSchoolDiplomaGED,
+	  :collegeEducation ,
+	  :collegeGraduated, 
+	  :type,
+	   :typeWPM, 
+	  :haveComputer,
+	   :computerType,
+	    :wordProcessing,
+	     :wordProcessingWPM, 
+		:military,
+		:militarySpecialty,
+		 :militaryStartDate,
+		 :militaryEndDate ,
+		 :nationalGuard, 
+		  :nationalGuardSpecialty,
+	 :nationalGuardStartDate,
+	  :nationalGuardEndDate, 
+	  :jobOneEmployerName, 
+	  :jobOneAddress, 
+	  :jobOnePhoneNum, 
+	  :jobOneSupervisorName,
+	   :jobOneStartDate, 
+	 :jobOneEndDate,
+	  :jobOneTitle, 
+	  :jobOneLeavingReasons,
+	   :jobOneDuties, 
+	   :jobTwoEmployerName, 
+	   :jobTwoAddress, 
+	   :jobTwoPhoneNum, 
+	   :jobTwoSupervisorName, 
+	 :jobTwoStartDate, 
+	 :jobTwoEndDate, 
+	 :jobTwoTitle, 
+	 :jobTwoLeavingReasons,
+	  :jobTwoDuties, 
+	  :contactLastEmployer, 
+	  :applicantCompletedApplication,
+	:whoCompletedApplication
+	)"; //38
 	$stmt = $dbConn->prepare($sql);
 	$namedParameters = array(":applicantId"=> $_SESSION['lastId'],
 						 ":highSchoolDiplomaGED"=> $_POST['highSchoolDiplomaGED'],
@@ -40,7 +111,6 @@ function getConnection()
                          ":typeWPM"=> $_POST['typeWPM'],
 						 ":haveComputer"=>$_POST['haveComputer'],
 						 ":computerType"=>$_POST['computerType'],
-						 ":tenKeyComputer"=>$_POST['tenKeyComputer'],
 						 ":wordProcessing"=>$_POST['wordProcessing'],
 						 ":wordProcessingWPM"=>$_POST['wordProcessingWPM'],
 						 ":military"=>$_POST['military'],
@@ -71,7 +141,8 @@ function getConnection()
 						 ":jobTwoDuties"=>$_POST['jobTwoDuties'],
 						 ":contactLastEmployer"=>$_POST['contactLastEmployer'],
 						 ":applicantCompletedApplication"=>$_POST['applicantCompletedApplication'],
-						 ":whoCompletedApplication"=>$_POST['whoCompletedApplication']);
+						 ":whoCompletedApplication"=>$_POST['whoCompletedApplication']
+						 );
 	$stmt->execute($namedParameters); 
 	header("Location: jobListing.php");
 }
@@ -130,7 +201,7 @@ function getConnection()
 						<div class="col-md-4 input-group">
 							<span class="input-group-addon">College education:</span>
 							<select class="form-control" name="collegeEducation" required>
-								<option value="noValue"></option>
+								<option value="noValue">noVal</option>
 								<option value="none">N/A</option>
 								<option value="communityCollege">Community College</option>
 								<option value="fourYearInstitution">4 year institution</option>
