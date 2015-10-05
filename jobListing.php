@@ -414,7 +414,7 @@ else
 
 				function setApply(jobId,com,pos)
 				{
-					sendCode();	
+					sendCode(<?php $_SESSION['phone']?>);	
 					$('#job-confirmation .success-check2').css('stroke-dashoffset',1000);
 					$('.success-circle').css({'pointer-events':'all'});
 					
@@ -500,14 +500,14 @@ else
 		setTimeout("blinkFont()",500);
 	}
 
-	function sendCode()
+	function sendCode(number)
 
 	
 		{
 		$.ajax({
 		type:"POST",
 		url: "sendThankyouMsg.php",
-		data:{"num":<?php $_SESSION['phone'] ?>},
+		data:{"num":number},
 		success: function(data,status){
 		
 	  	}
