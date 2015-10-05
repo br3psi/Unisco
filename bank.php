@@ -68,7 +68,7 @@
    position:absolute;
    top:5%;
    right:5%;
-   border-radius: 3px;
+   border-radius: 5px;
 }
 
 </style>
