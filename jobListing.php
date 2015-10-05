@@ -507,7 +507,7 @@ else
 		$.ajax({
 		type:"POST",
 		url: "sendThankyouMsg.php",
-		data:{"num":$_SESSION['phone'] },
+		data:{"num":<?php $_SESSION['phone'] ?>},
 		success: function(data,status){
 		
 	  	}
