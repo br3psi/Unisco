@@ -61,6 +61,11 @@
     text-shadow: 0px 0px 2px #fff;
 
 }
+#gobackButton{
+  background-color: #00FFC0;
+  padding-top: 5%;
+  padding-left: 5%;
+}
 
 </style>
 </head>
@@ -68,7 +73,7 @@
 
 <!--<span><button  onclick="goBack()" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="back"><i class = 'icon-back'></i></a></button>-->
 <form action="jobListing.php">
-    <input type="submit" value="Go back">
+    <input id = "gobackButton" type="submit" value="Go back">
 </form>
 <div>
 
