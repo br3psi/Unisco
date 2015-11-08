@@ -2,6 +2,7 @@
 
 	//inserting basic information to database
 session_start();
+$_SESSION['phone'] = $_POST['phoneNum'];
 function getConnection()
 	{
 		$host = "localhost";
@@ -70,6 +71,7 @@ if(!empty($_POST['firstName']))
 	// $_SESSION['phone'] = $_POST['phoneNum'];
 	header("Location: application.php");
 }
+
 ?>
 
 <!DOCTYPE HTML>
