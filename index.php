@@ -133,12 +133,13 @@ if(isset($_POST['info']))
 
 
 <!-- REGISTRATION FORMS POPUP -->
+<form action="resumeApplication.php" id="codeForm" method="post" name="codeForm">
 <div id = 'signup'>
 
 	<!-- SIGNUP FORM -->
 	<div id="abc">
 		
-		<form action="resumeApplication.php" id="form" method="post" name="form">
+		<!-- <form  id="form" method="post" name="form"> -->
 			<input class='form-control well-lg' id="fName" name="fName" placeholder="First Name" type="text">
 			<br>
 			<input class='form-control well-lg' id="lName" name="lName" placeholder="Last Name" type="text">
@@ -162,7 +163,7 @@ if(isset($_POST['info']))
 	<!-- TEXT VALIDATION FORM -->
 	<div id="numCode">
 		<div id="popupCode">
-			<!-- <form action="resumeApplication.php" id="codeForm" method="post" name="codeForm"> -->
+			
 				<h2>Enter Code</h2>
 				<br>
 					you should recieve a text message with your verification code shortly.
@@ -175,11 +176,12 @@ if(isset($_POST['info']))
 					<a class = "btn btn-primary well-lg" href="javascript:%20check_code()" id="submitCode">Submit Code</a>
 				</div>
 				
-			</form>
+			
 		</div>
-	</div>	
+	</div>
+	
 </div>
-
+</form>	
 <script>
 	
 	$('#phoneNum').change(checkPhoneNum);
