@@ -3,6 +3,7 @@
 	//inserting basic information to database
 session_start();
 $_SESSION['phone'] = $_POST['phoneNum'];
+$_SESSION['password'] = $_POST['password'];
 function getConnection()
 	{
 		$host = "localhost";
