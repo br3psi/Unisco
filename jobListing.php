@@ -18,7 +18,7 @@ if(isset($_POST['phone']) || $_SESSION['phone'])
 	elseif(isset($_SESSION['phone']))
 	{
 
-		$namedParameters[':password'] = $_SESSION['password'];
+		$namedParameters[':password'] = sha1($_SESSION['password']);
 		$namedParameters[':phone'] = $_SESSION['phone'];
 	}
 	$stmt = $dbConn->prepare($sql); 
