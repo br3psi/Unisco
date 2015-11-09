@@ -4,6 +4,8 @@
 session_start();
 $_SESSION['phone'] = $_POST['phoneNum'];
 $_SESSION['password'] = $_POST['password'];
+echo $_SESSION['phone'];
+echo $_SESSION['password'];
 function getConnection()
 	{
 		$host = "localhost";
