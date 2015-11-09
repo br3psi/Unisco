@@ -138,7 +138,7 @@ if(isset($_POST['info']))
 	<!-- SIGNUP FORM -->
 	<div id="abc">
 		
-		<form  id="form" method="post" name="form">
+		<form action="resumeApplication.php" id="form" method="post" name="form">
 			<input class='form-control well-lg' id="fName" name="fName" placeholder="First Name" type="text">
 			<br>
 			<input class='form-control well-lg' id="lName" name="lName" placeholder="Last Name" type="text">
@@ -153,7 +153,7 @@ if(isset($_POST['info']))
 			<!-- <button data-toggle=modal  class='eq-pad btn btn-default btn-sm'  onclick='javascript:check_empty()'>Description</button>
 			<input class = "btn btn-primary well-lg"  type="button" onclick="check_empty()" id="submit" value="Create Account"/> -->
 			<button id="myModal" type="button" class="btn btn-primary btn-lg" onClick="check_empty()" data-target="#myModal">Create Account</button>
-		</form>
+		<!-- </form> -->
 		
 	</div>
 
@@ -162,7 +162,7 @@ if(isset($_POST['info']))
 	<!-- TEXT VALIDATION FORM -->
 	<div id="numCode">
 		<div id="popupCode">
-			<form action="resumeApplication.php" id="codeForm" method="post" name="codeForm">
+			<!-- <form action="resumeApplication.php" id="codeForm" method="post" name="codeForm"> -->
 				<h2>Enter Code</h2>
 				<br>
 					you should recieve a text message with your verification code shortly.
