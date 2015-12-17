@@ -199,8 +199,6 @@ else
 			border-radius: 0px;
 		}
 
-	
-
 
 		.job-options-td{
 			width: 300px;

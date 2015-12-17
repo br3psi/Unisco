@@ -145,7 +145,7 @@ function getConnection()
 
 </head>
 <body style='height:auto !important;'>
-	<?php require 'header.php' ?>
+	<?php require 'headerinit.php' ?>
 	<div id = 'application'>
 		<form method="POST" action="jobListing.php">
 			
