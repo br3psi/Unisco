@@ -69,7 +69,7 @@
 
 		<li class = 'option'>
 			<div style = 'padding:0;margin:0;'>
-				<a href="" class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="Save"><i class = 'icon-floppy'></i></a>
+				<a  class="btn btn-link" data-placement="bottom" data-toggle="tooltip" title="Save"><i class = 'icon-floppy'></i></a>
 			</div>
 		</li>
 
