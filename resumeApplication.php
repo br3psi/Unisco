@@ -155,13 +155,13 @@ if(!empty($_POST['firstName']))
 						<div class = 'col-md-4'>
 							<div class="input-group">
 								<span class="input-group-addon">Last Name</span>
-								<input type="text" class="form-control"  name="lastName" required aria-describe value="<?php $_POST['lName'] ?>">
+								<input type="text" class="form-control"  name="lastName" required aria-describe value=<?php $_POST['lName'] ?>>
 							</div>
 						</div>
 						<div class = 'col-md-4'>	
 								<div class="input-group">
 								<span class="input-group-addon">First Name</span>
-								<input type="text" class="form-control"  name="firstName" required aria-describe value="<?php $_POST['fName'] ?>">
+								<input type="text" class="form-control"  name="firstName" required aria-describe value=<?php $_POST['fName'] ?>>
 							</div>
 						</div>
 					</div>
@@ -224,7 +224,7 @@ if(!empty($_POST['firstName']))
 					<div class = 'col-md-4'>
 						<div class="input-group">
 							<span class="input-group-addon">Phone Number</span>
-							<input name="phoneNum" type="text" class="form-control" required aria-describe placeHolder="(###)###-####" value="<?php $_POST['phoneNum'] ?>">
+							<input name="phoneNum" type="text" class="form-control" required aria-describe placeHolder="(###)###-####" value=<?php $_POST['phoneNum'] ?>>
 						</div>
 					</div>
 
