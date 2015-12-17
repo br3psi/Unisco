@@ -142,7 +142,6 @@ if(!empty($_POST['firstName']))
 </head>
 <body style='height:auto !important;'>
 	<?php require 'headerinit.php' ?>
-
 	<div id = 'application'>
 		<h2 class = 'title'>General Information Application</h2>
 		<form method="post" >
@@ -272,14 +271,7 @@ if(!empty($_POST['firstName']))
 					<div class="row">
 						<div class = 'col-lg-6'>
 							<div class="input-group">
-								<span class="form-control">Have you ever  been convicted of a misdemeanor or felony?</span>
-
-								<label class="input-group-addon">
-									<input type="radio" value="yes" name="felony">Yes
-								</label>
-								<label class="input-group-addon">
-									<input type="radio" value="no" name="felony">No
-								</label>
+								
 							</div>
 						</div>
 					</div>
