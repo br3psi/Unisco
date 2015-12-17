@@ -90,7 +90,7 @@ if(!empty($_POST['firstName']))
   <meta name="author" content="Monse">
 
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/fontello/css/home.css">
+	
   <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -141,7 +141,8 @@ if(!empty($_POST['firstName']))
 </script>
 </head>
 <body style='height:auto !important;'>
-	<?php require 'header.php' ?>
+	<?php require 'headerinit.php' ?>
+
 	<div id = 'application'>
 		<h2 class = 'title'>General Information Application</h2>
 		<form method="post" >
@@ -439,17 +440,11 @@ if(!empty($_POST['firstName']))
 		</form>
 
 		<div id = 'sendapp'>
-			<a href="application.php"><button id="finishingApplication" class="btn btn-primary" onclick='javascript:;'>Finish Application</button>
+			<a href="application.php"><button id="finishingApplication" class="btn btn-primary" onclick='javascript:;'>Finish Application</button></a>
 			<span id="orSpan" style = 'margin: 50px;'><b>OR</b></span>
 			<a><button id="submittingResume" data-toggle=modal href='#submit-resume'  class="btn btn-primary">Upload Resume</button></a>				
 		</div>	
 
-
-
-
-
-
-	
 	<script src="https://sdk.ttcdn.co/tt-uikit-0.11.0.min.js"></script>  
 </body>
 </html>
