@@ -201,8 +201,8 @@ function getConnection()
 						<div class="col-md-4 input-group">
 							<span class="input-group-addon">College education:</span>
 							<select class="form-control" name="collegeEducation" required>
-								<option value="noValue">noVal</option>
-								<option value="none">N/A</option>
+								<option value="none">none</option>
+								<option value="HighSchoolDiploma">HighSchoolDiploma</option>
 								<option value="communityCollege">Community College</option>
 								<option value="fourYearInstitution">4 year institution</option>
 							</select>
