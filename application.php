@@ -175,7 +175,7 @@ function getConnection()
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body >
-	<?php require 'header.php' ?>
+	<?php require 'headerinit.php' ?>
 		<form method="POST" >
 		<br>
 		<br>
