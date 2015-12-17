@@ -271,14 +271,7 @@ if(!empty($_POST['firstName']))
 					<div class="row">
 						<div class = 'col-lg-6'>
 							<div class="input-group">
-								<span class="form-control">Have you ever  been convicted of a misdemeanor or felony?</span>
-
-								<label class="input-group-addon">
-									<input type="radio" value="yes" name="felony">Yes
-								</label>
-								<label class="input-group-addon">
-									<input type="radio" value="no" name="felony">No
-								</label>
+								
 							</div>
 						</div>
 					</div>
